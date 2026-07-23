@@ -218,6 +218,7 @@
             background: #fafafa;
             border-radius: 10px;
             padding: 20px;
+            overflow: hidden;
         }
         .bill-rate h3 {
             font-size: 16px;
@@ -232,29 +233,40 @@
         .bill-rate table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 14px;
-            min-width: 520px;
+            font-size: 13px;
+            table-layout: fixed;
         }
         .bill-rate th, .bill-rate td {
-            padding: 10px 6px;
+            padding: 8px 4px;
             text-align: center;
             border: 1px solid #e0e0e0;
-            white-space: nowrap;
+            word-break: break-all;
         }
         .bill-rate th {
             background: #f5f5f5;
             font-weight: 600;
             color: #333;
         }
-        .bill-rate td:first-child {
+        .bill-rate td:first-child,
+        .bill-rate th:first-child {
             font-weight: 500;
             background: #fafafa;
+            word-break: keep-all;
+            min-width: 80px;
         }
         .bill-rate .note {
             text-align: right;
             color: #999;
             font-size: 12px;
             margin-top: 10px;
+        }
+        /* 手机端进一步压缩 */
+        @media (max-width: 480px) {
+            .bill-rate { padding: 12px; }
+            .bill-rate table { font-size: 12px; }
+            .bill-rate th, .bill-rate td { padding: 6px 3px; }
+            .bill-rate td:first-child,
+            .bill-rate th:first-child { min-width: 60px; font-size: 11px; }
         }
 
     </style>
