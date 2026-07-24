@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2026-07-23 财经早报</title>
+    <title>2026-07-24 财经早报</title>
     <style>
         /* ========== 全局样式（固定不变）========== */
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -218,6 +218,7 @@
             background: #fafafa;
             border-radius: 10px;
             padding: 20px;
+            overflow: hidden;
         }
         .bill-rate h3 {
             font-size: 16px;
@@ -232,23 +233,26 @@
         .bill-rate table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 14px;
-            min-width: 520px;
+            font-size: 13px;
+            table-layout: fixed;
         }
         .bill-rate th, .bill-rate td {
-            padding: 10px 6px;
+            padding: 8px 4px;
             text-align: center;
             border: 1px solid #e0e0e0;
-            white-space: nowrap;
+            word-break: break-all;
         }
         .bill-rate th {
             background: #f5f5f5;
             font-weight: 600;
             color: #333;
         }
-        .bill-rate td:first-child {
+        .bill-rate td:first-child,
+        .bill-rate th:first-child {
             font-weight: 500;
             background: #fafafa;
+            word-break: keep-all;
+            min-width: 80px;
         }
         .bill-rate .note {
             text-align: right;
@@ -256,26 +260,34 @@
             font-size: 12px;
             margin-top: 10px;
         }
+        /* 手机端进一步压缩 */
+        @media (max-width: 480px) {
+            .bill-rate { padding: 12px; }
+            .bill-rate table { font-size: 12px; }
+            .bill-rate th, .bill-rate td { padding: 6px 3px; }
+            .bill-rate td:first-child,
+            .bill-rate th:first-child { min-width: 60px; font-size: 11px; }
+        }
 
     </style>
 </head>
 <body>
     <!-- 头部 -->
     <div class="header">
-        <h1>📰 2026-07-23 财经早报</h1>
-        <p class="subtitle">云链直贴业务参考价（报价日期：2026年7月23日早间）</p>
+        <h1>📰 2026-07-24 财经早报</h1>
+        <p class="subtitle">云链直贴业务参考价（2026年7月23日早间报价，*小票适当加点）</p>
     </div>
     
     <!-- 头条 -->
     <section class="section headline">
         <h2 class="section-title">🔥 头条</h2>
-        <article class="news-item" data-news-id="headline-1" data-news-title="印花税激增97.3%">
-            <a href="https://stcn.com/article/detail/4036198.html" target="_blank">
-                <h3 class="news-title">上半年财政收支出炉：证券交易印花税同比激增97.3%，资本市场活跃度飙升</h3>
+        <article class="news-item" data-news-id="headline-1" data-news-title="中美探讨300亿美元对等降税">
+            <a href="http://www.xinhuanet.com/fortune/20260723/c8179576169c4cb7bf6a3fa69a832866/c.html" target="_blank">
+                <h3 class="news-title">中美探讨各自300亿美元规模对等降税框架安排</h3>
             </a>
-            <div class="news-meta">中国证券报</div>
+            <div class="news-meta">新华社</div>
             
-            <div class="ai-summary">财政部7月22日发布上半年财政收支数据显示，全国一般公共预算收入12.1万亿元，同比增长4.7%，增幅逐月提高。其中，证券交易印花税1549亿元，同比大增97.3%，主要受股市成交金额增长驱动。全国税收收入9.79万亿元，同比增长5.3%。一般公共预算支出14.33万亿元，同比增长1.5%，卫生健康、社保就业等重点领域支出保持较快增长，财政支出靠前发力态势明显。</span>
+            <div class="ai-summary">商务部外资司司长孟华婷在国新办新闻发布会上表示，中美双方经贸团队正就贸易理事会架构、职能、运行模式等具体安排保持密切沟通，并探讨推进各自300亿美元规模的对等降税框架安排。中方正广泛征求国内利益相关方意见，美方也在征求意见。双方将尽快商定具体产品降税安排并推动实施，进一步拓展双边贸易。</span>
         </article>
     </section>
     
@@ -287,23 +299,23 @@
 
                 <div class="market-card">
                     <div class="index-name">上证指数</div>
-                    <div class="index-value">3867.03</div>
-                    <div class="index-change up">+0.07%</div>
+                    <div class="index-value">3876.78</div>
+                    <div class="index-change up">+0.25%</div>
                 </div>
                 <div class="market-card">
                     <div class="index-name">深证成指</div>
-                    <div class="index-value">14061.44</div>
-                    <div class="index-change down">-1.42%</div>
+                    <div class="index-value">14123.31</div>
+                    <div class="index-change up">+0.44%</div>
                 </div>
                 <div class="market-card">
                     <div class="index-name">创业板指</div>
-                    <div class="index-value">3566.73</div>
-                    <div class="index-change down">-3.23%</div>
+                    <div class="index-value">3575.52</div>
+                    <div class="index-change up">+0.25%</div>
                 </div>
                 <div class="market-card">
                     <div class="index-name">成交额</div>
-                    <div class="index-value">2.65万亿</div>
-                    <div class="index-change flat">缩量3037亿</div>
+                    <div class="index-value">2.2万亿</div>
+                    <div class="index-change flat">缩量4580亿</div>
                 </div>
             </div>
         </div>
@@ -312,49 +324,49 @@
     <section class="section finance-news">
         <h2 class="section-title">📊 财经要闻</h2>
         
-        <article class="news-item" data-news-id="news-1" data-news-title="央企利润1.4万亿">
-            <a href="https://stcn.com/article/detail/4035945.html" target="_blank">
-                <h3 class="news-title">国资央企上半年实现利润1.4万亿元 国务院国资委部署六大方向发力</h3>
+        <article class="news-item" data-news-id="news-1" data-news-title="央行5000亿MLF净投放1000亿">
+            <a href="https://finance.sina.com.cn/jjxw/2026-07-24/doc-iniivtws4485767.shtml" target="_blank">
+                <h3 class="news-title">央行开展5000亿元MLF操作 连续三月加量续作净投放1000亿</h3>
+            </a>
+            <div class="news-meta">经济参考报</div>
+            
+            <div class="ai-summary">央行7月24日开展5000亿元中期借贷便利操作，本月有4000亿元到期，实现净投放1000亿元，为连续第三个月加量续作。加上买断式逆回购合计净投放7000亿元，7月中期流动性合计净投放8000亿元，扭转此前连续4个月缩量态势，有利于支持政府债券发行和银行配套信贷投放。</span>
+        </article>
+        
+        <article class="news-item" data-news-id="news-2" data-news-title="蓝佛安：财政金融协同促内需">
+            <a href="http://www.mof.gov.cn/zhengwuxinxi/caizhengxinwen/202607/t20260723_3994034.htm" target="_blank">
+                <h3 class="news-title">财政部部长蓝佛安：以更大力度落实财政金融协同促内需一揽子政策</h3>
+            </a>
+            <div class="news-meta">财政部</div>
+            
+            <div class="ai-summary">财政部部长蓝佛安在人民日报发文指出，中央财政专门安排1000亿元推出财政金融协同促内需一揽子6项政策，统筹推进促消费、扩投资。政策实施进展符合预期，支持重点投资和消费领域信贷投放逆势增长。下一步将推动打通制约投资消费的堵点卡点，拓展内需增长新空间，加强部门信息共享，深化央地联动。</span>
+        </article>
+        
+        <article class="news-item" data-news-id="news-3" data-news-title="北京发布智能体新政提出Token经济">
+            <a href="https://fgw.beijing.gov.cn/fgwzwgk/2024zcjd/202607/t20260723_4780614.htm" target="_blank">
+                <h3 class="news-title">北京发布智能体引领发展新政 首次提出Token经济新业态</h3>
+            </a>
+            <div class="news-meta">北京市发改委</div>
+            
+            <div class="ai-summary">北京市发改委等四部门联合印发《北京市关于加快智能体引领发展的若干措施》，提出10方面重点任务。首次提出鼓励发展Token经济，培育Token即服务、智能体即服务等商业新模式，探索发放Token券、智能体服务券。对符合条件的算力部署、软件智能技改等给予最高3000万元支持，推动信息软件业从底层架构实现范式变革。</span>
+        </article>
+        
+        <article class="news-item" data-news-id="news-4" data-news-title="公募基金39.67万亿创新高">
+            <a href="https://stcn.com/article/detail/4038502.html" target="_blank">
+                <h3 class="news-title">公募基金资产净值达39.67万亿元创历史新高 逼近40万亿关口</h3>
             </a>
             <div class="news-meta">证券时报</div>
             
-            <div class="ai-summary">国务院国资委7月21日至22日举办中央企业负责人研讨班。数据显示，上半年央企实现利润总额1.4万亿元，固定资产投资同比增长4.5%，研发经费投入同比增长3.8%。国资委主任程福波强调，下半年将从巩固经济运行、推进科技创新、产业转型升级、深化国资改革、防范化解风险、提升战略保障六大方向着力，确保完成全年目标任务。</span>
+            <div class="ai-summary">中基协数据显示，截至2026年6月底，我国公募基金资产净值合计39.67万亿元，连续三个月创历史新高，距40万亿关口一步之遥。债券基金单月大增4394亿元为主力，混合基金增长3955亿元。但货币基金规模下降6415亿元，资金从货基流向权益和固收产品。股票基金和混合基金份额有所减少，部分投资者高位止盈。</span>
         </article>
         
-        <article class="news-item" data-news-id="news-2" data-news-title="央行新增千亿再贷款">
-            <a href="https://finance.sina.com.cn/jjxw/2026-07-23/doc-iniiteir1794844.shtml" target="_blank">
-                <h3 class="news-title">央行新增1000亿元支农支小再贷款额度 精准支持防汛救灾及灾后重建</h3>
+        <article class="news-item" data-news-id="news-5" data-news-title="长鑫科技下周一科创板上市">
+            <a href="https://finance.sina.com.cn/wm/2026-07-24/doc-iniiwenr4960379.shtml" target="_blank">
+                <h3 class="news-title">长鑫科技将于7月27日科创板上市 DRAM龙头上半年净利预增超22倍</h3>
             </a>
-            <div class="news-meta">北京商报</div>
+            <div class="news-meta">科创板日报</div>
             
-            <div class="ai-summary">中国人民银行新增支农支小再贷款额度1000亿元，引导金融机构加大对广西、湖北、甘肃、浙江等受灾地区小微企业、个体工商户及农业企业的信贷支持。此次结构性工具发力属于精准滴灌，通过"先贷后借"模式向金融机构提供低成本资金，受灾主体可对接当地城商行、农商行申请专项低息贷款。截至3月末，结构性货币政策工具余额达4.3万亿元。</span>
-        </article>
-        
-        <article class="news-item" data-news-id="news-3" data-news-title="以旧换新破1.1万亿">
-            <a href="http://www.gd.xinhuanet.com/20260723/fc7c7b03c64d492b8afc763c6b308af2/c.html" target="_blank">
-                <h3 class="news-title">上半年消费品以旧换新带动销售额1.1万亿元 新能源车渗透率创历史新高</h3>
-            </a>
-            <div class="news-meta">新华社</div>
-            
-            <div class="ai-summary">商务部数据显示，2026年上半年消费品以旧换新累计带动销售1.1万亿元，惠及1.5亿人次。其中汽车以旧换新370.7万辆、家电6326.6万台。6月享受补贴的新能源车占比达65.4%，支撑二季度新能源车零售渗透率升至62.4%创历史新高。数码和智能产品销售量同比增长13.4%，智能眼镜6月单月增长30.6%成为消费新热点。</span>
-        </article>
-        
-        <article class="news-item" data-news-id="news-4" data-news-title="体育强国规划发布">
-            <a href="https://stcn.com/article/detail/4035839.html" target="_blank">
-                <h3 class="news-title">国务院批复《体育强国建设"十五五"规划》 2030年产业总规模突破7万亿元</h3>
-            </a>
-            <div class="news-meta">证券时报</div>
-            
-            <div class="ai-summary">经国务院批复同意，国家体育总局正式印发首个以"体育强国"为主题的国家级专项规划。规划提出到2030年人均体育场地面积达4平方米、经常参加体育锻炼人数比例达40%、体育产业总规模突破7万亿元。重点推动赛事经济发展，发挥足球篮球城市联赛综合带动作用，加快职业体育发展，持续举办"跟着赛事去旅行"系列活动。</span>
-        </article>
-        
-        <article class="news-item" data-news-id="news-5" data-news-title="国新办发布商务数据">
-            <a href="https://finance.sina.com.cn/headline/2026-07-23/doc-iniitqxn8447137.shtml" target="_blank">
-                <h3 class="news-title">国新办将发布上半年商务运行数据 以旧换新政策成效与外贸形势受关注</h3>
-            </a>
-            <div class="news-meta">新浪财经</div>
-            
-            <div class="ai-summary">国新办7月23日就2026年上半年商务工作及运行情况举行新闻发布会。商务部此前披露的数据显示，上半年以旧换新带动销售1.1万亿元、新能源车渗透率62.4%、智能家电数码消费增长显著。市场同时关注下半年外贸形势及中美贸易摩擦影响，122关税7月24日到期后特朗普关税体系加速重构，301调查、232调查等多重贸易工具面临调整。</span>
+            <div class="ai-summary">国内DRAM龙头企业长鑫科技将于7月27日在科创板上市，发行价8.66元/股。公司预计上半年营收1100亿至1200亿元，同比增长612%至677%；净利润500亿至570亿元，同比增长2244%至2544%。上市估值约5800亿元，全球市占率不到8%。业内人士认为定价合理，给予未来价值成长空间。</span>
         </article>
         
     </section>
@@ -363,49 +375,49 @@
     <section class="section supply-news">
         <h2 class="section-title">⛓️ 供应链金融</h2>
         
-        <article class="news-item" data-news-id="snews-1" data-news-title="票交所系统功能升级">
-            <a href="https://www.toutiao.com/group/7664914493318726182/" target="_blank">
-                <h3 class="news-title">上海票据交易所系统功能优化升级 新增主动付款及线上票据支付等多项功能</h3>
+        <article class="news-item" data-news-id="snews-1" data-news-title="进出口银行外贸贷款6500亿">
+            <a href="http://paper.people.com.cn/rmrb/pc/content/202607/24/content_30170717.html" target="_blank">
+                <h3 class="news-title">进出口银行上半年新发放外贸领域贷款近6500亿元</h3>
             </a>
-            <div class="news-meta">票风信息网</div>
+            <div class="news-meta">人民日报</div>
             
-            <div class="ai-summary">上海票据交易所7月17日印发《中国票据业务系统直连接口规范V1.4》，对票据业务系统进行全面优化升级。新增主动付款申请报文，优化线上票据支付支持批量处理和订单信息推送，新增贴现业务办理通知报文支持供应链平台对接，部分功能将于三季度投产。此次升级将进一步提升票据业务处理效率，强化供应链金融平台的数字化服务能力。</span>
+            <div class="ai-summary">中国进出口银行上半年新发放外贸领域贷款近6500亿元，其中近40%投向稳外贸主体和稳外贸产业链领域。设立专项额度统筹支持货物贸易与服务贸易、传统贸易与新业态，助力发展数字贸易和绿色贸易。同时支持电商物流企业海外布局，落地多个海外仓项目，探索形成支持小微跨境电商企业多样化融资服务模式。</span>
         </article>
         
-        <article class="news-item" data-news-id="snews-2" data-news-title="兰州银行政采e贷落地">
-            <a href="https://www.toutiao.com/group/7665275218454004243/" target="_blank">
-                <h3 class="news-title">兰州银行全省首家落地线上"政采e贷" 打通政府采购供应商融资渠道</h3>
+        <article class="news-item" data-news-id="snews-2" data-news-title="重庆首笔"一单制"提单融资落地">
+            <a href="http://cq.people.com.cn/n2/2026/0723/c365411-41648088.html" target="_blank">
+                <h3 class="news-title">重庆首笔"一单制"提单贸易融资落地 破解外贸企业融资难</h3>
             </a>
-            <div class="news-meta">宣天下</div>
+            <div class="news-meta">人民网</div>
             
-            <div class="ai-summary">2026年7月，兰州银行完成与省级融资信用服务平台甘肃信易贷·陇信通系统直联，成为全省首家落地线上政采e贷业务的商业银行。该产品凭政府采购信用即可转化为经营周转资金，无抵押、免担保、纯信用，累计服务500余家中小微企业，投放融资近30亿元。系统对接后实现融资申请、信息核验、智能审批、资金发放全线上闭环。</span>
+            <div class="ai-summary">重庆首笔依托"央行西部陆海智融通"平台的数字可转让货物单证"一单制"提单贸易融资落地，某通机出口企业凭铁海联运提单获得367万元贷款。传统纸质提单转化为可信数字凭证，银行可快速完成核验及放款。截至目前已累计投放"一单制"融资2.56亿元，直击"有单难融、在途难贷"的行业痛点。</span>
         </article>
         
-        <article class="news-item" data-news-id="snews-3" data-news-title="九江银行谈供应链脱核">
-            <a href="http://jiangxi.jxnews.com.cn/system/2026/07/19/031193222.shtml" target="_blank">
-                <h3 class="news-title">九江银行行长专访：供应链金融"脱核"是方向 从"资金提供者"转型"生态共建者"</h3>
+        <article class="news-item" data-news-id="snews-3" data-news-title="数字人民币CBETS规模化运营">
+            <a href="https://finance.sina.com.cn/money/forex/forexinfo/2026-07-22/doc-iniispmy8726097.shtml" target="_blank">
+                <h3 class="news-title">数字人民币CBETS跨境结算平台规模化运营 服务供应链金融</h3>
             </a>
-            <div class="news-meta">江西新闻网</div>
+            <div class="news-meta">中国外汇</div>
             
-            <div class="ai-summary">九江银行行长肖璟接受专访指出，2025年"77号文"已明确引导银行探索"脱核"模式，转向以"数据信用"和"物的信用"为核心的新范式。但"脱核"不是"离核"，需核心企业开放场景、金融机构升级风控"双向奔赴"。该行聚焦产业金融综合服务平台升级和"产业大脑"深度嵌入，通过平台将链上交易数据转化为信用资产，上半年已向45万户经营主体投放8335亿元。</span>
+            <div class="ai-summary">数字人民币国际运营中心旗下CBETS跨境结算综合服务平台启动品牌化运作，业务覆盖港澳、新加坡、泰国、阿联酋等国家和地区。平台基于统一技术底座，可依托智能合约拓展担保支付、订单支付等贸易增值服务，通过区块链服务平台提供跨链对接，服务供应链金融和跨境贸易场景。</span>
         </article>
         
-        <article class="news-item" data-news-id="snews-4" data-news-title="华电保理票据融资翻倍">
-            <a href="http://www.sinotf.com/GB/kuaixun/" target="_blank">
-                <h3 class="news-title">华电保理以高质量票据融资助力集团主业降本增效 上半年投放42亿元同比翻倍</h3>
+        <article class="news-item" data-news-id="snews-4" data-news-title="内蒙古自贸区创新供应链融资">
+            <a href="https://finance.sina.com.cn/jjxw/2026-07-20/doc-iniiktnr3163539.shtml" target="_blank">
+                <h3 class="news-title">内蒙古自贸区推出供应链融资等外贸特色金融模式</h3>
             </a>
-            <div class="news-meta">中国贸易金融网</div>
+            <div class="news-meta">内蒙古日报</div>
             
-            <div class="ai-summary">2026年以来，华电商业保理通过票据融资保理模式累计投放42亿元，规模同比实现翻倍增长，较现金模式有效降低资金成本超20BP。该模式依托中国华电集团产业链场景，为上下游企业提供基于票据的供应链金融服务，实现核心企业信用向产业链末端传导，有效降低中小供应商融资成本，助力集团主业降本增效和产业链协同发展。</span>
+            <div class="ai-summary">呼和浩特片区发布金融改革创新十条措施，围绕跨境结算便利、全链条融资等推出10项硬招。创新铁路运单物权化、供应链融资等外贸特色模式，推广本外币合一银行结算账户体系和跨国公司资金池业务。完善"政府+银行+信保+担保"四方分险机制，升级"首府金服云平台"为中小外贸企业精准画像。</span>
         </article>
         
-        <article class="news-item" data-news-id="snews-5" data-news-title="仓登链上线数字化仓单">
-            <a href="http://www.56ec.org.cn/news/hyzx/2026-07-15/54407.html" target="_blank">
-                <h3 class="news-title">"仓登链"上线 国家级区块链物流设施落地 大宗商品仓单实现全流程数字化</h3>
+        <article class="news-item" data-news-id="snews-5" data-news-title="票交所供票平台扩容至57家">
+            <a href="https://cj.sina.cn/articles/view/2004321037/7777830d00101h8na" target="_blank">
+                <h3 class="news-title">票交所供应链票据平台扩容至57家 半年净增7家覆盖八大产业</h3>
             </a>
-            <div class="news-meta">搜狐新闻</div>
+            <div class="news-meta">贸易金融</div>
             
-            <div class="ai-summary">国家级区块链物流基础设施"仓登链"正式上线，实现大宗商品仓单全流程数字化管理。物流仓储报告显示，头部企业正依托票据、ABS、专项信贷等多元融资工具获取低成本资金。深圳国际成功发行20亿元中期票据利率1.53%，物产中大、圆通速递相继落地超短期融资券利率1.41%、1.51%，供应链金融与物流基础设施数字化深度融合加速。</span>
+            <div class="ai-summary">上海票据交易所公布最新名单，截至2026年6月末已有57家供应链平台获准接入，半年内净增7家。其中企业33家占比58%，银行18家占比32%，财务公司5家，信托公司1家。平台覆盖八大核心产业，供应商通过平台可获得在线比价和即时贴现服务，贴现成本较传统方式下降20%至40%。</span>
         </article>
         
     </section>
@@ -425,7 +437,7 @@
                     </tbody>
                 </table>
                 </div>
-                <p class="note">*小票适当加点。</p>
+                <p class="note">*小票适当加点。云链直贴业务参考价（2026年7月23日早间报价，*小票适当加点）</p>
             </div>
         </div>
 
@@ -1109,4 +1121,4 @@ window.__TRACKER_CONFIG__ = { WEBHOOK_URL: "https://open.feishu.cn/open-apis/bot
 
 </script>
 </body>
-</html><!-- trigger rebuild -->
+</html>
