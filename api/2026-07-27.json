@@ -1,0 +1,122 @@
+{
+  "date": "",
+  "updated_at": "T09:45:00+08:00",
+  "copyright_notice": "配图均来自互联网，仅供内部阅读参考。如有版权问题请联系运营团队替换。",
+  "headline": {
+    "id": "headline-1",
+    "title": "长鑫科技今日登陆科创板 募资579亿成科创板史上最大IPO",
+    "title_short": "长鑫科技登陆科创板 创史上最大IPO",
+    "source": "",
+    "summary": "",
+    "url": "https://stcn.com/article/detail/4042038.html",
+    "image": "api/images/headline-1.png",
+    "image_source": "article_original"
+  },
+  "finance_news": [
+    {
+      "id": "news-1",
+      "title": "央行将开展2.1万亿元隔夜逆回购操作 呵护月末流动性",
+      "title_short": "央行2.1万亿隔夜逆回购呵护流动性",
+      "source": "",
+      "summary": "",
+      "url": "http://www.csrc.gov.cn/csrc/c100028/c7647101/content.shtml",
+      "image": "api/images/news-1.png",
+      "image_source": "article_original"
+    },
+    {
+      "id": "news-2",
+      "title": "上半年规模以上工业企业利润增长18.7% 制造业盈利显著改善",
+      "title_short": "上半年工业企业利润增长18.7%",
+      "source": "",
+      "summary": "",
+      "url": "https://www.stats.gov.cn/sj/zxfbhjd/202607/t20260727_1964194.html",
+      "image": "api/images/news-2.png",
+      "image_source": "article_original"
+    },
+    {
+      "id": "news-3",
+      "title": "\"两高\"修改内幕交易司法解释今日起施行 敏感期认定大幅前移",
+      "title_short": "",
+      "source": "",
+      "summary": "",
+      "url": "https://stcn.com/article/detail/4041407.html",
+      "image": "api/images/news-3.png",
+      "image_source": "article_original"
+    },
+    {
+      "id": "news-4",
+      "title": "证监会召开监管工作座谈会 部署七方面重点工作稳定市场",
+      "title_short": "证监会部署七方面工作稳定市场",
+      "source": "",
+      "summary": "",
+      "url": "https://stcn.com/article/detail/4041142.html",
+      "image": "api/images/news-4.png",
+      "image_source": "article_original"
+    },
+    {
+      "id": "news-5",
+      "title": "宁德时代拟200亿至400亿元回购股份 创A股单次回购规模之最",
+      "title_short": "宁德时代400亿回购创A股纪录",
+      "source": "",
+      "summary": "",
+      "url": "https://www.stcn.com/article/detail/4041101.html",
+      "image": "api/images/news-5.png",
+      "image_source": "article_original"
+    }
+  ],
+  "supply_news": [
+    {
+      "id": "snews-1",
+      "title": "上海电气接入票交所供应链票据平台 落地首单供应链商票业务",
+      "title_short": "上海电气落地供应链商票首单",
+      "url": "https://finance.sina.com.cn/wm/2026-06-30/doc-inifesxw6674809.shtml",
+      "source": "万联网",
+      "summary": "",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "snews-2",
+      "title": "车企账期压缩一周年：头部立行立改 供应链金融标准化加速推进",
+      "title_short": "车企账期压缩 供应链金融提速",
+      "url": "https://stcn.com/article/detail/4003271.html",
+      "source": "证券时报",
+      "summary": "",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "snews-3",
+      "title": "票据转贴现0.5%成阶段性参考线 引导融资回归真实需求",
+      "title_short": "票据0.5%成阶段性参考线",
+      "url": "http://www.cnstock.com/commonDetail/745809",
+      "source": "上海证券报",
+      "summary": "",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "snews-4",
+      "title": "沪深交易所修订ABS指引 严把保理应收款准入关",
+      "title_short": "沪深交易所修订ABS指引",
+      "url": "http://www.cnstock.com/commonDetail/750759",
+      "source": "上海证券报",
+      "summary": "",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "snews-5",
+      "title": "恒丰银行合肥分行落地首单民营造船厂船舶预付款保函",
+      "title_short": "恒丰银行落地船舶预付款保函",
+      "url": "https://ah.ifeng.com/c/8v1PpaX5uLA",
+      "source": "凤凰网安徽",
+      "summary": "",
+      "image": "",
+      "image_source": ""
+    }
+  ],
+  "bill_rate_note": "",
+  "page_url": "https://pkbmw110120.github.io/finance-morning-brief/",
+  "archive_url": "https://pkbmw110120.github.io/finance-morning-brief/.html"
+}
