@@ -1,0 +1,71 @@
+{
+  "date": "",
+  "updated_at": "T09:45:00+08:00",
+  "copyright_notice": "配图均来自互联网，仅供内部阅读参考。如有版权问题请联系运营团队替换。",
+  "headline": {
+    "id": "headline-1",
+    "title": "上半年规模以上工业企业利润同比增长18.7% 电子行业利润激增96.9%",
+    "title_short": "上半年工业企业利润增18.7%",
+    "source": "",
+    "summary": "",
+    "url": "https://www.stats.gov.cn/sj/zxfbhjd/202607/t20260727_1964194.html",
+    "image": "api/images/headline-1.png",
+    "image_source": "article_original"
+  },
+  "finance_news": [
+    {
+      "id": "news-1",
+      "title": "国务院国资委发布第二批央企AI战略性高价值场景 上线\"焕新社区\"2.0",
+      "title_short": "国资委发布央企AI场景成果",
+      "source": "",
+      "summary": "",
+      "url": "https://m.thepaper.cn/newsDetail_forward_33669792",
+      "image": "api/images/news-1.jpg",
+      "image_source": "article_original"
+    },
+    {
+      "id": "news-2",
+      "title": "中债登宣布五项降费措施 全免熊猫债发行登记费及科创债付息兑付费",
+      "title_short": "中债登推债市降费大礼包",
+      "source": "",
+      "summary": "",
+      "url": "https://www.chinabond.com.cn/xwgg/ggtz/xwgg_gsgg/gsgg_zytz_ath/202607/t20260727_855243978.html",
+      "image": "api/images/news-2.jpg",
+      "image_source": "bing_search"
+    },
+    {
+      "id": "news-3",
+      "title": "东方证券披露合并重组草案 251.2亿元收购上海证券100%股权",
+      "title_short": "东方证券251亿合并上海证券",
+      "source": "",
+      "summary": "",
+      "url": "http://paper.cnstock.com/html/2026-07/28/content_2249209.htm",
+      "image": "api/images/news-3.png",
+      "image_source": "article_original"
+    },
+    {
+      "id": "news-4",
+      "title": "金融监管总局召开年中工作会议 强调守住不发生系统性金融风险底线",
+      "title_short": "金融监管总局部署风险防控",
+      "source": "",
+      "summary": "",
+      "url": "https://www.financialnews.com.cn/m/2026-07/28/content_453863.html",
+      "image": "api/images/news-4.png",
+      "image_source": "article_original"
+    },
+    {
+      "id": "news-5",
+      "title": "中际旭创H股定价980港元 534亿港元募资成2026年港股最大IPO",
+      "title_short": "中际旭创港股IPO定价980港元",
+      "source": "",
+      "summary": "",
+      "url": "https://finance.sina.com.cn/jjxw/2026-07-28/doc-inikiewr0464235.shtml",
+      "image": "api/images/news-5.jpg",
+      "image_source": "bing_search"
+    }
+  ],
+  "supply_news": [],
+  "bill_rate_note": "",
+  "page_url": "https://pkbmw110120.github.io/finance-morning-brief/",
+  "archive_url": "https://pkbmw110120.github.io/finance-morning-brief/.html"
+}
