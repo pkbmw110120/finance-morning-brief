@@ -15,52 +15,42 @@
   "finance_news": [
     {
       "id": "news-1",
-      "title": "国务院公布修订后《集成电路布图设计保护条例》 10月15日起施行",
-      "title_short": "集成电路布图设计保护条例修订",
-      "source": "",
-      "summary": "",
-      "url": "https://www.gov.cn/zhengce/zhengceku/202608/content_7077399.htm",
-      "image": "api/images/news-1.jpg",
-      "image_source": "article_original"
-    },
-    {
-      "id": "news-2",
       "title": "证监会发布十项举措 深化内地与香港资本市场合作",
       "title_short": "证监会十项举措深化两地合作",
       "source": "",
       "summary": "",
       "url": "http://finance.people.com.cn/n1/2026/0803/c1004-40772977.html",
-      "image": "api/images/news-2.jpg",
+      "image": "api/images/news-1.jpg",
       "image_source": "article_original"
     },
     {
-      "id": "news-3",
+      "id": "news-2",
       "title": "药明康德上半年净利首破百亿 全面上调全年业绩指引",
       "title_short": "药明康德上半年净利破百亿",
       "source": "",
       "summary": "",
       "url": "https://finance.eastmoney.com/a/202608033830056755.html",
-      "image": "api/images/news-3.png",
+      "image": "api/images/news-2.png",
       "image_source": "article_original"
     },
     {
-      "id": "news-4",
+      "id": "news-3",
       "title": "中微公司上半年净利润预增逾2.8倍 半导体设备景气度持续走高",
       "title_short": "中微公司上半年净利预增超2.8倍",
       "source": "",
       "summary": "",
       "url": "http://www.cnstock.com/commonDetail/754781",
-      "image": "api/images/news-4.jpg",
+      "image": "api/images/news-3.jpg",
       "image_source": "bing_search"
     },
     {
-      "id": "news-5",
+      "id": "news-4",
       "title": "股票私募仓位指数创近52个月新高 超七成私募满仓运行",
       "title_short": "股票私募仓位创52个月新高",
       "source": "",
       "summary": "",
       "url": "https://stcn.com/article/detail/4056670.html",
-      "image": "api/images/news-5.png",
+      "image": "api/images/news-4.png",
       "image_source": "article_original"
     }
   ],
