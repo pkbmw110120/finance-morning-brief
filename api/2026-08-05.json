@@ -1,0 +1,71 @@
+{
+  "date": "",
+  "updated_at": "T09:45:00+08:00",
+  "copyright_notice": "配图均来自互联网，仅供内部阅读参考。如有版权问题请联系运营团队替换。",
+  "headline": {
+    "id": "headline-1",
+    "title": "央行开展5000亿元买断式逆回购操作 连续第二个月加量续作净投放2000亿元",
+    "title_short": "央行5000亿买断式逆回购 净投放2000亿",
+    "source": "",
+    "summary": "",
+    "url": "http://epaper.stcn.com/con/202608/05/content_2957880.html",
+    "image": "api/images/headline-1.jpg",
+    "image_source": "article_original"
+  },
+  "finance_news": [
+    {
+      "id": "news-1",
+      "title": "首部L3/L4级自动驾驶强制性国家标准发布 拟2027年7月起正式实施",
+      "title_short": "自动驾驶强制国标发布",
+      "source": "",
+      "summary": "",
+      "url": "https://www.miit.gov.cn/jgsj/zbys/qcgy/art/2026/art_a1d2072374884287b67048a77560014e.html",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "news-2",
+      "title": "多部门明确下半年经济工作发力点 财政金融协同扩内需更大力度举措有望落地",
+      "title_short": "财政金融协同扩内需",
+      "source": "",
+      "summary": "",
+      "url": "http://www.cnstock.com/commonDetail/755346",
+      "image": "api/images/news-2.jpg",
+      "image_source": "bing_search"
+    },
+    {
+      "id": "news-3",
+      "title": "7月A股新开户265.54万户 同比增长35.23% 年内累计开户达2281万户",
+      "title_short": "7月A股新开户265万户",
+      "source": "",
+      "summary": "",
+      "url": "https://finance.eastmoney.com/a/202608043831527234.html",
+      "image": "api/images/news-3.png",
+      "image_source": "article_original"
+    },
+    {
+      "id": "news-4",
+      "title": "8月5日起国内航线燃油附加费再次下调 较年内最高标准降幅近六成",
+      "title_short": "燃油附加费今日下调",
+      "source": "",
+      "summary": "",
+      "url": "https://stcn.com/article/detail/4052357.html",
+      "image": "api/images/news-4.png",
+      "image_source": "article_original"
+    },
+    {
+      "id": "news-5",
+      "title": "中证协拟系统性修订IPO保荐尽调规则 新增工程互联网消费医药四类行业尽调指南",
+      "title_short": "中证协修订IPO尽调规则",
+      "source": "",
+      "summary": "",
+      "url": "http://www.cnstock.com/commonDetail/755331",
+      "image": "",
+      "image_source": ""
+    }
+  ],
+  "supply_news": [],
+  "bill_rate_note": "",
+  "page_url": "https://pkbmw110120.github.io/finance-morning-brief/",
+  "archive_url": "https://pkbmw110120.github.io/finance-morning-brief/.html"
+}
