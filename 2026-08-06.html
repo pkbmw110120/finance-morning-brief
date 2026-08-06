@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026-08-06 财经早报</title>
+    <style>
+        /* ========== 全局样式（固定不变）========== */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f0f0f0;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        a { color: #1a73e8; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        
+        /* ========== 头部区域 ========== */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 32px 24px;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .header .subtitle {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        /* ========== 板块通用样式 ========== */
+        .section {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .section-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #667eea;
+        }
+        
+        /* ========== 新闻条目样式 ========== */
+        .news-item {
+            padding: 16px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .news-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        
+        .news-item:first-child {
+            padding-top: 0;
+        }
+        
+        .news-title {
+            font-size: 17px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+        
+        .news-meta {
+            font-size: 13px;
+            color: #999;
+            margin-bottom: 8px;
+        }
+        
+        .ai-summary {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.7;
+            background: #f8f9fa;
+            padding: 12px 16px;
+            border-radius: 8px;
+            border-left: 3px solid #667eea;
+        }
+        
+        /* ========== 头条特殊样式 ========== */
+        .headline .news-title {
+            font-size: 22px;
+            color: #667eea;
+        }
+        
+        .headline .ai-summary {
+            background: #f0f4ff;
+            border-left-color: #764ba2;
+        }
+        
+        /* ========== 图片样式 ========== */
+        .news-image {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 8px;
+            margin: 12px 0;
+            display: block;
+        }
+        
+        .image-caption {
+            font-size: 12px;
+            color: #999;
+            text-align: center;
+            margin-top: 4px;
+        }
+        
+        /* ========== 版权提示 ========== */
+        .copyright {
+            font-size: 12px;
+            color: #999;
+            text-align: center;
+            padding: 16px;
+            margin-top: 24px;
+            border-top: 1px solid #eee;
+        }
+        
+        /* ========== 响应式适配 ========== */
+        @media (max-width: 768px) {
+            body { padding: 12px; }
+            
+            .header {
+                padding: 24px 16px;
+                border-radius: 8px;
+            }
+            
+            .header h1 { font-size: 22px; }
+            
+            .section {
+                padding: 16px;
+                border-radius: 8px;
+            }
+            
+            .section-title { font-size: 18px; }
+            
+            .news-title { font-size: 16px; }
+            
+            .headline .news-title { font-size: 18px; }
+        }
+        
+        /* ========== 打印优化 ========== */
+        @media print {
+            body { background: white; }
+            
+            .header {
+                background: white;
+                color: #333;
+                border: 2px solid #667eea;
+                box-shadow: none;
+            }
+            
+            .section {
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+        }
+    
+        /* ===== 股市概览 ===== */
+        .market-overview {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        .market-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .index-name {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        .index-value {
+            font-size: 22px;
+            font-weight: bold;
+            color: #333;
+        }
+        .index-change {
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        .index-change.up, .up { color: #e63946; }
+        .index-change.down, .down { color: #2a9d8f; }
+        .index-change.flat, .flat { color: #666; }
+        @media (max-width: 600px) {
+            .market-overview { grid-template-columns: 1fr; }
+        }
+
+        /* ===== 票据利率 ===== */
+        .bill-rate {
+            margin-top: 20px;
+            background: #fafafa;
+            border-radius: 10px;
+            padding: 20px;
+            overflow: hidden;
+        }
+        .bill-rate h3 {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .bill-rate .table-wrapper {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        .bill-rate table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+            table-layout: fixed;
+        }
+        .bill-rate th, .bill-rate td {
+            padding: 8px 4px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+            word-break: break-all;
+        }
+        .bill-rate th {
+            background: #f5f5f5;
+            font-weight: 600;
+            color: #333;
+        }
+        .bill-rate td:first-child,
+        .bill-rate th:first-child {
+            font-weight: 500;
+            background: #fafafa;
+            word-break: keep-all;
+            min-width: 80px;
+        }
+        .bill-rate .note {
+            text-align: right;
+            color: #999;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+        /* 手机端进一步压缩 */
+        @media (max-width: 480px) {
+            .bill-rate { padding: 12px; }
+            .bill-rate table { font-size: 12px; }
+            .bill-rate th, .bill-rate td { padding: 6px 3px; }
+            .bill-rate td:first-child,
+            .bill-rate th:first-child { min-width: 60px; font-size: 11px; }
+        }
+
+    </style>
+</head>
+<body style="background: #f0f0f0;">
+    <div class="header">
+        <h1>📰 2026-08-06 财经早报</h1>
+        <p class="subtitle">云链直贴业务参考价（报价日期：2026年8月4日早间）*小票适当加点</p>
+    </div>
+    
+    
+    <section class="section headline">
+        <h2 class="section-title">🔥 头条</h2>
+        <article class="news-item" data-news-id="headline-1" data-news-title="商务部公布多项对美反制措施 加强无人机相关两用物项出口管制">
+            <a data-news-id="headline-1" href="http://www.mofcom.gov.cn/zfxxgk/gkml/art/2026/art_a8019dc0a512493d96b0f30d32ede5ea.html" target="_blank">
+                <h3 class="news-title">商务部公布多项对美反制措施 加强无人机相关两用物项出口管制</h3>
+            </a>
+            <div class="news-meta">商务部</div>
+            <div class="ai-summary">就美国联邦通信委员会持续泛化国家安全概念出台涉华限制性措施，商务部8月5日发布公告，加强无人机及其关键零部件、相关技术对美国出口管制，逐案从严审核，不适用许可便利措施。同时将应用DNA科学公司等6家美国实体列入反制清单，暂停中国强制性产品认证指定机构委托美认证机构实施的工厂跟踪检查，对进口打印复印办公设备发起对外贸易国家安全调查。商务部表示，如美方执意出台新的对华限制性措施，中方将进一步反制。</div>
+        </article>
+    </section>
+    
+    <!-- 股市概览 -->
+    <div class="section">
+        <h2 class="section-title">股市概览</h2>
+        <div class="market-overview">
+                <div class="market-card">
+                    <div class="index-name">上证指数</div>
+                    <div class="index-value">3878.43</div>
+                    <div class="index-change up">+1.47%</div>
+                </div>
+                <div class="market-card">
+                    <div class="index-name">深证成指</div>
+                    <div class="index-value">14144.20</div>
+                    <div class="index-change up">+1.86%</div>
+                </div>
+                <div class="market-card">
+                    <div class="index-name">创业板指</div>
+                    <div class="index-value">3535.14</div>
+                    <div class="index-change up">+1.32%</div>
+                </div>
+                <div class="market-card">
+                    <div class="index-name">科创50</div>
+                    <div class="index-value">1693.67</div>
+                    <div class="index-change up">+4.78%</div>
+                </div>
+        </div>
+    </div>
+
+    <!-- 财经要闻 -->
+    <section class="section finance-news">
+        <h2 class="section-title">📊 财经要闻</h2>
+        
+        <article class="news-item" data-news-id="news-1" data-news-title="《"十五五"促进中小企业发展规划》即将发布">
+            <a data-news-id="news-1" href="https://www.163.com/dy/article/L3JSJUSG0519D45U.html" target="_blank">
+                <h3 class="news-title">《"十五五"促进中小企业发展规划》即将发布</h3>
+            </a>
+            <div class="news-meta">中国证券报</div>
+            <div class="ai-summary">工信部会同多个部门联合制定的《"十五五"促进中小企业发展规划》即将发布。专家指出，中小企业是经济活力的重要源泉，是保就业、稳产业链、发展新质生产力的微观基础。预计规划将以促进专精特新中小企业发展为主线，优化发展环境，完善优质中小企业梯度培育体系，构建促进专精特新中小企业发展壮大机制，推动中小企业高质量发展。</div>
+        </article>
+        <article class="news-item" data-news-id="news-2" data-news-title="DeepSeek重启第二轮融资 拟募资500亿元 投前估值约5000亿元">
+            <a data-news-id="news-2" href="https://www.21jingji.com/article/20260805/herald/1b225651d6155037137a1d5f32b03702.html" target="_blank">
+                <h3 class="news-title">DeepSeek重启第二轮融资 拟募资500亿元 投前估值约5000亿元</h3>
+            </a>
+            <div class="news-meta">21世纪经济报道</div>
+            <div class="ai-summary">多名交易人士透露，大模型公司DeepSeek已重启第二轮融资，本轮计划募资500亿元，投前估值约5000亿元，较首轮融资估值3500亿元增长约43%，计划在8月下旬完成签约。DeepSeek今年4月开启首轮融资，6月完成交割500亿元。首轮融资投资方包括国家AI产业投资基金、腾讯、宁德时代、网易、京东等。若第二轮顺利完成，累计募资将超1000亿元。</div>
+        </article>
+        <article class="news-item" data-news-id="news-3" data-news-title="国务院公布修订后《集成电路布图设计保护条例》 20余年来首次系统性修订">
+            <a data-news-id="news-3" href="https://www.moj.gov.cn/pub/sfbgw/zwxxgk/fdzdgknr/fdzdgknrjdhy/202608/t20260803_538210.html" target="_blank">
+                <h3 class="news-title">国务院公布修订后《集成电路布图设计保护条例》 20余年来首次系统性修订</h3>
+            </a>
+            <div class="news-meta">司法部</div>
+            <div class="ai-summary">国务院总理李强签署第842号国务院令，公布修订后的《集成电路布图设计保护条例》，自2026年10月15日起施行。这是该条例2001年施行以来的首次系统性修订，将集成光子、量子等功能集成电路布图设计纳入保护范围，大幅提高侵权赔偿上限，引入诚实信用原则，完善登记审查和权利恢复程序，促进布图设计运用，为半导体国产替代再添法律护盾。</div>
+        </article>
+        <article class="news-item" data-news-id="news-4" data-news-title="量化私募7月遭遇大面积回撤 幻方量化9只产品8只年内收益转负">
+            <a data-news-id="news-4" href="https://finance.eastmoney.com/a/202608053832556813.html" target="_blank">
+                <h3 class="news-title">量化私募7月遭遇大面积回撤 幻方量化9只产品8只年内收益转负</h3>
+            </a>
+            <div class="news-meta">每日经济新闻</div>
+            <div class="ai-summary">私募排排网数据显示，截至7月31日，梁文锋旗下幻方量化9只展示产品中8只年内收益由正转负，9只产品7月单月跌幅全部超20%，最大回撤达22.15%。明汯、九坤、稳博等百亿量化私募同样出现显著回撤。Wind数据显示，1198只股票量化产品7月平均下跌14.60%，正收益占比仅5%。分析人士指出，回撤主因市场风格极致收敛、策略同质化拥挤。</div>
+        </article>
+        <article class="news-item" data-news-id="news-5" data-news-title="2026版国家基药目录发布 首次将创新药纳入遴选范围 共收录794种药品">
+            <a data-news-id="news-5" href="http://stock.finance.sina.com.cn/stock/go.php/vReport_Show/kind/search/rptid/839085180260/index.phtml" target="_blank">
+                <h3 class="news-title">2026版国家基药目录发布 首次将创新药纳入遴选范围 共收录794种药品</h3>
+            </a>
+            <div class="news-meta">证券日报</div>
+            <div class="ai-summary">国家卫健委等三部门公布2026年版国家基本药物目录，时隔8年首次全面更新，收录药品794种，新增116种，16款创新药首次批量入围，含4款国产I类新药。基药目录是公立医院强制配备品种，基层医院配备比例不低于90%，相当于为创新药打开全国公立医院放量通道。业内认为，创新药"上市—医保—基药"三级跳路径正在被打通。</div>
+        </article>
+    </section>
+    
+    <!-- 供应链金融 -->
+    <section class="section supply-news">
+        <h2 class="section-title">⛓️ 供应链金融</h2>
+        
+        <article class="news-item" data-news-id="snews-1" data-news-title="全国首笔药品追溯码无追索权保理业务落地温州 医保数据赋能供应链金融">
+            <a data-news-id="snews-1" href="http://ybj.wenzhou.gov.cn/col/col1659510/art/2026/art_b60e9a8aa6b14ca48a4ec52a4fea12ac.html" target="_blank">
+                <h3 class="news-title">全国首笔药品追溯码无追索权保理业务落地温州 医保数据赋能供应链金融</h3>
+            </a>
+            <div class="news-meta">国家医保局</div>
+            <div class="ai-summary">在温州市医保局推动下，全国首笔基于药品追溯码的无追索权保理业务落地。国药控股温州公司将应收账款转让给招商银行温州分行获921万元融资，银行不保留追索权。平台对涉及的139479个追溯码全链路核验，招商银行给予3亿元保理授信额度。温州90%以上医药主体已接入追溯平台，累计归集2.5亿条追溯数据，准确率超99%。</div>
+        </article>
+        <article class="news-item" data-news-id="snews-2" data-news-title="江西银行落地全行首笔供应链票据线上贴现业务 赋能电子信息产业链">
+            <a data-news-id="snews-2" href="http://zj.xinhuanet.com/20260804/23b3fff037bc4107885ae00f3d236999/c.html" target="_blank">
+                <h3 class="news-title">江西银行落地全行首笔供应链票据线上贴现业务 赋能电子信息产业链</h3>
+            </a>
+            <div class="news-meta">新华网</div>
+            <div class="ai-summary">在中国人民银行江西省分行指导下，江西银行落地全行首笔供应链票据线上贴现业务，赋能省级"专精特新"电子信息龙头企业设备采购。依托票交所基础设施，实现票据签发、背书拆分、线上贴现全流程电子化操作，配套商票保贴业务为上游小微企业打通线上贴现融资通道，实现核心企业信用多级穿透沿链传导。</div>
+        </article>
+        <article class="news-item" data-news-id="snews-3" data-news-title="第12批药品集采开标 多家银行驻场推介集采贷与追溯码贷等供应链金融产品">
+            <a data-news-id="snews-3" href="https://www.cs.com.cn/xwzx/01/2026/07/31/detail_2026073110028437.html" target="_blank">
+                <h3 class="news-title">第12批药品集采开标 多家银行驻场推介集采贷与追溯码贷等供应链金融产品</h3>
+            </a>
+            <div class="news-meta">中国证券报</div>
+            <div class="ai-summary">第12批国家组织药品集中带量采购在上海开标，共纳入65种药品。本次集采新亮点：中国银行、招商银行、浦发银行、上海银行等金融机构驻场布展，集中推介集采贷、管线研发贷、供应链保理、追溯码贷等特色金融产品。银行深度嵌入集采全链条，从中标企业备货扩产到流通企业应收账款管理，提供全流程供应链金融服务，重构医药产业竞争逻辑。</div>
+        </article>
+        <article class="news-item" data-news-id="snews-4" data-news-title="供应链票据平台持续扩容 57家平台接入票交所 业务量突破万亿">
+            <a data-news-id="snews-4" href="https://finance.sina.com.cn/roll/2026-08-02/doc-inikxrzf6672666.shtml" target="_blank">
+                <h3 class="news-title">供应链票据平台持续扩容 57家平台接入票交所 业务量突破万亿</h3>
+            </a>
+            <div class="news-meta">新浪财经</div>
+            <div class="ai-summary">截至2026年6月，获准接入票交所的供应链平台达57家，含33家企业、18家银行、5家财务公司和1家信托公司（首次获准接入）。2025年供应链票据业务总量突破1万亿元，上半年新增8家平台。供应链票据支持按需自由拆分、等额流转，有效减少产业链资金沉淀。2026上半年全市场票据承兑发生额约23万亿元，同比增长15%。</div>
+        </article>
+        <article class="news-item" data-news-id="snews-5" data-news-title="央行加强供应链信息服务平台监管 2.75万亿应收账款电子凭证加速规范化">
+            <a data-news-id="snews-5" href="https://caifuhao.eastmoney.com/news/20260804104402975492620" target="_blank">
+                <h3 class="news-title">央行加强供应链信息服务平台监管 2.75万亿应收账款电子凭证加速规范化</h3>
+            </a>
+            <div class="news-meta">东方财富</div>
+            <div class="ai-summary">央行下半年工作会议明确提出规范应收账款电子凭证业务、加强供应链信息服务平台监管。据中国互联网金融协会数据，一季度末全市场应收电子凭证开立余额2.75万亿元，融资余额2.08万亿元，237家登记机构中24家已退出、15家存量清零。多地开展窗口指导，过渡期截止线设在2027年6月，供应链票据成为承接存量的主要渠道。</div>
+        </article>
+    </section>
+    
+    <!-- 票据利率 -->
+    <div class="section">
+        <div class="bill-rate">
+            <h3>云链直贴业务参考价</h3>
+            <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr><th>承兑行类别</th><th>8月</th><th>9月</th><th>10月</th><th>11月</th><th>12月</th><th>1月(2027)</th><th>2月(2027)</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>国股</td><td>1.10</td><td>0.50</td><td>0.55</td><td>0.55</td><td>0.55</td><td>0.42</td><td>0.42</td></tr><tr><td>大商</td><td>1.50</td><td>0.55</td><td>0.55</td><td>0.55</td><td>0.55</td><td>0.42</td><td>0.42</td></tr><tr><td>一类城农商</td><td>1.50</td><td>0.65</td><td>0.65</td><td>0.65</td><td>0.65</td><td>0.56</td><td>0.56</td></tr><tr><td>二类城农商</td><td>1.60</td><td>0.70</td><td>0.70</td><td>0.68</td><td>0.68</td><td>0.58</td><td>0.58</td></tr><tr><td>其他银行</td><td>1.70</td><td>0.83</td><td>0.83</td><td>0.72</td><td>0.72</td><td>0.60</td><td>0.60</td></tr><tr><td>财司票</td><td>1.50</td><td>0.80</td><td>0.89</td><td>0.89</td><td>0.89</td><td>0.78</td><td>0.77</td></tr><tr><td>商票</td><td>1.00</td><td>1.00</td><td>1.00</td><td>1.00</td><td>1.00</td><td>1.00</td><td>1.00</td></tr>
+                </tbody>
+            </table>
+            </div>
+            <p class="note">*小票适当加点</p>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <p>配图均来自互联网，仅供内部阅读参考。如有版权问题请联系运营团队替换。</p>
+        <p style="margin-top: 8px;">© 2026 财经早报系统 | 数据来源：公开资讯</p>
+    </div>
+
+<script>
+window.__TRACKER_CONFIG__ = { WEBHOOK_URL: "https://open.feishu.cn/open-apis/bot/v2/hook/621a5ea9-5b95-4176-8229-ccf30cdbb683" };
+</script>
+
+<script>
+/**
+ * 扣子早报埋点系统 - 前端采集代码 v8.4
+ * 
+ * 功能：
+ * 1. 批量发送：事件队列，达到3条或6秒自动批量发送
+ * 2. 自动重试：失败后指数退避重试3次
+ * 3. 阅读里程碑：25%/50%/75%/100% 四档记录
+ * 4. 停留时间心跳：每60秒发送heartbeat事件
+ * 5. 设备信息：session内仅发送一次，后续事件不含device字段
+ * 6. 核心指标：新闻曝光、新闻点击、阅读完成度
+ * 
+ * v8.4 变更（2026-06-10）：
+ * - 新增(P2)：DNT（Do Not Track）隐私合规检测，尊重用户浏览器隐私设置
+ * - 新增：dntEnabled 标志，navigator.doNotTrack 为 "1" 或 1 时自动启用
+ * - 新增：sendTracker() 开头增加 DNT 检查，启用时直接跳过所有事件发送
+ * - 新增：全局 API 暴露 isDntEnabled() 方法
+ * - 优化：debug 模式下打印 DNT 状态
+ * 
+ * v8.3 变更（2026-06-10）：
+ * - 修复(P1-3)：beforeunload/visibilitychange hidden 改用 navigator.sendBeacon 发送队列，防止浏览器丢弃异步 fetch
+ * - 修复(P0-2)：新增客户端频率控制，每秒最多 2 次批量请求，防止触发飞书 Webhook 频率限制
+ * - 新增：重试全部失败后，事件缓存至 sessionStorage（键名 tracker_failed_events），下次加载时自动重发
+ * - 优化：batchSize 5→3，batchInterval 10s→6s，缩短窗口期减少数据丢失
+ * - 优化：WEBHOOK_URL 支持从 window.__TRACKER_CONFIG__ 外部注入，移除硬编码依赖
+ * 
+ * v8.2 变更（2026-06-09）：
+ * - 优化：debug模式支持URL参数控制（?debug=1），线上默认关闭，需要时手动开启
+ * 
+ * v8.1 变更（2026-05-26）：
+ * - 修复：heartbeat_time改为活跃时长（仅页面可见时计时），而非累计打开时长
+ * - 修复：page_stay duration改为活跃时长，visibilitychange hidden时不再发送（避免记录过短的切标签页时长）
+ * - 修复：page_stay只在beforeunload时发送，代表完整活跃阅读时长
+ * - 新增：activeTime/lastVisibleTime追踪活跃阅读时间
+ * 
+ * v8.0 变更（2026-05-26）：
+ * - 修复：beforeunload不再重复发送page_stay（检查pageStaySent标记）
+ * - 修复：页面重新可见时重启心跳定时器（之前只发一次不重启）
+ * - 优化：event_type不再编码业务数据（news_id/title），保持纯枚举值
+ * - 优化：设备信息仅session_start事件携带一次，后续事件不含device（减少70%+payload）
+ * - 优化：合并scroll_depth和read_milestone为统一的read_milestone（25/50/75/100四档）
+ * - 优化：新增session_start事件，记录会话开始+设备信息
+ */
+
+(function() {
+    'use strict';
+    
+    /** Tracker配置 */
+    var CONFIG = {
+        // 飞书Webhook地址（必须通过 window.__TRACKER_CONFIG__ 注入，不留默认值）
+        WEBHOOK_URL: '',
+        
+        // 页面标识
+        pageId: '',
+        
+        // 采样率（1=100%）
+        sampleRate: 1,
+        
+        // 是否显示调试信息（URL加 ?debug=1 开启）
+        debug: /[?&]debug=1/i.test(location.search),
+        
+        // 曝光检测阈值（元素进入视口多少比例算曝光）
+        exposureThreshold: 0.5,
+        
+        // 阅读完成度里程碑（合并原readMilestones和scrollDepthStep）
+        readMilestones: [25, 50, 75, 100],
+        
+        // ========== 批量发送配置（v8.3: 缩短窗口期减少丢失） ==========
+        batchSize: 3,
+        batchInterval: 6000,
+        maxRetries: 3,
+        heartbeatInterval: 60000,
+        
+        // ========== 频率控制配置（v8.3: P0-2 加固） ==========
+        maxSendsPerSecond: 2,
+        
+        // ========== 失败事件缓存配置 ==========
+        failedEventsKey: 'tracker_failed_events',
+        failedEventsLimit: 50
+    };
+    
+    // v8.3: 支持从 window.__TRACKER_CONFIG__ 外部注入配置（覆盖 WEBHOOK_URL 等）
+    if (window.__TRACKER_CONFIG__) {
+        var extConfig = window.__TRACKER_CONFIG__;
+        for (var _ck in extConfig) {
+            if (extConfig.hasOwnProperty(_ck)) {
+                CONFIG[_ck] = extConfig[_ck];
+            }
+        }
+    }
+    
+    // v8.3: 校验必须配置项
+    if (!CONFIG.WEBHOOK_URL) {
+        console.warn('[Tracker v8.3] WEBHOOK_URL 未配置！请通过 window.__TRACKER_CONFIG__ 注入。');
+    }
+
+    // 提取页面标识
+    CONFIG.pageId = '早报_' + (document.title.match(/\d{4}年\d+月\d+日/) || [new Date().toISOString().slice(0,10)])[0];
+    
+    // ========== 设备信息（仅session_start时发送一次） ==========
+    var DEVICE_INFO = {
+        screenWidth: window.screen.width,
+        screenHeight: window.screen.height,
+        screenAvailWidth: window.screen.availWidth,
+        screenAvailHeight: window.screen.availHeight,
+        devicePixelRatio: window.devicePixelRatio || 1,
+        userAgent: navigator.userAgent,
+        language: navigator.language || navigator.userLanguage || 'zh-CN',
+        platform: navigator.platform,
+        cookieEnabled: navigator.cookieEnabled,
+        doNotTrack: navigator.doNotTrack,
+        viewportWidth: window.innerWidth,
+        viewportHeight: window.innerHeight
+    };
+    
+    // 用户标识（localStorage持久化）
+    var userId = localStorage.getItem('tracker_user_id');
+    if (!userId) {
+        userId = 'u_' + Math.random().toString(36).substr(2, 9);
+        localStorage.setItem('tracker_user_id', userId);
+    }
+    
+    // 会话标识
+    var sessionId = 's_' + Date.now();
+    var enterTime = Date.now();
+    
+    // v8.1: 活跃时间追踪（只在页面可见时计时）
+    var activeTime = 0;           // 累计活跃时间（毫秒）
+    var lastVisibleTime = Date.now(); // 上次页面变为可见的时间
+    
+    // 状态追踪
+    var exposedNews = new Set(); // 已曝光的新闻ID
+    var recordedMilestones = new Set(); // 已记录的阅读里程碑
+    var deviceInfoSent = false; // 设备信息是否已发送
+    var pageStaySent = false; // page_stay是否已发送（防止重复）
+    
+    // 获取当前活跃时长（秒）
+    function getActiveDuration() {
+        var extra = document.hidden ? 0 : (Date.now() - lastVisibleTime);
+        return Math.floor((activeTime + extra) / 1000);
+    }
+    
+    // ========== 事件队列（批量发送） ==========
+    var eventQueue = [];
+    var lastBatchTime = Date.now();
+    
+    // 定时器ID
+    var batchTimer = null;
+    var heartbeatTimer = null;
+    
+    // ========== v8.3: 频率控制（P0-2 加固，滑动窗口） ==========
+    var sendTimestamps = []; // 记录最近发送时间戳
+    
+    /**
+     * 检查是否超过频率限制（每秒最多 maxSendsPerSecond 次批量请求）
+     */
+    function checkRateLimit() {
+        var now = Date.now();
+        // 清除 1 秒前的时间戳
+        while (sendTimestamps.length > 0 && sendTimestamps[0] <= now - 1000) {
+            sendTimestamps.shift();
+        }
+        return sendTimestamps.length < CONFIG.maxSendsPerSecond;
+    }
+    
+    /**
+     * 记录一次发送时间戳
+     */
+    function recordSend() {
+        sendTimestamps.push(Date.now());
+    }
+    
+    // ========== v8.3: sessionStorage 失败事件缓存 ==========
+    
+    /**
+     * 将失败事件存入 sessionStorage（上限 failedEventsLimit 条，超过丢弃最早的）
+     */
+    function cacheFailedEvents(events) {
+        try {
+            var cached = [];
+            try {
+                cached = JSON.parse(sessionStorage.getItem(CONFIG.failedEventsKey) || '[]');
+            } catch(e) { cached = []; }
+            cached = cached.concat(events);
+            // 超过上限时丢弃最早的事件
+            if (cached.length > CONFIG.failedEventsLimit) {
+                cached = cached.slice(cached.length - CONFIG.failedEventsLimit);
+            }
+            sessionStorage.setItem(CONFIG.failedEventsKey, JSON.stringify(cached));
+            log('Cached', events.length, 'failed events to sessionStorage (total:', cached.length, ')');
+        } catch(e) {
+            log('sessionStorage cache error:', e);
+        }
+    }
+    
+    /**
+     * 从 sessionStorage 读取并重新发送缓存的失败事件
+     */
+    function retryCachedFailedEvents() {
+        try {
+            var cached = JSON.parse(sessionStorage.getItem(CONFIG.failedEventsKey) || '[]');
+            if (cached.length > 0) {
+                sessionStorage.removeItem(CONFIG.failedEventsKey);
+                log('Retrying', cached.length, 'cached failed events');
+                sendBatchWithRetry(cached, 0);
+            }
+        } catch(e) {
+            log('Failed to retry cached events:', e);
+        }
+    }
+    
+    // ========== 工具函数 ==========
+    
+    function log() {
+        if (CONFIG.debug) {
+            console.log('[Tracker v8.3]', Array.prototype.slice.call(arguments));
+        }
+    }
+    
+    /**
+     * 发送埋点数据到飞书Webhook
+     * v8.0: event_type保持纯枚举值，news_id/news_title作为独立字段
+     */
+    function sendTracker(eventType, extraData) {
+        // v8.4: DNT 检查 — 如果用户启用了 Do Not Track，跳过所有事件发送
+        if (dntEnabled) return;
+        
+        if (Math.random() > CONFIG.sampleRate) return;
+        
+        var payload = {
+            page_id: CONFIG.pageId,
+            user_id: userId,
+            session_id: sessionId,
+            event_type: eventType,  // 纯枚举值，不再编码业务数据
+            timestamp: new Date().toISOString(),
+            duration: 0,
+            referrer: document.referrer || '',
+            url: location.href,
+            title: document.title
+        };
+        
+        // session_start事件携带设备信息（仅一次）
+        if (eventType === 'session_start') {
+            payload.device = DEVICE_INFO;
+            deviceInfoSent = true;
+        }
+        
+        // 如果有额外数据，合并到 payload
+        if (extraData) {
+            for (var key in extraData) {
+                if (extraData.hasOwnProperty(key)) {
+                    payload[key] = extraData[key];
+                }
+            }
+        }
+        
+        // 添加到队列
+        eventQueue.push(payload);
+        
+        // 检查是否需要批量发送
+        if (eventQueue.length >= CONFIG.batchSize) {
+            flushEventQueue();
+        } else if (!batchTimer) {
+            batchTimer = setTimeout(flushEventQueue, CONFIG.batchInterval);
+        }
+    }
+    
+    /**
+     * 批量发送事件队列
+     */
+    function flushEventQueue() {
+        if (batchTimer) {
+            clearTimeout(batchTimer);
+            batchTimer = null;
+        }
+        
+        if (eventQueue.length === 0) return;
+        
+        var payloads = eventQueue.splice(0, eventQueue.length);
+        lastBatchTime = Date.now();
+        
+        sendBatchWithRetry(payloads, 0);
+    }
+    
+    /**
+     * 带重试的批量发送（v8.3: 增加频率控制和失败缓存）
+     */
+    function sendBatchWithRetry(payloads, retryCount) {
+        // v8.3: 频率控制检查
+        if (!checkRateLimit()) {
+            log('Rate limit exceeded, deferring send by 500ms');
+            setTimeout(function() {
+                sendBatchWithRetry(payloads, retryCount);
+            }, 500);
+            return;
+        }
+        
+        // v8.0: 精简批量payload，仅包含必要字段
+        var batchPayload = payloads.map(function(p) {
+            var item = {
+                page_id: p.page_id,
+                user_id: p.user_id,
+                session_id: p.session_id,
+                event_type: p.event_type,
+                timestamp: p.timestamp,
+                duration: p.duration,
+                referrer: p.referrer,
+                url: p.url,
+                title: p.title
+            };
+            // 仅session_start事件带device
+            if (p.device) {
+                item.device = p.device;
+            }
+            // 可选字段
+            if (p.news_id) item.news_id = p.news_id;
+            if (p.news_title) item.news_title = p.news_title;
+            if (p.milestone) item.milestone = p.milestone;
+            if (p.heartbeat_time !== undefined) item.heartbeat_time = p.heartbeat_time;
+            if (p.visible !== undefined) item.visible = p.visible;
+            return item;
+        });
+        
+        var webhookBody = {
+            msg_type: 'text',
+            content: {
+                text: JSON.stringify({
+                    batch_type: 'tracker_events',
+                    batch_count: batchPayload.length,
+                    events: batchPayload
+                })
+            }
+        };
+        
+        // v8.3: 记录发送时间戳用于频率控制
+        recordSend();
+        
+        fetch(CONFIG.WEBHOOK_URL, {
+            method: 'POST',
+            headers: { 
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(webhookBody)
+        }).then(function(response) {
+            if (!response.ok) {
+                throw new Error('HTTP ' + response.status);
+            }
+            log('Batch sent successfully:', batchPayload.length, 'events');
+        }).catch(function(error) {
+            log('Batch send error:', error.message);
+            
+            // 指数退避重试
+            if (retryCount < CONFIG.maxRetries) {
+                var delay = Math.pow(2, retryCount) * 1000;
+                log('Retrying in', delay, 'ms (attempt', retryCount + 1, ')');
+                setTimeout(function() {
+                    sendBatchWithRetry(payloads, retryCount + 1);
+                }, delay);
+            } else {
+                // v8.3: 重试全部失败后，缓存到 sessionStorage（替代单条发送，避免彻底丢失）
+                log('Max retries reached, caching to sessionStorage');
+                cacheFailedEvents(payloads);
+            }
+        });
+    }
+    
+    /**
+     * 发送单个事件（后备方案）
+     */
+    function sendSingleEvent(payload) {
+        var webhookBody = {
+            msg_type: 'text',
+            content: {
+                text: JSON.stringify(payload)
+            }
+        };
+        
+        fetch(CONFIG.WEBHOOK_URL, {
+            method: 'POST',
+            headers: { 
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(webhookBody)
+        }).catch(function(e) {
+            log('Single event send error:', e);
+        });
+    }
+    
+    /**
+     * v8.3: 通过 navigator.sendBeacon 发送事件队列（用于 beforeunload/visibilitychange hidden）
+     * sendBeacon 由浏览器保证在页面关闭时也能可靠送达，不会被丢弃
+     */
+    function flushWithBeacon() {
+        if (batchTimer) {
+            clearTimeout(batchTimer);
+            batchTimer = null;
+        }
+        
+        if (eventQueue.length === 0) return;
+        
+        var payloads = eventQueue.splice(0, eventQueue.length);
+        lastBatchTime = Date.now();
+        
+        // 构造与 fetch 相同格式的批量 payload
+        var batchPayload = payloads.map(function(p) {
+            var item = {
+                page_id: p.page_id,
+                user_id: p.user_id,
+                session_id: p.session_id,
+                event_type: p.event_type,
+                timestamp: p.timestamp,
+                duration: p.duration,
+                referrer: p.referrer,
+                url: p.url,
+                title: p.title
+            };
+            if (p.device) item.device = p.device;
+            if (p.news_id) item.news_id = p.news_id;
+            if (p.news_title) item.news_title = p.news_title;
+            if (p.milestone) item.milestone = p.milestone;
+            if (p.heartbeat_time !== undefined) item.heartbeat_time = p.heartbeat_time;
+            if (p.visible !== undefined) item.visible = p.visible;
+            return item;
+        });
+        
+        var webhookBody = {
+            msg_type: 'text',
+            content: {
+                text: JSON.stringify({
+                    batch_type: 'tracker_events',
+                    batch_count: batchPayload.length,
+                    events: batchPayload
+                })
+            }
+        };
+        
+        // v8.3: 频率控制 - sendBeacon 也受频率限制
+        if (!checkRateLimit()) {
+            log('Rate limit exceeded for beacon, caching events');
+            cacheFailedEvents(payloads);
+            return;
+        }
+        recordSend();
+        
+        var blob = new Blob([JSON.stringify(webhookBody)], { type: 'application/json' });
+        var sent = navigator.sendBeacon(CONFIG.WEBHOOK_URL, blob);
+        
+        if (sent) {
+            log('Beacon sent successfully:', batchPayload.length, 'events');
+        } else {
+            log('Beacon send failed, caching to sessionStorage');
+            cacheFailedEvents(payloads);
+        }
+    }
+    
+    // ========== v8.4: DNT（Do Not Track）隐私合规检测 ==========
+    var dntEnabled = (function() {
+        var dnt = navigator.doNotTrack;
+        return dnt === "1" || dnt === 1;
+    })();
+    
+    if (CONFIG.debug) {
+        console.log('[Tracker v8.4] DNT status:', dntEnabled ? 'ENABLED (tracking disabled)' : 'DISABLED (tracking active)');
+    }
+    
+    // ========== 会话开始（携带设备信息） ==========
+    sendTracker('session_start', {});
+    
+    // ========== v8.3: 恢复上次会话缓存的失败事件 ==========
+    retryCachedFailedEvents();
+    
+    // ========== 页面浏览 ==========
+    sendTracker('page_view');
+    
+    // ========== 新闻曝光埋点 ==========
+    var newsItems = document.querySelectorAll('[data-news-id]');
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                var el = entry.target;
+                var newsId = el.dataset.newsId;
+                if (!exposedNews.has(newsId)) {
+                    exposedNews.add(newsId);
+                    sendTracker('news_exposure', {
+                        news_id: newsId,
+                        news_title: el.dataset.newsTitle || ''
+                    });
+                }
+                observer.unobserve(el);
+            }
+        });
+    }, {threshold: CONFIG.exposureThreshold});
+    
+    newsItems.forEach(function(item) {
+        observer.observe(item);
+    });
+    
+    // ========== 新闻点击埋点 ==========
+    document.querySelectorAll('.news-item a, .hot-news a, .headline a').forEach(function(link) {
+        link.addEventListener('click', function() {
+            var parent = link.closest('[data-news-id]');
+            sendTracker('news_click', {
+                news_id: parent ? parent.dataset.newsId : 'unknown',
+                news_title: parent ? parent.dataset.newsTitle : link.textContent.trim()
+            });
+        });
+    });
+    
+    // ========== 阅读里程碑埋点（v8.0: 合并原scroll_depth和read_milestone） ==========
+    var scrollTimer;
+    window.addEventListener('scroll', function() {
+        clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(function() {
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            var scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            if (scrollHeight <= 0) return;
+            var readPercent = Math.round((scrollTop / scrollHeight) * 100);
+            
+            CONFIG.readMilestones.forEach(function(milestone) {
+                if (readPercent >= milestone && !recordedMilestones.has(milestone)) {
+                    recordedMilestones.add(milestone);
+                    sendTracker('read_milestone', { milestone: milestone });
+                }
+            });
+        }, 500);
+    });
+    
+    // ========== 停留时间心跳（v8.1: 使用活跃时长） ==========
+    function sendHeartbeat() {
+        var heartbeatTime = getActiveDuration();
+        sendTracker('heartbeat', { 
+            heartbeat_time: heartbeatTime,
+            visible: !document.hidden
+        });
+        log('Heartbeat sent, active time:', heartbeatTime, 's');
+    }
+    
+    // 页面可见性变化时处理（v8.1: 累积活跃时间，不在hidden时发page_stay）
+    document.addEventListener('visibilitychange', function() {
+        if (document.visibilityState === 'hidden') {
+            // 累积活跃时间：从上次可见到现在的这段时间
+            activeTime += (Date.now() - lastVisibleTime);
+            // v8.3: 通过 sendBeacon 发送队列中的事件（兜底，防止页面随后被关闭）
+            flushWithBeacon();
+            // 停止心跳定时器（节省资源）
+            if (heartbeatTimer) {
+                clearInterval(heartbeatTimer);
+                heartbeatTimer = null;
+            }
+        } else if (document.visibilityState === 'visible') {
+            // 记录页面重新可见的时间点
+            lastVisibleTime = Date.now();
+            // 重启心跳定时器
+            sendHeartbeat();
+            if (!heartbeatTimer) {
+                heartbeatTimer = setInterval(sendHeartbeat, CONFIG.heartbeatInterval);
+            }
+        }
+    });
+    
+    // 启动心跳定时器
+    heartbeatTimer = setInterval(sendHeartbeat, CONFIG.heartbeatInterval);
+    
+    // ========== 页面离开（v8.1: 发送完整活跃时长的page_stay） ==========
+    window.addEventListener('beforeunload', function() {
+        // v8.3: 通过 sendBeacon 发送队列，避免浏览器丢弃异步 fetch
+        flushWithBeacon();
+        
+        // 发送page_stay：完整活跃阅读时长（只在关闭页面时发一次）
+        if (!pageStaySent) {
+            pageStaySent = true;
+            var duration = getActiveDuration();
+            
+            var payload = {
+                page_id: CONFIG.pageId,
+                user_id: userId,
+                session_id: sessionId,
+                event_type: 'page_stay',
+                timestamp: new Date().toISOString(),
+                duration: duration,
+                referrer: document.referrer || '',
+                url: location.href,
+                title: document.title
+            };
+            
+            var webhookBody = {
+                msg_type: 'text',
+                content: {
+                    text: JSON.stringify(payload)
+                }
+            };
+            
+            // v8.3: 必须用 Blob 包装才能以 application/json 发送
+            // 直接传字符串会被浏览器当作 text/plain，飞书 Webhook 会拒绝
+            var blob = new Blob([JSON.stringify(webhookBody)], { type: 'application/json' });
+            navigator.sendBeacon(CONFIG.WEBHOOK_URL, blob);
+        }
+        
+        // 清理定时器
+        if (heartbeatTimer) {
+            clearInterval(heartbeatTimer);
+        }
+        if (batchTimer) {
+            clearTimeout(batchTimer);
+        }
+    });
+    
+    // ========== 全局API暴露 ==========
+    window.MorningBriefTracker = {
+        track: function(event, data) {
+            sendTracker(event, data);
+        },
+        
+        flush: function() {
+            flushEventQueue();
+        },
+        
+        // v8.4: 暴露 DNT 状态查询方法
+        isDntEnabled: function() {
+            return dntEnabled;
+        },
+        
+        getSessionInfo: function() {
+            return {
+                userId: userId,
+                sessionId: sessionId,
+                pageId: CONFIG.pageId,
+                enterTime: new Date(enterTime).toISOString(),
+                duration: Math.floor((Date.now() - enterTime) / 1000)
+            };
+        },
+        
+        getDeviceInfo: function() {
+            return DEVICE_INFO;
+        },
+        
+        getExposedNews: function() {
+            return Array.from(exposedNews);
+        },
+        
+        getReadProgress: function() {
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            var scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            if (scrollHeight <= 0) return 0;
+            return Math.round((scrollTop / scrollHeight) * 100);
+        },
+        
+        getQueueStatus: function() {
+            return {
+                pending: eventQueue.length,
+                lastBatchTime: new Date(lastBatchTime).toISOString()
+            };
+        },
+        
+        setSampleRate: function(rate) {
+            CONFIG.sampleRate = Math.max(0, Math.min(1, rate));
+        },
+        
+        setDebug: function(enabled) {
+            CONFIG.debug = enabled;
+        }
+    };
+    
+    window.MorningBriefTracker.version = '8.4';
+    
+    log('MorningBriefTracker v8.4 initialized');
+})();
+
+</script>
+</body>
+</html>
