@@ -4,67 +4,118 @@
   "copyright_notice": "配图均来自互联网，仅供内部阅读参考。如有版权问题请联系运营团队替换。",
   "headline": {
     "id": "headline-1",
-    "title": "7月份CPI同比上涨0.5% PPI同比上涨3.5%",
-    "title_short": "7月CPI同比涨0.5%",
+    "title": "央行印发\"十五五\"改革发展规划：加快建设金融强国 高质量建设债券市场\"科技板\"",
+    "title_short": "央行印发",
     "source": "",
     "summary": "",
-    "url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260809_1965008.html",
+    "url": "https://www.gov.cn/lianbo/202608/content_7077845.htm",
     "image": "api/images/headline-1.jpg",
     "image_source": "article_original"
   },
   "finance_news": [
     {
       "id": "news-1",
-      "title": "宇树科技今日科创板申购 发行价150.80元/股",
-      "title_short": "宇树科技今日申购",
+      "title": "《煤炭工业发展\"十五五\"规划》印发：到2030年基本建成现代煤炭产业体系",
+      "title_short": "煤炭工业",
       "source": "",
       "summary": "",
-      "url": "https://stcn.com/article/detail/4066023.html",
-      "image": "api/images/news-1.png",
+      "url": "https://www.gov.cn/lianbo/202608/content_7077803.htm",
+      "image": "api/images/news-1.jpg",
       "image_source": "article_original"
     },
     {
       "id": "news-2",
-      "title": "苹果被曝测试长鑫存储芯片 用于iPhone和MacBook",
-      "title_short": "苹果测试长鑫存储芯片",
+      "title": "霍尔木兹海峡通航前景不明 国际油价10日上涨约5%",
+      "title_short": "国际油价大涨约5%",
       "source": "",
       "summary": "",
-      "url": "https://www.cls.cn/detail/2449420",
-      "image": "api/images/news-2.jpg",
-      "image_source": "bing_search"
+      "url": "https://stcn.com/article/detail/4068293.html",
+      "image": "api/images/news-2.png",
+      "image_source": "article_original"
     },
     {
       "id": "news-3",
-      "title": "北京楼市新政落地:非京籍五环内购房社保降至1年",
-      "title_short": "北京楼市限购再松绑",
+      "title": "财政部：中央政府将于8月20日在澳门发行60亿元人民币国债",
+      "title_short": "澳门发行60亿人民币国债",
       "source": "",
       "summary": "",
-      "url": "https://finance.sina.com.cn/jjxw/2026-08-08/doc-inimqimv9829272.shtml",
-      "image": "api/images/news-3.jpg",
-      "image_source": "bing_search"
+      "url": "http://www.mof.gov.cn/zhengwuxinxi/caizhengxinwen/202608/t20260810_3995151.htm",
+      "image": "api/images/news-3.png",
+      "image_source": "article_original"
     },
     {
       "id": "news-4",
-      "title": "央行连续21个月增持黄金 7月增持64万盎司",
-      "title_short": "央行连续21个月增持黄金",
+      "title": "现货黄金突破4400美元/盎司 多路资金买入黄金机构热议\"击球区\"",
+      "title_short": "现货黄金突破4400美元",
       "source": "",
       "summary": "",
-      "url": "https://stcn.com/article/detail/4065949.html",
+      "url": "https://stcn.com/article/detail/4068474.html",
       "image": "api/images/news-4.png",
       "image_source": "article_original"
     },
     {
       "id": "news-5",
-      "title": "寒武纪上半年净利23.11亿元 同比增122.61%",
-      "title_short": "寒武纪业绩大增",
+      "title": "商务部：对原产于墨西哥和美国的进口碧根果作出反倾销初裁",
+      "title_short": "碧根果反倾销初裁落地",
       "source": "",
       "summary": "",
-      "url": "https://finance.eastmoney.com/a/202608083835785747.html",
-      "image": "api/images/news-5.png",
-      "image_source": "article_original"
+      "url": "http://www.mofcom.gov.cn/zfxxgk/fdzdgknr/ztfl/blgg/art/2026/art_f0cc3e3cffab4b0a82e8f79216cc39ea.html",
+      "image": "api/images/news-5.jpg",
+      "image_source": "bing_search"
     }
   ],
-  "supply_news": [],
+  "supply_news": [
+    {
+      "id": "supply-1",
+      "title": "英伟达联手华尔街六巨头筹建5000亿美元AI基础设施融资平台",
+      "title_short": "英伟达5000亿AI融资平台",
+      "source": "",
+      "summary": "",
+      "url": "http://www.cnstock.com/commonDetail/758025?commTag=true",
+      "image": "api/images/supply-1.jpg",
+      "image_source": "bing_search"
+    },
+    {
+      "id": "supply-2",
+      "title": "上海电气获批接入上海票据交易所供应链商票首单业务",
+      "title_short": "上海电气供应链商票首单",
+      "source": "",
+      "summary": "",
+      "url": "https://stcn.com/article/detail/4061320.html",
+      "image": "api/images/supply-2.png",
+      "image_source": "article_original"
+    },
+    {
+      "id": "supply-3",
+      "title": "广东自贸区拟拓展跨境供应链金融 推动数字人民币跨境支付扩容",
+      "title_short": "广东自贸区跨境供应链金融",
+      "source": "",
+      "summary": "",
+      "url": "https://stcn.com/article/detail/4061326.html",
+      "image": "api/images/supply-3.png",
+      "image_source": "article_original"
+    },
+    {
+      "id": "supply-4",
+      "title": "大华银行报告：东盟持续成为中企首选海外布局地 贸易融资增长19%",
+      "title_short": "东盟成中企出海首选地",
+      "source": "",
+      "summary": "",
+      "url": "http://www.cnstock.com/commonDetail/755724",
+      "image": "api/images/supply-4.jpg",
+      "image_source": "bing_search"
+    },
+    {
+      "id": "supply-5",
+      "title": "大宏立供应链融资客户还款逾期 公司或履行1030万元连带担保责任",
+      "title_short": "大宏立供应链融资逾期",
+      "source": "",
+      "summary": "",
+      "url": "https://finance.sina.com.cn/stock/t/2026-08-09/doc-inimtuei5390496.shtml",
+      "image": "api/images/supply-5.jpg",
+      "image_source": "bing_search"
+    }
+  ],
   "bill_rate_note": "",
   "page_url": "https://pkbmw110120.github.io/finance-morning-brief/",
   "archive_url": "https://pkbmw110120.github.io/finance-morning-brief/.html"
