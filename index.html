@@ -260,13 +260,13 @@
             font-size: 12px;
             margin-top: 10px;
         }
-        /* 手机端进一步压缩 */
+        /* 手机端表格滚动适配 */
         @media (max-width: 480px) {
             .bill-rate { padding: 12px; }
-            .bill-rate table { font-size: 12px; }
-            .bill-rate th, .bill-rate td { padding: 6px 3px; }
+            .bill-rate table { font-size: 12px; min-width: 520px; }
+            .bill-rate th, .bill-rate td { padding: 6px 4px; }
             .bill-rate td:first-child,
-            .bill-rate th:first-child { min-width: 60px; font-size: 11px; }
+            .bill-rate th:first-child { min-width: 80px; font-size: 11px; }
         }
 
     </style>
