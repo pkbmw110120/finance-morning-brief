@@ -1,0 +1,71 @@
+{
+  "date": "",
+  "updated_at": "T09:45:00+08:00",
+  "copyright_notice": "配图均来自互联网，仅供内部阅读参考。如有版权问题请联系运营团队替换。",
+  "headline": {
+    "id": "headline-1",
+    "title": "央行发布二季度货币政策执行报告：及时谋划出台务实管用增量政策",
+    "title_short": "央行二季度货政报告：谋划增量政策加大逆周期调节",
+    "source": "",
+    "summary": "",
+    "url": "https://www.cs.com.cn/xwzx/01/2026/08/13/detail_2026081310031015.html",
+    "image": "api/images/headline-1.jpg",
+    "image_source": "article_original"
+  },
+  "finance_news": [
+    {
+      "id": "news-1",
+      "title": "央行首次在月中开展隔夜逆回购操作 每日不超6000亿元",
+      "title_short": "央行首次月中开展隔夜逆回购操作",
+      "source": "",
+      "summary": "",
+      "url": "https://www.cs.com.cn/xwzx/01/2026/08/13/detail_2026081310031014.html",
+      "image": "api/images/news-1.jpg",
+      "image_source": "article_original"
+    },
+    {
+      "id": "news-2",
+      "title": "7月新能源汽车月度新车销量占比首超60% 出口连续两月破百万",
+      "title_short": "新能源汽车销量占比首超60% 出口连破百万",
+      "source": "",
+      "summary": "",
+      "url": "http://www.ce.cn/cysc/newmain/yc/jsxw/202608/t20260813_3144903.shtml",
+      "image": "api/images/news-2.jpg",
+      "image_source": "article_original"
+    },
+    {
+      "id": "news-3",
+      "title": "长江存储NAND闪存出货量首次跻身全球前三 市占率达14%",
+      "title_short": "长江存储NAND出货量首进全球前三",
+      "source": "",
+      "summary": "",
+      "url": "https://www.cls.cn/detail/2452416",
+      "image": "api/images/news-3.jpg",
+      "image_source": "bing_search"
+    },
+    {
+      "id": "news-4",
+      "title": "腾讯Q2营收2047.9亿元同比增11% 算力采购大幅推高资本开支",
+      "title_short": "腾讯Q2营收同比增11% 资本开支大增",
+      "source": "",
+      "summary": "",
+      "url": "https://m.thepaper.cn/newsDetail_forward_33773864",
+      "image": "api/images/news-4.png",
+      "image_source": "bing_search"
+    },
+    {
+      "id": "news-5",
+      "title": "民企再贷款余额约8000亿元 央行加力金融支持民营经济",
+      "title_short": "民企再贷款余额约8000亿 央行加力支持",
+      "source": "",
+      "summary": "",
+      "url": "https://m.huanqiu.com/article/4Sm5hT0MtcE",
+      "image": "api/images/news-5.jpg",
+      "image_source": "article_original"
+    }
+  ],
+  "supply_news": [],
+  "bill_rate_note": "",
+  "page_url": "https://pkbmw110120.github.io/finance-morning-brief/",
+  "archive_url": "https://pkbmw110120.github.io/finance-morning-brief/.html"
+}
