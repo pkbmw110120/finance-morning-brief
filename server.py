@@ -40,7 +40,7 @@ import requests
 BRIEF_BASE_URL = "https://pkbmw110120.github.io/finance-morning-brief"
 
 # 飞书多维表格配置（埋点数据）
-BITABLE_APP_TOKEN = "E9CebRUs0a0bIrsxb0c6b948f44a23"
+BITABLE_APP_TOKEN = "E9CebRUs0a0bIrsxb0zccNMCn4d"
 BITABLE_TABLE_ID = "tbl9KGKukLxSwB0P"
 
 # HTTP 超时（秒）
