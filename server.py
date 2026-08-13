@@ -1348,6 +1348,355 @@ class MCPServer:
 
 
 # ==========================================================================
+# SSE HTTP 传输层
+# ==========================================================================
+
+import uuid
+import threading
+from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+from urllib.parse import urlparse, parse_qs
+
+
+class MCPSSESession:
+    """
+    单个 SSE 客户端会话。
+
+    每个客户端通过 GET /sse 建立一个 SSE 长连接，并获得一个 session_id。
+    客户端通过 POST /messages?session_id=xxx 发送 JSON-RPC 请求，
+    响应通过对应的 SSE 流推送回去。
+    """
+
+    def __init__(self, session_id: str, server: "MCPServer"):
+        self.session_id = session_id
+        self.server = server
+        # 使用队列（list + Condition）实现生产者-消费者模式
+        self._queue: list[str] = []
+        self._cond = threading.Condition()
+        self._alive = True
+
+    def enqueue_message(self, message: dict):
+        """将一条 JSON-RPC 消息（响应/通知）放入队列，等待通过 SSE 发送"""
+        line = json.dumps(message, ensure_ascii=False)
+        with self._cond:
+            if not self._alive:
+                return
+            self._queue.append(line)
+            self._cond.notify()
+
+    def next_event(self) -> str | None:
+        """
+        阻塞等待下一条要发送的 SSE 消息文本。
+        返回 None 表示会话已结束。
+        """
+        with self._cond:
+            while self._alive and not self._queue:
+                self._cond.wait(timeout=15)  # 15 秒心跳间隔
+            if not self._alive and not self._queue:
+                return None
+            line = self._queue.pop(0)
+            return line
+
+    def close(self):
+        """关闭会话，唤醒所有等待者"""
+        with self._cond:
+            self._alive = False
+            self._cond.notify_all()
+        logger.info(f"SSE 会话关闭: {self.session_id}")
+
+    @property
+    def alive(self) -> bool:
+        return self._alive
+
+
+class SSESessionManager:
+    """管理所有 SSE 客户端会话，线程安全"""
+
+    def __init__(self):
+        self._sessions: dict[str, MCPSSESession] = {}
+        self._lock = threading.Lock()
+
+    def create(self, server: "MCPServer") -> MCPSSESession:
+        """创建一个新会话并返回"""
+        session_id = str(uuid.uuid4())
+        session = MCPSSESession(session_id, server)
+        with self._lock:
+            self._sessions[session_id] = session
+        logger.info(f"SSE 会话创建: {session_id}, 当前会话数: {len(self._sessions)}")
+        return session
+
+    def get(self, session_id: str) -> MCPSSESession | None:
+        """根据 ID 获取会话"""
+        with self._lock:
+            return self._sessions.get(session_id)
+
+    def remove(self, session_id: str):
+        """移除会话"""
+        with self._lock:
+            if session_id in self._sessions:
+                del self._sessions[session_id]
+        logger.info(f"SSE 会话移除: {session_id}, 剩余会话数: {len(self._sessions)}")
+
+    def count(self) -> int:
+        with self._lock:
+            return len(self._sessions)
+
+
+# 全局会话管理器（SSE 模式下使用）
+_sse_manager: SSESessionManager | None = None
+_sse_server_instance: "MCPServer | None" = None
+
+
+def _sse_dispatch_request(request: dict, session_id: str) -> dict | None:
+    """
+    将一条 JSON-RPC 请求分发到 MCPServer 处理。
+    如果有响应，通过对应 SSE 会话推送回去。
+    返回 None（通知）或响应 dict。
+    """
+    global _sse_server_instance
+    if _sse_server_instance is None:
+        return None
+
+    response = _sse_server_instance.handle_request(request)
+    if response is not None:
+        session = _sse_manager.get(session_id) if _sse_manager else None
+        if session and session.alive:
+            session.enqueue_message(response)
+    return response
+
+
+class MCPSSERequestHandler(BaseHTTPRequestHandler):
+    """
+    MCP SSE HTTP 请求处理器。
+
+    支持三个端点：
+    - GET  /sse       → 建立 SSE 长连接，发送 endpoint 事件
+    - POST /messages  → 接收 JSON-RPC 请求，通过 SSE 流返回响应
+    - GET  /health    → 健康检查
+    """
+
+    # 覆写日志输出到 stderr
+    def log_message(self, format: str, *args):  # type: ignore[override]
+        logger.info("HTTP %s - %s", self.address_string(), format % args)
+
+    # ---- SSE 端点 ----
+
+    def do_GET(self):
+        parsed = urlparse(self.path)
+        path = parsed.path
+
+        if path == "/sse":
+            self._handle_sse()
+        elif path == "/health":
+            self._handle_health()
+        else:
+            self.send_error(404, "Not Found")
+
+    def do_POST(self):
+        parsed = urlparse(self.path)
+        path = parsed.path
+
+        if path == "/messages":
+            self._handle_messages(parsed)
+        else:
+            self.send_error(404, "Not Found")
+
+    # ---- 处理函数 ----
+
+    def _handle_health(self):
+        """健康检查端点"""
+        body = json.dumps({
+            "status": "ok",
+            "server": SERVER_NAME,
+            "version": SERVER_VERSION,
+            "sessions": _sse_manager.count() if _sse_manager else 0,
+        }, ensure_ascii=False).encode("utf-8")
+        self.send_response(200)
+        self.send_header("Content-Type", "application/json; charset=utf-8")
+        self.send_header("Content-Length", str(len(body)))
+        self.send_header("Access-Control-Allow-Origin", "*")
+        self.end_headers()
+        self.wfile.write(body)
+
+    def _handle_sse(self):
+        """处理 GET /sse，建立 SSE 长连接"""
+        global _sse_manager, _sse_server_instance
+        if _sse_manager is None or _sse_server_instance is None:
+            self.send_error(503, "SSE server not initialized")
+            return
+
+        # 创建会话
+        session = _sse_manager.create(_sse_server_instance)
+        session_id = session.session_id
+
+        # 构造 endpoint URL（客户端用来发请求的地址）
+        # 优先使用客户端请求的 Host 头
+        host = self.headers.get("Host", f"localhost:{self.server.server_port}")
+        scheme = "http"  # SSE 标准协议用 http
+        messages_url = f"{scheme}://{host}/messages?session_id={session_id}"
+
+        # 发送 SSE 响应头
+        self.send_response(200)
+        self.send_header("Content-Type", "text/event-stream; charset=utf-8")
+        self.send_header("Cache-Control", "no-cache, no-transform")
+        self.send_header("Connection", "keep-alive")
+        self.send_header("Access-Control-Allow-Origin", "*")
+        self.send_header("X-Accel-Buffering", "no")  # 禁用反向代理缓冲
+        self.end_headers()
+
+        try:
+            # 1. 发送 endpoint 事件（MCP SSE 协议要求）
+            self._write_sse_event("endpoint", messages_url)
+
+            # 2. 持续从会话队列读取消息并推送
+            while session.alive:
+                line = session.next_event()
+                if line is None:
+                    break
+                # 发送 JSON-RPC 消息事件（默认事件名 message）
+                self._write_sse_message(line)
+
+        except (BrokenPipeError, ConnectionResetError, OSError):
+            logger.info(f"SSE 客户端断开: {session_id}")
+        except Exception as e:
+            logger.exception(f"SSE 连接异常: {session_id}, {e}")
+        finally:
+            session.close()
+            if _sse_manager:
+                _sse_manager.remove(session_id)
+
+    def _handle_messages(self, parsed):
+        """处理 POST /messages，接收 JSON-RPC 请求"""
+        global _sse_manager
+        if _sse_manager is None:
+            self.send_error(503, "SSE server not initialized")
+            return
+
+        # 从 query string 获取 session_id
+        query = parse_qs(parsed.query)
+        session_ids = query.get("session_id", [])
+        if not session_ids:
+            self.send_error(400, "Missing session_id query parameter")
+            return
+        session_id = session_ids[0]
+
+        # 验证会话
+        session = _sse_manager.get(session_id)
+        if session is None or not session.alive:
+            self.send_error(404, "Session not found or closed")
+            return
+
+        # 读取请求体
+        content_length = int(self.headers.get("Content-Length", 0))
+        if content_length <= 0:
+            self.send_error(400, "Empty request body")
+            return
+
+        raw_body = self.rfile.read(content_length)
+        try:
+            body_text = raw_body.decode("utf-8")
+            request = json.loads(body_text)
+        except (UnicodeDecodeError, json.JSONDecodeError) as e:
+            logger.error(f"JSON 解析失败: {e}")
+            error_resp = {
+                "jsonrpc": "2.0",
+                "id": None,
+                "error": {
+                    "code": JsonRpcError.PARSE_ERROR.value,
+                    "message": f"Parse error: {str(e)}",
+                },
+            }
+            body = json.dumps(error_resp, ensure_ascii=False).encode("utf-8")
+            self.send_response(400)
+            self.send_header("Content-Type", "application/json; charset=utf-8")
+            self.send_header("Content-Length", str(len(body)))
+            self.send_header("Access-Control-Allow-Origin", "*")
+            self.end_headers()
+            self.wfile.write(body)
+            return
+
+        logger.debug(f"收到 SSE 请求: {body_text[:200]}")
+
+        # 处理请求（响应通过 SSE 流推送）
+        _sse_dispatch_request(request, session_id)
+
+        # 返回 202 Accepted（请求已接收，响应走 SSE）
+        self.send_response(202)
+        self.send_header("Content-Type", "application/json; charset=utf-8")
+        self.send_header("Content-Length", "0")
+        self.send_header("Access-Control-Allow-Origin", "*")
+        self.end_headers()
+
+    def do_OPTIONS(self):
+        """处理 CORS 预检请求"""
+        self.send_response(204)
+        self.send_header("Access-Control-Allow-Origin", "*")
+        self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
+        self.send_header("Access-Control-Allow-Headers", "Content-Type")
+        self.send_header("Access-Control-Max-Age", "86400")
+        self.end_headers()
+
+    # ---- SSE 写入辅助 ----
+
+    def _write_sse_event(self, event_name: str, data: str):
+        """发送一条命名事件"""
+        payload = f"event: {event_name}\ndata: {data}\n\n"
+        self.wfile.write(payload.encode("utf-8"))
+        self.wfile.flush()
+
+    def _write_sse_message(self, data: str):
+        """发送一条默认 message 事件（JSON-RPC 响应）"""
+        # data 可能是多行 JSON？不，JSON-RPC 消息是单行 JSON
+        payload = f"data: {data}\n\n"
+        self.wfile.write(payload.encode("utf-8"))
+        self.wfile.flush()
+
+
+class SSEMCPServer:
+    """
+    SSE 模式的 MCP Server 包装器。
+
+    启动 HTTP 服务器，管理 SSE 会话，复用 MCPServer 的请求处理逻辑。
+    """
+
+    def __init__(self, server: "MCPServer", host: str = "0.0.0.0", port: int = 8765):
+        self.mcp_server = server
+        self.host = host
+        self.port = port
+        self._http_server: ThreadingHTTPServer | None = None
+
+    def run(self):
+        """启动 SSE HTTP 服务器（阻塞运行）"""
+        global _sse_manager, _sse_server_instance
+        _sse_manager = SSESessionManager()
+        _sse_server_instance = self.mcp_server
+
+        self._http_server = ThreadingHTTPServer(
+            (self.host, self.port),
+            MCPSSERequestHandler,
+        )
+
+        logger.info(
+            f"MCP SSE Server started on {self.host}:{self.port} "
+            f"(SSE endpoint: /sse, Messages endpoint: /messages)"
+        )
+        sys.stderr.flush()
+
+        try:
+            self._http_server.serve_forever()
+        except KeyboardInterrupt:
+            logger.info("收到中断信号，退出 SSE 服务器")
+        except Exception as e:
+            logger.exception(f"SSE 服务器异常: {e}")
+        finally:
+            if self._http_server:
+                self._http_server.server_close()
+            # 清理所有会话
+            if _sse_manager:
+                # 由于 session 可能仍在运行，标记关闭
+                pass
+
+
+# ==========================================================================
 # 工具实现（业务逻辑）
 # ==========================================================================
 
@@ -1563,6 +1912,43 @@ def build_server() -> MCPServer:
     return server
 
 
+def _parse_args():
+    """
+    解析命令行参数。
+    为了最小依赖和 Python 3.9 兼容，手写参数解析（不使用 argparse 也可，
+    但 argparse 是标准库，直接使用更清晰）。
+    """
+    import argparse
+
+    parser = argparse.ArgumentParser(
+        description="财经早报 MCP Server（支持 stdio 和 SSE 两种传输模式）",
+    )
+    parser.add_argument(
+        "--sse",
+        action="store_true",
+        help="以 SSE HTTP 模式启动（默认 stdio 模式）",
+    )
+    parser.add_argument(
+        "--host",
+        type=str,
+        default="0.0.0.0",
+        help="SSE 模式下的监听地址（默认 0.0.0.0）",
+    )
+    parser.add_argument(
+        "--port",
+        type=int,
+        default=8765,
+        help="SSE 模式下的监听端口（默认 8765）",
+    )
+    return parser.parse_args()
+
+
 if __name__ == "__main__":
+    args = _parse_args()
     server = build_server()
-    server.run()
+
+    if args.sse:
+        sse_server = SSEMCPServer(server, host=args.host, port=args.port)
+        sse_server.run()
+    else:
+        server.run()
