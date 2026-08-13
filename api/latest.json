@@ -3,68 +3,68 @@
   "updated_at": "T09:45:00+08:00",
   "copyright_notice": "配图均来自互联网，仅供内部阅读参考。如有版权问题请联系运营团队替换。",
   "headline": {
-    "id": "headline-001",
-    "title": "DR基准利率贷款落地16省份 企业贷款定价进入“LPR+DR”双锚时代",
-    "title_short": "DR基准利率贷款落地16省份",
+    "id": "headline-1",
+    "title": "央行发布二季度货币政策执行报告：及时谋划出台务实管用增量政策",
+    "title_short": "央行二季度货政报告：谋划增量政策加大逆周期调节",
     "source": "",
     "summary": "",
-    "url": "https://www.yicai.com/news/103313968.html",
-    "image": "api/images/headline-001.png",
+    "url": "https://www.cs.com.cn/xwzx/01/2026/08/13/detail_2026081310031015.html",
+    "image": "api/images/headline-1.jpg",
     "image_source": "article_original"
   },
-  "finance_news": [],
-  "supply_news": [
+  "finance_news": [
     {
-      "id": "supply-001",
-      "title": "渤海银行“脱核不脱链”供应链金融破解禽类养殖融资难",
-      "title_short": "渤海银行脱核不脱链供应链金融",
+      "id": "news-1",
+      "title": "央行首次在月中开展隔夜逆回购操作 每日不超6000亿元",
+      "title_short": "央行首次月中开展隔夜逆回购操作",
       "source": "",
       "summary": "",
-      "url": "http://news.hexun.com/2026-08-11/224803695.html",
-      "image": "api/images/supply-001.png",
+      "url": "https://www.cs.com.cn/xwzx/01/2026/08/13/detail_2026081310031014.html",
+      "image": "api/images/news-1.jpg",
+      "image_source": "article_original"
+    },
+    {
+      "id": "news-2",
+      "title": "7月新能源汽车月度新车销量占比首超60% 出口连续两月破百万",
+      "title_short": "新能源汽车销量占比首超60% 出口连破百万",
+      "source": "",
+      "summary": "",
+      "url": "http://www.ce.cn/cysc/newmain/yc/jsxw/202608/t20260813_3144903.shtml",
+      "image": "api/images/news-2.jpg",
+      "image_source": "article_original"
+    },
+    {
+      "id": "news-3",
+      "title": "长江存储NAND闪存出货量首次跻身全球前三 市占率达14%",
+      "title_short": "长江存储NAND出货量首进全球前三",
+      "source": "",
+      "summary": "",
+      "url": "https://www.cls.cn/detail/2452416",
+      "image": "api/images/news-3.jpg",
       "image_source": "bing_search"
     },
     {
-      "id": "supply-002",
-      "title": "含权贸易优化中小贸易商成本管理",
-      "title_short": "含权贸易优化中小贸易商成本管理",
+      "id": "news-4",
+      "title": "腾讯Q2营收2047.9亿元同比增11% 算力采购大幅推高资本开支",
+      "title_short": "腾讯Q2营收同比增11% 资本开支大增",
       "source": "",
       "summary": "",
-      "url": "https://www.stcn.com/article/detail/4021929.html",
-      "image": "api/images/supply-002.png",
-      "image_source": "article_original"
+      "url": "https://m.thepaper.cn/newsDetail_forward_33773864",
+      "image": "api/images/news-4.png",
+      "image_source": "bing_search"
     },
     {
-      "id": "supply-003",
-      "title": "风险管理公司上半年利润大增 场外衍生品业务同比增62%",
-      "title_short": "风险管理公司上半年利润大增",
+      "id": "news-5",
+      "title": "民企再贷款余额约8000亿元 央行加力金融支持民营经济",
+      "title_short": "民企再贷款余额约8000亿 央行加力支持",
       "source": "",
       "summary": "",
-      "url": "https://www.stcn.com/article/detail/4048150.html",
-      "image": "api/images/supply-003.png",
-      "image_source": "article_original"
-    },
-    {
-      "id": "supply-004",
-      "title": "破解小币种跨境结算繁难 银行组合拳赋能外贸企业出海",
-      "title_short": "破解小币种跨境结算繁难",
-      "source": "",
-      "summary": "",
-      "url": "https://stcn.com/article/detail/4068376.html",
-      "image": "api/images/supply-004.png",
-      "image_source": "article_original"
-    },
-    {
-      "id": "supply-005",
-      "title": "上港集团、亿通国际等合资成立数智航贸供应链管理公司",
-      "title_short": "上港集团亿通国际等合资成立数智航贸",
-      "source": "",
-      "summary": "",
-      "url": "https://stcn.com/article/detail/4057101.html",
-      "image": "api/images/supply-005.png",
+      "url": "https://m.huanqiu.com/article/4Sm5hT0MtcE",
+      "image": "api/images/news-5.jpg",
       "image_source": "article_original"
     }
   ],
+  "supply_news": [],
   "bill_rate_note": "",
   "page_url": "https://pkbmw110120.github.io/finance-morning-brief/",
   "archive_url": "https://pkbmw110120.github.io/finance-morning-brief/.html"
