@@ -549,7 +549,7 @@ window.__TRACKER_CONFIG__ = { WEBHOOK_URL: "https://open.feishu.cn/open-apis/bot
     
     // v8.3: 校验必须配置项
     if (!CONFIG.WEBHOOK_URL) {
-        console.warn('[Tracker v8.3] WEBHOOK_URL 未配置！请通过 window.__TRACKER_CONFIG__ 注入。');
+        console.warn('[Tracker v8.5] WEBHOOK_URL 未配置！请通过 window.__TRACKER_CONFIG__ 注入。');
     }
 
     // 提取页面标识
@@ -671,7 +671,7 @@ window.__TRACKER_CONFIG__ = { WEBHOOK_URL: "https://open.feishu.cn/open-apis/bot
     
     function log() {
         if (CONFIG.debug) {
-            console.log('[Tracker v8.3]', Array.prototype.slice.call(arguments));
+            console.log('[Tracker v8.5]', Array.prototype.slice.call(arguments));
         }
     }
     
@@ -920,7 +920,7 @@ window.__TRACKER_CONFIG__ = { WEBHOOK_URL: "https://open.feishu.cn/open-apis/bot
     })();
     
     if (CONFIG.debug) {
-        console.log('[Tracker v8.4] DNT status:', dntEnabled ? 'ENABLED (tracking disabled)' : 'DISABLED (tracking active)');
+        console.log('[Tracker v8.5] DNT status:', dntEnabled ? 'ENABLED (tracking disabled)' : 'DISABLED (tracking active)');
     }
     
     // ========== 会话开始（携带设备信息） ==========
