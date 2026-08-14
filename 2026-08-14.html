@@ -547,8 +547,8 @@ window.__TRACKER_CONFIG__ = { WEBHOOK_URL: "https://open.feishu.cn/open-apis/bot
         console.warn('[Tracker v8.3] WEBHOOK_URL 未配置！请通过 window.__TRACKER_CONFIG__ 注入。');
     }
 
-    // 提取页面标识
-    CONFIG.pageId = '早报_' + (document.title.match(/\d{4}年\d+月\d+日/) || [new Date().toISOString().slice(0,10)])[0];
+    // 提取页面标识（兼容 dash 格式 "2026-08-14" 和中文格式 "2026年8月14日"）
+    CONFIG.pageId = '早报_' + (document.title.match(/\d{4}-\d{2}-\d{2}/) || document.title.match(/\d{4}年\d+月\d+日/) || [new Date().toISOString().slice(0,10)])[0];
     
     // ========== 设备信息（仅session_start时发送一次） ==========
     var DEVICE_INFO = {
