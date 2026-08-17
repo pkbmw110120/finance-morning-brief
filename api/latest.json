@@ -4,116 +4,116 @@
   "copyright_notice": "配图均来自互联网，仅供内部阅读参考。如有版权问题请联系运营团队替换。",
   "headline": {
     "id": "headline-1",
-    "title": "央行将开展1万亿元买断式逆回购操作 6个月期等量续作",
-    "title_short": "央行开展万亿买断式逆回购",
+    "title": "国新办今日15时举行新闻发布会 介绍2026年7月国民经济运行情况",
+    "title_short": "国新办今日发布7月经济数据",
     "source": "",
     "summary": "",
-    "url": "http://www.gd.xinhuanet.com/20260814/c962b8a9ed9b4775ba552bfd62dac15a/c.html",
+    "url": "http://www.xinhuanet.com/fortune/20260817/cff8d36526f340a683ad5e118e83261a/c.html",
     "image": "api/images/headline-1.jpg",
-    "image_source": "bing_search"
+    "image_source": "article_original"
   },
   "finance_news": [
     {
       "id": "news-1",
-      "title": "长鑫科技市值超越腾讯 成A+H股市值最高上市公司",
-      "title_short": "长鑫科技市值超腾讯",
+      "title": "央行、外汇局：跨国公司本外币跨境资金集中运营业务全国推广",
+      "title_short": "跨境资金集中运营全国推广",
       "source": "",
       "summary": "",
-      "url": "https://36kr.com/p/3938066101582978",
+      "url": "http://finance.cnr.cn/gundong/20260815/t20260815_527763233.shtml",
       "image": "api/images/news-1.jpg",
-      "image_source": "bing_search"
-    },
-    {
-      "id": "news-2",
-      "title": "美股标普500指数创收盘历史新高 存储板块大涨",
-      "title_short": "标普500创收盘历史新高",
-      "source": "",
-      "summary": "",
-      "url": "https://www.thepaper.cn/newsDetail_forward_33780622",
-      "image": "api/images/news-2.png",
       "image_source": "article_original"
     },
     {
-      "id": "news-3",
-      "title": "MSCI中国指数8月审议结果公布 新纳入智谱等33只股票",
-      "title_short": "MSCI中国指数新纳入33股",
+      "id": "news-2",
+      "title": "财政部等四部门：明确集成电路、工业母机企业非货币性资产交换所得税优惠",
+      "title_short": "集成电路等企业所得税优惠明确",
       "source": "",
       "summary": "",
-      "url": "https://www.cls.cn/detail/2452986",
-      "image": "",
-      "image_source": ""
+      "url": "http://adimg.ce.cn/xwzx/gnsz/gdxw/202608/t20260815_3148617.shtml",
+      "image": "api/images/news-2.jpg",
+      "image_source": "bing_search"
+    },
+    {
+      "id": "news-3",
+      "title": "国内成品油价格下调 汽柴油每吨分别降230元和220元",
+      "title_short": "成品油价格年内第五次下调",
+      "source": "",
+      "summary": "",
+      "url": "http://www.ce.cn/xwzx/gnsz/gdxw/202608/t20260814_3148181.shtml",
+      "image": "api/images/news-3.png",
+      "image_source": "article_original"
     },
     {
       "id": "news-4",
-      "title": "DeepSeek宣布API峰谷定价 8月17日起生效",
-      "title_short": "DeepSeek API峰谷定价",
+      "title": "金融监管总局：上半年商业银行净利润1.2万亿元 净息差四年来首次企稳",
+      "title_short": "银行净利企稳 息差回升",
       "source": "",
       "summary": "",
-      "url": "http://news.ycwb.com/ikimvkctjh/content_54268207.htm",
+      "url": "http://m.gxfin.com/article/finance/default/default/2026-08-17/6320851.html",
       "image": "api/images/news-4.jpg",
       "image_source": "bing_search"
     },
     {
       "id": "news-5",
-      "title": "宇树科技发布IPO发行结果 中签率创科创板历史新低",
-      "title_short": "宇树科技IPO发行结果",
+      "title": "A股积极因素持续汇聚 产业资本增持回购力度加大",
+      "title_short": "A股积极因素持续汇聚",
       "source": "",
       "summary": "",
-      "url": "https://36kr.com/p/3938602872683907",
-      "image": "api/images/news-5.jpg",
-      "image_source": "bing_search"
+      "url": "https://m.jrj.com.cn/madapter/finance/2026/08/14151658111435.shtml",
+      "image": "api/images/news-5.png",
+      "image_source": "article_original"
     }
   ],
   "supply_news": [
     {
       "id": "supply-1",
-      "title": "广东首家地方国资供应链票据平台华发\"粤融易\"上线",
-      "title_short": "华发粤融易供票平台上线",
+      "title": "广东首个国资供应链票据平台\"粤融易\"上线 大湾区产业链融资迎新解法",
+      "title_short": "粤融易供票平台正式上线",
       "source": "",
       "summary": "",
-      "url": "https://finance.eastmoney.com/a/202608133840748128.html",
+      "url": "https://c.m.163.com/news/a/L4ABU4FF0518IJ4K.html",
       "image": "api/images/supply-1.png",
       "image_source": "article_original"
     },
     {
       "id": "supply-2",
-      "title": "渤海银行数字供应链金融破解纺织小微融资难题",
-      "title_short": "渤海银行供应链金融创新",
+      "title": "广州海珠发布广东首个\"Token贷\" 以词元消耗数据为AI企业授信",
+      "title_short": "Token贷为AI企业创新授信",
       "source": "",
       "summary": "",
-      "url": "http://finance.eastmoney.com/a/202608063833862515.html",
-      "image": "api/images/supply-2.png",
+      "url": "https://www.nfnews.com/content/Ko7DGAqqye.html",
+      "image": "api/images/supply-2.jpg",
       "image_source": "article_original"
     },
     {
       "id": "supply-3",
-      "title": "上海十五五规划：推动数字人民币在供应链金融等场景创新应用",
-      "title_short": "上海规划供应链金融创新",
+      "title": "有限追索供应链票据多地破冰 破解中小企业账款拖欠难题",
+      "title_short": "有限追索供票多地落地",
       "source": "",
       "summary": "",
-      "url": "https://www.thepaper.cn/newsDetail_forward_33770473",
-      "image": "api/images/supply-3.jpg",
+      "url": "https://xxsb.gz-cmc.com/pages/2026/08/14/be3901193b48481eb9c4bb009125a902.html",
+      "image": "api/images/supply-3.png",
       "image_source": "article_original"
     },
     {
       "id": "supply-4",
-      "title": "央行\"十五五\"规划：拓展宏观审慎管理 推进数字金融发展",
-      "title_short": "央行十五五金融规划出台",
+      "title": "工信部发布安全应急装备\"十五五\"规划 2030年产业规模达1.4万亿元",
+      "title_short": "安全应急装备规划出炉",
       "source": "",
       "summary": "",
-      "url": "http://fund.eastmoney.com/a/202608133840280550.html",
-      "image": "api/images/supply-4.png",
+      "url": "https://www.gov.cn/lianbo/202608/content_7078000.htm",
+      "image": "api/images/supply-4.jpg",
       "image_source": "article_original"
     },
     {
       "id": "supply-5",
-      "title": "联易融AI实践案例：供应链金融有了\"眼睛\"和\"大脑\"",
-      "title_short": "联易融AI赋能供应链金融",
+      "title": "渤海银行成都分行供应链金融创新 2个工作日为小微企业放款百万",
+      "title_short": "供应链金融2天放款百万",
       "source": "",
       "summary": "",
-      "url": "https://www.cls.cn/subject/7733",
+      "url": "https://finance.eastmoney.com/a/202608143841742126.html",
       "image": "api/images/supply-5.jpg",
-      "image_source": "bing_search"
+      "image_source": "article_original"
     }
   ],
   "bill_rate_note": "",
