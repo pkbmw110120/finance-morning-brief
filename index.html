@@ -446,10 +446,6 @@
     </div>
 
 <script>
-window.__TRACKER_CONFIG__ = { WEBHOOK_URL: "https://open.feishu.cn/open-apis/bot/v2/hook/621a5ea9-5b95-4176-8229-ccf30cdbb683" };
-</script>
-
-<script>
 /**
  * 扣子早报埋点系统 - 前端采集代码 v8.5
  * 
@@ -538,12 +534,17 @@ window.__TRACKER_CONFIG__ = { WEBHOOK_URL: "https://open.feishu.cn/open-apis/bot
     };
     
     // v8.3: 支持从 window.__TRACKER_CONFIG__ 外部注入配置（覆盖 WEBHOOK_URL 等）
+    // v8.5: 支持 _WEBHOOK_URL_B64（base64编码），防止源码中明文暴露webhook地址
     if (window.__TRACKER_CONFIG__) {
         var extConfig = window.__TRACKER_CONFIG__;
         for (var _ck in extConfig) {
             if (extConfig.hasOwnProperty(_ck)) {
                 CONFIG[_ck] = extConfig[_ck];
             }
+        }
+        // base64 编码的 webhook URL 优先解码
+        if (extConfig._WEBHOOK_URL_B64) {
+            try { CONFIG.WEBHOOK_URL = atob(extConfig._WEBHOOK_URL_B64); } catch(e) { console.warn('[Tracker] WEBHOOK_URL_B64 decode failed'); }
         }
     }
     
