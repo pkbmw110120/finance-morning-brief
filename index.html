@@ -451,7 +451,7 @@ window.__TRACKER_CONFIG__ = { WEBHOOK_URL: "https://open.feishu.cn/open-apis/bot
 
 <script>
 /**
- * 扣子早报埋点系统 - 前端采集代码 v8.4
+ * 扣子早报埋点系统 - 前端采集代码 v8.5
  * 
  * 功能：
  * 1. 批量发送：事件队列，达到3条或6秒自动批量发送
@@ -460,6 +460,13 @@ window.__TRACKER_CONFIG__ = { WEBHOOK_URL: "https://open.feishu.cn/open-apis/bot
  * 4. 停留时间心跳：每60秒发送heartbeat事件
  * 5. 设备信息：session内仅发送一次，后续事件不含device字段
  * 6. 核心指标：新闻曝光、新闻点击、阅读完成度
+ * 
+ * v8.5 变更（2026-08-17）：
+ * - 修复(P1-3)：曝光检测阈值 0.5→0.1，移动端快速滚动时减少漏曝光，提升CTR配对准确率
+ * - 修复(P2-1)：新增爬虫/机器人流量过滤（UA检测+referrer检测），拦截weixin110等爬虫
+ * - 修复(P2-2)：去重key从秒级改为60秒桶，防止快速连点误判（影响feishu_utils.py）
+ * - 优化(P2-4)：心跳间隔 60s→120s，减半事件量，停留时长精度仍足够
+ * - 标注(P2-5)：UV基于localStorage，跨设备/清缓存场景有膨胀局限，已添加注释
  * 
  * v8.4 变更（2026-06-10）：
  * - 新增(P2)：DNT（Do Not Track）隐私合规检测，尊重用户浏览器隐私设置
@@ -510,8 +517,8 @@ window.__TRACKER_CONFIG__ = { WEBHOOK_URL: "https://open.feishu.cn/open-apis/bot
         // 是否显示调试信息（URL加 ?debug=1 开启）
         debug: /[?&]debug=1/i.test(location.search),
         
-        // 曝光检测阈值（元素进入视口多少比例算曝光）
-        exposureThreshold: 0.5,
+        // 曝光检测阈值（v8.5: 0.5→0.1，移动端滚动快，低阈值减少漏曝光，提升CTR配对率）
+        exposureThreshold: 0.1,
         
         // 阅读完成度里程碑（合并原readMilestones和scrollDepthStep）
         readMilestones: [25, 50, 75, 100],
@@ -520,7 +527,7 @@ window.__TRACKER_CONFIG__ = { WEBHOOK_URL: "https://open.feishu.cn/open-apis/bot
         batchSize: 3,
         batchInterval: 6000,
         maxRetries: 3,
-        heartbeatInterval: 60000,
+        heartbeatInterval: 120000,  // v8.5: 60s→120s，减半心跳事件量，停留精度仍足够
         
         // ========== 频率控制配置（v8.3: P0-2 加固） ==========
         maxSendsPerSecond: 2,
@@ -565,6 +572,9 @@ window.__TRACKER_CONFIG__ = { WEBHOOK_URL: "https://open.feishu.cn/open-apis/bot
     };
     
     // 用户标识（localStorage持久化）
+    // v8.5 已知局限 (P2-5)：基于 localStorage + 随机ID，无法跨设备/跨浏览器追踪同一用户。
+    // 清除缓存后会被重新计数为新用户。UV 数据存在一定程度的"膨胀"（同一物理用户可能被计为多个UV）。
+    // 对于早报场景（主要通过固定设备访问），影响较小，暂不升级为服务端指纹方案。
     var userId = localStorage.getItem('tracker_user_id');
     if (!userId) {
         userId = 'u_' + Math.random().toString(36).substr(2, 9);
@@ -910,8 +920,40 @@ window.__TRACKER_CONFIG__ = { WEBHOOK_URL: "https://open.feishu.cn/open-apis/bot
         return dnt === "1" || dnt === 1;
     })();
     
+    // ========== v8.5: 爬虫/机器人流量过滤 (P2-1) ==========
+    var isBot = (function() {
+        var ua = (navigator.userAgent || '').toLowerCase();
+        var botPatterns = [
+            'bot', 'crawl', 'spider', 'slurp', 'mediapartners',
+            'weixin110', 'micromessenger',                    // 微信安全爬虫
+            'facebookexternalhit', 'twitterbot', 'linkedinbot', // 社交分享爬虫
+            'whatsapp', 'telegrambot', 'discordbot',
+            'googlebot', 'bingbot', 'baiduspider', 'yandexbot', // 搜索引擎
+            'applebot', 'duckduckbot', 'sogou', '360spider',
+            'semrushbot', 'ahrefsbot', 'mj12bot', 'dotbot',
+            'headlesschrome', 'phantomjs', 'puppeteer',        // 无头浏览器
+            'lighthouse', 'pagespeed', 'gtmetrix',             // 性能检测工具
+            'curl', 'wget', 'python-requests', 'httpclient'    // HTTP 客户端库
+        ];
+        for (var i = 0; i < botPatterns.length; i++) {
+            if (ua.indexOf(botPatterns[i]) !== -1) return true;
+        }
+        // 额外检查：referrer 含已知爬虫来源
+        var ref = (document.referrer || '').toLowerCase();
+        if (ref.indexOf('weixin110.qq.com') !== -1) return true;
+        return false;
+    })();
+    
     if (CONFIG.debug) {
-        console.log('[Tracker v8.4] DNT status:', dntEnabled ? 'ENABLED (tracking disabled)' : 'DISABLED (tracking active)');
+        console.log('[Tracker v8.5] DNT status:', dntEnabled ? 'ENABLED (tracking disabled)' : 'DISABLED (tracking active)');
+        console.log('[Tracker v8.5] Bot detection:', isBot ? 'BOT detected (tracking disabled)' : 'Normal user');
+    }
+    
+    // 如果是爬虫，直接跳过所有采集
+    if (isBot) {
+        if (CONFIG.debug) console.log('[Tracker v8.5] Skipping all tracking for bot traffic');
+        window.MorningBriefTracker = { track: function(){}, flush: function(){}, isDntEnabled: function(){ return dntEnabled; }, isBot: function(){ return true; } };
+        return;
     }
     
     // ========== 会话开始（携带设备信息） ==========
@@ -1112,9 +1154,9 @@ window.__TRACKER_CONFIG__ = { WEBHOOK_URL: "https://open.feishu.cn/open-apis/bot
         }
     };
     
-    window.MorningBriefTracker.version = '8.4';
+    window.MorningBriefTracker.version = '8.5';
     
-    log('MorningBriefTracker v8.4 initialized');
+    log('MorningBriefTracker v8.5 initialized');
 })();
 
 </script>
