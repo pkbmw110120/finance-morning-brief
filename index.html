@@ -973,7 +973,8 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
             headers: { 
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(webhookBody)
+            body: JSON.stringify(webhookBody),
+            keepalive: true
         }).then(function(response) {
             if (!response.ok) {
                 throw new Error('HTTP ' + response.status);
@@ -1045,7 +1046,8 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
             headers: { 
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(webhookBody)
+            body: JSON.stringify(webhookBody),
+            keepalive: true
         }).catch(function(e) {
             log('Single event send error:', e);
         });
@@ -1487,12 +1489,16 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
                     }
                 };
                 
-                // 用 sendBeacon 发送，浏览器保证尽可能送达
-                if (navigator.sendBeacon) {
-                    var stayBlob = new Blob([JSON.stringify(stayWebhookBody)], { type: 'application/json' });
-                    navigator.sendBeacon(CONFIG.WEBHOOK_URL, stayBlob);
-                } else {
-                    // 兜底：fallback 到普通 fetch
+                // v8.9-fix: 改用 fetch + keepalive（飞书 webhook 实测丢弃 sendBeacon 请求，
+                // 导致 page_stay 长期恒为 0；keepalive fetch 是普通 POST，飞书可正常接收且页面 hidden 时可靠送达）
+                try {
+                    fetch(CONFIG.WEBHOOK_URL, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(stayWebhookBody),
+                        keepalive: true
+                    });
+                } catch (e) {
                     sendSingleEvent(stayPayload);
                 }
             }
