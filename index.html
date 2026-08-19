@@ -854,7 +854,7 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
         };
         
         // session_start事件携带设备信息（仅一次）
-        if (eventType === 'session_start') {
+        if (eventType === 'session_start' || eventType === 'page_view') {
             payload.device = DEVICE_INFO;
             // v8.7 P6: session_start 携带渠道来源
             payload.channel_source = CHANNEL_SOURCE;
@@ -1657,8 +1657,4 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
     window.MorningBriefTracker.version = '8.8';
     
     log('MorningBriefTracker v8.8 initialized');
-})();
-
-</script>
-</body>
-</html>
+})(
