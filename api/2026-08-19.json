@@ -1,0 +1,71 @@
+{
+  "date": "",
+  "updated_at": "T09:45:00+08:00",
+  "copyright_notice": "配图均来自互联网，仅供内部阅读参考。如有版权问题请联系运营团队替换。",
+  "headline": {
+    "id": "headline-1",
+    "title": "国务院修改住房公积金管理条例 租房提取取消收入比例门槛",
+    "title_short": "国务院修改住房公积金条例",
+    "source": "",
+    "summary": "",
+    "url": "https://www.gov.cn/zhengce/202608/content_7078510.htm",
+    "image": "api/images/headline-1.jpg",
+    "image_source": "article_original"
+  },
+  "finance_news": [],
+  "supply_news": [
+    {
+      "id": "supply-1",
+      "title": "有限追索供应链票据多地破冰 化解中小企业账款拖欠难题",
+      "title_short": "有限追供票多地破冰",
+      "source": "",
+      "summary": "",
+      "url": "https://www.cnstock.com/commonDetail/755821",
+      "image": "api/images/supply-1.jpg",
+      "image_source": "bing_search"
+    },
+    {
+      "id": "supply-2",
+      "title": "广东首家地方国资供应链票据平台\"粤融易\"在横琴上线",
+      "title_short": "粤融易供票平台上线",
+      "source": "",
+      "summary": "",
+      "url": "https://www.cls.cn/detail/2454538",
+      "image": "api/images/supply-2.jpg",
+      "image_source": "bing_search"
+    },
+    {
+      "id": "supply-3",
+      "title": "九江银行落地\"供应链票据+电费支付\"创新场景",
+      "title_short": "九江银行电费票据创新",
+      "source": "",
+      "summary": "",
+      "url": "http://jx.people.com.cn/n2/2026/0818/c186330-41671006.html",
+      "image": "api/images/supply-3.png",
+      "image_source": "article_original"
+    },
+    {
+      "id": "supply-4",
+      "title": "上海推动数字人民币在供应链金融场景创新应用",
+      "title_short": "上海数字人民币供应链金融",
+      "source": "",
+      "summary": "",
+      "url": "http://www.cnstock.com/commonDetail/758263",
+      "image": "api/images/supply-4.jpg",
+      "image_source": "bing_search"
+    },
+    {
+      "id": "supply-5",
+      "title": "广东首发词元经济专项金融产品 \"Token贷\"赋能算力中小企业",
+      "title_short": "Token贷赋能中小企业",
+      "source": "",
+      "summary": "",
+      "url": "https://m.yicai.com/brief/103318670.html",
+      "image": "api/images/supply-5.png",
+      "image_source": "article_original"
+    }
+  ],
+  "bill_rate_note": "",
+  "page_url": "https://pkbmw110120.github.io/finance-morning-brief/",
+  "archive_url": "https://pkbmw110120.github.io/finance-morning-brief/.html"
+}
