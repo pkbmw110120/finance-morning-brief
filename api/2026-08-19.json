@@ -12,7 +12,58 @@
     "image": "api/images/headline-1.jpg",
     "image_source": "article_original"
   },
-  "finance_news": [],
+  "finance_news": [
+    {
+      "id": "news-1",
+      "title": "九部门发文活跃县域消费 6方面18条措施激发下沉市场活力",
+      "title_short": "九部门活跃县域消费",
+      "source": "",
+      "summary": "",
+      "url": "https://www.gov.cn/lianbo/202608/content_7078445.htm",
+      "image": "api/images/news-1.jpg",
+      "image_source": "article_original"
+    },
+    {
+      "id": "news-2",
+      "title": "宇树科技今日登陆科创板 A股\"人形机器人第一股\"来了",
+      "title_short": "宇树科技科创板上市",
+      "source": "",
+      "summary": "",
+      "url": "https://www.jiemian.com/article/14942568.html",
+      "image": "api/images/news-2.jpg",
+      "image_source": "article_original"
+    },
+    {
+      "id": "news-3",
+      "title": "央行开展3274亿元隔夜逆回购操作 今日净回笼1423亿元",
+      "title_short": "央行公开市场操作",
+      "source": "",
+      "summary": "",
+      "url": "https://www.jiemian.com/article/14944520.html",
+      "image": "api/images/news-3.gif",
+      "image_source": "article_original"
+    },
+    {
+      "id": "news-4",
+      "title": "储能产业链全线涨价 多企业发布调价函幅度最高达30%",
+      "title_short": "储能产业链涨价",
+      "source": "",
+      "summary": "",
+      "url": "https://www.cls.cn/detail/2457818",
+      "image": "api/images/news-4.jpg",
+      "image_source": "bing_search"
+    },
+    {
+      "id": "news-5",
+      "title": "前7个月工业机器人产量同比增长28.5% 机器人产业持续高景气",
+      "title_short": "机器人产量高增长",
+      "source": "",
+      "summary": "",
+      "url": "https://caifuhao.eastmoney.com/news/20260819083649682982620",
+      "image": "api/images/news-5.jpg",
+      "image_source": "article_original"
+    }
+  ],
   "supply_news": [
     {
       "id": "supply-1",
