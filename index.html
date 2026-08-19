@@ -423,10 +423,10 @@
                 <div class="table-wrapper">
                 <table>
                     <thead>
-                        <tr><th>银行大类</th><th>8月</th><th>9月</th><th>10月</th><th>11月</th><th>12月</th><th>1月</th><th>2月</th></tr>
+                        <tr><th>承兑行类别</th><th>2026.08</th><th>2026.09</th><th>2026.10</th><th>2026.11</th><th>2026.12</th><th>2027.01</th><th>2027.02</th></tr>
                     </thead>
                     <tbody>
-                        <tr><td>国股</td><td>1.10</td><td>0.50</td><td>0.55</td><td>0.55</td><td>0.55</td><td>0.50</td><td>0.46</td></tr><tr><td>大商</td><td>1.10</td><td>0.50</td><td>0.55</td><td>0.55</td><td>0.55</td><td>0.50</td><td>0.46</td></tr><tr><td>一类城农商</td><td>1.10</td><td>0.55</td><td>0.59</td><td>0.56</td><td>0.56</td><td>0.53</td><td>0.53</td></tr><tr><td>二类城农商</td><td>1.35</td><td>0.60</td><td>0.60</td><td>0.60</td><td>0.58</td><td>0.56</td><td>0.58</td></tr><tr><td>其他银行</td><td>1.25</td><td>0.61</td><td>0.61</td><td>0.61</td><td>0.60</td><td>0.60</td><td>0.60</td></tr><tr><td>财司</td><td>1.40</td><td>0.825</td><td>0.81</td><td>0.81</td><td>0.66</td><td>0.53</td><td>0.49</td></tr><tr><td>商票</td><td>1.0</td><td>1.0</td><td>1.0</td><td>1.0</td><td>1.0</td><td>1.0</td><td>1.0</td></tr>
+                        <tr><td>国股</td><td>1.20</td><td>0.50</td><td>0.65</td><td>0.60</td><td>0.55</td><td>0.50</td><td>0.46</td></tr><tr><td>大商</td><td>1.25</td><td>0.55</td><td>0.68</td><td>0.62</td><td>0.60</td><td>0.50</td><td>0.46</td></tr><tr><td>一类城农商</td><td>1.35</td><td>0.60</td><td>0.73</td><td>0.65</td><td>0.60</td><td>0.56</td><td>0.56</td></tr><tr><td>二类城农商</td><td>1.35</td><td>0.60</td><td>0.78</td><td>0.68</td><td>0.60</td><td>0.58</td><td>0.58</td></tr><tr><td>其他银行</td><td>1.55</td><td>0.61</td><td>0.81</td><td>0.72</td><td>0.61</td><td>0.60</td><td>0.60</td></tr><tr><td>财司票</td><td>1.50</td><td>0.83</td><td>1.03</td><td>0.97</td><td>0.96</td><td>0.78</td><td>0.77</td></tr><tr><td>商票</td><td>1.00</td><td>1.00</td><td>1.00</td><td>1.00</td><td>1.00</td><td>1.00</td><td>1.00</td></tr>
                     </tbody>
                 </table>
                 </div>
@@ -853,10 +853,11 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
             title: document.title
         };
         
-        // session_start事件携带设备信息（仅一次）
+        // session_start / page_view 事件携带设备信息（均为每会话1次的低频事件；
+        // page_view 附带 device/channel_source 使其自包含，支撑设备与渠道维度下钻）
         if (eventType === 'session_start' || eventType === 'page_view') {
             payload.device = DEVICE_INFO;
-            // v8.7 P6: session_start 携带渠道来源
+            // v8.7 P6: 携带渠道来源
             payload.channel_source = CHANNEL_SOURCE;
             deviceInfoSent = true;
         }
@@ -1137,7 +1138,7 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
      * @param {string} exitType - 'unload' (beforeunload) 或 'hide' (visibilitychange)
      * 使用 sendBeacon 保证页面关闭时可靠送达
      */
-    function sendPageExit(exitType) {
+        function sendPageExit(exitType) {
         if (exitSent) return;
         exitSent = true;
 
@@ -1150,38 +1151,17 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
             return Math.round((scrollTop / scrollHeight) * 100);
         })();
 
-        var payload = {
-            event_id: generateEventId(),
-            page_id: CONFIG.pageId,
-            user_id: userId,
-            session_id: sessionId,
-            event_type: 'page_exit',
-            timestamp: new Date().toISOString(),
+        // v8.8-fix: 改用 sendTracker 队列（fetch 落库路径）。
+        // 原 sendBeacon 独立发送经实测无法落库（飞书 webhook 对 beacon 请求丢弃），
+        // 导致 page_exit/page_stay 长期为 0，使 §I page_exit 到达率无法统计。
+        // 改走已验证可用的 sendTracker 队列后，event_id 由 sendTracker 统一生成。
+        log('Page exit (' + exitType + '): session=' + sessionDuration + 's, active=' + pageStayDuration + 's, scroll=' + scrollDepth + '%');
+        sendTracker('page_exit', {
             duration: sessionDuration,
-            referrer: document.referrer || '',
-            url: location.href,
-            title: document.title,
             exit_type: exitType,
             session_duration: sessionDuration,
-            page_stay_duration: pageStayDuration,
             scroll_depth: scrollDepth
-        };
-
-        var webhookBody = {
-            msg_type: 'text',
-            content: {
-                text: JSON.stringify(payload)
-            }
-        };
-
-        log('Page exit (' + exitType + '): session=' + sessionDuration + 's, active=' + pageStayDuration + 's, scroll=' + scrollDepth + '%');
-
-        if (navigator.sendBeacon) {
-            var blob = new Blob([JSON.stringify(webhookBody)], { type: 'application/json' });
-            navigator.sendBeacon(CONFIG.WEBHOOK_URL, blob);
-        } else {
-            sendSingleEvent(payload);
-        }
+        });
     }
     
     // ========== v8.4: DNT（Do Not Track）隐私合规检测 ==========
@@ -1657,4 +1637,8 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
     window.MorningBriefTracker.version = '8.8';
     
     log('MorningBriefTracker v8.8 initialized');
-})(
+})();
+
+</script>
+</body>
+</html>
