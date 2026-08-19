@@ -1249,11 +1249,16 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
             var parent = link.closest('[data-news-id]');
             var newsId = parent ? parent.dataset.newsId : 'unknown';
             var newsTitle = parent ? parent.dataset.newsTitle : link.textContent.trim();
+            var href = link.getAttribute('href');
             log('News click:', newsId, '-', newsTitle);
+            // 先发埋点（当前页未卸载，fetch 可靠送达）
             sendTracker('news_click', {
                 news_id: newsId,
                 news_title: newsTitle
             });
+            // v8.9-fix: 新标签打开，避免同标签跳转卸载早期 news_click(fetch 被导航取消) 丢失
+            e.preventDefault();
+            if (href) window.open(href, '_blank', 'noopener,noreferrer');
         });
     });
 
