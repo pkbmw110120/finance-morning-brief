@@ -853,10 +853,11 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
             title: document.title
         };
         
-        // session_start事件携带设备信息（仅一次）
-        if (eventType === 'session_start') {
+        // session_start / page_view 事件携带设备信息（均为每会话1次的低频事件；
+        // page_view 附带 device/channel_source 使其自包含，支撑设备与渠道维度下钻）
+        if (eventType === 'session_start' || eventType === 'page_view') {
             payload.device = DEVICE_INFO;
-            // v8.7 P6: session_start 携带渠道来源
+            // v8.7 P6: 携带渠道来源
             payload.channel_source = CHANNEL_SOURCE;
             deviceInfoSent = true;
         }
