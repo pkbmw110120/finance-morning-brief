@@ -665,7 +665,20 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
                 }
             }
         }
-        
+
+        // v8.9-fix(P5): 无 referrer/URL 参数时，按 UA 识别内嵌浏览器；仍无则标记 direct，
+        // 避免「渠道」字段恒为空导致无法下钻（直接访问也是有效渠道）。
+        if (!channelSource) {
+            var ua = navigator.userAgent || '';
+            if (/MicroMessenger/i.test(ua)) {
+                channelSource = 'wechat';      // 微信内打开（公众号/朋友圈/群）
+            } else if (/wxwork/i.test(ua)) {
+                channelSource = 'wecom';       // 企业微信内打开
+            } else {
+                channelSource = 'direct';      // 书签/地址栏直输等直接访问
+            }
+        }
+
         // 尝试从 localStorage 读取持久化的来源
         var stored = '';
         try {
@@ -685,8 +698,8 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
             return stored;
         }
         
-        // 无任何来源信息，返回空字符串
-        return '';
+        // 兜底（理论上不会到这，UA 识别已保证非空）
+        return 'direct';
     }
     
     // 计算并缓存本次会话的渠道来源
