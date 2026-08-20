@@ -4,118 +4,67 @@
   "copyright_notice": "配图均来自互联网，仅供内部阅读参考。如有版权问题请联系运营团队替换。",
   "headline": {
     "id": "headline-1",
-    "title": "国务院修改住房公积金管理条例 租房提取取消收入比例门槛",
-    "title_short": "国务院修改住房公积金条例",
+    "title": "宇树科技上市首日收涨460%市值3418亿元 \"人形机器人第一股\"登陆科创板",
+    "title_short": "宇树科技首日涨460%市值3418亿",
     "source": "",
     "summary": "",
-    "url": "https://www.gov.cn/zhengce/202608/content_7078510.htm",
+    "url": "https://www.jiemian.com/article/14943006.html",
     "image": "api/images/headline-1.jpg",
     "image_source": "article_original"
   },
   "finance_news": [
     {
       "id": "news-1",
-      "title": "九部门发文活跃县域消费 6方面18条措施激发下沉市场活力",
-      "title_short": "九部门活跃县域消费",
+      "title": "\"六张网\"建设加快推进 年度投资规模超7万亿元",
+      "title_short": "",
       "source": "",
       "summary": "",
-      "url": "https://www.gov.cn/lianbo/202608/content_7078445.htm",
-      "image": "api/images/news-1.jpg",
-      "image_source": "article_original"
+      "url": "http://www.ce.cn/cysc/tech/gdzq/202608/20/t2026_0820_3909821.shtml",
+      "image": "",
+      "image_source": ""
     },
     {
       "id": "news-2",
-      "title": "宇树科技今日登陆科创板 A股\"人形机器人第一股\"来了",
-      "title_short": "宇树科技科创板上市",
+      "title": "财金联动持续加力 上半年4项促投资政策惠及民间投资超1.24万亿",
+      "title_short": "财金联动促民间投资",
       "source": "",
       "summary": "",
-      "url": "https://www.jiemian.com/article/14942568.html",
+      "url": "http://www3.xinhuanet.com/20260817/917b90312e36422186024adfc896ce68/c.html",
       "image": "api/images/news-2.jpg",
       "image_source": "article_original"
     },
     {
       "id": "news-3",
-      "title": "央行开展3274亿元隔夜逆回购操作 今日净回笼1423亿元",
-      "title_short": "央行公开市场操作",
+      "title": "港交所上半年净利首破百亿港元 IPO募资同比激增94%",
+      "title_short": "港交所半年净利破百亿",
       "source": "",
       "summary": "",
-      "url": "https://www.jiemian.com/article/14944520.html",
-      "image": "api/images/news-3.gif",
+      "url": "https://www.thepaper.cn/newsDetail_forward_33812323",
+      "image": "api/images/news-3.png",
       "image_source": "article_original"
     },
     {
       "id": "news-4",
-      "title": "储能产业链全线涨价 多企业发布调价函幅度最高达30%",
-      "title_short": "储能产业链涨价",
+      "title": "九部门联合发文激活县域消费 18条举措激发下沉市场活力",
+      "title_short": "九部门激活县域消费",
       "source": "",
       "summary": "",
-      "url": "https://www.cls.cn/detail/2457818",
-      "image": "api/images/news-4.jpg",
-      "image_source": "bing_search"
+      "url": "https://www.yicai.com/news/103319574.html",
+      "image": "api/images/news-4.png",
+      "image_source": "article_original"
     },
     {
       "id": "news-5",
-      "title": "前7个月工业机器人产量同比增长28.5% 机器人产业持续高景气",
-      "title_short": "机器人产量高增长",
+      "title": "2026世界机器人大会开幕 上半年机器人产业规上企业营收达1655亿元",
+      "title_short": "机器人产业营收1655亿",
       "source": "",
       "summary": "",
-      "url": "https://caifuhao.eastmoney.com/news/20260819083649682982620",
+      "url": "http://imgs.xinhuanet.com/tech/20260820/36a420de7f134c359bde1f2f9c94ee9d/c.html",
       "image": "api/images/news-5.jpg",
       "image_source": "article_original"
     }
   ],
-  "supply_news": [
-    {
-      "id": "supply-1",
-      "title": "有限追索供应链票据多地破冰 化解中小企业账款拖欠难题",
-      "title_short": "有限追供票多地破冰",
-      "source": "",
-      "summary": "",
-      "url": "https://www.cnstock.com/commonDetail/755821",
-      "image": "api/images/supply-1.jpg",
-      "image_source": "bing_search"
-    },
-    {
-      "id": "supply-2",
-      "title": "成都首个市属国企供应链ABS项目获批 发行规模30亿元",
-      "title_short": "成都首个供应链ABS获批",
-      "source": "红星新闻",
-      "summary": "成都轨道集团下属成都轨道城市投资集团供应链ABS项目获上交所批准发行，储架规模30亿元，为成都首个市属国企供应链资产证券化项目。项目以集团对上游供应商应付账款为基础资产，分期发行资产证券化产品募集资金，加速上游供应商回款，助力TOD项目建设资金需求。中国工商银行四川省分行提供支持。",
-      "url": "https://www.chinatod.com.cn/index.php?m=content&c=index&a=show&catid=36&id=661",
-      "image": "api/images/supply-2.jpg",
-      "image_source": "bing_search"
-    },
-    {
-      "id": "supply-3",
-      "title": "九江银行落地\"供应链票据+电费支付\"创新场景",
-      "title_short": "九江银行电费票据创新",
-      "source": "",
-      "summary": "",
-      "url": "http://jx.people.com.cn/n2/2026/0818/c186330-41671006.html",
-      "image": "api/images/supply-3.png",
-      "image_source": "article_original"
-    },
-    {
-      "id": "supply-4",
-      "title": "上海推动数字人民币在供应链金融场景创新应用",
-      "title_short": "上海数字人民币供应链金融",
-      "source": "",
-      "summary": "",
-      "url": "http://www.cnstock.com/commonDetail/758263",
-      "image": "api/images/supply-4.jpg",
-      "image_source": "bing_search"
-    },
-    {
-      "id": "supply-5",
-      "title": "广东首发词元经济专项金融产品 \"Token贷\"赋能算力中小企业",
-      "title_short": "Token贷赋能中小企业",
-      "source": "",
-      "summary": "",
-      "url": "https://m.yicai.com/brief/103318670.html",
-      "image": "api/images/supply-5.png",
-      "image_source": "article_original"
-    }
-  ],
+  "supply_news": [],
   "bill_rate_note": "",
   "page_url": "https://pkbmw110120.github.io/finance-morning-brief/",
   "archive_url": "https://pkbmw110120.github.io/finance-morning-brief/.html"
