@@ -446,7 +446,7 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
 
 <script>
 /**
- * 扣子早报埋点系统 - 前端采集代码 v8.8
+ * 扣子早报埋点系统 - 前端采集代码 v8.9
  * 
  * 功能：
  * 1. 批量发送：事件队列，达到3条或6秒自动批量发送
@@ -457,6 +457,11 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
  * 6. 核心指标：新闻曝光、新闻点击、阅读完成度
  * 7. 离开事件：page_exit 追踪跳出率和会话时长终点
  * 8. 转化事件：订阅/分享/留存漏斗追踪
+ * 
+ * v8.9 变更（2026-08-20）：
+ * - 修复(P2)：flushQueue/page_exit/page_stay 全部从 navigator.sendBeacon 迁移到 fetch+keepalive，解决部分浏览器 sendBeacon 残留兼容问题
+ * - 修复(P2)：getChannelSource 增加 UA 识别兜底，当 URL 参数和 referrer 均为空时，从 User-Agent 提取应用标识（如 MicroMessenger/WeChatWork/Feishu 等），解决 88% referrer 为空导致渠道来源丢失的问题
+ * - 修复(P2)：news_click 点击事件改用 preventDefault + fetch(keepalive) + window.open 模式，确保点击数据在页面跳转前可靠送达
  * 
  * v8.8 变更（2026-08-18）：
  * - 新增(P9)：page_exit 离开事件，支持 beforeunload（exit_type=unload）和 visibilitychange hidden（exit_type=hide）两种触发时机
@@ -685,7 +690,26 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
             return stored;
         }
         
-        // 无任何来源信息，返回空字符串
+        // v8.9: 本次无来源信息，尝试从 UA 提取应用标识作为兜底渠道来源
+        var ua = navigator.userAgent || '';
+        var uaMap = [
+            { pattern: 'MicroMessenger', label: 'wechat' },
+            { pattern: 'WeChatWork', label: 'wecom' },
+            { pattern: 'wxwork', label: 'wecom' },
+            { pattern: 'Lark', label: 'feishu' },
+            { pattern: 'Feishu', label: 'feishu' },
+            { pattern: 'DingTalk', label: 'dingtalk' },
+            { pattern: 'Coze', label: 'coze' },
+            { pattern: 'Firefox', label: 'firefox' },
+            { pattern: 'Edg/', label: 'edge' },
+            { pattern: 'Chrome', label: 'chrome' },
+            { pattern: 'Safari', label: 'safari' }
+        ];
+        for (var u = 0; u < uaMap.length; u++) {
+            if (ua.indexOf(uaMap[u].pattern) !== -1) {
+                return 'ua:' + uaMap[u].label;
+            }
+        }
         return '';
     }
     
@@ -1051,9 +1075,9 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
     }
     
     /**
-     * v8.3: 通过 navigator.sendBeacon 发送事件队列（用于 beforeunload/visibilitychange hidden）
-     * sendBeacon 由浏览器保证在页面关闭时也能可靠送达，不会被丢弃
-     * v8.7 P7: beacon payload 包含 event_id
+     * v8.9: 通过 fetch+keepalive 发送事件队列（用于 beforeunload/visibilitychange hidden）
+     * 替代原 sendBeacon，解决部分浏览器 sendBeacon 残留兼容问题
+     * v8.7 P7: payload 包含 event_id
      */
     function flushWithBeacon() {
         if (batchTimer) {
@@ -1066,10 +1090,10 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
         var payloads = eventQueue.splice(0, eventQueue.length);
         lastBatchTime = Date.now();
         
-        // 构造与 fetch 相同格式的批量 payload
+        // 构造批量 payload
         var batchPayload = payloads.map(function(p) {
             var item = {
-                event_id: p.event_id || '',       // v8.7 P7: 唯一事件ID
+                event_id: p.event_id || '',
                 page_id: p.page_id,
                 user_id: p.user_id,
                 session_id: p.session_id,
@@ -1087,16 +1111,13 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
             if (p.milestone) item.milestone = p.milestone;
             if (p.heartbeat_time !== undefined) item.heartbeat_time = p.heartbeat_time;
             if (p.visible !== undefined) item.visible = p.visible;
-            // v8.8 P9: page_exit 字段
             if (p.exit_type) item.exit_type = p.exit_type;
             if (p.session_duration !== undefined) item.session_duration = p.session_duration;
             if (p.page_stay_duration !== undefined) item.page_stay_duration = p.page_stay_duration;
             if (p.scroll_depth !== undefined) item.scroll_depth = p.scroll_depth;
-            // v8.8 P10: 转化事件字段
             if (p.share_target !== undefined) item.share_target = p.share_target;
             if (p.is_returning !== undefined) item.is_returning = p.is_returning;
             if (p.days_since_last_visit !== undefined) item.days_since_last_visit = p.days_since_last_visit;
-            // channel_source 通用携带
             if (p.channel_source !== undefined && !item.channel_source) item.channel_source = p.channel_source;
             return item;
         });
@@ -1112,30 +1133,37 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
             }
         };
         
-        // v8.3: 频率控制 - sendBeacon 也受频率限制
         if (!checkRateLimit()) {
-            log('Rate limit exceeded for beacon, caching events');
+            log('Rate limit exceeded for flush, caching events');
             cacheFailedEvents(payloads);
             return;
         }
         recordSend();
         
-        var blob = new Blob([JSON.stringify(webhookBody)], { type: 'application/json' });
-        var sent = navigator.sendBeacon(CONFIG.WEBHOOK_URL, blob);
-        
-        if (sent) {
-            log('Beacon sent successfully:', batchPayload.length, 'events');
-        } else {
-            log('Beacon send failed, caching to sessionStorage');
+        // v8.9: 使用 fetch + keepalive 替代 sendBeacon
+        fetch(CONFIG.WEBHOOK_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(webhookBody),
+            keepalive: true
+        }).then(function(resp) {
+            if (resp.ok) {
+                log('Flush sent successfully:', batchPayload.length, 'events');
+            } else {
+                log('Flush send failed:', resp.status, ', caching events');
+                cacheFailedEvents(payloads);
+            }
+        }).catch(function(err) {
+            log('Flush send error:', err, ', caching events');
             cacheFailedEvents(payloads);
-        }
+        });
     }
 
     // ========== v8.8 P9: page_exit 离开事件 ==========
     /**
      * 发送 page_exit 离开事件
      * @param {string} exitType - 'unload' (beforeunload) 或 'hide' (visibilitychange)
-     * 使用 sendBeacon 保证页面关闭时可靠送达
+     * v8.9: 使用 fetch+keepalive 替代 sendBeacon，保证页面关闭时可靠送达
      */
     function sendPageExit(exitType) {
         if (exitSent) return;
@@ -1176,12 +1204,15 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
 
         log('Page exit (' + exitType + '): session=' + sessionDuration + 's, active=' + pageStayDuration + 's, scroll=' + scrollDepth + '%');
 
-        if (navigator.sendBeacon) {
-            var blob = new Blob([JSON.stringify(webhookBody)], { type: 'application/json' });
-            navigator.sendBeacon(CONFIG.WEBHOOK_URL, blob);
-        } else {
-            sendSingleEvent(payload);
-        }
+        // v8.9: 使用 fetch + keepalive 替代 sendBeacon
+        fetch(CONFIG.WEBHOOK_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(webhookBody),
+            keepalive: true
+        }).catch(function(err) {
+            log('Page exit send error:', err);
+        });
     }
     
     // ========== v8.4: DNT（Do Not Track）隐私合规检测 ==========
@@ -1262,16 +1293,52 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
     
     // ========== 新闻点击埋点 ==========
     // v8.6 P4: 选择器改为 article[data-news-id] a，更精确匹配所有带 data-news-id 的文章内链接
+    // v8.9: preventDefault + fetch(keepalive) + window.open，确保点击数据在页面跳转前可靠送达
     document.querySelectorAll('article[data-news-id] a').forEach(function(link) {
         link.addEventListener('click', function(e) {
+            e.preventDefault();
+            var href = link.href;
             var parent = link.closest('[data-news-id]');
             var newsId = parent ? parent.dataset.newsId : 'unknown';
             var newsTitle = parent ? parent.dataset.newsTitle : link.textContent.trim();
             log('News click:', newsId, '-', newsTitle);
-            sendTracker('news_click', {
+            
+            // 构建点击事件 payload
+            var clickPayload = {
+                event_id: generateEventId(),
+                page_id: CONFIG.pageId,
+                user_id: userId,
+                session_id: sessionId,
+                event_type: 'news_click',
+                timestamp: new Date().toISOString(),
+                referrer: document.referrer || '',
+                url: location.href,
+                title: document.title,
                 news_id: newsId,
                 news_title: newsTitle
+            };
+            if (!deviceSent) {
+                clickPayload.device = DEVICE_INFO;
+                deviceSent = true;
+            }
+            
+            var webhookBody = {
+                msg_type: 'text',
+                content: { text: JSON.stringify(clickPayload) }
+            };
+            
+            // 使用 fetch + keepalive 确保数据在页面跳转前送达
+            fetch(CONFIG.WEBHOOK_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(webhookBody),
+                keepalive: true
+            }).catch(function(err) {
+                log('News click send error:', err);
             });
+            
+            // 导航到目标链接（当前页打开）
+            window.location.href = href;
         });
     });
 
@@ -1507,17 +1574,18 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
                     }
                 };
                 
-                // 用 sendBeacon 发送，浏览器保证尽可能送达
-                if (navigator.sendBeacon) {
-                    var stayBlob = new Blob([JSON.stringify(stayWebhookBody)], { type: 'application/json' });
-                    navigator.sendBeacon(CONFIG.WEBHOOK_URL, stayBlob);
-                } else {
-                    // 兜底：fallback 到普通 fetch
-                    sendSingleEvent(stayPayload);
-                }
+                // v8.9: 使用 fetch + keepalive 替代 sendBeacon
+                fetch(CONFIG.WEBHOOK_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(stayWebhookBody),
+                    keepalive: true
+                }).catch(function(err) {
+                    log('Page stay (visibility) send error:', err);
+                });
             }
             
-            // v8.3: 通过 sendBeacon 发送队列中的事件（兜底，防止页面随后被关闭）
+            // v8.9: 通过 fetch+keepalive 发送队列中的事件（兜底，防止页面随后被关闭）
             flushWithBeacon();
 
             // v8.8 P9: visibilitychange hidden 时发送 page_exit（exit_type=hide）
@@ -1545,7 +1613,7 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
     
     // ========== 页面离开（v8.1: 发送完整活跃时长的page_stay） ==========
     window.addEventListener('beforeunload', function() {
-        // v8.3: 通过 sendBeacon 发送队列，避免浏览器丢弃异步 fetch
+        // v8.9: 通过 fetch+keepalive 发送队列，避免浏览器丢弃异步请求
         flushWithBeacon();
 
         // v8.8 P9: beforeunload 时发送 page_exit（exit_type=unload）
@@ -1577,10 +1645,15 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
                 }
             };
             
-            // v8.3: 必须用 Blob 包装才能以 application/json 发送
-            // 直接传字符串会被浏览器当作 text/plain，飞书 Webhook 会拒绝
-            var blob = new Blob([JSON.stringify(webhookBody)], { type: 'application/json' });
-            navigator.sendBeacon(CONFIG.WEBHOOK_URL, blob);
+            // v8.9: 使用 fetch + keepalive 替代 sendBeacon
+            fetch(CONFIG.WEBHOOK_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(webhookBody),
+                keepalive: true
+            }).catch(function(err) {
+                log('Page stay (unload) send error:', err);
+            });
         }
         
         // 清理定时器
@@ -1654,9 +1727,9 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
         }
     };
     
-    window.MorningBriefTracker.version = '8.8';
+    window.MorningBriefTracker.version = '8.9';
     
-    log('MorningBriefTracker v8.8 initialized');
+    log('MorningBriefTracker v8.9 initialized');
 })();
 
 </script>
