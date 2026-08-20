@@ -446,17 +446,30 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
 
 <script>
 /**
- * 扣子早报埋点系统 - 前端采集代码 v8.9
+ * 扣子早报埋点系统 - 前端采集代码 v9.0
  * 
  * 功能：
  * 1. 批量发送：事件队列，达到3条或6秒自动批量发送
  * 2. 自动重试：失败后指数退避重试3次
  * 3. 阅读里程碑：25%/50%/75%/100% 四档记录
- * 4. 停留时间心跳：每120秒发送heartbeat事件
+ * 4. 停留时间心跳：每60秒发送heartbeat事件
  * 5. 设备信息：session内仅发送一次，后续事件不含device字段
  * 6. 核心指标：新闻曝光、新闻点击、阅读完成度
  * 7. 离开事件：page_exit 追踪跳出率和会话时长终点
  * 8. 转化事件：订阅/分享/留存漏斗追踪
+ * 9. 设备指纹：基于 UA/屏幕/语言/时区的 djb2 hash，标识同一设备
+ * 10. 点击补偿：点击事件存入 sessionStorage，失败后下次加载自动重发
+ * 
+ * v9.0 变更（2026-08-20）：
+ * - 核心修复(P0)：点击事件彻底改造，采用 sessionStorage 持久化 + fetch(keepalive) + 300ms 延迟跳转方案，
+ *   解决 v8.9 preventDefault+fetch+立即跳转 模式下点击捕获率仅约 3% 的严重丢失问题；
+ *   fetch 成功则从 sessionStorage 移除，失败则保留，下次页面加载时自动重发（上限20条）
+ * - 优化(P2)：心跳间隔 120s→60s，提升停留时长采集精度，更准确反映用户活跃情况
+ * - 新增(P3)：设备指纹（fingerprint），基于 navigator.userAgent + screen.width/height + language + timezone
+ *   做 djb2 hash，输出 10 位字符串；在 session_start 事件中新增 fingerprint 字段，
+ *   辅助跨 session/清缓存的同一设备识别，缓解 UV 膨胀问题
+ * - 修复(P1)：点击事件中 deviceSent 变量名修正为 deviceInfoSent（v8.9 遗留 bug）
+ * - 新增：CONFIG.version 字段，window.MorningBriefTracker.version 同步更新为 9.0
  * 
  * v8.9 变更（2026-08-20）：
  * - 修复(P2)：flushQueue/page_exit/page_stay 全部从 navigator.sendBeacon 迁移到 fetch+keepalive，解决部分浏览器 sendBeacon 残留兼容问题
@@ -530,6 +543,9 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
     
     /** Tracker配置 */
     var CONFIG = {
+        // v9.0: 前端版本号
+        version: '9.0',
+
         // 飞书Webhook地址（必须通过 window.__TRACKER_CONFIG__ 注入，不留默认值）
         WEBHOOK_URL: '',
         
@@ -552,7 +568,7 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
         batchSize: 3,
         batchInterval: 6000,
         maxRetries: 3,
-        heartbeatInterval: 120000,  // v8.5: 60s→120s，减半心跳事件量，停留精度仍足够
+        heartbeatInterval: 60000,   // v9.0: 120s→60s，提升停留时长采集精度
         
         // ========== 频率控制配置（v8.3: P0-2 加固） ==========
         maxSendsPerSecond: 2,
@@ -560,6 +576,11 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
         // ========== 失败事件缓存配置 ==========
         failedEventsKey: 'tracker_failed_events',
         failedEventsLimit: 50,
+
+        // ========== v9.0: 点击事件 pending 缓存配置 ==========
+        pendingClicksKey: 'tracker_pending_clicks',
+        pendingClicksLimit: 20,     // 最多重发 20 条，防止堆积
+        clickNavigateDelay: 300,    // 点击后延迟跳转毫秒数，给 fetch 留出发送时间
         
         // ========== v8.7 P6: 渠道来源持久化配置 ==========
         referrerStorageKey: 'tracker_referrer',
@@ -586,7 +607,7 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
     
     // v8.3: 校验必须配置项
     if (!CONFIG.WEBHOOK_URL) {
-        console.warn('[Tracker v8.7] WEBHOOK_URL 未配置！请通过 window.__TRACKER_CONFIG__ 注入。');
+        console.warn('[Tracker v9.0] WEBHOOK_URL 未配置！请通过 window.__TRACKER_CONFIG__ 注入。');
     }
 
     // ========== v8.7 P8: 统一页面ID命名规范 ==========
@@ -755,6 +776,50 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
         localStorage.setItem('tracker_user_id', userId);
     }
     
+    // ========== v9.0: 设备指纹（device fingerprint） ==========
+    // 基于 UA + 屏幕尺寸 + 语言 + 时区做 djb2 hash，生成 10 位字符串
+    // 辅助跨 session/清缓存的同一设备识别，缓解 UV 膨胀问题
+    // 注意：指纹不保证 100% 唯一，同型号设备+同配置可能碰撞，仅作辅助标识
+    function djb2Hash(str) {
+        var hash = 5381;
+        for (var i = 0; i < str.length; i++) {
+            hash = ((hash << 5) + hash) + str.charCodeAt(i); // hash * 33 + char
+            hash = hash & hash; // 转为 32 位有符号整数
+        }
+        // 转为无符号并转 base36，得到约 6-7 位
+        var unsigned = hash >>> 0;
+        return unsigned.toString(36);
+    }
+    
+    function generateFingerprint() {
+        try {
+            var tz = '';
+            try {
+                tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+            } catch(e) { tz = ''; }
+            
+            var raw = [
+                navigator.userAgent || '',
+                screen.width + 'x' + screen.height,
+                navigator.language || navigator.userLanguage || '',
+                tz
+            ].join('|');
+            
+            var hash = djb2Hash(raw);
+            // 确保输出 10 位左右，不足补前导 0，太长截断
+            if (hash.length < 10) {
+                while (hash.length < 10) hash = '0' + hash;
+            } else if (hash.length > 12) {
+                hash = hash.substring(0, 10);
+            }
+            return 'fp_' + hash;
+        } catch(e) {
+            return 'fp_unknown';
+        }
+    }
+    
+    var deviceFingerprint = generateFingerprint();
+    
     // 会话标识
     var sessionId = 's_' + Date.now();
     var enterTime = Date.now();
@@ -844,12 +909,103 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
             log('Failed to retry cached events:', e);
         }
     }
+
+    // ========== v9.0: 点击事件 pending 缓存辅助函数 ==========
+
+    /**
+     * 将点击事件添加到 sessionStorage pending 队列
+     * 超过上限时丢弃最早的
+     */
+    function addPendingClick(clickPayload) {
+        try {
+            var pending = JSON.parse(sessionStorage.getItem(CONFIG.pendingClicksKey) || '[]');
+            pending.push(clickPayload);
+            // 超过上限时丢弃最早的
+            if (pending.length > CONFIG.pendingClicksLimit) {
+                pending = pending.slice(pending.length - CONFIG.pendingClicksLimit);
+            }
+            sessionStorage.setItem(CONFIG.pendingClicksKey, JSON.stringify(pending));
+            log('Added pending click to sessionStorage (total:', pending.length, ')');
+        } catch(e) {
+            log('addPendingClick error:', e);
+        }
+    }
+
+    /**
+     * 从 sessionStorage pending 队列中移除指定 event_id 的点击事件
+     */
+    function removePendingClick(eventId) {
+        try {
+            var pending = JSON.parse(sessionStorage.getItem(CONFIG.pendingClicksKey) || '[]');
+            var filtered = pending.filter(function(p) {
+                return p.event_id !== eventId;
+            });
+            if (filtered.length !== pending.length) {
+                sessionStorage.setItem(CONFIG.pendingClicksKey, JSON.stringify(filtered));
+                log('Removed pending click from sessionStorage (remaining:', filtered.length, ')');
+            }
+        } catch(e) {
+            log('removePendingClick error:', e);
+        }
+    }
+
+    /**
+     * v9.0: 页面加载时重发 pending 点击事件
+     * - 读取 sessionStorage 中的 tracker_pending_clicks 数组
+     * - 逐条重新发送（fetch + keepalive）
+     * - 发送成功的移除，失败的保留
+     * - 限制最多重发 20 条，防止堆积
+     */
+    function retryPendingClicks() {
+        try {
+            var pending = JSON.parse(sessionStorage.getItem(CONFIG.pendingClicksKey) || '[]');
+            if (pending.length === 0) return;
+            
+            // 最多重发 pendingClicksLimit 条
+            var toRetry = pending.slice(0, CONFIG.pendingClicksLimit);
+            log('Retrying', toRetry.length, 'pending click events from sessionStorage');
+            
+            var remaining = []; // 发送失败或未尝试的保留
+            var successCount = 0;
+            
+            toRetry.forEach(function(clickPayload) {
+                var webhookBody = {
+                    msg_type: 'text',
+                    content: { text: JSON.stringify(clickPayload) }
+                };
+                
+                fetch(CONFIG.WEBHOOK_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(webhookBody),
+                    keepalive: true
+                }).then(function(resp) {
+                    if (resp.ok) {
+                        successCount++;
+                        removePendingClick(clickPayload.event_id);
+                        log('Pending click resent successfully:', clickPayload.news_id);
+                    } else {
+                        log('Pending click resend failed (HTTP ' + resp.status + '), kept');
+                    }
+                }).catch(function(err) {
+                    log('Pending click resend error, kept:', err);
+                });
+            });
+            
+            // 超过限制的部分保留在队尾
+            if (pending.length > CONFIG.pendingClicksLimit) {
+                remaining = pending.slice(CONFIG.pendingClicksLimit);
+            }
+        } catch(e) {
+            log('retryPendingClicks error:', e);
+        }
+    }
     
     // ========== 工具函数 ==========
     
     function log() {
         if (CONFIG.debug) {
-            console.log('[Tracker v8.7]', Array.prototype.slice.call(arguments));
+            console.log('[Tracker v9.0]', Array.prototype.slice.call(arguments));
         }
     }
     
@@ -882,6 +1038,8 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
             payload.device = DEVICE_INFO;
             // v8.7 P6: session_start 携带渠道来源
             payload.channel_source = CHANNEL_SOURCE;
+            // v9.0: session_start 携带设备指纹
+            payload.fingerprint = deviceFingerprint;
             deviceInfoSent = true;
         }
         
@@ -957,6 +1115,8 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
             }
             // v8.7 P6: channel_source 字段（session_start 携带）
             if (p.channel_source !== undefined) item.channel_source = p.channel_source;
+            // v9.0: fingerprint 字段（session_start 携带）
+            if (p.fingerprint !== undefined) item.fingerprint = p.fingerprint;
             // 可选字段
             if (p.news_id) item.news_id = p.news_id;
             if (p.news_title) item.news_title = p.news_title;
@@ -1119,6 +1279,8 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
             if (p.is_returning !== undefined) item.is_returning = p.is_returning;
             if (p.days_since_last_visit !== undefined) item.days_since_last_visit = p.days_since_last_visit;
             if (p.channel_source !== undefined && !item.channel_source) item.channel_source = p.channel_source;
+            // v9.0: fingerprint 字段
+            if (p.fingerprint !== undefined) item.fingerprint = p.fingerprint;
             return item;
         });
         
@@ -1246,15 +1408,15 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
     })();
     
     if (CONFIG.debug) {
-        console.log('[Tracker v8.7] DNT status:', dntEnabled ? 'ENABLED (tracking disabled)' : 'DISABLED (tracking active)');
-        console.log('[Tracker v8.7] Bot detection:', isBot ? 'BOT detected (tracking disabled)' : 'Normal user');
-        console.log('[Tracker v8.7] Channel source:', CHANNEL_SOURCE || '(empty)');
-        console.log('[Tracker v8.7] Page ID:', CONFIG.pageId);
+        console.log('[Tracker v9.0] DNT status:', dntEnabled ? 'ENABLED (tracking disabled)' : 'DISABLED (tracking active)');
+        console.log('[Tracker v9.0] Bot detection:', isBot ? 'BOT detected (tracking disabled)' : 'Normal user');
+        console.log('[Tracker v9.0] Channel source:', CHANNEL_SOURCE || '(empty)');
+        console.log('[Tracker v9.0] Page ID:', CONFIG.pageId);
     }
     
     // 如果是爬虫，直接跳过所有采集
     if (isBot) {
-        if (CONFIG.debug) console.log('[Tracker v8.7] Skipping all tracking for bot traffic');
+        if (CONFIG.debug) console.log('[Tracker v9.0] Skipping all tracking for bot traffic');
         window.MorningBriefTracker = { track: function(){}, flush: function(){}, isDntEnabled: function(){ return dntEnabled; }, isBot: function(){ return true; } };
         return;
     }
@@ -1262,8 +1424,44 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
     // ========== 会话开始（携带设备信息） ==========
     sendTracker('session_start', {});
     
+    // ========== v9.0: 重发上次未成功发送的点击事件 ==========
+    (function replayPendingClicks() {
+        try {
+            var pending = JSON.parse(sessionStorage.getItem(CONFIG.pendingClicksKey) || '[]');
+            if (!pending.length) return;
+            log('Replaying', pending.length, 'pending click event(s)');
+            // 最多重发20条，防止积压
+            var toReplay = pending.slice(0, 20);
+            var remaining = pending.slice(20);
+            toReplay.forEach(function(item) {
+                fetch(CONFIG.WEBHOOK_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(item.webhookBody),
+                    keepalive: true
+                }).then(function(resp) {
+                    if (resp && resp.ok) {
+                        // 成功，已从 toReplay 中移出，不再保留
+                    } else {
+                        // 失败，放回 remaining
+                        remaining.push(item);
+                    }
+                }).catch(function() {
+                    remaining.push(item);
+                });
+            });
+            sessionStorage.setItem(CONFIG.pendingClicksKey, JSON.stringify(remaining));
+        } catch (e) {
+            log('replayPendingClicks error:', e);
+        }
+    })();
+    
     // ========== v8.3: 恢复上次会话缓存的失败事件 ==========
     retryCachedFailedEvents();
+
+    // ========== v9.0: 重发 pending 点击事件（上次点击失败后留存的） ==========
+    // 放在 session_start 之后、page_view 之前，确保尽可能早地补发丢失的点击数据
+    retryPendingClicks();
     
     // ========== 页面浏览 ==========
     sendTracker('page_view');
@@ -1293,7 +1491,13 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
     
     // ========== 新闻点击埋点 ==========
     // v8.6 P4: 选择器改为 article[data-news-id] a，更精确匹配所有带 data-news-id 的文章内链接
-    // v8.9: preventDefault + fetch(keepalive) + window.open，确保点击数据在页面跳转前可靠送达
+    // v9.0 (P0 核心修复): 点击事件彻底改造，解决 v8.9 模式下点击捕获率仅约 3% 的问题
+    //   a) 先生成 clickPayload（含 event_id）
+    //   b) 存入 sessionStorage（tracker_pending_clicks 数组）
+    //   c) 发送 fetch(keepalive) 到 Webhook
+    //   d) fetch 成功 → 从 sessionStorage 移除该条
+    //   e) fetch 失败 → 保留在 sessionStorage 中（下次页面加载时重发）
+    //   f) 无论成功失败，setTimeout 300ms 后执行 window.location.href = href
     document.querySelectorAll('article[data-news-id] a').forEach(function(link) {
         link.addEventListener('click', function(e) {
             e.preventDefault();
@@ -1315,12 +1519,19 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
                 url: location.href,
                 title: document.title,
                 news_id: newsId,
-                news_title: newsTitle
+                news_title: newsTitle,
+                // v9.0: 点击事件也携带设备指纹和渠道来源，便于关联分析
+                fingerprint: deviceFingerprint,
+                channel_source: CHANNEL_SOURCE
             };
-            if (!deviceSent) {
+            // v9.0: 修复 deviceSent 变量名错误（v8.9 遗留 bug，正确变量为 deviceInfoSent）
+            if (!deviceInfoSent) {
                 clickPayload.device = DEVICE_INFO;
-                deviceSent = true;
+                deviceInfoSent = true;
             }
+            
+            // v9.0: 先存入 sessionStorage，确保即使 fetch 失败+页面跳转也不会丢失
+            addPendingClick(clickPayload);
             
             var webhookBody = {
                 msg_type: 'text',
@@ -1333,12 +1544,23 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(webhookBody),
                 keepalive: true
+            }).then(function(resp) {
+                if (resp.ok) {
+                    // 发送成功，从 sessionStorage 移除
+                    removePendingClick(clickPayload.event_id);
+                    log('News click sent successfully:', newsId);
+                } else {
+                    log('News click send failed (HTTP ' + resp.status + '), kept in sessionStorage');
+                }
             }).catch(function(err) {
-                log('News click send error:', err);
+                log('News click send error, kept in sessionStorage:', err);
             });
             
-            // 导航到目标链接（当前页打开）
-            window.location.href = href;
+            // v9.0: 延迟 300ms 后跳转，给 fetch 留出发送时间窗口
+            // 即使 fetch 尚未完成，sessionStorage 中的 pending 数据下次加载时会重发
+            setTimeout(function() {
+                window.location.href = href;
+            }, CONFIG.clickNavigateDelay);
         });
     });
 
@@ -1727,9 +1949,9 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
         }
     };
     
-    window.MorningBriefTracker.version = '8.9';
+    window.MorningBriefTracker.version = CONFIG.version;
     
-    log('MorningBriefTracker v8.9 initialized');
+    log('MorningBriefTracker v' + CONFIG.version + ' initialized');
 })();
 
 </script>
