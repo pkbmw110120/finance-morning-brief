@@ -1215,6 +1215,8 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
         if (payload.days_since_last_visit !== undefined) eventData.days_since_last_visit = payload.days_since_last_visit;
         // channel_source 通用携带
         if (payload.channel_source !== undefined && !eventData.channel_source) eventData.channel_source = payload.channel_source;
+        // v9.0: fingerprint 字段
+        if (payload.fingerprint !== undefined) eventData.fingerprint = payload.fingerprint;
 
         var webhookBody = {
             msg_type: 'text',
@@ -1423,38 +1425,6 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
     
     // ========== 会话开始（携带设备信息） ==========
     sendTracker('session_start', {});
-    
-    // ========== v9.0: 重发上次未成功发送的点击事件 ==========
-    (function replayPendingClicks() {
-        try {
-            var pending = JSON.parse(sessionStorage.getItem(CONFIG.pendingClicksKey) || '[]');
-            if (!pending.length) return;
-            log('Replaying', pending.length, 'pending click event(s)');
-            // 最多重发20条，防止积压
-            var toReplay = pending.slice(0, 20);
-            var remaining = pending.slice(20);
-            toReplay.forEach(function(item) {
-                fetch(CONFIG.WEBHOOK_URL, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(item.webhookBody),
-                    keepalive: true
-                }).then(function(resp) {
-                    if (resp && resp.ok) {
-                        // 成功，已从 toReplay 中移出，不再保留
-                    } else {
-                        // 失败，放回 remaining
-                        remaining.push(item);
-                    }
-                }).catch(function() {
-                    remaining.push(item);
-                });
-            });
-            sessionStorage.setItem(CONFIG.pendingClicksKey, JSON.stringify(remaining));
-        } catch (e) {
-            log('replayPendingClicks error:', e);
-        }
-    })();
     
     // ========== v8.3: 恢复上次会话缓存的失败事件 ==========
     retryCachedFailedEvents();
@@ -1951,7 +1921,8 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
     
     window.MorningBriefTracker.version = CONFIG.version;
     
-    log('MorningBriefTracker v' + CONFIG.version + ' initialized');
+    // v9.0: 初始化日志打印版本和设备指纹
+    log('MorningBriefTracker v' + CONFIG.version + ' initialized, fingerprint:', deviceFingerprint);
 })();
 
 </script>
