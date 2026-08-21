@@ -440,7 +440,6 @@
         <p style="margin-top: 8px;">© 2026 财经早报系统 | 数据来源：公开资讯</p>
     </div>
 
-<!-- ⚠️ Tracker WEBHOOK_URL 未配置：既未传入也未从 config.json 读取到 coze_workflow_url -->
 
 <script>
 /**
@@ -1923,6 +1922,10 @@
     log('MorningBriefTracker v' + CONFIG.version + ' initialized, fingerprint:', deviceFingerprint);
 })();
 
+</script>
+
+<script>
+window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9vcGVuLWFwaXMvYm90L3YyL2hvb2svNjIxYTVlYTktNWI5NS00MTc2LTgyMjktY2NmMzBjZGJiNjgz" };
 </script>
 </body>
 </html>
