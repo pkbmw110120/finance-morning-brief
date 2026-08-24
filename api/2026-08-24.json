@@ -1,0 +1,71 @@
+{
+  "date": "",
+  "updated_at": "T09:45:00+08:00",
+  "copyright_notice": "配图均来自互联网，仅供内部阅读参考。如有版权问题请联系运营团队替换。",
+  "headline": {
+    "id": "headline-1",
+    "title": "阿里巴巴宣布800亿港元配售 全部投入AI基建创港股最大后续发行",
+    "title_short": "阿里800亿配售全押AI",
+    "source": "",
+    "summary": "",
+    "url": "https://www.cs.com.cn/ssgs/01/2026/08/23/detail_2026082310033309.html",
+    "image": "api/images/headline-1.jpg",
+    "image_source": "article_original"
+  },
+  "finance_news": [
+    {
+      "id": "news-1",
+      "title": "中际旭创上半年营收418亿元同比增长182% 2027年订单需求快速增长",
+      "title_short": "中际旭创半年营收418亿",
+      "source": "",
+      "summary": "",
+      "url": "https://www.cs.com.cn/ssgs/01/2026/08/23/detail_2026082310033310.html",
+      "image": "api/images/news-1.jpg",
+      "image_source": "article_original"
+    },
+    {
+      "id": "news-2",
+      "title": "央行将在香港发行300亿元中央银行票据",
+      "title_short": "央行港发300亿央票",
+      "source": "",
+      "summary": "",
+      "url": "http://www2.xinhuanet.com/20260821/6569bb33e3fd4ad08f632244172b9571/c.html",
+      "image": "api/images/news-2.jpg",
+      "image_source": "article_original"
+    },
+    {
+      "id": "news-3",
+      "title": "国常会部署清理拖欠企业账款 大力整治大企业拖欠中小企业账款问题",
+      "title_short": "国常会整治拖欠账款",
+      "source": "",
+      "summary": "",
+      "url": "https://www.gov.cn/zhengce/202608/content_7078874.htm",
+      "image": "api/images/news-3.jpg",
+      "image_source": "article_original"
+    },
+    {
+      "id": "news-4",
+      "title": "社保基金二季度持仓版图浮现 重仓182只个股新进54只",
+      "title_short": "社保基金重仓182股",
+      "source": "",
+      "summary": "",
+      "url": "http://www.cnr.cn/jingji/gundong/20260824/t20260824_527789011.shtml",
+      "image": "api/images/news-4.jpg",
+      "image_source": "article_original"
+    },
+    {
+      "id": "news-5",
+      "title": "美国联邦债务突破40万亿美元 达利欧警告债务危机三年内或爆发",
+      "title_short": "美债40万亿达利欧预警",
+      "source": "",
+      "summary": "",
+      "url": "https://finance.sina.com.cn/roll/2026-08-22/doc-inipcwvt6147993.shtml",
+      "image": "api/images/news-5.png",
+      "image_source": "bing_search"
+    }
+  ],
+  "supply_news": [],
+  "bill_rate_note": "",
+  "page_url": "https://pkbmw110120.github.io/finance-morning-brief/",
+  "archive_url": "https://pkbmw110120.github.io/finance-morning-brief/.html"
+}
