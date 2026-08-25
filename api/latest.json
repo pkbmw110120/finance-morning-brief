@@ -4,67 +4,118 @@
   "copyright_notice": "配图均来自互联网，仅供内部阅读参考。如有版权问题请联系运营团队替换。",
   "headline": {
     "id": "headline-1",
-    "title": "阿里巴巴宣布800亿港元配售 全部投入AI基建创港股最大后续发行",
-    "title_short": "阿里800亿配售全押AI",
+    "title": "央行打出长短\"组合拳\"呵护流动性 5000亿MLF加隔夜逆回购护航月末",
+    "title_short": "央行5000亿MLF+隔夜逆回购护航月末",
     "source": "",
     "summary": "",
-    "url": "https://www.cs.com.cn/ssgs/01/2026/08/23/detail_2026082310033309.html",
+    "url": "https://i.ifeng.com/c/8vrvd0SRI53",
     "image": "api/images/headline-1.jpg",
     "image_source": "article_original"
   },
   "finance_news": [
     {
       "id": "news-1",
-      "title": "中际旭创上半年营收418亿元同比增长182% 2027年订单需求快速增长",
-      "title_short": "中际旭创半年营收418亿",
+      "title": "A股三大指数集体调整 沪指跌0.59%创业板指跌3.21%",
+      "title_short": "A股三大指数集体调整",
       "source": "",
       "summary": "",
-      "url": "https://www.cs.com.cn/ssgs/01/2026/08/23/detail_2026082310033310.html",
+      "url": "https://finance.eastmoney.com/a/chgjj.html",
       "image": "api/images/news-1.jpg",
       "image_source": "article_original"
     },
     {
       "id": "news-2",
-      "title": "央行将在香港发行300亿元中央银行票据",
-      "title_short": "央行港发300亿央票",
+      "title": "近六成A股公司中报净利增长 401家拟实施中期分红",
+      "title_short": "近六成A股公司中报净利增长",
       "source": "",
       "summary": "",
-      "url": "http://www2.xinhuanet.com/20260821/6569bb33e3fd4ad08f632244172b9571/c.html",
+      "url": "http://www.ce.cn/macro/more/202608/t20260825_3167966.shtml",
       "image": "api/images/news-2.jpg",
-      "image_source": "article_original"
+      "image_source": "bing_search"
     },
     {
       "id": "news-3",
-      "title": "国常会部署清理拖欠企业账款 大力整治大企业拖欠中小企业账款问题",
-      "title_short": "国常会整治拖欠账款",
+      "title": "上海发布新型工业化十五五规划 打造三个万亿级产业集群",
+      "title_short": "上海十五五规划三个万亿级产业",
       "source": "",
       "summary": "",
-      "url": "https://www.gov.cn/zhengce/202608/content_7078874.htm",
+      "url": "https://www.jiemian.com/article/14978679.html",
       "image": "api/images/news-3.jpg",
       "image_source": "article_original"
     },
     {
       "id": "news-4",
-      "title": "社保基金二季度持仓版图浮现 重仓182只个股新进54只",
-      "title_short": "社保基金重仓182股",
+      "title": "财政\"引水渠\"撬动20万亿 中央财政千亿工具引导金融资源",
+      "title_short": "财政千亿工具撬动20万亿信贷",
       "source": "",
       "summary": "",
-      "url": "http://www.cnr.cn/jingji/gundong/20260824/t20260824_527789011.shtml",
+      "url": "https://finance.sina.com.cn/headline/2026-08-25/doc-inipnpza5650564.shtml",
       "image": "api/images/news-4.jpg",
-      "image_source": "article_original"
+      "image_source": "bing_search"
     },
     {
       "id": "news-5",
-      "title": "美国联邦债务突破40万亿美元 达利欧警告债务危机三年内或爆发",
-      "title_short": "美债40万亿达利欧预警",
+      "title": "人民币兑美元中间价报6.7852 下调11点",
+      "title_short": "人民币中间价下调11点",
       "source": "",
       "summary": "",
-      "url": "https://finance.sina.com.cn/roll/2026-08-22/doc-inipcwvt6147993.shtml",
+      "url": "https://36kr.com/newsflashes/3954256524262535",
       "image": "api/images/news-5.png",
       "image_source": "bing_search"
     }
   ],
-  "supply_news": [],
+  "supply_news": [
+    {
+      "id": "supply-1",
+      "title": "中小微企业账期困局 供应链金融正在换一套玩法",
+      "title_short": "供应链金融换玩法 电子凭证退场",
+      "source": "",
+      "summary": "",
+      "url": "https://www.piaofengzixun.com/category/news/",
+      "image": "api/images/supply-1.jpg",
+      "image_source": "bing_search"
+    },
+    {
+      "id": "supply-2",
+      "title": "沂链通\"供票中国行\"济南启幕 聚焦供应链票据规范发展",
+      "title_short": "供票中国行济南站启幕",
+      "source": "",
+      "summary": "",
+      "url": "https://www.jiemian.com/article/14975244.html",
+      "image": "api/images/supply-2.png",
+      "image_source": "article_original"
+    },
+    {
+      "id": "supply-3",
+      "title": "招商银行接入票交所新一代票据系统 等分化票据时代开启",
+      "title_short": "招行接入新一代票据系统",
+      "source": "",
+      "summary": "",
+      "url": "http://news.qq.com/rain/a/20260823A04CID00",
+      "image": "api/images/supply-3.jpg",
+      "image_source": "article_original"
+    },
+    {
+      "id": "supply-4",
+      "title": "渤海银行\"脱核不脱链\"供应链金融破解禽类养殖融资难",
+      "title_short": "渤海银行脱核链贷创新模式",
+      "source": "",
+      "summary": "",
+      "url": "https://finance.sina.com.cn/wm/2026-08-24/doc-inipkzxs1948462.shtml",
+      "image": "api/images/supply-4.png",
+      "image_source": "bing_search"
+    },
+    {
+      "id": "supply-5",
+      "title": "浙商银行供小联动助推供应链项目扩面上量",
+      "title_short": "浙商银行供应链金融扩面",
+      "source": "",
+      "summary": "",
+      "url": "http://m.toutiao.com/group/7677429822062101035/",
+      "image": "api/images/supply-5.jpg",
+      "image_source": "bing_search"
+    }
+  ],
   "bill_rate_note": "",
   "page_url": "https://pkbmw110120.github.io/finance-morning-brief/",
   "archive_url": "https://pkbmw110120.github.io/finance-morning-brief/.html"
