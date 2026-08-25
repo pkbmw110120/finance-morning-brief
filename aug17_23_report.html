@@ -283,7 +283,7 @@ a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; border-ra
 <header class="report-header">
   <h1>财经早报 · 埋点数据周报</h1>
   <div class="subtitle">
-    <span>📅 统计周期：2026-08-17（周一）至 2026-08-21（周五）</span>
+    <span>📅 统计周期：2026-08-17（周一）至 2026-08-23（周日）</span>
     <span>📊 总事件 738 条</span>
     <span>⏱ 生成时间：2026-08-25 11:20</span>
   </div>
@@ -322,7 +322,7 @@ a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; border-ra
   </div>
 
   <div class="warning">
-    <strong>⚠️ 核心发现：</strong>整体点击率仅 1.96%，远低于内容产品 5%~10% 的常见水平。8 次点击分散在 5 天中的 2 天（8/19 和 8/20），其余 3 天均为零点击。这意味着绝大多数用户只是"扫了一眼"标题就离开了，内容吸引力或链接引导存在较大优化空间。
+    <strong>⚠️ 核心发现：</strong>整体点击率仅 1.96%，远低于内容产品 5%~10% 的常见水平。8 次点击分散在 7 天中的 2 天（8/19 和 8/20），其余 5 天均为零点击。这意味着绝大多数用户只是"扫了一眼"标题就离开了，内容吸引力或链接引导存在较大优化空间。
   </div>
 </section>
 
@@ -396,6 +396,26 @@ a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; border-ra
           <td class="num">56.2s</td>
           <td class="num">61</td>
         </tr>
+        <tr>
+          <td>08-22（周六）</td>
+          <td class="num">0</td>
+          <td class="num">0</td>
+          <td class="num">0</td>
+          <td class="num">0</td>
+          <td class="num">0.00%</td>
+          <td class="num">—</td>
+          <td class="num">0</td>
+        </tr>
+        <tr>
+          <td>08-23（周日）</td>
+          <td class="num">0</td>
+          <td class="num">0</td>
+          <td class="num">0</td>
+          <td class="num">0</td>
+          <td class="num">0.00%</td>
+          <td class="num">—</td>
+          <td class="num">0</td>
+        </tr>
       </tbody>
       <tfoot>
         <tr>
@@ -414,18 +434,18 @@ a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; border-ra
 
   <!-- SVG bar chart: PV & UV trend -->
   <div class="chart-box">
-    <svg viewBox="0 0 700 260" role="img" aria-labelledby="chart-daily-title chart-daily-desc">
+    <svg viewBox="0 0 800 260" role="img" aria-labelledby="chart-daily-title chart-daily-desc">
       <title id="chart-daily-title">每日 PV / UV / 点击数对比图</title>
-      <desc id="chart-daily-desc">柱状图展示 8/17 至 8/21 每日的 PV、UV 和点击数量</desc>
+      <desc id="chart-daily-desc">柱状图展示 8/17 至 8/23 每日的 PV、UV 和点击数量</desc>
 
       <!-- Y axis -->
       <line x1="60" y1="20" x2="60" y2="200" stroke="#E6E1D8" stroke-width="1"/>
       <!-- grid lines -->
-      <line x1="60" y1="200" x2="680" y2="200" stroke="#E6E1D8" stroke-width="1"/>
-      <line x1="60" y1="155" x2="680" y2="155" stroke="#E6E1D8" stroke-width="0.5" stroke-dasharray="4"/>
-      <line x1="60" y1="110" x2="680" y2="110" stroke="#E6E1D8" stroke-width="0.5" stroke-dasharray="4"/>
-      <line x1="60" y1="65" x2="680" y2="65" stroke="#E6E1D8" stroke-width="0.5" stroke-dasharray="4"/>
-      <line x1="60" y1="20" x2="680" y2="20" stroke="#E6E1D8" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="60" y1="200" x2="780" y2="200" stroke="#E6E1D8" stroke-width="1"/>
+      <line x1="60" y1="155" x2="780" y2="155" stroke="#E6E1D8" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="60" y1="110" x2="780" y2="110" stroke="#E6E1D8" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="60" y1="65" x2="780" y2="65" stroke="#E6E1D8" stroke-width="0.5" stroke-dasharray="4"/>
+      <line x1="60" y1="20" x2="780" y2="20" stroke="#E6E1D8" stroke-width="0.5" stroke-dasharray="4"/>
 
       <!-- Y labels -->
       <text x="55" y="204" text-anchor="end" font-size="11" fill="#98A2B3" font-family="ui-monospace,monospace">0</text>
@@ -472,15 +492,27 @@ a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; border-ra
       <text x="601" y="218" text-anchor="middle" font-size="11" fill="#667085">8/21</text>
       <text x="576" y="172" text-anchor="middle" font-size="10" fill="#2978B5" font-family="ui-monospace,monospace">5</text>
 
+      <!-- 8/22（周六）: PV=0, UV=0, Click=0 — 周末无发报 -->
+      <rect x="645" y="200" width="16" height="0" rx="3" fill="#2978B5" opacity="0.3"/>
+      <rect x="664" y="200" width="16" height="0" rx="3" fill="#2978B5" opacity="0.15"/>
+      <rect x="683" y="200" width="16" height="0" rx="3" fill="#F59E0B"/>
+      <text x="672" y="218" text-anchor="middle" font-size="11" fill="#BDBDBD">8/22</text>
+
+      <!-- 8/23（周日）: PV=0, UV=0, Click=0 — 周末无发报 -->
+      <rect x="705" y="200" width="16" height="0" rx="3" fill="#2978B5" opacity="0.3"/>
+      <rect x="724" y="200" width="16" height="0" rx="3" fill="#2978B5" opacity="0.15"/>
+      <rect x="743" y="200" width="16" height="0" rx="3" fill="#F59E0B"/>
+      <text x="732" y="218" text-anchor="middle" font-size="11" fill="#BDBDBD">8/23</text>
+
       <!-- Legend -->
-      <rect x="460" y="240" width="12" height="12" rx="2" fill="#2978B5" opacity="0.85"/>
-      <text x="477" y="250" font-size="11" fill="#667085">PV</text>
-      <rect x="510" y="240" width="12" height="12" rx="2" fill="#2978B5" opacity="0.45"/>
-      <text x="527" y="250" font-size="11" fill="#667085">UV</text>
-      <rect x="560" y="240" width="12" height="12" rx="2" fill="#F59E0B"/>
-      <text x="577" y="250" font-size="11" fill="#667085">点击</text>
+      <rect x="200" y="240" width="12" height="12" rx="2" fill="#2978B5" opacity="0.85"/>
+      <text x="217" y="250" font-size="11" fill="#667085">PV</text>
+      <rect x="250" y="240" width="12" height="12" rx="2" fill="#2978B5" opacity="0.45"/>
+      <text x="267" y="250" font-size="11" fill="#667085">UV</text>
+      <rect x="300" y="240" width="12" height="12" rx="2" fill="#F59E0B"/>
+      <text x="317" y="250" font-size="11" fill="#667085">点击</text>
     </svg>
-    <div class="chart-caption">图 1 · 每日 PV / UV / 点击数对比（8/22-23 为周末无发报）</div>
+    <div class="chart-caption">图 1 · 每日 PV / UV / 点击数对比（完整一周，8/22-23 周末无发报数据为零）</div>
   </div>
 
   <div class="insight">
@@ -757,6 +789,8 @@ a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; border-ra
             <tr><td>08-19</td><td class="num">67.5s</td><td class="num">2</td></tr>
             <tr><td>08-20</td><td class="num">49.7s</td><td class="num">16</td></tr>
             <tr><td>08-21</td><td class="num">56.2s</td><td class="num">5</td></tr>
+            <tr><td>08-22</td><td class="num">—</td><td class="num">0</td></tr>
+            <tr><td>08-23</td><td class="num">—</td><td class="num">0</td></tr>
           </tbody>
         </table>
       </div>
@@ -779,6 +813,8 @@ a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; border-ra
             <tr><td>08-19</td><td class="num">5</td><td class="num">10</td><td class="num">0.50</td></tr>
             <tr><td>08-20</td><td class="num">29</td><td class="num">28</td><td class="num" style="color:var(--green);font-weight:600">1.04</td></tr>
             <tr><td>08-21</td><td class="num">8</td><td class="num">5</td><td class="num" style="color:var(--green);font-weight:600">1.60</td></tr>
+            <tr><td>08-22</td><td class="num">0</td><td class="num">0</td><td class="num">—</td></tr>
+            <tr><td>08-23</td><td class="num">0</td><td class="num">0</td><td class="num">—</td></tr>
           </tbody>
         </table>
       </div>
@@ -844,7 +880,7 @@ a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; border-ra
   <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:16px;">
     <h3 style="margin-top:0;color:var(--blue-deep);">🔑 核心结论</h3>
     <ol style="padding-left:20px;line-height:2;font-size:14px;">
-      <li><strong>流量集中且偏低</strong>：5 天 88 UV，日均 17.6 人，周一高周五低，符合工作日早报的流量模型，但绝对量较小。</li>
+      <li><strong>流量集中且偏低</strong>：7 天 88 UV（均来自 5 个工作日），日均 17.6 人，周一高周五低，符合工作日早报的流量模型，但绝对量较小。</li>
       <li><strong>点击率是最大瓶颈</strong>：1.96% 的整体 CTR 说明用户"看了标题但不想点进去"。53% 的新闻全周零点击，标题吸引力不足。</li>
       <li><strong>供应链专版 CTR 反而更高</strong>：3 条供金新闻 CTR 超过 7%，说明垂直领域、标题具体化的内容更能触发点击行为。</li>
       <li><strong>用户停留偏短</strong>：多数人 30-70 秒看完就走，符合"扫读"习惯，说明早报信息密度需要再提升或排版需要更强的引导。</li>
@@ -896,7 +932,7 @@ a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; border-ra
 
 <footer class="report-footer">
   <span>数据来源：<a href="https://applink.feishu.cn/client/bitable/open?appToken=E9CebRUs0a0bIrsxb0zccNMCn4d&tableId=tbl9KGKukLxSwB0P" target="_blank" rel="noopener noreferrer">飞书多维表格 · 埋点事件表</a></span>
-  <span>共 738 条事件 · 覆盖 5 个工作日</span>
+  <span>共 738 条事件 · 覆盖 7 天（5 个工作日）</span>
   <span>报告生成于 2026-08-25 11:20 CST</span>
 </footer>
 
