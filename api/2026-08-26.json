@@ -1,0 +1,71 @@
+{
+  "date": "",
+  "updated_at": "T09:45:00+08:00",
+  "copyright_notice": "配图均来自互联网，仅供内部阅读参考。如有版权问题请联系运营团队替换。",
+  "headline": {
+    "id": "headline-1",
+    "title": "四大银行发布公告：中小微企业贷款和服务业经营主体贷款贴息政策正式落地",
+    "title_short": "四大行落地中小微企业贷款贴息政策",
+    "source": "",
+    "summary": "",
+    "url": "https://finance.sina.com.cn/jjxw/2026-08-26/doc-inipqxha2162758.shtml",
+    "image": "api/images/headline-1.jpg",
+    "image_source": "bing_search"
+  },
+  "finance_news": [
+    {
+      "id": "news-1",
+      "title": "财政金融协同再发力：三大增量举措进一步释放内需活力",
+      "title_short": "财政金融协同再发力",
+      "source": "",
+      "summary": "",
+      "url": "https://finance.eastmoney.com/a/202608253851675028.html",
+      "image": "api/images/news-1.png",
+      "image_source": "article_original"
+    },
+    {
+      "id": "news-2",
+      "title": "银行业监督管理法修订草案二审：拟加强消费者权益保护",
+      "title_short": "银行业监督管理法拟加强消费者保护",
+      "source": "",
+      "summary": "",
+      "url": "https://www.cs.com.cn/xwzx/01/2026/08/25/detail_2026082510033910.html",
+      "image": "api/images/news-2.jpg",
+      "image_source": "article_original"
+    },
+    {
+      "id": "news-3",
+      "title": "工信部：上半年数字产业收入超20万亿元，利润同比增长19.3%",
+      "title_short": "上半年数字产业收入超20万亿",
+      "source": "",
+      "summary": "",
+      "url": "https://36kr.com/newsflashes/catalog/4",
+      "image": "api/images/news-3.png",
+      "image_source": "bing_search"
+    },
+    {
+      "id": "news-4",
+      "title": "央行今日开展2395亿元7天逆回购操作，利率持平1.40%",
+      "title_short": "央行开展2395亿元逆回购操作",
+      "source": "",
+      "summary": "",
+      "url": "https://finance.sina.com.cn/jjxw/2026-08-26/doc-iniprcpu1062660.shtml",
+      "image": "api/images/news-4.jpg",
+      "image_source": "bing_search"
+    },
+    {
+      "id": "news-5",
+      "title": "东吴证券落地全国首单券商\"数字人民币+货币桥+跨境投资\"业务",
+      "title_short": "首单券商数字人民币跨境投资落地",
+      "source": "",
+      "summary": "",
+      "url": "https://finance.eastmoney.com/a/202608243851564544.html",
+      "image": "api/images/news-5.jpg",
+      "image_source": "article_original"
+    }
+  ],
+  "supply_news": [],
+  "bill_rate_note": "",
+  "page_url": "https://pkbmw110120.github.io/finance-morning-brief/",
+  "archive_url": "https://pkbmw110120.github.io/finance-morning-brief/.html"
+}
