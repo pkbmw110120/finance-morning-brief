@@ -4,63 +4,63 @@
   "copyright_notice": "配图均来自互联网，仅供内部阅读参考。如有版权问题请联系运营团队替换。",
   "headline": {
     "id": "headline-1",
-    "title": "四大银行发布公告：中小微企业贷款和服务业经营主体贷款贴息政策正式落地",
-    "title_short": "四大行落地中小微企业贷款贴息政策",
+    "title": "工信部\"十五五\"发力：加快打造集成电路、低空经济等六大新兴支柱产业",
+    "title_short": "工信部六大新兴支柱产业规划出炉",
     "source": "",
     "summary": "",
-    "url": "https://finance.sina.com.cn/jjxw/2026-08-26/doc-inipqxha2162758.shtml",
-    "image": "api/images/headline-1.jpg",
-    "image_source": "bing_search"
+    "url": "https://m.yicai.com/news/103334414.html",
+    "image": "api/images/headline-1.png",
+    "image_source": "article_original"
   },
   "finance_news": [
     {
       "id": "news-1",
-      "title": "财政金融协同再发力：三大增量举措进一步释放内需活力",
-      "title_short": "财政金融协同再发力",
+      "title": "英伟达Q2营收962亿美元同比翻倍，各项业绩指标均超市场预期",
+      "title_short": "英伟达Q2营收翻倍超预期",
       "source": "",
       "summary": "",
-      "url": "https://finance.eastmoney.com/a/202608253851675028.html",
-      "image": "api/images/news-1.png",
-      "image_source": "article_original"
+      "url": "https://www.cls.cn/detail/2465563",
+      "image": "api/images/news-1.jpg",
+      "image_source": "bing_search"
     },
     {
       "id": "news-2",
-      "title": "银行业监督管理法修订草案二审：拟加强消费者权益保护",
-      "title_short": "银行业监督管理法拟加强消费者保护",
+      "title": "黄金重新站上4600美元，全球信用重构抬升金价长周期中枢",
+      "title_short": "黄金站上4600美元 信用重构推升中枢",
       "source": "",
       "summary": "",
-      "url": "https://www.cs.com.cn/xwzx/01/2026/08/25/detail_2026082510033910.html",
+      "url": "https://www.cls.cn/detail/2465628",
       "image": "api/images/news-2.jpg",
-      "image_source": "article_original"
+      "image_source": "bing_search"
     },
     {
       "id": "news-3",
-      "title": "工信部：上半年数字产业收入超20万亿元，利润同比增长19.3%",
-      "title_short": "上半年数字产业收入超20万亿",
+      "title": "上海发布战略性新兴产业\"十五五\"规划，2030年产业增加值达2.1万亿",
+      "title_short": "上海战新产业十五五目标2.1万亿",
       "source": "",
       "summary": "",
-      "url": "https://36kr.com/newsflashes/catalog/4",
-      "image": "api/images/news-3.png",
+      "url": "http://www.cnstock.com/commonDetail/775462",
+      "image": "api/images/news-3.jpg",
       "image_source": "bing_search"
     },
     {
       "id": "news-4",
-      "title": "央行今日开展2395亿元7天逆回购操作，利率持平1.40%",
-      "title_short": "央行开展2395亿元逆回购操作",
+      "title": "社保基金与牛散二季度集中加仓A股科技方向",
+      "title_short": "社保基金与牛散集中加仓科技股",
       "source": "",
       "summary": "",
-      "url": "https://finance.sina.com.cn/jjxw/2026-08-26/doc-iniprcpu1062660.shtml",
+      "url": "https://m.21jingji.com/article/20260826/herald/21531b1626455d5286fe0adcfa2493c9_zaker.html",
       "image": "api/images/news-4.jpg",
       "image_source": "bing_search"
     },
     {
       "id": "news-5",
-      "title": "东吴证券落地全国首单券商\"数字人民币+货币桥+跨境投资\"业务",
-      "title_short": "首单券商数字人民币跨境投资落地",
+      "title": "中金公司吸并东兴证券、信达证券今日上会审核",
+      "title_short": "中金三合一重组今日上会",
       "source": "",
       "summary": "",
-      "url": "https://finance.eastmoney.com/a/202608243851564544.html",
-      "image": "api/images/news-5.jpg",
+      "url": "https://caifuhao.eastmoney.com/news/20260823025208321717880",
+      "image": "api/images/news-5.png",
       "image_source": "article_original"
     }
   ],
