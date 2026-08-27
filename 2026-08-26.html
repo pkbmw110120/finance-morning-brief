@@ -441,7 +441,7 @@
     </div>
 
 <script>
-window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9vcGVuLWFwaXMvYm90L3YyL2hvb2svNjIxYTVlYTktNWI5NS00MTc2LTgyMjktY2NmMzBjZGJiNjgz" };
+window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9vcGVuLWFwaXMvYm90L3YyL2hvb2svNjIxYTVlYTktNWI5NS00MTc2LTgyMjktY2NmMzBjZGJiNjgz", _COZE_WORKFLOW_URL_B64: "aHR0cHM6Ly90cmFja2VyLWJpdGFibGUtd2ViaG9vay55dWFueXVhbjg5MDIwMS53b3JrZXJzLmRldg==" };
 </script>
 
 <script>
@@ -544,7 +544,7 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
     /** Tracker配置 */
     var CONFIG = {
         // v9.0: 前端版本号
-        version: '9.0',
+        version: '9.1',
 
         // 飞书Webhook地址（必须通过 window.__TRACKER_CONFIG__ 注入，不留默认值）
         WEBHOOK_URL: '',
@@ -569,6 +569,9 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
         batchInterval: 6000,
         maxRetries: 3,
         heartbeatInterval: 60000,   // v9.0: 120s→60s，提升停留时长采集精度
+
+        // ========== v9.1: 直写多维表格端点 ==========
+        cozeWorkflowUrl: '',
         
         // ========== 频率控制配置（v8.3: P0-2 加固） ==========
         maxSendsPerSecond: 2,
@@ -603,12 +606,156 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
         if (extConfig._WEBHOOK_URL_B64) {
             try { CONFIG.WEBHOOK_URL = atob(extConfig._WEBHOOK_URL_B64); } catch(e) { console.warn('[Tracker] WEBHOOK_URL_B64 decode failed'); }
         }
+        // v9.1: base64 编码的直写多维表格端点 URL
+        if (extConfig._COZE_WORKFLOW_URL_B64) {
+            try { CONFIG.cozeWorkflowUrl = atob(extConfig._COZE_WORKFLOW_URL_B64); } catch(e) { console.warn('[Tracker] _COZE_WORKFLOW_URL_B64 decode failed'); }
+        }
     }
     
     // v8.3: 校验必须配置项
     if (!CONFIG.WEBHOOK_URL) {
-        console.warn('[Tracker v9.0] WEBHOOK_URL 未配置！请通过 window.__TRACKER_CONFIG__ 注入。');
+        console.warn('[Tracker v9.1] WEBHOOK_URL 未配置！请通过 window.__TRACKER_CONFIG__ 注入。');
     }
+
+    // ========== v9.1: 直写多维表格（mirrorToCoze） ==========
+    // 将事件双写到 Cloudflare Worker 端点，Worker 直接调用飞书多维表格 API
+    // 彻底摆脱 im:message.history:readonly 权限依赖
+    var COZE_EVENT_TYPES = new Set([
+        'page_view', 'page_stay', 'page_exit',
+        'news_exposure', 'news_click',
+        'heartbeat', 'scroll', 'click',
+        'session_start', 'read_milestone',
+        'subscribe_click', 'share_click', 'retention_check'
+    ]);
+
+    function mirrorToCoze(events) {
+        if (!CONFIG.cozeWorkflowUrl) return;
+        try {
+            var cozeEvents = [];
+            for (var i = 0; i < events.length; i++) {
+                var p = events[i];
+                if (!COZE_EVENT_TYPES.has(p.event_type)) continue;
+                var ce = {
+                    event_id: p.event_id || '',
+                    page_id: p.page_id || '',
+                    user_id: p.user_id || '',
+                    session_id: p.session_id || '',
+                    event_type: p.event_type,
+                    timestamp: p.timestamp,
+                    duration: p.duration || 0,
+                    referrer: p.referrer || '',
+                    url: p.url || '',
+                    title: p.title || '',
+                    channel: p.channel_source || '',
+                    channel_source: p.channel_source || '',
+                    device: p.device || {
+                        screenWidth: DEVICE_INFO.screenWidth,
+                        screenHeight: DEVICE_INFO.screenHeight,
+                        userAgent: DEVICE_INFO.userAgent,
+                        language: DEVICE_INFO.language
+                    }
+                };
+                // 附加事件特定字段
+                if (p.news_id) ce.news_id = p.news_id;
+                if (p.news_title) ce.news_title = p.news_title;
+                if (p.heartbeat_time !== undefined) ce.heartbeat_time = p.heartbeat_time;
+                if (p.scroll_depth !== undefined) ce.scroll_depth = p.scroll_depth;
+                if (p.click_target) ce.click_target = p.click_target;
+                if (p.exit_type) ce.exit_type = p.exit_type;
+                if (p.session_duration !== undefined) ce.session_duration = p.session_duration;
+                if (p.page_stay_duration !== undefined) ce.page_stay_duration = p.page_stay_duration;
+                if (p.fingerprint) ce.fingerprint = p.fingerprint;
+                if (p.milestone !== undefined) ce.milestone = p.milestone;
+                if (p.visible !== undefined) ce.visible = p.visible;
+                cozeEvents.push(ce);
+            }
+            if (cozeEvents.length === 0) return;
+            fetch(CONFIG.cozeWorkflowUrl, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ source: 'tracker_v9.1', events: cozeEvents }),
+                keepalive: true
+            }).then(function(resp) {
+                if (!resp.ok) log('mirrorToCoze HTTP ' + resp.status);
+            }).catch(function(err) {
+                log('mirrorToCoze error:', err);
+            });
+        } catch(e) {
+            log('mirrorToCoze exception:', e);
+        }
+    }
+
+
+
+    // ========== v9.1: 直写多维表格（mirrorToCoze） ==========
+    // 将事件双写到 Cloudflare Worker 端点，Worker 直接调用飞书多维表格 API
+    // 彻底摆脱 im:message.history:readonly 权限依赖
+    var COZE_EVENT_TYPES = new Set([
+        'page_view', 'page_stay', 'page_exit',
+        'news_exposure', 'news_click',
+        'heartbeat', 'scroll', 'click',
+        'session_start', 'read_milestone',
+        'subscribe_click', 'share_click', 'retention_check'
+    ]);
+
+    function mirrorToCoze(events) {
+        if (!CONFIG.cozeWorkflowUrl) return;
+        try {
+            var cozeEvents = [];
+            for (var i = 0; i < events.length; i++) {
+                var p = events[i];
+                if (!COZE_EVENT_TYPES.has(p.event_type)) continue;
+                var ce = {
+                    event_id: p.event_id || '',
+                    page_id: p.page_id || '',
+                    user_id: p.user_id || '',
+                    session_id: p.session_id || '',
+                    event_type: p.event_type,
+                    timestamp: p.timestamp,
+                    duration: p.duration || 0,
+                    referrer: p.referrer || '',
+                    url: p.url || '',
+                    title: p.title || '',
+                    channel: p.channel_source || '',
+                    channel_source: p.channel_source || '',
+                    device: p.device || {
+                        screenWidth: DEVICE_INFO.screenWidth,
+                        screenHeight: DEVICE_INFO.screenHeight,
+                        userAgent: DEVICE_INFO.userAgent,
+                        language: DEVICE_INFO.language
+                    }
+                };
+                // 附加事件特定字段
+                if (p.news_id) ce.news_id = p.news_id;
+                if (p.news_title) ce.news_title = p.news_title;
+                if (p.heartbeat_time !== undefined) ce.heartbeat_time = p.heartbeat_time;
+                if (p.scroll_depth !== undefined) ce.scroll_depth = p.scroll_depth;
+                if (p.click_target) ce.click_target = p.click_target;
+                if (p.exit_type) ce.exit_type = p.exit_type;
+                if (p.session_duration !== undefined) ce.session_duration = p.session_duration;
+                if (p.page_stay_duration !== undefined) ce.page_stay_duration = p.page_stay_duration;
+                if (p.fingerprint) ce.fingerprint = p.fingerprint;
+                if (p.milestone !== undefined) ce.milestone = p.milestone;
+                if (p.visible !== undefined) ce.visible = p.visible;
+                cozeEvents.push(ce);
+            }
+            if (cozeEvents.length === 0) return;
+            fetch(CONFIG.cozeWorkflowUrl, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ source: 'tracker_v9.1', events: cozeEvents }),
+                keepalive: true
+            }).then(function(resp) {
+                if (!resp.ok) log('mirrorToCoze HTTP ' + resp.status);
+            }).catch(function(err) {
+                log('mirrorToCoze error:', err);
+            });
+        } catch(e) {
+            log('mirrorToCoze exception:', e);
+        }
+    }
+
+
 
     // ========== v8.7 P8: 统一页面ID命名规范 ==========
     // 强制输出格式: 早报_YYYY-MM-DD（如 早报_2026-08-18）
@@ -1005,7 +1152,7 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
     
     function log() {
         if (CONFIG.debug) {
-            console.log('[Tracker v9.0]', Array.prototype.slice.call(arguments));
+            console.log('[Tracker v9.1]', Array.prototype.slice.call(arguments));
         }
     }
     
@@ -1151,6 +1298,9 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
         // v8.3: 记录发送时间戳用于频率控制
         recordSend();
         
+        // v9.1: 镜像到直写端点
+        mirrorToCoze(payloads);
+
         fetch(CONFIG.WEBHOOK_URL, {
             method: 'POST',
             headers: { 
@@ -1368,6 +1518,9 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
 
         log('Page exit (' + exitType + '): session=' + sessionDuration + 's, active=' + pageStayDuration + 's, scroll=' + scrollDepth + '%');
 
+        // v9.1: 镜像到直写端点
+        mirrorToCoze([payload]);
+
         // v8.9: 使用 fetch + keepalive 替代 sendBeacon
         fetch(CONFIG.WEBHOOK_URL, {
             method: 'POST',
@@ -1410,15 +1563,15 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
     })();
     
     if (CONFIG.debug) {
-        console.log('[Tracker v9.0] DNT status:', dntEnabled ? 'ENABLED (tracking disabled)' : 'DISABLED (tracking active)');
-        console.log('[Tracker v9.0] Bot detection:', isBot ? 'BOT detected (tracking disabled)' : 'Normal user');
-        console.log('[Tracker v9.0] Channel source:', CHANNEL_SOURCE || '(empty)');
-        console.log('[Tracker v9.0] Page ID:', CONFIG.pageId);
+        console.log('[Tracker v9.1] DNT status:', dntEnabled ? 'ENABLED (tracking disabled)' : 'DISABLED (tracking active)');
+        console.log('[Tracker v9.1] Bot detection:', isBot ? 'BOT detected (tracking disabled)' : 'Normal user');
+        console.log('[Tracker v9.1] Channel source:', CHANNEL_SOURCE || '(empty)');
+        console.log('[Tracker v9.1] Page ID:', CONFIG.pageId);
     }
     
     // 如果是爬虫，直接跳过所有采集
     if (isBot) {
-        if (CONFIG.debug) console.log('[Tracker v9.0] Skipping all tracking for bot traffic');
+        if (CONFIG.debug) console.log('[Tracker v9.1] Skipping all tracking for bot traffic');
         window.MorningBriefTracker = { track: function(){}, flush: function(){}, isDntEnabled: function(){ return dntEnabled; }, isBot: function(){ return true; } };
         return;
     }
@@ -1508,6 +1661,9 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
                 content: { text: JSON.stringify(clickPayload) }
             };
             
+            // v9.1: 镜像点击到直写端点
+            mirrorToCoze([clickPayload]);
+
             // 使用 fetch + keepalive 确保数据在页面跳转前送达
             fetch(CONFIG.WEBHOOK_URL, {
                 method: 'POST',
@@ -1728,6 +1884,24 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
             heartbeat_time: heartbeatTime,
             visible: !document.hidden
         });
+        // v9.1: 镜像心跳到直写端点
+        mirrorToCoze([{
+            event_id: generateEventId(),
+            page_id: CONFIG.pageId,
+            user_id: userId,
+            session_id: sessionId,
+            event_type: 'heartbeat',
+            timestamp: new Date().toISOString(),
+            duration: heartbeatTime,
+            heartbeat_time: heartbeatTime,
+            channel_source: CHANNEL_SOURCE,
+            device: {
+                screenWidth: DEVICE_INFO.screenWidth,
+                screenHeight: DEVICE_INFO.screenHeight,
+                userAgent: DEVICE_INFO.userAgent,
+                language: DEVICE_INFO.language
+            }
+        }]);
         log('Heartbeat sent, active time:', heartbeatTime, 's');
     }
     
@@ -1766,6 +1940,9 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
                     }
                 };
                 
+                // v9.1: 镜像到直写端点
+                mirrorToCoze([stayPayload]);
+
                 // v8.9: 使用 fetch + keepalive 替代 sendBeacon
                 fetch(CONFIG.WEBHOOK_URL, {
                     method: 'POST',
@@ -1837,6 +2014,9 @@ window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9
                 }
             };
             
+            // v9.1: 镜像到直写端点
+            mirrorToCoze([payload]);
+
             // v8.9: 使用 fetch + keepalive 替代 sendBeacon
             fetch(CONFIG.WEBHOOK_URL, {
                 method: 'POST',
