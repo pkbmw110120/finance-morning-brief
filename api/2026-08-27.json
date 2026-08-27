@@ -1,0 +1,71 @@
+{
+  "date": "",
+  "updated_at": "T09:45:00+08:00",
+  "copyright_notice": "配图均来自互联网，仅供内部阅读参考。如有版权问题请联系运营团队替换。",
+  "headline": {
+    "id": "headline-1",
+    "title": "工信部\"十五五\"发力：加快打造集成电路、低空经济等六大新兴支柱产业",
+    "title_short": "工信部六大新兴支柱产业规划出炉",
+    "source": "",
+    "summary": "",
+    "url": "https://m.yicai.com/news/103334414.html",
+    "image": "api/images/headline-1.png",
+    "image_source": "article_original"
+  },
+  "finance_news": [
+    {
+      "id": "news-1",
+      "title": "英伟达Q2营收962亿美元同比翻倍，各项业绩指标均超市场预期",
+      "title_short": "英伟达Q2营收翻倍超预期",
+      "source": "",
+      "summary": "",
+      "url": "https://www.cls.cn/detail/2465563",
+      "image": "api/images/news-1.jpg",
+      "image_source": "bing_search"
+    },
+    {
+      "id": "news-2",
+      "title": "黄金重新站上4600美元，全球信用重构抬升金价长周期中枢",
+      "title_short": "黄金站上4600美元 信用重构推升中枢",
+      "source": "",
+      "summary": "",
+      "url": "https://www.cls.cn/detail/2465628",
+      "image": "api/images/news-2.jpg",
+      "image_source": "bing_search"
+    },
+    {
+      "id": "news-3",
+      "title": "上海发布战略性新兴产业\"十五五\"规划，2030年产业增加值达2.1万亿",
+      "title_short": "上海战新产业十五五目标2.1万亿",
+      "source": "",
+      "summary": "",
+      "url": "http://www.cnstock.com/commonDetail/775462",
+      "image": "api/images/news-3.jpg",
+      "image_source": "bing_search"
+    },
+    {
+      "id": "news-4",
+      "title": "社保基金与牛散二季度集中加仓A股科技方向",
+      "title_short": "社保基金与牛散集中加仓科技股",
+      "source": "",
+      "summary": "",
+      "url": "https://m.21jingji.com/article/20260826/herald/21531b1626455d5286fe0adcfa2493c9_zaker.html",
+      "image": "api/images/news-4.jpg",
+      "image_source": "bing_search"
+    },
+    {
+      "id": "news-5",
+      "title": "中金公司吸并东兴证券、信达证券今日上会审核",
+      "title_short": "中金三合一重组今日上会",
+      "source": "",
+      "summary": "",
+      "url": "https://caifuhao.eastmoney.com/news/20260823025208321717880",
+      "image": "api/images/news-5.png",
+      "image_source": "article_original"
+    }
+  ],
+  "supply_news": [],
+  "bill_rate_note": "",
+  "page_url": "https://pkbmw110120.github.io/finance-morning-brief/",
+  "archive_url": "https://pkbmw110120.github.io/finance-morning-brief/.html"
+}
