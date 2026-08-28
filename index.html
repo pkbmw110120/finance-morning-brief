@@ -3,416 +3,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2026-08-27 财经早报</title>
+    <title>2026-08-28 财经早报</title>
     <style>
-        /* ========== 全局样式（固定不变）========== */
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f5f7fa;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
+            line-height: 1.6; color: #333; background: #f0f0f0;
+            max-width: 900px; margin: 0 auto; padding: 20px;
         }
-        
         a { color: #1a73e8; text-decoration: none; }
         a:hover { text-decoration: underline; }
-        
-        /* ========== 头部区域 ========== */
         .header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 32px 24px;
-            border-radius: 12px;
-            margin-bottom: 24px;
-            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+            color: white; padding: 32px 24px; border-radius: 12px;
+            margin-bottom: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
-        
-        .header h1 {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-/* ========== 板块通用样式 ========== */
+        .header h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
         .section {
-            background: white;
-            border-radius: 12px;
-            padding: 24px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            background: white; border-radius: 12px; padding: 24px;
+            margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
         }
-        
         .section-title {
-            font-size: 20px;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 16px;
-            padding-bottom: 12px;
-            border-bottom: 2px solid #667eea;
+            font-size: 20px; font-weight: 600; color: #333;
+            margin-bottom: 16px; padding-bottom: 12px; border-bottom: 2px solid #667eea;
         }
-        
-        /* ========== 新闻条目样式 ========== */
-        .news-item {
-            padding: 16px 0;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .news-item:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
-        }
-        
-        .news-item:first-child {
-            padding-top: 0;
-        }
-        
-        .news-title {
-            font-size: 17px;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 8px;
-            line-height: 1.5;
-        }
-        
-        .news-meta {
-            font-size: 13px;
-            color: #999;
-            margin-bottom: 8px;
-        }
-        
+        .news-item { padding: 16px 0; border-bottom: 1px solid #eee; }
+        .news-item:last-child { border-bottom: none; padding-bottom: 0; }
+        .news-item:first-child { padding-top: 0; }
+        .news-title { font-size: 17px; font-weight: 600; color: #333; margin-bottom: 8px; line-height: 1.5; }
+        .news-meta { font-size: 13px; color: #999; margin-bottom: 8px; }
         .ai-summary {
-            font-size: 14px;
-            color: #666;
-            line-height: 1.7;
-            background: #f8f9fa;
-            padding: 12px 16px;
-            border-radius: 8px;
-            border-left: 3px solid #667eea;
+            font-size: 14px; color: #666; line-height: 1.7;
+            background: #f8f9fa; padding: 12px 16px; border-radius: 8px; border-left: 3px solid #667eea;
         }
-        
-        /* ========== 头条特殊样式 ========== */
-        .headline .news-title {
-            font-size: 22px;
-            color: #667eea;
-        }
-        
-        .headline .ai-summary {
-            background: #f0f4ff;
-            border-left-color: #764ba2;
-        }
-        
-        /* ========== 图片样式 ========== */
-        .news-image {
-            width: 100%;
-            max-width: 400px;
-            height: auto;
-            border-radius: 8px;
-            margin: 12px 0;
-            display: block;
-        }
-        
-        .image-caption {
-            font-size: 12px;
-            color: #999;
-            text-align: center;
-            margin-top: 4px;
-        }
-        
-        /* ========== 版权提示 ========== */
+        .headline .news-title { font-size: 22px; color: #667eea; }
+        .headline .ai-summary { background: #f0f4ff; border-left-color: #764ba2; }
         .copyright {
-            font-size: 12px;
-            color: #999;
-            text-align: center;
-            padding: 16px;
-            margin-top: 24px;
-            border-top: 1px solid #eee;
+            font-size: 12px; color: #999; text-align: center;
+            padding: 16px; margin-top: 24px; border-top: 1px solid #eee;
         }
-        
-        /* ========== 响应式适配 ========== */
         @media (max-width: 768px) {
             body { padding: 12px; }
-            
-            .header {
-                padding: 24px 16px;
-                border-radius: 8px;
-            }
-            
+            .header { padding: 24px 16px; border-radius: 8px; }
             .header h1 { font-size: 22px; }
-            
-            .section {
-                padding: 16px;
-                border-radius: 8px;
-            }
-            
+            .section { padding: 16px; border-radius: 8px; }
             .section-title { font-size: 18px; }
-            
             .news-title { font-size: 16px; }
-            
             .headline .news-title { font-size: 18px; }
         }
-        
-        /* ========== 打印优化 ========== */
-        @media print {
-            body { background: white; }
-            
-            .header {
-                background: white;
-                color: #333;
-                border: 2px solid #667eea;
-                box-shadow: none;
-            }
-            
-            .section {
-                box-shadow: none;
-                border: 1px solid #ddd;
-            }
+        .bill-rate { margin-top: 20px; background: #fafafa; border-radius: 10px; padding: 20px; overflow: visible; }
+        .bill-rate h3 { font-size: 16px; color: #333; margin-bottom: 15px; text-align: center; }
+        .bill-rate .table-wrapper { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        .bill-rate table { min-width: 560px; border-collapse: collapse; font-size: 13px; }
+        .bill-rate th, .bill-rate td { padding: 8px 6px; text-align: center; border: 1px solid #e0e0e0; white-space: nowrap; }
+        .bill-rate th { background: #f5f5f5; font-weight: 600; color: #333; }
+        .bill-rate td:first-child, .bill-rate th:first-child {
+            font-weight: 500; background: #fafafa; min-width: 90px; text-align: left; padding-left: 10px;
         }
-    
-        /* ===== 股市概览 ===== */
-        .market-overview {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin-bottom: 25px;
-        }
-        .market-card {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            border-radius: 10px;
-            padding: 15px;
-            text-align: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-        }
-        .index-name {
-            font-size: 13px;
-            color: #666;
-            margin-bottom: 5px;
-        }
-        .index-value {
-            font-size: 22px;
-            font-weight: bold;
-            color: #333;
-        }
-        .index-change {
-            font-size: 14px;
-            margin-top: 5px;
-        }
-        .index-change.up, .up { color: #e63946; }
-        .index-change.down, .down { color: #2a9d8f; }
-        .index-change.flat, .flat { color: #666; }
-        @media (max-width: 600px) {
-            .market-overview { grid-template-columns: 1fr; }
-        }
-
-        /* ===== 票据利率 ===== */
-        .bill-rate {
-            margin-top: 20px;
-            background: #fafafa;
-            border-radius: 10px;
-            padding: 20px;
-            overflow: visible;
-        }
-        .bill-rate h3 {
-            font-size: 16px;
-            color: #333;
-            margin-bottom: 15px;
-            text-align: center;
-        }
-        .bill-rate .table-wrapper {
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-        }
-        .bill-rate table {
-            min-width: 560px;
-            border-collapse: collapse;
-            font-size: 13px;
-        }
-        .bill-rate th, .bill-rate td {
-            padding: 8px 6px;
-            text-align: center;
-            border: 1px solid #e0e0e0;
-            white-space: nowrap;
-        }
-        .bill-rate th {
-            background: #f5f5f5;
-            font-weight: 600;
-            color: #333;
-        }
-        .bill-rate td:first-child,
-        .bill-rate th:first-child {
-            font-weight: 500;
-            background: #fafafa;
-            min-width: 90px;
-            text-align: left;
-            padding-left: 10px;
-        }
-        .bill-rate .note {
-            text-align: right;
-            color: #999;
-            font-size: 12px;
-            margin-top: 10px;
-        }
-        /* 手机端表格滚动适配 */
         @media (max-width: 480px) {
             .bill-rate { padding: 12px; }
             .bill-rate table { font-size: 12px; min-width: 520px; }
             .bill-rate th, .bill-rate td { padding: 6px 4px; }
-            .bill-rate td:first-child,
-            .bill-rate th:first-child { min-width: 80px; font-size: 11px; }
+            .bill-rate td:first-child, .bill-rate th:first-child { min-width: 80px; font-size: 11px; }
         }
-
     </style>
 </head>
 <body>
-    <!-- 头部 -->
     <div class="header">
-        <h1>📰 2026-08-27 财经早报</h1>
-</div>
+        <h1>📰 2026-08-28 财经早报</h1>
+    </div>
     
-    <!-- 头条 -->
     <section class="section headline">
         <h2 class="section-title">🔥 头条</h2>
-        <article class="news-item" data-news-id="headline-1" data-news-title="工信部六大新兴支柱产业规划出炉">
-            <a href="https://m.yicai.com/news/103334414.html" target="_blank">
-                <h3 class="news-title">工信部"十五五"发力：加快打造集成电路、低空经济等六大新兴支柱产业</h3>
+                <article class="news-item" data-news-id="headline-1" data-news-title="1-7月全国规模以上工业企业利润同比增长">
+            <a href="https://www.cls.cn/detail/2467001" target="_blank">
+                <h3 class="news-title">1-7月全国规模以上工业企业利润同比增长17.6%</h3>
             </a>
-            <div class="news-meta">第一财经</div>
-            
-            <div class="ai-summary">国新办举行"开局起步十五五"发布会，工信部明确未来五年将加快打造集成电路、航空航天、生物医药、低空经济、新型储能、智能机器人六大新兴支柱产业，同时推动量子科技、6G、脑机接口等未来产业成为新增长点。到2035年力争培育百家示范园区、千家示范企业，在集成电路、工业母机等关键领域采取超常规措施实现决定性突破。</span>
+            <div class="news-meta">证券时报网</div>
+            <div class="ai-summary">国家统计局8月27日发布数据，1-7月份全国规模以上工业企业实现利润总额45820.6亿元，同比增长17.6%，7月单月增长11.2%。高技术制造业利润同比增长50.1%，集成电路行业利润同比增长18.5倍，光纤制造增长468.4%。</div>
         </article>
     </section>
     
-    <!-- 供应链金融 -->
     <section class="section supply-news">
         <h2 class="section-title">⛓️ 供应链金融</h2>
+                <article class="news-item" data-news-id="snews-1" data-news-title="浦发银行半年报：供应链金融累计服务上下游">
+            <a href="https://m.huanqiu.com/article/4Sxydg7tDLs" target="_blank">
+                <h3 class="news-title">浦发银行半年报：供应链金融累计服务上下游客户47850户</h3>
+            </a>
+            <div class="news-meta">环球网</div>
+            <div class="ai-summary">浦发银行2026年半年报显示，集团资产总额突码10.4万亿元。供应链金融赛道构建全产业链全场景解决方案，累计服务供应链上下游客户47850户，较上年末增长27.91%；上半年在线供应链业务量5002.52亿元，同比增长54.84%。浦链通投放786亿元，余额突码1000亿元。</div>
+        </article>
         
-        <article class="news-item" data-news-id="snews-1" data-news-title="渤海银行脱核供应链金融破局">
+        <article class="news-item" data-news-id="snews-2" data-news-title="交通银行江苏省分行与南钢集团签署供应链金">
             <a href="https://m.sohu.com/a/1067724180_121155050/" target="_blank">
-                <h3 class="news-title">渤海银行"脱核不脱链"供应链金融模式落地 破解禽类养殖融资难</h3>
+                <h3 class="news-title">交通银行江苏省分行与南钢集团签署供应链金融战略合作协议</h3>
             </a>
             <div class="news-meta">贴现centre</div>
-            
-            <div class="ai-summary">渤海银行青岛分行创新"脱核不脱链"供应链金融模式，上游小微企业无须核心企业确权，凭供货记录和商业汇票即可获得信贷资金。该模式已在山东平度肉鸭养殖产业集群落地，惠及上千家中小养殖户。"海纳池+商票"方案有效破解传统供应链金融过度依赖核心企业信用的行业痛点。</span>
+            <div class="ai-summary">交通银行江苏省分行参加南钢集团2026年金融专题客户座谈会，围绕业财融合、产业链金融服务开展深度交流。交行宣讲重点产业链金融产品体系，解读供应链融资等特色金融工具，南钢集团、交行及金融机构、产业链下游合作单位共同签署供应链金融模式战略合作协议。</div>
         </article>
         
-        <article class="news-item" data-news-id="snews-2" data-news-title="广东供应链票据平台横琴上线">
-            <a href="https://m.21jingji.com/article/20260818/herald/5509fb69b185d0d74ed84efd31c70f7b.html" target="_blank">
-                <h3 class="news-title">广东首家地方国资供应链票据平台"粤融易"在横琴上线</h3>
-            </a>
-            <div class="news-meta">21世纪经济报道</div>
-            
-            <div class="ai-summary">广东首家地方国资供应链票据平台——华发"粤融易"在横琴正式上线。平台依托《票据法》与票交所统一登记体系，将应收账款转化为标准化电子商业汇票，一站式解决产业链多级企业结算和融资需求，标志着供应链金融从"单体授信"向"链式服务"升级。</span>
-        </article>
-        
-        <article class="news-item" data-news-id="snews-3" data-news-title="河北产业集群融资创新破零">
-            <a href="http://he.people.com.cn/n2/2026/0826/c192235-41678533.html" target="_blank">
-                <h3 class="news-title">河北金融"五篇大文章"贷款加速 产业集群数据资产质押融资破零</h3>
-            </a>
-            <div class="news-meta">河北省人民政府</div>
-            
-            <div class="ai-summary">河北上半年金融系统量身定制679款专属信贷产品，深入集群重点企业8900余家，解决融资需求393亿元。衡水市落地全省首笔产业集群数据资产质押融资业务，邢台市开发产业集群分析监测系统，沧州市上线智慧金融平台服务专区，供应链金融创新产品"共享贷""产业集群贷"加速推广。</span>
-        </article>
-        
-        <article class="news-item" data-news-id="snews-4" data-news-title="安徽数智供应链行动方案出台">
-            <a href="http://www.tibet.cn/cn/Instant/municipal/202608/t20260824_8036684.html" target="_blank">
-                <h3 class="news-title">安徽发布数智供应链发展行动方案 推动批发企业数智化转型</h3>
-            </a>
-            <div class="news-meta">安徽省人民政府</div>
-            
-            <div class="ai-summary">安徽省办公厅印发《加快数智供应链发展行动方案（2026-2028年）》，支持大宗商品、农产品、消费品等领域批发企业建设数智化平台，推动供应链全流程数字化升级。方案明确开展数智化改造提升、技术升级、安全韧性提升等八项行动，构建集成开放的供应链服务体系。</span>
-        </article>
-        
-        <article class="news-item" data-news-id="snews-5" data-news-title="上海推数字人民币赋能供应链金融">
-            <a href="https://m.yicai.com/news/103332640.html" target="_blank">
-                <h3 class="news-title">上海"十五五"规划：推动数字人民币在供应链金融等场景创新应用</h3>
-            </a>
-            <div class="news-meta">第一财经</div>
-            
-            <div class="ai-summary">上海软信业"十五五"规划提出拓展新型金融应用场景，推动数字人民币在元宇宙、供应链金融等场景创新应用。依托智能合约和区块链技术，探索现实世界资产数字化拆分和合规流通，构建安全可控、全程可溯、高效便捷的支付清算体系。</span>
-        </article>
-        
-    </section>
-    
-    <!-- 财经要闻 -->
-    <section class="section finance-news">
-        <h2 class="section-title">📊 财经要闻</h2>
-        
-        <article class="news-item" data-news-id="news-1" data-news-title="英伟达Q2营收翻倍超预期">
-            <a href="https://www.cls.cn/detail/2465563" target="_blank">
-                <h3 class="news-title">英伟达Q2营收962亿美元同比翻倍，各项业绩指标均超市场预期</h3>
+        <article class="news-item" data-news-id="snews-3" data-news-title="中节能太阳能子公司获2亿元关联供应链金融">
+            <a href="https://www.cls.cn/detail/2466980" target="_blank">
+                <h3 class="news-title">中节能太阳能子公司获2亿元关联供应链金融云单额度</h3>
             </a>
             <div class="news-meta">财联社</div>
-            
-            <div class="ai-summary">英伟达2027财年Q2营收962亿美元，同比增长106%，超市场预估的923.8亿美元；调整后EPS 2.22美元，同比增长120%。数据中心收入890亿美元，超预期。Q3营收指引约1080亿美元，同样超出预期。公司在财报电话会上给出乐观的2028财年展望，缓解市场对AI投资放缓的担忧。</span>
+            <div class="ai-summary">中节能太阳能公告披露，全资子公司拟与中节能商业保理有限公司开展供应链金融关联交易，申请2亿元云单信用额度。供应商可凭云单凭证申请融资、持有至到期收款或向上游拆分转让，年化融资费率不超过2.45%，定价参考同期市场供应链融资利率，担保方式为纯信用无需抵质押。</div>
         </article>
         
-        <article class="news-item" data-news-id="news-2" data-news-title="黄金站上4600美元 信用重构推升中枢">
-            <a href="https://www.cls.cn/detail/2465628" target="_blank">
-                <h3 class="news-title">黄金重新站上4600美元，全球信用重构抬升金价长周期中枢</h3>
+        <article class="news-item" data-news-id="snews-4" data-news-title="工建保理落地首笔“供应链票据+未来应收保">
+            <a href="http://www.sinotf.com/GB/kuaixun/2026-08-21/wNMDAwMDM4MjEwNg.html" target="_blank">
+                <h3 class="news-title">工建保理落地首笔“供应链票据+未来应收保理”创新业务</h3>
             </a>
-            <div class="news-meta">财联社</div>
-            
-            <div class="ai-summary">伦敦金现货价格重新站上4600美元。受美国30年期国债收益率创2007年以来新高、美财政部出手干预债市等因素影响，市场对美元信用担忧升温。黄金作为信用对冲工具获资金关注，货币属性迎来价值重估。德银看涨目标4800美元，桥水达利欧建议低配债券超配黄金。</span>
+            <div class="news-meta">贸易金融网</div>
+            <div class="ai-summary">湖北工建商业保理有限公司立足集团主责主业，深入践行产融协同发展要求，持续推进内外部协同业务创新突破。在风控、法务、财务、业务等团队通力协作下，成功落地首笔“供应链票据+未来应收保理”业务，标志着供应链金融创新产品矩阵进一步丰富。</div>
         </article>
         
-        <article class="news-item" data-news-id="news-3" data-news-title="上海战新产业十五五目标2.1万亿">
-            <a href="http://www.cnstock.com/commonDetail/775462" target="_blank">
-                <h3 class="news-title">上海发布战略性新兴产业"十五五"规划，2030年产业增加值达2.1万亿</h3>
+        <article class="news-item" data-news-id="snews-5" data-news-title="九州通发行第二期资产支持商业票据5亿元，">
+            <a href="https://www.cls.cn/detail/2466850" target="_blank">
+                <h3 class="news-title">九州通发行第二期资产支持商业票据5亿元，支持养老产业</h3>
             </a>
             <div class="news-meta">上海证券报</div>
-            
-            <div class="ai-summary">上海印发《上海市战略性新兴产业发展"十五五"规划》，到2030年战新产业增加值达2.1万亿元，占规上工业比重超50%。以三大先导产业为引领，布局12个新兴支柱细分赛道，涵盖集成电路、人工智能、生物医药等方向，三大先导产业制造业年均增速达10%以上。</span>
+            <div class="ai-summary">九州通医药集团在全国银行间债券市场公开发行2026年度第二期资产支持商业票据，发行总额5亿元。其中优先级规橄4.75亿元占95%，次级规橄0.25亿元占5%。控股股东楚昌投资认购次级份额2500万元。该产品以应收账款为基础资产，通过结构化设计实现资产证券化融资。</div>
         </article>
-        
-        <article class="news-item" data-news-id="news-4" data-news-title="社保基金与牛散集中加仓科技股">
-            <a href="https://m.21jingji.com/article/20260826/herald/21531b1626455d5286fe0adcfa2493c9_zaker.html" target="_blank">
-                <h3 class="news-title">社保基金与牛散二季度集中加仓A股科技方向</h3>
-            </a>
-            <div class="news-meta">21世纪经济报道</div>
-            
-            <div class="ai-summary">A股中报披露显示，社保基金已现身254家公司前十大流通股东名单，二季度新进73只个股。知名牛散同步加仓科技赛道：章建平家族新进亨通光电并重仓光通信股，葛卫东坚守兆易创新，付小铜新进同花顺、北方稀土，大资金对科技成长配置偏好进一步强化。</span>
-        </article>
-        
-        <article class="news-item" data-news-id="news-5" data-news-title="中金三合一重组今日上会">
-            <a href="https://caifuhao.eastmoney.com/news/20260823025208321717880" target="_blank">
-                <h3 class="news-title">中金公司吸并东兴证券、信达证券今日上会审核</h3>
-            </a>
-            <div class="news-meta">东方财富</div>
-            
-            <div class="ai-summary">上交所并购重组审核委员会8月27日召开审议会议，审核中金公司换股吸收合并东兴证券和信达证券事项。中金A股换股价36.68元/股，东兴16.05元/股，信达19.11元/股。合并后中金为存续主体，东兴和信达终止上市注销法人资格，中央汇金仍为控股股东，万亿级券商整合迎关键节点。</span>
-        </article>
-        
     </section>
     
+    <section class="section finance-news">
+        <h2 class="section-title">📊 财经要闻</h2>
+                <article class="news-item" data-news-id="news-1" data-news-title="中金公司“三合一”重组获上交所审核通过">
+            <a href="https://www.cls.cn/detail/2466900" target="_blank">
+                <h3 class="news-title">中金公司“三合一”重组获上交所审核通过</h3>
+            </a>
+            <div class="news-meta">财联社</div>
+            <div class="ai-summary">中金公司换股吸收合并东兴证券和信达证券事项获上交所并购重组审核委员会审核通过。中金A股换股价36.68元/股，东兴16.05元/股，信达19.11元/股。合并后中金为存续主体，东兴和信达终止上市注销法人资格，中央汇金仍为控股股东，万亿级券商整合迈出关键一步。</div>
+        </article>
+        
+        <article class="news-item" data-news-id="news-2" data-news-title="英伟达Q2营收962亿美元同比翻倍，市值">
+            <a href="https://www.cls.cn/detail/2465563" target="_blank">
+                <h3 class="news-title">英伟达Q2营收962亿美元同比翻倍，市值单日增4420亿</h3>
+            </a>
+            <div class="news-meta">财联社</div>
+            <div class="ai-summary">英伟达2027财年Q2营收962亿美元同比增长106%，远超市场预估的923.8亿美元，调整后EPS 2.22美元同比增长120%。数据中心收入890亿美元超预期。Q3营收指引约1080亿美元同样超出预期。股价大涨8.74%，市值单日增加约4420亿美元创全球股票历史第二大单日市值增长纪录。</div>
+        </article>
+        
+        <article class="news-item" data-news-id="news-3" data-news-title="央行发布二季度货币政策执行报告：继续实施">
+            <a href="https://gmt8press.com/flash/detail/1510761" target="_blank">
+                <h3 class="news-title">央行发布二季度货币政策执行报告：继续实施适度宽松的货币政策</h3>
+            </a>
+            <div class="news-meta">GMT8</div>
+            <div class="ai-summary">央行发布2026年第二季度中国货币政策执行报告，明确继续实施适度宽松的货币政策，增强前瞻性灵活性和针对性。加强与财政政策协调配合，综合运用多种货币政策工具，保持流动性充裕和较为宽松的金融条件，引导社会融资规模和货币供应量增长同经济增长和价格水平预期相匹配。</div>
+        </article>
+        
+        <article class="news-item" data-news-id="news-4" data-news-title="1-7月全国社会物流总额214.5万亿元">
+            <a href="https://www.cls.cn/detail/2467120" target="_blank">
+                <h3 class="news-title">1-7月全国社会物流总额214.5万亿元 同比增长5%</h3>
+            </a>
+            <div class="news-meta">财联社</div>
+            <div class="ai-summary">中国物流与采购联合会公布数据显示，1-7月份我国物流运行延续稳中有进的发展态势，全国社会物流总额214.5万亿元，同比增长5%。发改委和交通运输部同步印发《物流网建设实施方案》，提出统筹运用相关资金渠道支持物流网建设，加快物流设施设备数智化转型升级。</div>
+        </article>
+        
+        <article class="news-item" data-news-id="news-5" data-news-title="韩国央行连续第二次加息25个基点至3.0">
+            <a href="https://wallstreetcn.com/member/articles/3780487" target="_blank">
+                <h3 class="news-title">韩国央行连续第二次加息25个基点至3.00%</h3>
+            </a>
+            <div class="news-meta">华尔街见闻</div>
+            <div class="ai-summary">韩国银行金融货币委员会决定将基准利率上调25个基点至3.00%，为继7月后连续第二个月加息，也是2022年4月至2023年1月以来首次连续加息。韩国央行表示经济明显强于预期、通胀压力持续高企，中东局势长期紧张推高国际油价，需提前采取紧缩措施。分析认为本轮加息周期尚未结束。</div>
+        </article>
+    </section>
     
-        <!-- 票据利率 -->
-        <div class="section">
-            <div class="bill-rate">
-                <h3>票据利率</h3>
-                <div class="table-wrapper">
+    <div class="section">
+        <div class="bill-rate">
+            <h3>票据利率</h3>
+            <div class="table-wrapper">
                 <table>
-                    <thead>
-                        <tr><th>承兑行类别</th><th>8月</th><th>9月</th><th>10月</th><th>11月</th><th>12月</th><th>1月</th><th>2月</th></tr>
-                    </thead>
-                    <tbody>
-<tr><td>国股</td><td>0.45</td><td>0.45</td><td>0.45</td><td>0.45</td><td>0.37</td><td>0.37</td></tr><tr><td>大商</td><td>0.57</td><td>0.57</td><td>0.57</td><td>0.57</td><td>0.37</td><td>0.37</td></tr><tr><td>一类城农商</td><td>1.40</td><td>0.57</td><td>0.55</td><td>0.55</td><td>0.53</td><td>0.53</td></tr><tr><td>二类城农商</td><td>1.60</td><td>0.58</td><td>0.56</td><td>0.56</td><td>0.54</td><td>0.54</td></tr><tr><td>其他银行</td><td>1.70</td><td>0.61</td><td>0.60</td><td>0.58</td><td>0.58</td><td>0.58</td></tr><tr><td>财司票</td><td>0.90</td><td>0.775</td><td>0.775</td><td>0.66</td><td>0.45</td><td>0.45</td></tr><tr><td>商票</td><td>1.45</td><td>1.20</td><td>1.20</td><td>1.20</td><td>1.20</td><td>1.20</td></tr>
-</tbody>
+                    <thead><tr><th>承兑行类别</th><th>8月</th><th>9月</th><th>10月</th><th>11月</th><th>12月</th><th>1月</th><th>2月</th></tr></thead>
+                    <tbody><tr><td>国股</td><td>0.45</td><td>0.45</td><td>0.45</td><td>0.45</td><td>0.37</td><td>0.37</td><td>0.37</td></tr><tr><td>大商</td><td>0.58</td><td>0.58</td><td>0.58</td><td>0.58</td><td>0.37</td><td>0.37</td><td>0.37</td></tr><tr><td>一类城农商</td><td>1.40</td><td>0.60</td><td>0.58</td><td>0.56</td><td>0.54</td><td>0.54</td><td>0.54</td></tr><tr><td>二类城农商</td><td>1.60</td><td>0.60</td><td>0.58</td><td>0.56</td><td>0.55</td><td>0.55</td><td>0.55</td></tr><tr><td>其他银行</td><td>1.70</td><td>0.62</td><td>0.60</td><td>0.58</td><td>0.58</td><td>0.58</td><td>0.58</td></tr><tr><td>财司票</td><td>0.90</td><td>0.78</td><td>0.78</td><td>0.66</td><td>0.45</td><td>0.45</td><td>0.45</td></tr><tr><td>商票</td><td>1.45</td><td>1.20</td><td>1.20</td><td>1.20</td><td>1.20</td><td>1.20</td><td>1.20</td></tr></tbody>
                 </table>
-                </div>
-                
             </div>
         </div>
+    </div>
 
-    <!-- 版权提示 -->
     <div class="copyright">
         <p>配图均来自互联网，仅供内部阅读参考。如有版权问题请联系运营团队替换。</p>
         <p style="margin-top: 8px;">© 2026 财经早报系统 | 数据来源：公开资讯</p>
     </div>
 
 <script>
-window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9vcGVuLWFwaXMvYm90L3YyL2hvb2svNjIxYTVlYTktNWI5NS00MTc2LTgyMjktY2NmMzBjZGJiNjgz", _COZE_WORKFLOW_URL_B64: "aHR0cHM6Ly90cmFja2VyLWJpdGFibGUtd2ViaG9vay55dWFueXVhbjg5MDIwMS53b3JrZXJzLmRldg==" };
+window.__TRACKER_CONFIG__ = {
+    _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9vcGVuLWFwaXMvYm90L3YyL2hvb2svMjEwNDRiZjUtMDU0My00ZmQ1LTg3NWEtMzc1NDI0ZTAyZTJi",
+    _DIRECT_WRITE_URL_B64: "aHR0cHM6Ly90cmFja2VyLWJpdGFibGUtd2ViaG9vay55dWFueXVhbjg5MDIwMS53b3JrZXJzLmRldg=="
+};
 </script>
 
 <script>
