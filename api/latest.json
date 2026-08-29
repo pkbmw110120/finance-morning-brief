@@ -4,118 +4,67 @@
   "copyright_notice": "配图均来自互联网，仅供内部阅读参考。如有版权问题请联系运营团队替换。",
   "headline": {
     "id": "headline-1",
-    "title": "1—7月份全国规模以上工业企业利润同比增长17.6%，电子行业利润增长1.1倍",
-    "title_short": "1-7月规上工业企业利润增长17.6%",
+    "title": "央行、金融监管总局联合发文改革完善房地产信贷管理 个人住房贷款期限延长至40年",
+    "title_short": "央行发文改革房地产信贷管理 房贷期限延至40年",
     "source": "",
     "summary": "",
-    "url": "https://www.gov.cn/lianbo/202608/content_7079284.htm",
-    "image": "api/images/headline-1.jpg",
-    "image_source": "article_original"
+    "url": "https://www.cls.cn/detail/2468035",
+    "image": "",
+    "image_source": ""
   },
   "finance_news": [
     {
       "id": "news-1",
-      "title": "\"汇金系\"券商整合迈入新阶段：中金公司\"三合一\"重组获上交所审核通过",
-      "title_short": "中金公司三合一重组获上交所通过",
+      "title": "沃什杰克逊霍尔首秀释放鹰派信号 市场加大美联储加息押注",
+      "title_short": "沃什鹰派表态 加息预期升温",
       "source": "",
       "summary": "",
-      "url": "http://www.ce.cn/xwzx/gnsz/gdxw/202608/t20260828_3174779.shtml",
+      "url": "https://www.cls.cn/detail/2468432",
       "image": "api/images/news-1.jpg",
       "image_source": "bing_search"
     },
     {
       "id": "news-2",
-      "title": "英伟达Q2营收962亿美元同比翻倍，Vera Rubin平台全面量产，给出罕见长期增长指引",
-      "title_short": "英伟达Q2营收962亿美元翻倍",
+      "title": "标普维持中国主权信用评级A+ 展望稳定",
+      "title_short": "标普维持中国主权评级A+",
       "source": "",
       "summary": "",
-      "url": "https://finance.sina.com.cn/roll/2026-08-28/doc-inipvmnc5659172.shtml",
-      "image": "api/images/news-2.jpg",
-      "image_source": "bing_search"
+      "url": "https://www.cls.cn/detail/2467443",
+      "image": "",
+      "image_source": ""
     },
     {
       "id": "news-3",
-      "title": "央行开展200亿元7天期逆回购及3330亿元隔夜逆回购操作，人民币中间价调升29基点",
-      "title_short": "央行开展200亿逆回购及3330亿隔夜逆回购",
+      "title": "金融监管总局发布五大房地产融资管理办法 构建信贷全周期体系",
+      "title_short": "五大房地产融资新规发布",
       "source": "",
       "summary": "",
-      "url": "https://finance.eastmoney.com/a/202608283857540481.html",
+      "url": "https://finance.eastmoney.com/a/202608283858732572.html",
       "image": "api/images/news-3.png",
       "image_source": "article_original"
     },
     {
       "id": "news-4",
-      "title": "国家发改委、交通运输部印发《物流网建设实施方案》，统筹运用资金渠道支持物流网建设",
-      "title_short": "两部门印发物流网建设实施方案",
+      "title": "发改委交通运输部联合印发《物流网建设实施方案》",
+      "title_short": "物流网建设实施方案发布",
       "source": "",
       "summary": "",
-      "url": "http://www.nbd.com.cn/articles/2026-08-28/4562804.html",
-      "image": "api/images/news-4.png",
+      "url": "https://www.gov.cn/lianbo/202608/content_7079387.htm",
+      "image": "api/images/news-4.jpg",
       "image_source": "article_original"
     },
     {
       "id": "news-5",
-      "title": "A股主力资金净流入332亿元，科技成长板块获资金集中布局，电子板块净流入215亿元",
-      "title_short": "A股主力净流入332亿科技板块领跑",
+      "title": "国内成品油价格上调 汽油每吨涨375元柴油涨360元",
+      "title_short": "成品油价上调 汽油涨375元/吨",
       "source": "",
       "summary": "",
-      "url": "https://www.jiemian.com/article/15014143.html",
-      "image": "api/images/news-5.jpg",
+      "url": "https://finance.eastmoney.com/a/202608283858433457.html",
+      "image": "api/images/news-5.png",
       "image_source": "article_original"
     }
   ],
-  "supply_news": [
-    {
-      "id": "supply-1",
-      "title": "浦发银行半年报：供应链金融赛道优化服务供给，浦链通投放786亿元余额突破千亿",
-      "title_short": "浦发银行供应链金融余额破千亿",
-      "source": "",
-      "summary": "",
-      "url": "https://finance.sina.com.cn/roll/2026-08-27/doc-inipuiyp9165956.shtml",
-      "image": "api/images/supply-1.jpg",
-      "image_source": "bing_search"
-    },
-    {
-      "id": "supply-2",
-      "title": "兴业银行产业金融新逻辑：21条产业链谱系经营，从主体信用转向交易信用",
-      "title_short": "兴业银行21条产业链谱系经营",
-      "source": "",
-      "summary": "",
-      "url": "https://hunan.ifeng.com/c/8vx5cVr7If0",
-      "image": "api/images/supply-2.png",
-      "image_source": "article_original"
-    },
-    {
-      "id": "supply-3",
-      "title": "交通银行江苏省分行参加南钢集团金融专题座谈会，多方签署供应链金融战略合作协议",
-      "title_short": "交行与南钢签署供应链金融协议",
-      "source": "",
-      "summary": "",
-      "url": "https://m.huanqiu.com/article/4Sxydg7tDLs",
-      "image": "api/images/supply-3.jpg",
-      "image_source": "article_original"
-    },
-    {
-      "id": "supply-4",
-      "title": "长沙银行半年报：供应链金融融资余额533亿元，较上年末增长16.03%",
-      "title_short": "长沙银行供应链金融融资余额533亿",
-      "source": "",
-      "summary": "",
-      "url": "https://m.yicai.com/brief/103337231.html",
-      "image": "api/images/supply-4.png",
-      "image_source": "article_original"
-    },
-    {
-      "id": "supply-5",
-      "title": "兴业银行发布\"双碳专业服务方案\"，整合20项产品覆盖碳资产管理、供应链管理等五大场景",
-      "title_short": "兴业银行发布双碳专业服务方案",
-      "source": "",
-      "summary": "",
-      "url": "https://app.xinhuanet.com/news/article.html?articleId=2026082720b86f09ef754a088ef8fc5e3e942ce4",
-      "image": "api/images/supply-5.jpg",
-      "image_source": "article_original"
-    }
-  ],
+  "supply_news": [],
   "bill_rate_note": "",
   "page_url": "https://pkbmw110120.github.io/finance-morning-brief/",
   "archive_url": "https://pkbmw110120.github.io/finance-morning-brief/.html"
