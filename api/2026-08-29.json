@@ -1,0 +1,71 @@
+{
+  "date": "",
+  "updated_at": "T09:45:00+08:00",
+  "copyright_notice": "配图均来自互联网，仅供内部阅读参考。如有版权问题请联系运营团队替换。",
+  "headline": {
+    "id": "headline-1",
+    "title": "央行、金融监管总局联合发文改革完善房地产信贷管理 个人住房贷款期限延长至40年",
+    "title_short": "央行发文改革房地产信贷管理 房贷期限延至40年",
+    "source": "",
+    "summary": "",
+    "url": "https://www.cls.cn/detail/2468035",
+    "image": "",
+    "image_source": ""
+  },
+  "finance_news": [
+    {
+      "id": "news-1",
+      "title": "沃什杰克逊霍尔首秀释放鹰派信号 市场加大美联储加息押注",
+      "title_short": "沃什鹰派表态 加息预期升温",
+      "source": "",
+      "summary": "",
+      "url": "https://www.cls.cn/detail/2468432",
+      "image": "api/images/news-1.jpg",
+      "image_source": "bing_search"
+    },
+    {
+      "id": "news-2",
+      "title": "标普维持中国主权信用评级A+ 展望稳定",
+      "title_short": "标普维持中国主权评级A+",
+      "source": "",
+      "summary": "",
+      "url": "https://www.cls.cn/detail/2467443",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "news-3",
+      "title": "金融监管总局发布五大房地产融资管理办法 构建信贷全周期体系",
+      "title_short": "五大房地产融资新规发布",
+      "source": "",
+      "summary": "",
+      "url": "https://finance.eastmoney.com/a/202608283858732572.html",
+      "image": "api/images/news-3.png",
+      "image_source": "article_original"
+    },
+    {
+      "id": "news-4",
+      "title": "发改委交通运输部联合印发《物流网建设实施方案》",
+      "title_short": "物流网建设实施方案发布",
+      "source": "",
+      "summary": "",
+      "url": "https://www.gov.cn/lianbo/202608/content_7079387.htm",
+      "image": "api/images/news-4.jpg",
+      "image_source": "article_original"
+    },
+    {
+      "id": "news-5",
+      "title": "国内成品油价格上调 汽油每吨涨375元柴油涨360元",
+      "title_short": "成品油价上调 汽油涨375元/吨",
+      "source": "",
+      "summary": "",
+      "url": "https://finance.eastmoney.com/a/202608283858433457.html",
+      "image": "api/images/news-5.png",
+      "image_source": "article_original"
+    }
+  ],
+  "supply_news": [],
+  "bill_rate_note": "",
+  "page_url": "https://pkbmw110120.github.io/finance-morning-brief/",
+  "archive_url": "https://pkbmw110120.github.io/finance-morning-brief/.html"
+}
