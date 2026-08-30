@@ -4,62 +4,62 @@
   "copyright_notice": "配图均来自互联网，仅供内部阅读参考。如有版权问题请联系运营团队替换。",
   "headline": {
     "id": "headline-1",
-    "title": "央行、金融监管总局联合发文改革完善房地产信贷管理 个人住房贷款期限延长至40年",
-    "title_short": "央行发文改革房地产信贷管理 房贷期限延至40年",
+    "title": "央行、金融监管总局联合印发房地产信贷改革意见 个人房贷期限最长延至40年",
+    "title_short": "央行发布房地产信贷改革意见 房贷延至40年",
     "source": "",
     "summary": "",
-    "url": "https://www.cls.cn/detail/2468035",
-    "image": "",
-    "image_source": ""
+    "url": "https://finance.eastmoney.com/a/202608283858435272.html",
+    "image": "api/images/headline-1.png",
+    "image_source": "article_original"
   },
   "finance_news": [
     {
       "id": "news-1",
-      "title": "沃什杰克逊霍尔首秀释放鹰派信号 市场加大美联储加息押注",
-      "title_short": "沃什鹰派表态 加息预期升温",
+      "title": "美联储主席沃什杰克逊霍尔首秀放鹰 9月加息概率从35%飙升至60%",
+      "title_short": "沃什首秀放鹰 加息预期骤升",
       "source": "",
       "summary": "",
-      "url": "https://www.cls.cn/detail/2468432",
-      "image": "api/images/news-1.jpg",
+      "url": "https://www.cls.cn/detail/2468365",
+      "image": "api/images/news-1.png",
       "image_source": "bing_search"
     },
     {
       "id": "news-2",
-      "title": "标普维持中国主权信用评级A+ 展望稳定",
-      "title_short": "标普维持中国主权评级A+",
+      "title": "中金公司\"三合一\"重组过会 换股吸收合并东兴证券、信达证券从受理到通过仅77天",
+      "title_short": "中金公司三合一重组过会",
       "source": "",
       "summary": "",
-      "url": "https://www.cls.cn/detail/2467443",
-      "image": "",
-      "image_source": ""
+      "url": "https://finance.eastmoney.com/a/202608273856997914.html",
+      "image": "api/images/news-2.png",
+      "image_source": "article_original"
     },
     {
       "id": "news-3",
-      "title": "金融监管总局发布五大房地产融资管理办法 构建信贷全周期体系",
-      "title_short": "五大房地产融资新规发布",
+      "title": "日本单月砸下965亿美元干预汇市 创史上最高纪录仍难阻日元贬值",
+      "title_short": "日本965亿美元干预汇市创纪录",
       "source": "",
       "summary": "",
-      "url": "https://finance.eastmoney.com/a/202608283858732572.html",
+      "url": "https://finance.eastmoney.com/a/202608283858752146.html",
       "image": "api/images/news-3.png",
       "image_source": "article_original"
     },
     {
       "id": "news-4",
-      "title": "发改委交通运输部联合印发《物流网建设实施方案》",
-      "title_short": "物流网建设实施方案发布",
+      "title": "伊朗称霍尔木兹海峡完全关闭 商船通过量较战前暴跌超九成",
+      "title_short": "霍尔木兹海峡完全关闭",
       "source": "",
       "summary": "",
-      "url": "https://www.gov.cn/lianbo/202608/content_7079387.htm",
+      "url": "https://www.cls.cn/detail/2468422",
       "image": "api/images/news-4.jpg",
-      "image_source": "article_original"
+      "image_source": "bing_search"
     },
     {
       "id": "news-5",
-      "title": "国内成品油价格上调 汽油每吨涨375元柴油涨360元",
-      "title_short": "成品油价上调 汽油涨375元/吨",
+      "title": "国内金饰克价一夜大跌近40元 现货黄金跌破4500美元关口",
+      "title_short": "现货黄金跌破4500美元 金饰大跌",
       "source": "",
       "summary": "",
-      "url": "https://finance.eastmoney.com/a/202608283858433457.html",
+      "url": "http://www.nbd.com.cn/articles/2026-08-29/4565777.html",
       "image": "api/images/news-5.png",
       "image_source": "article_original"
     }
