@@ -1,0 +1,71 @@
+{
+  "date": "",
+  "updated_at": "T09:45:00+08:00",
+  "copyright_notice": "配图均来自互联网，仅供内部阅读参考。如有版权问题请联系运营团队替换。",
+  "headline": {
+    "id": "headline-1",
+    "title": "央行、金融监管总局联合印发房地产信贷改革意见 个人房贷期限最长延至40年",
+    "title_short": "央行发布房地产信贷改革意见 房贷延至40年",
+    "source": "",
+    "summary": "",
+    "url": "https://finance.eastmoney.com/a/202608283858435272.html",
+    "image": "api/images/headline-1.png",
+    "image_source": "article_original"
+  },
+  "finance_news": [
+    {
+      "id": "news-1",
+      "title": "美联储主席沃什杰克逊霍尔首秀放鹰 9月加息概率从35%飙升至60%",
+      "title_short": "沃什首秀放鹰 加息预期骤升",
+      "source": "",
+      "summary": "",
+      "url": "https://www.cls.cn/detail/2468365",
+      "image": "api/images/news-1.png",
+      "image_source": "bing_search"
+    },
+    {
+      "id": "news-2",
+      "title": "中金公司\"三合一\"重组过会 换股吸收合并东兴证券、信达证券从受理到通过仅77天",
+      "title_short": "中金公司三合一重组过会",
+      "source": "",
+      "summary": "",
+      "url": "https://finance.eastmoney.com/a/202608273856997914.html",
+      "image": "api/images/news-2.png",
+      "image_source": "article_original"
+    },
+    {
+      "id": "news-3",
+      "title": "日本单月砸下965亿美元干预汇市 创史上最高纪录仍难阻日元贬值",
+      "title_short": "日本965亿美元干预汇市创纪录",
+      "source": "",
+      "summary": "",
+      "url": "https://finance.eastmoney.com/a/202608283858752146.html",
+      "image": "api/images/news-3.png",
+      "image_source": "article_original"
+    },
+    {
+      "id": "news-4",
+      "title": "伊朗称霍尔木兹海峡完全关闭 商船通过量较战前暴跌超九成",
+      "title_short": "霍尔木兹海峡完全关闭",
+      "source": "",
+      "summary": "",
+      "url": "https://www.cls.cn/detail/2468422",
+      "image": "api/images/news-4.jpg",
+      "image_source": "bing_search"
+    },
+    {
+      "id": "news-5",
+      "title": "国内金饰克价一夜大跌近40元 现货黄金跌破4500美元关口",
+      "title_short": "现货黄金跌破4500美元 金饰大跌",
+      "source": "",
+      "summary": "",
+      "url": "http://www.nbd.com.cn/articles/2026-08-29/4565777.html",
+      "image": "api/images/news-5.png",
+      "image_source": "article_original"
+    }
+  ],
+  "supply_news": [],
+  "bill_rate_note": "",
+  "page_url": "https://pkbmw110120.github.io/finance-morning-brief/",
+  "archive_url": "https://pkbmw110120.github.io/finance-morning-brief/.html"
+}
