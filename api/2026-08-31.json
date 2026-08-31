@@ -1,0 +1,122 @@
+{
+  "date": "",
+  "updated_at": "T09:45:00+08:00",
+  "copyright_notice": "配图均来自互联网，仅供内部阅读参考。如有版权问题请联系运营团队替换。",
+  "headline": {
+    "id": "headline-1",
+    "title": "多部门连发重磅文件 房地产迎里程碑式政策调整",
+    "title_short": "多部门连发重磅文件 房地产迎里程碑式政策调整",
+    "source": "",
+    "summary": "",
+    "url": "https://finance.eastmoney.com/a/202608283858700162.html",
+    "image": "api/images/headline-1.png",
+    "image_source": "article_original"
+  },
+  "finance_news": [
+    {
+      "id": "news-1",
+      "title": "国务院报告透露下半年经济工作重点 实施更加积极财政政策和适度宽松货币政策",
+      "title_short": "国务院报告透露下半年经济工作重点",
+      "source": "",
+      "summary": "",
+      "url": "https://www.yicai.com/news/103340001.html",
+      "image": "api/images/news-1.png",
+      "image_source": "article_original"
+    },
+    {
+      "id": "news-2",
+      "title": "发改委联合多部门召开全国投资工作推进会议 加力加紧做好稳投资工作",
+      "title_short": "多部门联合部署做好稳投资工作",
+      "source": "",
+      "summary": "",
+      "url": "https://www.gov.cn/lianbo/202608/content_7079462.htm",
+      "image": "api/images/news-2.jpg",
+      "image_source": "article_original"
+    },
+    {
+      "id": "news-3",
+      "title": "六大行半年报全部出炉 合计分红超2200亿元 营收净利全员双增",
+      "title_short": "六大行分红超2200亿 营收净利双增",
+      "source": "",
+      "summary": "",
+      "url": "http://www.cnstock.com/commonDetail/780235",
+      "image": "api/images/news-3.png",
+      "image_source": "bing_search"
+    },
+    {
+      "id": "news-4",
+      "title": "5550家A股公司半年报收官 合计营收37.74万亿元 净利润增长18.57%",
+      "title_short": "A股半年报收官 净利润增长18.57%",
+      "source": "",
+      "summary": "",
+      "url": "https://finance.eastmoney.com/a/202608313859542028.html",
+      "image": "api/images/news-4.png",
+      "image_source": "article_original"
+    },
+    {
+      "id": "news-5",
+      "title": "央行打出长短\"组合拳\"呵护流动性 隔夜逆回购+MLF操作精准调控",
+      "title_short": "央行组合拳呵护流动性",
+      "source": "",
+      "summary": "",
+      "url": "https://www.cs.com.cn/xwzx/01/2026/08/25/detail_2026082510033753.html",
+      "image": "api/images/news-5.jpg",
+      "image_source": "article_original"
+    }
+  ],
+  "supply_news": [
+    {
+      "id": "supply-1",
+      "title": "\"词元贷\"纾解AI企业融资困境 广东首发词元经济专项金融产品",
+      "title_short": "",
+      "source": "",
+      "summary": "",
+      "url": "http://www.xinhuanet.com/tech/20260831/f50a8b4ac77249eca832e7de9eb3f48c/c.html",
+      "image": "api/images/supply-1.png",
+      "image_source": "article_original"
+    },
+    {
+      "id": "supply-2",
+      "title": "北京探索\"供应链+融资担保\"创新模式 为重点产业链中小微企业提供融资支持",
+      "title_short": "北京探索",
+      "source": "",
+      "summary": "",
+      "url": "https://fgw.beijing.gov.cn/fgwzwgk/2024zcwj/bwgfxwj/202608/t20260825_4835630.htm",
+      "image": "api/images/supply-2.jpg",
+      "image_source": "bing_search"
+    },
+    {
+      "id": "supply-3",
+      "title": "兴业银行锚定\"产业金融\"新航道 产业金融贷款余额达2.63万亿元",
+      "title_short": "兴业银行产业金融贷款余额达2.63万亿",
+      "source": "",
+      "summary": "",
+      "url": "https://www.yicai.com/news/103336968.html",
+      "image": "api/images/supply-3.png",
+      "image_source": "article_original"
+    },
+    {
+      "id": "supply-4",
+      "title": "盛业客户数半年增131% 供应链金融科技平台面临规模与风控双重考验",
+      "title_short": "盛业客户数增131% 风控面临规模检验",
+      "source": "",
+      "summary": "",
+      "url": "https://finance.eastmoney.com/a/202608303859509789.html",
+      "image": "api/images/supply-4.jpg",
+      "image_source": "article_original"
+    },
+    {
+      "id": "supply-5",
+      "title": "江苏\"30条\"新政推广\"四贷联动\"融资模式 金融活水精准滴灌产业链",
+      "title_short": "江苏推广",
+      "source": "",
+      "summary": "",
+      "url": "http://js.xinhuanet.com/20260829/16ad794148c5484cb7b15b9788c5b465/c.html",
+      "image": "api/images/supply-5.jpg",
+      "image_source": "bing_search"
+    }
+  ],
+  "bill_rate_note": "",
+  "page_url": "https://pkbmw110120.github.io/finance-morning-brief/",
+  "archive_url": "https://pkbmw110120.github.io/finance-morning-brief/.html"
+}
