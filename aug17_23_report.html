@@ -14,8 +14,10 @@ h3{font-size:15px;color:var(--blue-deep);margin:16px 0 8px}
 .page{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow);padding:28px;margin-bottom:20px}
 .report-header{text-align:center;margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid var(--border)}
 .subtitle{font-size:13px;color:var(--ink-muted);margin-top:8px;display:flex;justify-content:center;gap:20px;flex-wrap:wrap}
-.week-nav{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;padding:12px;background:#f0ede6;border-radius:var(--radius)}
-.week-btn{padding:8px 16px;border:1px solid var(--border);border-radius:6px;background:#fff;cursor:pointer;font-size:13px;color:var(--ink);transition:all .2s}
+.week-nav{display:flex;gap:8px;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-behavior:smooth;margin-bottom:20px;padding:12px;background:#f0ede6;border-radius:var(--radius)}
+.week-nav::-webkit-scrollbar{height:4px}
+.week-nav::-webkit-scrollbar-thumb{background:#ccc;border-radius:2px}
+.week-btn{padding:8px 16px;border:1px solid var(--border);border-radius:6px;background:#fff;cursor:pointer;font-size:13px;color:var(--ink);transition:all .2s;flex-shrink:0;white-space:nowrap}
 .week-btn:hover{border-color:var(--blue);color:var(--blue)}
 .week-btn.active{background:var(--blue);color:#fff;border-color:var(--blue)}
 .week-summary{display:flex;flex-wrap:wrap;gap:12px;padding:16px;background:#f0ede6;border-radius:var(--radius);margin-bottom:16px;font-size:14px}
@@ -1238,8 +1240,20 @@ function switchWeek(wm) {
   document.querySelectorAll('.week-panel').forEach(p => p.style.display = 'none');
   document.querySelectorAll('.week-btn').forEach(b => b.classList.remove('active'));
   document.getElementById('week-' + wm).style.display = 'block';
-  document.querySelector('[data-week="' + wm + '"]').classList.add('active');
+  var btn = document.querySelector('[data-week="' + wm + '"]');
+  btn.classList.add('active');
+  var nav = document.querySelector('.week-nav');
+  var scrollLeft = btn.offsetLeft - nav.offsetWidth / 2 + btn.offsetWidth / 2;
+  nav.scrollTo({ left: Math.max(0, scrollLeft), behavior: 'smooth' });
 }
+(function(){
+  var active = document.querySelector('.week-btn.active');
+  if(active){
+    var nav = document.querySelector('.week-nav');
+    var scrollLeft = active.offsetLeft - nav.offsetWidth / 2 + active.offsetWidth / 2;
+    nav.scrollLeft = Math.max(0, scrollLeft);
+  }
+})();
 </script>
 </body>
 </html>
