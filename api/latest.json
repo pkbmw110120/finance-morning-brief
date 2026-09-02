@@ -4,64 +4,64 @@
   "copyright_notice": "配图均来自互联网，仅供内部阅读参考。如有版权问题请联系运营团队替换。",
   "headline": {
     "id": "headline-1",
-    "title": "七部门发文推动商品消费扩容升级 到2030年社零总额达60万亿元左右",
-    "title_short": "七部门:2030年社零达60万亿 消费扩容升级",
+    "title": "美伊冲突再升级 国际油价大涨逾5%突破90美元",
+    "title_short": "美伊冲突升级 油价大涨逾5%",
     "source": "",
     "summary": "",
-    "url": "https://www.thepaper.cn/newsDetail_forward_33981027",
-    "image": "api/images/headline-1.png",
+    "url": "https://www.xinhuanet.com/fortune/20260902/c1f13b9b19bf4b7eb5fceea38af744b9/c.html",
+    "image": "api/images/headline-1.jpg",
     "image_source": "article_original"
   },
   "finance_news": [
     {
       "id": "news-1",
-      "title": "8月制造业PMI升至49.8% 较上月回升0.6个百分点 景气水平明显改善",
-      "title_short": "8月PMI回升至49.8% 景气改善",
+      "title": "财政部取消外籍个人股息红利免税政策 32年优惠正式终结",
+      "title_short": "外籍个人股息红利免税政策终结",
       "source": "",
       "summary": "",
-      "url": "http://sh.people.com.cn/n2/2026/0901/c134768-41683312.html",
+      "url": "https://original.ifeng.com/c/8w4a8WkALcK",
       "image": "api/images/news-1.png",
       "image_source": "article_original"
     },
     {
       "id": "news-2",
-      "title": "苹果正式完成权力交接 特努斯接任CEO 库克转任执行董事长",
-      "title_short": "苹果换帅 特努斯接任CEO",
+      "title": "2025年全国社保基金投资收益率达13.22% 累计收益超2.29万亿",
+      "title_short": "社保基金投资收益率13.22%",
       "source": "",
       "summary": "",
-      "url": "https://www.thepaper.cn/newsDetail_forward_33980497",
+      "url": "http://www.ce.cn/xwzx/gnsz/gdxw/202609/t20260902_3186494.shtml",
       "image": "api/images/news-2.jpg",
-      "image_source": "article_original"
+      "image_source": "bing_search"
     },
     {
       "id": "news-3",
-      "title": "伊朗袭击美军目标引发油价飙涨 布伦特原油重返90美元上方",
-      "title_short": "伊朗袭击美军 油价飙涨破90美元",
+      "title": "全球长债遭抛售 美日欧国债收益率接连刷新多年高位",
+      "title_short": "全球长债遭抛售 收益率刷新高位",
       "source": "",
       "summary": "",
-      "url": "https://www.jiemian.com/article/15037761.html",
-      "image": "api/images/news-3.gif",
-      "image_source": "article_original"
+      "url": "https://finance.sina.com.cn/jjxw/2026-09-01/doc-iniqitru8316195.shtml",
+      "image": "api/images/news-3.jpg",
+      "image_source": "bing_search"
     },
     {
       "id": "news-4",
-      "title": "希音正式登陆港交所 发售价48.56港元 成2026年港股最大跨境电商IPO",
-      "title_short": "希音港交所上市 募资132亿港元",
+      "title": "上市银行中期分红超2500亿元 六大行分红比例集体提升至31%",
+      "title_short": "上市银行中期分红超2500亿",
       "source": "",
       "summary": "",
-      "url": "https://www.cls.cn/detail/2470332",
-      "image": "api/images/news-4.png",
+      "url": "http://www.ce.cn/xwzx/gnsz/gdxw/202609/t20260901_3183470.shtml",
+      "image": "api/images/news-4.jpg",
       "image_source": "bing_search"
     },
     {
       "id": "news-5",
-      "title": "华为上半年营收4678亿元同比增9.55% 研发投入1214亿创历史新高",
-      "title_short": "华为半年报:营收4678亿 研发1214亿",
+      "title": "国际油价大涨逾5% 分析师称涨势或难持续",
+      "title_short": "国际油价大涨 涨势或难持续",
       "source": "",
       "summary": "",
-      "url": "https://www.jiemian.com/article/15037834.html",
+      "url": "https://www.100ppi.com/forecast/detail-20260902-205753.html",
       "image": "api/images/news-5.jpg",
-      "image_source": "article_original"
+      "image_source": "bing_search"
     }
   ],
   "supply_news": [],
