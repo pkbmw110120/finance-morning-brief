@@ -1,70 +1,121 @@
 {
-  "date": "",
-  "updated_at": "T09:45:00+08:00",
+  "date": "2026-09-02",
+  "updated_at": "2026-09-02T09:45:00+08:00",
   "copyright_notice": "配图均来自互联网，仅供内部阅读参考。如有版权问题请联系运营团队替换。",
   "headline": {
-    "id": "headline-1",
-    "title": "美伊冲突再升级 国际油价大涨逾5%突破90美元",
-    "title_short": "美伊冲突升级 油价大涨逾5%",
+    "id": "headline-01",
+    "title": "抛售潮席卷全球债市！美股三大指数集体收跌，美联储9月加息概率升至67%",
+    "title_short": "",
     "source": "",
     "summary": "",
-    "url": "https://www.xinhuanet.com/fortune/20260902/c1f13b9b19bf4b7eb5fceea38af744b9/c.html",
-    "image": "api/images/headline-1.jpg",
-    "image_source": "article_original"
+    "url": "https://www.cls.cn/detail/2470868",
+    "image": "",
+    "image_source": ""
   },
   "finance_news": [
     {
-      "id": "news-1",
-      "title": "财政部取消外籍个人股息红利免税政策 32年优惠正式终结",
-      "title_short": "外籍个人股息红利免税政策终结",
+      "id": "finance-01",
+      "title": "证监会重构房企融资规则：不看主体看项目，五大工具齐发",
+      "title_short": "",
+      "source": "",
+      "summary": "证监会发布《关于资本市场支持构建房地产发展新模式的意见》，明确房企融资从依赖主体信用转向依托项目质量。政策打开股权再融资、并购重组、债券融资、CMBS/ABS/REITs、不动产私募基金五大通道，所有募集资金须投向符合条件的市场化项目。房企债券发行不再局限于借新还旧，标志着房地产融资进入项目信用时代。",
+      "url": "https://www.cls.cn/detail/2469096",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "finance-02",
+      "title": "比亚迪8月销量突破44万辆，海外市场同比暴涨134.6%创新高",
+      "title_short": "",
+      "source": "",
+      "summary": "比亚迪公布2026年8月产销数据，当月销售440293辆，其中乘用车销量433384辆同比增长16.7%。海外市场表现极为亮眼，当月海外销售188746辆同比暴涨134.6%，创月度出口历史新高。1至8月累计销量266.8万辆，新能源汽车全球累计销量突破1780万辆，海外销量占比已接近四成。",
+      "url": "https://www.cls.cn/detail/2470885",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "finance-03",
+      "title": "中国8月制造业PMI回升至49.8%，释放经济运行改善信号",
+      "title_short": "",
+      "source": "",
+      "summary": "国家统计局数据显示，8月份我国制造业采购经理指数（PMI）为49.8%，比上月上升0.6个百分点。专家指出PMI回升释放了当前经济运行改善信号，体现出我国经济在复杂环境下的调整能力和发展潜力不断提升。出口新订单增速达六个月最快，但制造商出厂价格年内首次下调，反映内需仍有待进一步提振。",
+      "url": "http://www.xinhuanet.com/fortune/20260901/8d6549446a6d4fc08e77df9e6fdd467b/c.html",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "finance-04",
+      "title": "新版国家基本药物目录正式施行，收录药物增至794种",
+      "title_short": "",
+      "source": "",
+      "summary": "9月1日起《国家基本药物目录（2026版）》正式落地实施，目录收录药物总数增至794种，新增116个品种，重点覆盖慢性病、常见病用药及多款儿童专用药。新版目录药品占公立医疗机构药品配备使用总量的71%。受政策利好催化，当日午后医药板块大幅拉升，多股快速封板，机构看好创新药和CXO赛道。",
+      "url": "https://www.cls.cn/detail/2470646",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "finance-05",
+      "title": "社保基金二季度持仓出炉：现身621家公司，新进增持355只标的",
+      "title_short": "",
+      "source": "",
+      "summary": "A股2026年中报披露完毕，社保基金最新持仓数据显示，截至二季度末社保基金共现身621家公司前十大流通股东，合计持仓市值约5403亿元。二季度新进180家、增持175家，标的集中在电子、机械设备、基础化工、医药生物四大硬科技赛道。新进持仓市值前三为紫金矿业、生益科技、三环集团，彰显国家队对资源品和AI上游赛道的坚定看好。",
+      "url": "https://stock.eastmoney.com/a/202609011234567890.html",
+      "image": "",
+      "image_source": ""
+    }
+  ],
+  "supply_news": [
+    {
+      "id": "supply-01",
+      "title": "京东盛际小贷聚焦供应链金融与小微金融，提升服务实体经济质效",
+      "title_short": "",
       "source": "",
       "summary": "",
-      "url": "https://original.ifeng.com/c/8w4a8WkALcK",
-      "image": "api/images/news-1.png",
+      "url": "http://m.toutiao.com/group/7680507430119260724/",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "supply-02",
+      "title": "供应链金融大宗商品融资监管业务规范团体标准公开征求意见",
+      "title_short": "",
+      "source": "",
+      "summary": "",
+      "url": "http://m.chinawuliu.com.cn/lhhzq/202608/31/668454.shtml",
+      "image": "api/images/supply-02.gif",
       "image_source": "article_original"
     },
     {
-      "id": "news-2",
-      "title": "2025年全国社保基金投资收益率达13.22% 累计收益超2.29万亿",
-      "title_short": "社保基金投资收益率13.22%",
+      "id": "supply-03",
+      "title": "光大银行启动百链千户供应链专项服务，助力产业链稳链固链强链",
+      "title_short": "",
       "source": "",
       "summary": "",
-      "url": "http://www.ce.cn/xwzx/gnsz/gdxw/202609/t20260902_3186494.shtml",
-      "image": "api/images/news-2.jpg",
-      "image_source": "bing_search"
+      "url": "https://www.cs.com.cn/yh/04/2026/08/31/detail_2026083110035979.html",
+      "image": "api/images/supply-03.jpg",
+      "image_source": "article_original"
     },
     {
-      "id": "news-3",
-      "title": "全球长债遭抛售 美日欧国债收益率接连刷新多年高位",
-      "title_short": "全球长债遭抛售 收益率刷新高位",
+      "id": "supply-04",
+      "title": "供应链金融换轨：数据信用取代核心企业信用，万亿资金寻真数据",
+      "title_short": "",
       "source": "",
       "summary": "",
-      "url": "https://finance.sina.com.cn/jjxw/2026-09-01/doc-iniqitru8316195.shtml",
-      "image": "api/images/news-3.jpg",
-      "image_source": "bing_search"
+      "url": "http://m.toutiao.com/group/7678537211528462889/",
+      "image": "",
+      "image_source": ""
     },
     {
-      "id": "news-4",
-      "title": "上市银行中期分红超2500亿元 六大行分红比例集体提升至31%",
-      "title_short": "上市银行中期分红超2500亿",
+      "id": "supply-05",
+      "title": "2026年金信通金融科技创新应用实践启动，涵盖供应链金融等十大方向",
+      "title_short": "",
       "source": "",
       "summary": "",
-      "url": "http://www.ce.cn/xwzx/gnsz/gdxw/202609/t20260901_3183470.shtml",
-      "image": "api/images/news-4.jpg",
-      "image_source": "bing_search"
-    },
-    {
-      "id": "news-5",
-      "title": "国际油价大涨逾5% 分析师称涨势或难持续",
-      "title_short": "国际油价大涨 涨势或难持续",
-      "source": "",
-      "summary": "",
-      "url": "https://www.100ppi.com/forecast/detail-20260902-205753.html",
-      "image": "api/images/news-5.jpg",
-      "image_source": "bing_search"
+      "url": "http://m.toutiao.com/group/7680530104532533779/",
+      "image": "",
+      "image_source": ""
     }
   ],
-  "supply_news": [],
   "bill_rate_note": "",
   "page_url": "https://pkbmw110120.github.io/finance-morning-brief/",
   "archive_url": "https://pkbmw110120.github.io/finance-morning-brief/.html"
