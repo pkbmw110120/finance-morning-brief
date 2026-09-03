@@ -1,0 +1,102 @@
+{
+  "date": "",
+  "updated_at": "T09:45:00+08:00",
+  "copyright_notice": "配图均来自互联网，仅供内部阅读参考。如有版权问题请联系运营团队替换。",
+  "headline": {
+    "id": "headline-1",
+    "title": "央行行长潘功胜G20发声：无意通过汇率贬值获取贸易竞争优势 将继续实施适度宽松货币政策",
+    "title_short": "潘功胜G20发声：无意汇率贬值 继续宽松货币政策",
+    "source": "",
+    "summary": "",
+    "url": "https://finance.sina.com.cn/money/bond/2026-09-03/doc-iniqnyae1093451.shtml",
+    "image": "api/images/headline-1.jpg",
+    "image_source": "bing_search"
+  },
+  "finance_news": [
+    {
+      "id": "news-1",
+      "title": "富时中国A50指数重大调整：纳入中微公司、生益科技两大科技龙头",
+      "title_short": "富时A50纳入两大科技龙头",
+      "source": "",
+      "summary": "",
+      "url": "https://www.jiemian.com/article/15046977.html",
+      "image": "api/images/news-1.gif",
+      "image_source": "article_original"
+    },
+    {
+      "id": "news-2",
+      "title": "单周82只基金发行创历史新高 权益类产品占比近七成",
+      "title_short": "82只基金发行创历史新高",
+      "source": "",
+      "summary": "",
+      "url": "http://www.cnstock.com/commonDetail/784628",
+      "image": "api/images/news-2.jpg",
+      "image_source": "bing_search"
+    },
+    {
+      "id": "news-3",
+      "title": "AI大模型公司Kimi秘密递表港交所 投前估值约500亿美元",
+      "title_short": "Kimi秘密递表港交所 估值500亿美元",
+      "source": "",
+      "summary": "",
+      "url": "https://finance.sina.com.cn/stock/t/2026-09-03/doc-iniqpeke7070340.shtml",
+      "image": "api/images/news-3.jpg",
+      "image_source": "bing_search"
+    },
+    {
+      "id": "news-4",
+      "title": "社保基金二季度重仓硬科技市值占比升至12.62% 险资同步加仓",
+      "title_short": "社保基金二季度重仓硬科技",
+      "source": "",
+      "summary": "",
+      "url": "http://bj.people.com.cn/n2/2026/0903/c14540-41685583.html",
+      "image": "api/images/news-4.png",
+      "image_source": "article_original"
+    },
+    {
+      "id": "news-5",
+      "title": "博通第三财季营收同比增长86% AI半导体收入增221%至167亿美元",
+      "title_short": "博通Q3营收增86% AI半导体增221%",
+      "source": "",
+      "summary": "",
+      "url": "http://news.10jqka.com.cn/20260903/c679542509.shtml",
+      "image": "api/images/news-5.jpg",
+      "image_source": "bing_search"
+    }
+  ],
+  "supply_news": [
+    {
+      "id": "snews-1",
+      "title": "云南将供应链金融列为七大重点领域",
+      "url": "http://www.yn.xinhuanet.com/20260903/2a2a7d28c1e4450682de61afeb7aef1d/c.html",
+      "summary": "云南省政府印发的《关于推进服务业扩能提质的实施意见》将供应链金融列为生产性服务业七大重点领域之一，明确做好科技金融、绿色金融、普惠金融、养老金融、数字金融\"五篇大文章\"。截至6月末，全省\"五篇大文章\"贷款余额1.91万亿元，同比增长10.73%。应收账款融资服务平台加快推广，资金流信息平台促成授信1466.89亿元，惠及企业19768家。"
+    },
+    {
+      "id": "snews-2",
+      "title": "威海银行\"共享贷\"入选2026\"好品金融\"案例 数字供应链金融累计服务上千家企业",
+      "url": "http://finance.china.com.cn/roll/20260902/6322993.shtml",
+      "summary": "威海银行创新推出数字供应链金融产品\"共享贷\"，成功入选2026\"好品金融-金融直达基层加速跑\"品类。产品通过银企双平台数据直连，抓取产业链真实交易、履约、结算等核心数据，搭建智能化授信评估体系，以\"数据即信用\"模式解决小微企业融资难题。目前\"共享贷\"已形成贷款、商票贴现、国内保理等一体化融资服务体系，累计服务交通产业链上千家企业。"
+    },
+    {
+      "id": "snews-3",
+      "title": "上半年应收账款ABS发行增28%",
+      "url": "https://www.nbd.com.cn/",
+      "summary": "2026年1-6月，应收账款ABS共计发行171单，同比增长24.82%；发行总规模1517.81亿元，同比增长28.18%。交易所市场发行规模占比79.95%，银行间市场占比20.05%。央企集团公司仍为主流发行人，头部效应明显。1至2年期限产品发行规模占比47.71%，较上年同期提升13.93个百分点，发行人主动拉长久期以锁定低成本融资。"
+    },
+    {
+      "id": "snews-4",
+      "title": "山东港口保理创新跨境出口保理",
+      "url": "http://paper.dzwww.com/dzrb/content/20260902/Articel09006MT.htm",
+      "summary": "山东港口商业保理有限公司创新推出以国际贸易跨境应收账款为基础的出口保理产品，实现\"船开即融、单到即放\"的高效兑付。该模式不依赖核心企业确权，依托真实贸易背景与海外买方资信，构建\"贸易真实、物流可溯、回款闭环\"的全链路跨境风控体系，有效盘活出口企业在途资金。目前已服务蔬菜加工、涂层钢板等出口企业，累计投放保理融资款近900万元。"
+    },
+    {
+      "id": "snews-5",
+      "title": "建行山东AI赋能供应链金融",
+      "url": "http://paper.dzwww.com/dzrb/content/20260902/Articel06005MT.htm",
+      "summary": "建行山东省分行以AI技术拓展服务半径，推动金融资源覆盖产业链关键节点。济南分行担当电子信息产业链金融链主单位，上半年为多家集成电路重点企业累计授信80余亿元。菏泽巨野支行为18户医疗上游供应商办理供应链融资，累计放款超2400万元，以数字信用破解链上中小微企业融资难题。"
+    }
+  ],
+  "bill_rate_note": "",
+  "page_url": "https://pkbmw110120.github.io/finance-morning-brief/",
+  "archive_url": "https://pkbmw110120.github.io/finance-morning-brief/.html"
+}
