@@ -10,8 +10,8 @@
  *   4) 净化后套响应式模板返回；提取失败 / 异常则 302 跳原站
  */
 
-import { Readability } from "https://esm.sh/@mozilla/readability@0.5.0";
-import { parseHTML } from "https://esm.sh/linkedom@0.15.0";
+import { Readability } from "@mozilla/readability";
+import { parseHTML } from "linkedom";
 
 // SSRF 防护：仅抓取白名单域名。留空则放行所有 http(s)（不推荐公开部署）。
 // 由 verify_mobile_links.py 实测填充，例如：
