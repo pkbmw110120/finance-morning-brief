@@ -1,0 +1,122 @@
+{
+  "date": "",
+  "updated_at": "T09:45:00+08:00",
+  "copyright_notice": "配图均来自互联网，仅供内部阅读参考。如有版权问题请联系运营团队替换。",
+  "headline": {
+    "id": "headline-1",
+    "title": "美国8月非农就业激增16.2万大超预期 美联储9月加息概率飙升至60% 全球资产剧烈波动",
+    "title_short": "美国8月非农16.2万大超预期 加息概率飙升",
+    "source": "",
+    "summary": "",
+    "url": "https://finance.eastmoney.com/a/202609043865687192.html",
+    "image": "api/images/headline-1.png",
+    "image_source": "article_original"
+  },
+  "finance_news": [
+    {
+      "id": "news-1",
+      "title": "央行等量续作5000亿元买断式逆回购 结束两个月加量 月初资金面宽松",
+      "title_short": "央行等量续作5000亿买断式逆回购",
+      "source": "",
+      "summary": "",
+      "url": "http://news.cnr.cn/kuaixun/20260905/t20260905_527805098.shtml",
+      "image": "api/images/news-1.jpg",
+      "image_source": "article_original"
+    },
+    {
+      "id": "news-2",
+      "title": "证监会就私募基金募集新规征求意见 强化\"卖者尽责\" 细化合格投资者标准",
+      "title_short": "证监会私募募集新规征求意见",
+      "source": "",
+      "summary": "",
+      "url": "http://www.xinhuanet.com/legal/20260904/3a9944630e0a4aa2b3c7a5233e1936b2/c.html",
+      "image": "api/images/news-2.jpg",
+      "image_source": "article_original"
+    },
+    {
+      "id": "news-3",
+      "title": "七部门发文促进\"十五五\"数字化绿色化协同转型 算力设施绿色化部署提速",
+      "title_short": "七部门发文",
+      "source": "",
+      "summary": "",
+      "url": "https://app.xinhuanet.com/news/article.html?articleId=20260904921ccc58369d4ed893d81aa8a936a455",
+      "image": "api/images/news-3.jpg",
+      "image_source": "article_original"
+    },
+    {
+      "id": "news-4",
+      "title": "现货黄金本周累跌0.57% 非农超预期推升加息预期 金价一度跌破4400美元",
+      "title_short": "黄金跌破4400美元 本周累跌",
+      "source": "",
+      "summary": "",
+      "url": "https://m.jiemian.com/article/15058589.html",
+      "image": "api/images/news-4.png",
+      "image_source": "article_original"
+    },
+    {
+      "id": "news-5",
+      "title": "苹果股价下挫跌2.51% 市值一夜蒸发超8000亿元 折叠屏iPhone产能受限",
+      "title_short": "苹果跌2.51% 市值蒸发8000亿",
+      "source": "",
+      "summary": "",
+      "url": "https://stock.10jqka.com.cn/usstock/20260905/c679625459.shtml",
+      "image": "api/images/news-5.jpg",
+      "image_source": "article_original"
+    }
+  ],
+  "supply_news": [
+    {
+      "id": "snews-1",
+      "title": "深交所终止审核3笔债券项目 含数据资产ABS和供应链ABS 合计19.21亿元",
+      "title_short": "深交所终止审核含供应链ABS 19.21亿",
+      "url": "http://bond.eastmoney.com/a/202609033863875159.html",
+      "source": "东方财富",
+      "summary": "深交所日前终止审核3笔债券项目，合计19.21亿元。其中\"财信-潇湘数据资产第1期ABS\"（12亿元，发行人联易盛供应链）和\"宁证-云梦1号供应链ABS\"（2.21亿元，发行人中唐保理）均在列。数据资产ABS和供应链ABS相继被终止审核，折射交易所对创新品类底层资产真实性穿透审查趋严，供应链ABS审核门槛持续抬高。",
+      "image": "",
+      "image_source_label": ""
+    },
+    {
+      "id": "snews-2",
+      "title": "联易融获批荆开产投10亿元+湖北水发20亿元供应链ABS 合计30亿元",
+      "title_short": "联易融获批30亿供应链ABS",
+      "url": "https://www.qcc.com/creport/c27c911f70b558c8c273b9b041b02152.html",
+      "source": "企查查",
+      "summary": "深圳前海联易融商业保理有限公司近期作为发行人获批荆开产投供应链1-10期资产支持专项计划，拟发行金额10亿元。此外，公司担任原始权益人的长江证券-湖北水发供应链金融1-10期资产支持专项计划获批，拟发行规模达20亿元。两单合计30亿元，反映供应链ABS市场需求持续旺盛，头部平台机构优势进一步巩固。",
+      "image": "",
+      "image_source_label": ""
+    },
+    {
+      "id": "snews-3",
+      "title": "FundPark丰泊国际与花旗达成2.5亿美元ABS融资合作 服务跨境电商中小企业",
+      "title_short": "FundPark与花旗2.5亿美元ABS合作",
+      "url": "https://m.amz123.com/t/4s6C6Xln",
+      "source": "AMZ123/Fin123",
+      "summary": "香港金融科技公司FundPark丰泊国际宣布与花旗集团达成首次资产支持证券（ABS）融资合作。花旗将作为高级档投资者，承诺提供最高2.5亿美元资金，使FundPark的ABS融资总规模突破12.5亿美元。过去十年FundPark已支持超4万家中小企业，通过AI驱动的动态融资为跨境电商提供营运资金，累计放款超90亿美元。",
+      "image": "",
+      "image_source_label": ""
+    },
+    {
+      "id": "snews-4",
+      "title": "中诚信国际报告：2026上半年供应链ABS发行456亿 联易融102亿居首 市场结构深度调整",
+      "title_short": "上半年供应链ABS 联易融102亿居首",
+      "url": "http://m.microbell.com/wap_detail.aspx?id=c0e3417134db7823a7b887179e8e5fa8",
+      "source": "迈博汇金",
+      "summary": "中诚信国际发布供应链ABS产品报告显示，2026上半年共26家保理公司作为原始权益人参与发行，合计约456亿元。联易融保理以102.23亿元、22.39%市场份额居首，信安国际51.69亿元位居第三，亚洲保理23.61亿元位居第五。第三方平台型机构20家发行314亿元占比69%，核心企业下属保理6家发行142亿元占比31%。市场集中度较高，头部效应显著。",
+      "image": "",
+      "image_source_label": ""
+    },
+    {
+      "id": "snews-5",
+      "title": "上交所修订知名成熟发行人优化审核指引 提升债券融资效率",
+      "title_short": "上交所修订成熟发行人审核指引",
+      "url": "http://www.sse.com.cn/lawandrules/sselawsrules2025/bond/review/c/c_20260904_10831327.shtml",
+      "source": "上海证券交易所",
+      "summary": "上海证券交易所修订发布《公司债券发行上市审核规则适用指引第6号——知名成熟发行人优化审核（2026年修订）》，自9月4日起实施。新规按照分类监管理念，对市场认可度高、行业地位显著、治理完善的知名成熟发行人适用优化审核安排，简化审核流程、提高融资效率。同时明确发行人出现重大不利变化等情形时，可终止优化审核安排。",
+      "image": "",
+      "image_source_label": ""
+    }
+  ],
+  "bill_rate_note": "",
+  "page_url": "https://pkbmw110120.github.io/finance-morning-brief/",
+  "archive_url": "https://pkbmw110120.github.io/finance-morning-brief/.html"
+}
