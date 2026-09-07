@@ -1,0 +1,112 @@
+{
+  "date": "",
+  "updated_at": "T09:45:00+08:00",
+  "copyright_notice": "配图均来自互联网，仅供内部阅读参考。如有版权问题请联系运营团队替换。",
+  "headline": {
+    "id": "headline-1",
+    "title": "财政部将发行3000亿元特别国债 支持8家中央金融企业补充核心一级资本",
+    "title_short": "财政部3000亿特别国债支持金融企业增资",
+    "source": "",
+    "summary": "",
+    "url": "http://www.xinhuanet.com/politics/20260907/5f5e1ed0a29b4412b4edf316cc971eeb/c.html",
+    "image": "api/images/headline-1.jpg",
+    "image_source": "article_original"
+  },
+  "finance_news": [
+    {
+      "id": "news-1",
+      "title": "央行开展5000亿元3个月期买断式逆回购操作 保持流动性充裕",
+      "title_short": "央行5000亿买断式逆回购续作",
+      "source": "",
+      "summary": "",
+      "url": "https://www.cls.cn/detail/2474380",
+      "image": "api/images/news-1.jpg",
+      "image_source": "bing_search"
+    },
+    {
+      "id": "news-2",
+      "title": "美国8月非农大超预期 市场加大美联储9月加息押注 CPI成关键变量",
+      "title_short": "非农超预期 加息押注升温",
+      "source": "",
+      "summary": "",
+      "url": "https://caifuhao.eastmoney.com/news/20260906000531660537090",
+      "image": "api/images/news-2.jpg",
+      "image_source": "article_original"
+    },
+    {
+      "id": "news-3",
+      "title": "下周密集催化：华为发布会+CPI数据+服贸会+苹果发布会+算力大会",
+      "title_short": "下周五大催化密集落地",
+      "source": "",
+      "summary": "",
+      "url": "https://caifuhao.eastmoney.com/news/20260905094755873391950",
+      "image": "api/images/news-3.jpg",
+      "image_source": "article_original"
+    },
+    {
+      "id": "news-4",
+      "title": "复星医药拟斥资最高10亿港元回购H股 同步减持印度子公司6%股权",
+      "title_short": "复星医药10亿回购+减持印度子公司",
+      "source": "",
+      "summary": "",
+      "url": "https://www.fosunpharma.com/content/details37_16819.html",
+      "image": "api/images/news-4.jpg",
+      "image_source": "article_original"
+    },
+    {
+      "id": "news-5",
+      "title": "OPEC+主要产油国决定保持10月产量不变 首次暂停增产",
+      "title_short": "OPEC+暂停增产 维持10月产量不变",
+      "source": "",
+      "summary": "",
+      "url": "https://m.gmw.cn/2026-09/07/content_1304560114.htm",
+      "image": "api/images/news-5.jpg",
+      "image_source": "article_original"
+    }
+  ],
+  "supply_news": [
+    {
+      "id": "snews-1",
+      "title": "四川全国首创\"金融链长\"制 为\"15+N\"重点产业链配备金融管家 力争年信贷投放超3100亿",
+      "title_short": "四川首创\"金融链长\"制 力争信贷3100亿",
+      "url": "https://cbgc.scol.com.cn/news/7917589",
+      "source": "川观新闻",
+      "summary": "四川省七部门联合印发《四川省重点产业链金融链长制工作方案》，在全国首创\"大型商业银行+中型商业银行/政策性银行+基金等其他金融机构\"产业链金融协同工作机制，为全省\"15+N\"重点产业链逐一配备\"金融链长\"。今年力争实现产业链信贷投放超3100亿元、基金投资超240亿元、服务企业2500户以上。"
+    },
+    {
+      "id": "snews-2",
+      "title": "广东落地首批\"Token贷\" 以算力Token消耗量为授信依据 赋能词元经济",
+      "title_short": "广东首批Token贷落地 以算力消耗授信",
+      "url": "https://www.gdjr.gov.cn/gdjr/jrzx/dfjr/content/post_45016.html",
+      "source": "中国人民银行广东省分行",
+      "summary": "在中国人民银行广东省分行指导下，广东金融机构落地全省首批\"Token贷\"。中国银行广州分行发布首个词元经济专项金融产品\"中银·算力Token贷\"，以企业算力Token产出消耗等为核心授信依据，可提供最长3年、最高3000万元授信。"
+    },
+    {
+      "id": "snews-3",
+      "title": "太原能源低碳发展论坛大宗商品供应链韧性交流活动举行 签约超70亿元",
+      "title_short": "太原论坛供应链韧性交流签约70亿",
+      "url": "http://www.chinanews.com.cn/cj/2026/09-04/10690567.shtml",
+      "source": "中国新闻网",
+      "summary": "2026年太原能源低碳发展论坛大宗商品供应链韧性交流活动近日举行。晋能控股集团构建一体化产销模式，年交易量超11亿吨。现场签约10个重点项目，合作意向约70亿元。"
+    },
+    {
+      "id": "snews-4",
+      "title": "浙商银行供应链金融累计融资突破1.2万亿 覆盖超4100条产业链",
+      "title_short": "浙商银行供应链金融突破1.2万亿",
+      "url": "https://caifuhao.eastmoney.com/news/20260904192431773673110",
+      "source": "东方财富",
+      "summary": "浙商银行2026年半年报显示，供应链金融累计融资金额突破1.2万亿元，覆盖超4100条产业链、服务十万余家上下游企业。截至上半年科技贷款余额达2830亿元。"
+    },
+    {
+      "id": "snews-5",
+      "title": "第二十六届投洽会即将开幕 供应链创新与应用展集中展示AI赋能实践",
+      "title_short": "投洽会供应链展即将厦门开幕",
+      "url": "http://www.fj.chinanews.com.cn/news/2026/2026-09-02/590092.html",
+      "source": "中新网福建",
+      "summary": "第二十六届投洽会将于9月8日至11日在厦门举行。由中国物流与采购联合会主办的\"2026供应链创新与应用展\"同期举行，厦门国贸、建发、象屿供应链\"三剑客\"集中亮相。"
+    }
+  ],
+  "bill_rate_note": "",
+  "page_url": "https://pkbmw110120.github.io/finance-morning-brief/",
+  "archive_url": "https://pkbmw110120.github.io/finance-morning-brief/.html"
+}
