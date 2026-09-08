@@ -19,9 +19,9 @@
       "title_short": "外储连续5月站稳3.4万亿美元上方",
       "source": "",
       "summary": "",
-      "url": "https://caifuhao.eastmoney.com/news/20260907215033018476900",
+      "url": "https://www.cs.com.cn/xwzx/01/2026/09/08/detail_2026090810037468.html",
       "image": "api/images/news-1.jpg",
-      "image_source": "bing_search"
+      "image_source": "article_original"
     },
     {
       "id": "news-2",
@@ -49,7 +49,7 @@
       "title_short": "电池涨价潮蔓延 头部厂商一体化布局",
       "source": "",
       "summary": "",
-      "url": "https://www.cls.cn/detail/2475880",
+      "url": "https://www.cls.cn/detail/2476450",
       "image": "api/images/news-4.jpg",
       "image_source": "bing_search"
     },
@@ -64,58 +64,7 @@
       "image_source": "bing_search"
     }
   ],
-  "supply_news": [
-    {
-      "id": "snews-1",
-      "title": "两部门联合出台汽车行业首个国家级账期管理规范 禁止强迫供应商接受供应链票据",
-      "title_short": "首个国家级汽车账期管理规范出台",
-      "url": "https://www.miit.gov.cn/jgsj/zbys/wjfb/art/2026/art_6043f55908f44a71a3e51236f663356b.html",
-      "source": "工业和信息化部",
-      "summary": "工信部、市场监管总局联合发布《关于推动汽车企业规范供应商账款支付优化账期管理的通知》，系国家层面首个行业账期管理文件。明确账期自交付验收日起算，一般零部件3个工作日内验收；鼓励现金支付，不得强迫供应商接受供应链票据等非现金方式；中小企业60天内须完成支付。对故意拉长账期企业将联合约谈整改。",
-      "image": "",
-      "image_source_label": ""
-    },
-    {
-      "id": "snews-2",
-      "title": "前7月我国动力电池累计销量同比增长37.1% 全球前十中国企业占六席",
-      "title_short": "前7月动力电池销量增37.1%",
-      "url": "https://caifuhao.eastmoney.com/news/20260908092431065723760",
-      "source": "东方财富",
-      "summary": "2026年1至7月我国动力电池累计销量达790.4吉瓦时，同比增长37.1%。全球装机量前十电池企业中，中国企业占六席，合计市场份额超70%，较去年提升3个百分点。产业链上下游持续扩张，带动材料企业出货量增长，供应链融资需求同步扩大。",
-      "image": "",
-      "image_source_label": ""
-    },
-    {
-      "id": "snews-3",
-      "title": "浙商银行供应链金融累计融资突破1.2万亿 覆盖超4100条产业链",
-      "title_short": "浙商银行供应链金融突破1.2万亿",
-      "url": "https://caifuhao.eastmoney.com/news/20260904192431773673110",
-      "source": "东方财富",
-      "summary": "浙商银行半年报显示，供应链金融累计融资突破1.2万亿元，覆盖超4100条产业链、服务十万余家上下游企业。依托数字化供应链服务，上半年通过讯易链平台获得融资的中小企业平均融资成本低至2.51%，AI智能审核将资产审核周期从1-2天压缩至分钟级。",
-      "image": "",
-      "image_source_label": ""
-    },
-    {
-      "id": "snews-4",
-      "title": "第二十六届投洽会今日开幕 供应链创新与应用展集中展示AI赋能实践",
-      "title_short": "投洽会今日开幕 供应链展亮相",
-      "url": "http://www.chinanews.com.cn/cj/2026/09-04/10690567.shtml",
-      "source": "中国新闻网",
-      "summary": "第二十六届中国国际投洽会9月8日至11日在厦门举行，129个国家和地区的1200多个代表团确认参会。中国物流与采购联合会主办的\"2026供应链创新与应用展\"同期举行，厦门国贸、建发、象屿集中亮相。晋能控股集团披露一体化产销平台年交易量超11亿吨，年资金结算量达2000亿元。",
-      "image": "",
-      "image_source_label": ""
-    },
-    {
-      "id": "snews-5",
-      "title": "全球保理市场2026年预计达5.01万亿美元 亚太供应链融资需求持续扩张",
-      "title_short": "全球保理市场达5万亿美元",
-      "url": "https://www.einpresswire.com/article/939347877/factoring-market-size-expected-to-grow-from-usd-5-01-trillion-in-2026-to-usd-8-87-trillion-by-2035",
-      "source": "EIN Presswire",
-      "summary": "全球保理市场2025年以4.70万亿美元收官，2026年预计达5.01万亿美元，2035年将升至8.87万亿美元，年复合增长率6.55%。欧洲以62%份额居首，亚太贡献约9400亿美元位列第二。企业数字化发票基础设施完善和跨境贸易融资扩张共同推动供应链融资市场持续扩容。",
-      "image": "",
-      "image_source_label": ""
-    }
-  ],
+  "supply_news": [],
   "bill_rate_note": "",
   "page_url": "https://pkbmw110120.github.io/finance-morning-brief/",
   "archive_url": "https://pkbmw110120.github.io/finance-morning-brief/.html"
