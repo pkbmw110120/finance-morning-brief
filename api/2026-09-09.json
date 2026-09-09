@@ -1,0 +1,71 @@
+{
+  "date": "",
+  "updated_at": "T09:45:00+08:00",
+  "copyright_notice": "配图均来自互联网，仅供内部阅读参考。如有版权问题请联系运营团队替换。",
+  "headline": {
+    "id": "headline-1",
+    "title": "国际铜价再创历史新高 LME期铜触及14779美元/吨 AI算力引爆全球\"抢铜\"大战",
+    "title_short": "铜价创新高 AI算力引爆全球抢铜大战",
+    "source": "",
+    "summary": "",
+    "url": "http://adimg.ce.cn/xwzx/gnsz/gdxw/202609/t20260909_3201442.shtml",
+    "image": "api/images/headline-1.jpg",
+    "image_source": "bing_search"
+  },
+  "finance_news": [
+    {
+      "id": "news-1",
+      "title": "前8个月我国货物贸易进出口增长17.6% 进口增速连续6个月超过出口",
+      "title_short": "前8月外贸增17.6% 进口连续6月超出口",
+      "source": "",
+      "summary": "",
+      "url": "https://finance.eastmoney.com/a/202609083867986882.html",
+      "image": "api/images/news-1.png",
+      "image_source": "article_original"
+    },
+    {
+      "id": "news-2",
+      "title": "工信部\"十五五\"信息通信规划出炉 首次明确\"适时启动6G商用\"",
+      "title_short": "十五五规划首提6G商用 3.8万亿投资",
+      "source": "",
+      "summary": "",
+      "url": "https://content-static.cctvnews.cctv.com/snow-book/index.html?channelId=1119&item_id=109400552341799895&toc_style_id=feeds_default",
+      "image": "api/images/news-2.jpg",
+      "image_source": "bing_search"
+    },
+    {
+      "id": "news-3",
+      "title": "2026年服贸会今日开幕 数字技术与AI应用成最大亮点",
+      "title_short": "服贸会今日开幕 数字技术成亮点",
+      "source": "",
+      "summary": "",
+      "url": "http://adimg.ce.cn/xwzx/gnsz/gdxw/202609/t20260909_3201442.shtml",
+      "image": "api/images/news-3.png",
+      "image_source": "bing_search"
+    },
+    {
+      "id": "news-4",
+      "title": "龙版传媒7天涨超93% 9月9日起停牌核查 提示非理性炒作风险",
+      "title_short": "龙版传媒7天涨93%今起停牌核查",
+      "source": "",
+      "summary": "",
+      "url": "https://www.cls.cn/detail/2475880",
+      "image": "api/images/news-4.jpg",
+      "image_source": "bing_search"
+    },
+    {
+      "id": "news-5",
+      "title": "财政部今日续发50年期超长期特别国债350亿元 年内发行规模超1.1万亿",
+      "title_short": "50年期超长期特别国债350亿今日续发",
+      "source": "",
+      "summary": "",
+      "url": "http://fund.eastmoney.com/a/202609073866203046.html",
+      "image": "api/images/news-5.png",
+      "image_source": "article_original"
+    }
+  ],
+  "supply_news": [],
+  "bill_rate_note": "",
+  "page_url": "https://pkbmw110120.github.io/finance-morning-brief/",
+  "archive_url": "https://pkbmw110120.github.io/finance-morning-brief/.html"
+}
