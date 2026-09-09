@@ -1,16 +1,16 @@
 {
-  "date": "",
-  "updated_at": "T09:45:00+08:00",
+  "date": "2026-09-09",
+  "updated_at": "2026-09-09T09:45:00+08:00",
   "copyright_notice": "配图均来自互联网，仅供内部阅读参考。如有版权问题请联系运营团队替换。",
   "headline": {
     "id": "headline-1",
-    "title": "国际铜价再创历史新高 LME期铜触及14779美元/吨 AI算力引爆全球\"抢铜\"大战",
-    "title_short": "铜价创新高 AI算力引爆全球抢铜大战",
+    "title": "铜价上涨\"冲击波\" AI算力引爆全球\"抢铜\"大战",
+    "title_short": "铜价冲击波 AI算力引爆全球抢铜大战",
     "source": "",
     "summary": "",
-    "url": "http://adimg.ce.cn/xwzx/gnsz/gdxw/202609/t20260909_3201442.shtml",
-    "image": "api/images/headline-1.jpg",
-    "image_source": "bing_search"
+    "url": "http://paper.cnstock.com/html/2026-09/09/content_2266907.htm",
+    "image": "api/images/headline-1.png",
+    "image_source": "article_original"
   },
   "finance_news": [
     {
@@ -29,19 +29,19 @@
       "title_short": "十五五规划首提6G商用 3.8万亿投资",
       "source": "",
       "summary": "",
-      "url": "https://content-static.cctvnews.cctv.com/snow-book/index.html?channelId=1119&item_id=109400552341799895&toc_style_id=feeds_default",
+      "url": "https://content-static.cctvnews.cctv.com/snow-book/index.html?item_id=109400552341799895&toc_style_id=feeds_default",
       "image": "api/images/news-2.jpg",
       "image_source": "bing_search"
     },
     {
       "id": "news-3",
-      "title": "2026年服贸会今日开幕 数字技术与AI应用成最大亮点",
-      "title_short": "服贸会今日开幕 数字技术成亮点",
+      "title": "2026年服贸会今日开幕 90个国家和地区参展 培育更多\"中国服务\"品牌",
+      "title_short": "服贸会今日开幕 90国参展",
       "source": "",
       "summary": "",
-      "url": "http://adimg.ce.cn/xwzx/gnsz/gdxw/202609/t20260909_3201442.shtml",
-      "image": "api/images/news-3.png",
-      "image_source": "bing_search"
+      "url": "http://paper.people.com.cn/rmrb/pad/content/202609/09/content_30179935.html",
+      "image": "api/images/news-3.jpg",
+      "image_source": "article_original"
     },
     {
       "id": "news-4",
@@ -64,7 +64,58 @@
       "image_source": "article_original"
     }
   ],
-  "supply_news": [],
+  "supply_news": [
+    {
+      "id": "snews-1",
+      "title": "\"数币达\"跨境结算平台亮相投洽会 数字人民币跨境服务加速规模化应用",
+      "title_short": "\"数币达\"跨境结算平台亮相投洽会",
+      "url": "https://m.21jingji.com/article/20260908/herald/1cddea9c1ccc387676e7b57adc37dc85.html",
+      "source": "21世纪经济报道",
+      "summary": "数字人民币国际运营中心将三大平台整合升级为\"数币达\"（CBETS）跨境结算综合服务平台，支持境外机构通过香港接入点\"一点接入\"。今年6月已与首批26家金融机构签署协议，业务覆盖港澳、新加坡、泰国、阿联酋等国家和地区。交通银行联合\"数贸通\"搭建数字人民币跨境贸易结算通道，绕开代理行体系实现点对点快速支付，核心数据上链存证全程可追溯。",
+      "image": "",
+      "image_source_label": ""
+    },
+    {
+      "id": "snews-2",
+      "title": "CIPS与11家外资银行签约 首次覆盖卢旺达土耳其等国 跨境人民币网络再扩容",
+      "title_short": "CIPS签约11家外资银行 覆盖国扩至133个",
+      "url": "http://www.cnstock.com/commonDetail/787386",
+      "source": "上海证券报",
+      "summary": "第二届CIPS跨境银企合作专场活动在厦门投洽会启幕。CIPS与11家外资银行签约，首次覆盖卢旺达、土耳其、乌兹别克斯坦、马尔代夫、马来西亚、格鲁吉亚等国。星展银行成为首家将CIPS直连功能全面整合至自身服务的新加坡银行。CIPS参与者分布全球133个国家和地区，业务覆盖192个国家和地区。活动还发布CIPS跨境保函产品和跨境人民币网络支付清算服务。",
+      "image": "",
+      "image_source_label": ""
+    },
+    {
+      "id": "snews-3",
+      "title": "2026供应链合作创新大会今日开幕 聚焦\"数智供应链赋能新质生产力\"",
+      "title_short": "供应链合作创新大会今日开幕",
+      "url": "http://xm.fjsen.com/wap/2026-09/06/content_32248357.htm",
+      "source": "东南网",
+      "summary": "2026供应链合作创新大会9月9日在厦门开幕，由中国物流与采购联合会与厦门市政府联合主办。大会邀请世界经济论坛国际贸易与投资倡议全球总负责人肖恩·多尔蒂、国务院发展研究中心副主任隆国强等围绕\"构筑数智供应链赋能新质生产力\"主题发表主旨演讲。同期举办\"人工智能+国际供应链展\"，集中展示AI技术在物流供应链领域的典型应用场景。",
+      "image": "",
+      "image_source_label": ""
+    },
+    {
+      "id": "snews-4",
+      "title": "厦门供应链\"三剑客\"集体亮相投洽会 国贸建发象屿展示AI赋能供应链创新",
+      "title_short": "厦门供应链三剑客亮相投洽会",
+      "url": "http://m.mnw.cn/xiamen/news/3120936.html",
+      "source": "海峡导报",
+      "summary": "第二十六届投洽会\"2026供应链创新与应用展\"集中展示我国供应链高质量发展前沿实践。厦门国贸、建发、象屿三大供应链龙头集体亮相。厦门供应***智创新有限公司集中展示覆盖\"技术研发—场景验证—规模化落地\"完整闭环的24项产品服务能力及超700TB数据资源底座。\"丝路海运\"航线达160条通达全球50个国家153座港口，AI赋能供应链服务成闽企全球化重要支撑。",
+      "image": "",
+      "image_source_label": ""
+    },
+    {
+      "id": "snews-5",
+      "title": "投洽会金融风向标：跨境金融加速进阶 人民币国际化稳步推进",
+      "title_short": "投洽会金融风向：跨境金融进阶",
+      "url": "http://www.cnstock.com/commonDetail/787624",
+      "source": "上海证券报",
+      "summary": "第二十六届投洽会上，一系列金融元素集中亮相，透露出两股清晰的金融风向：企业出海热潮涌动，跨境金融从结算、融资等基础服务向综合化服务加速进阶；人民币国际化稳步推进。CIPS专场首次落地投洽会，吸引74家全球系统重要性银行参展。兴业银行、浙商银行分别与XTransfer签约，合作覆盖新兴市场小币种收款等跨境金融场景。中国银行联合10家机构成立\"出海环球通合作联盟\"。",
+      "image": "",
+      "image_source_label": ""
+    }
+  ],
   "bill_rate_note": "",
   "page_url": "https://pkbmw110120.github.io/finance-morning-brief/",
   "archive_url": "https://pkbmw110120.github.io/finance-morning-brief/.html"
