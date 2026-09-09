@@ -1,67 +1,67 @@
 {
   "date": "2026-09-09",
-  "updated_at": "2026-09-09T09:45:00+08:00",
+  "updated_at": "2026-09-09T09:50:00+08:00",
   "copyright_notice": "配图均来自互联网，仅供内部阅读参考。如有版权问题请联系运营团队替换。",
   "headline": {
     "id": "headline-1",
     "title": "铜价上涨\"冲击波\" AI算力引爆全球\"抢铜\"大战",
     "title_short": "铜价冲击波 AI算力引爆全球抢铜大战",
-    "source": "",
-    "summary": "",
     "url": "http://paper.cnstock.com/html/2026-09/09/content_2266907.htm",
-    "image": "api/images/headline-1.png",
-    "image_source": "article_original"
+    "source": "上海证券报",
+    "summary": "9月8日LME期铜价格触及14779美元/吨再创历史新高，沪铜主力合约盘中最高111720元/吨。AI数据中心成为铜\"超级需求引擎\"，单台算力柜液冷板纯铜材消耗达800至1000公斤，摩根大通预测2026年全球数据中心铜消费将达47.5万至74万吨。供应端持续收紧，智利产量预期下调至527万吨，刚果(金)实施铜精矿出口禁令。国内电缆企业面临\"成本倒挂\"考验，铝代铜趋势加速。中金公司判断铜价有望向15000美元/吨迈进。",
+    "image": "",
+    "image_source_label": ""
   },
   "finance_news": [
     {
       "id": "news-1",
       "title": "前8个月我国货物贸易进出口增长17.6% 进口增速连续6个月超过出口",
       "title_short": "前8月外贸增17.6% 进口连续6月超出口",
-      "source": "",
-      "summary": "",
       "url": "https://finance.eastmoney.com/a/202609083867986882.html",
-      "image": "api/images/news-1.png",
-      "image_source": "article_original"
+      "source": "东方财富",
+      "summary": "海关总署数据显示，2026年前8个月我国货物贸易进出口总值34.78万亿元，同比增长17.6%。其中出口20.17万亿元增长14.6%，进口14.61万亿元增长22%。8月单月进出口4.65万亿元增长19.8%，出口和进口连续4个月同时保持两位数增长，进口月度同比增速连续6个月超过出口。出口驱动力正从\"量\"的扩张转向\"价\"的提升与产品结构升级。",
+      "image": "",
+      "image_source_label": ""
     },
     {
       "id": "news-2",
       "title": "工信部\"十五五\"信息通信规划出炉 首次明确\"适时启动6G商用\"",
       "title_short": "十五五规划首提6G商用 3.8万亿投资",
-      "source": "",
-      "summary": "",
       "url": "https://content-static.cctvnews.cctv.com/snow-book/index.html?item_id=109400552341799895&toc_style_id=feeds_default",
-      "image": "api/images/news-2.jpg",
-      "image_source": "bing_search"
+      "source": "央视新闻",
+      "summary": "工信部印发《信息通信行业发展\"十五五\"规划》，首次明确\"适时启动6G商用\"。规划提出到2030年信息基础设施累计投资3.8万亿元，智能算力达9800EFLOPS，5G用户普及率95%。明确研制6G基站和6G智能手机，推动空天地一体化通信网络建设。中国6G技术专利全球占比达40.3%，紫金山实验室主导的通感融合网络架构提案已获28国支持。",
+      "image": "",
+      "image_source_label": ""
     },
     {
       "id": "news-3",
       "title": "2026年服贸会今日开幕 90个国家和地区参展 培育更多\"中国服务\"品牌",
       "title_short": "服贸会今日开幕 90国参展",
-      "source": "",
-      "summary": "",
       "url": "http://paper.people.com.cn/rmrb/pad/content/202609/09/content_30179935.html",
-      "image": "api/images/news-3.jpg",
-      "image_source": "article_original"
+      "source": "人民日报",
+      "summary": "2026年中国国际服务贸易交易会9月9日至13日在北京首钢园举办，90个国家和国际组织设展办会，1800余家企业线下参展，400多家为世界500强和行业龙头企业。今年前7月我国服务出口17732.3亿元同比增长17.1%。展会首次在主题展核心区域设立\"中国服务\"展区，汇集覆盖12大领域的140余个创新案例。挪威为今年主宾国，联合国贸发会议、世界知识产权组织首次参与主办全球服务贸易峰会。",
+      "image": "",
+      "image_source_label": ""
     },
     {
       "id": "news-4",
       "title": "龙版传媒7天涨超93% 9月9日起停牌核查 提示非理性炒作风险",
       "title_short": "龙版传媒7天涨93%今起停牌核查",
-      "source": "",
-      "summary": "",
       "url": "https://www.cls.cn/detail/2475880",
-      "image": "api/images/news-4.jpg",
-      "image_source": "bing_search"
+      "source": "财联社",
+      "summary": "龙版传媒公告称，公司股票自8月31日至9月8日累计涨幅约93.47%，股价累计涨幅偏离基本面，存在市场情绪过热、非理性炒作风险，存在股价短期快速回落风险。公司股票于9月9日开市起停牌，自披露核查公告后复牌。这是近期监管层加强异常交易监管的又一案例，提示投资者理性投资、注意交易风险。",
+      "image": "",
+      "image_source_label": ""
     },
     {
       "id": "news-5",
       "title": "财政部今日续发50年期超长期特别国债350亿元 年内发行规模超1.1万亿",
       "title_short": "50年期超长期特别国债350亿今日续发",
-      "source": "",
-      "summary": "",
       "url": "http://fund.eastmoney.com/a/202609073866203046.html",
-      "image": "api/images/news-5.png",
-      "image_source": "article_original"
+      "source": "东方财富",
+      "summary": "财政部9月9日续发2026年超长期特别国债（五期），为50年期固定利率附息债，竞争性招标面值总额350亿元。此次发行后，今年超长期特别国债发行规模将超1.1万亿元，发行进度接近85%（全年1.3万亿元）。资金主要投向国家重大战略实施和重点领域安全能力建设，以及设备更新和消费品以旧换新等\"两重\"\"两新\"领域。此外，财政部还将发行3000亿特别国债支持8家中央金融企业补充核心一级资本。",
+      "image": "",
+      "image_source_label": ""
     }
   ],
   "supply_news": [
@@ -116,7 +116,7 @@
       "image_source_label": ""
     }
   ],
-  "bill_rate_note": "",
+  "bill_rate_note": "云链直贴业务参考价（2026年9月9日）",
   "page_url": "https://pkbmw110120.github.io/finance-morning-brief/",
-  "archive_url": "https://pkbmw110120.github.io/finance-morning-brief/.html"
+  "archive_url": "https://pkbmw110120.github.io/finance-morning-brief/2026-09-09.html"
 }
