@@ -1,0 +1,71 @@
+{
+  "date": "",
+  "updated_at": "T09:45:00+08:00",
+  "copyright_notice": "配图均来自互联网，仅供内部阅读参考。如有版权问题请联系运营团队替换。",
+  "headline": {
+    "id": "headline-1",
+    "title": "车企\"60天账期\"从承诺变铁律 国家首个账期管理文件落地破解供应链资金难题",
+    "title_short": "车企",
+    "source": "",
+    "summary": "",
+    "url": "http://auto.cnr.cn/2015xc/20260910/t20260910_527809683.shtml",
+    "image": "api/images/headline-1.jpg",
+    "image_source": "article_original"
+  },
+  "finance_news": [
+    {
+      "id": "news-1",
+      "title": "国新办今日下午举行金融\"十五五\"发布会 四部门勾勒金融强国建设\"施工图\"",
+      "title_short": "国新办四部门发布金融强国建设",
+      "source": "",
+      "summary": "",
+      "url": "http://news.cnr.cn/native/gd/20260909/t20260909_527808856.shtml",
+      "image": "api/images/news-1.jpg",
+      "image_source": "article_original"
+    },
+    {
+      "id": "news-2",
+      "title": "8月CPI同比上涨0.8% PPI涨幅扩大至3.8% 消费与工业价格同步回暖",
+      "title_short": "8月CPI同比涨0.8% PPI涨幅扩至3.8%",
+      "source": "",
+      "summary": "",
+      "url": "http://jjckb.xinhuanet.com/20260910/3b76e408b2ea4f76b7c58c2feecaaac1/c.html",
+      "image": "api/images/news-2.jpg",
+      "image_source": "article_original"
+    },
+    {
+      "id": "news-3",
+      "title": "央行今日公布8月金融数据 M2及社融增量数据即将揭晓",
+      "title_short": "央行今日公布8月金融数据",
+      "source": "",
+      "summary": "",
+      "url": "https://www.cnfin.com/xwzxzy/jrhg/zgrmb/20260910/4467609_1.html",
+      "image": "api/images/news-3.jpg",
+      "image_source": "bing_search"
+    },
+    {
+      "id": "news-4",
+      "title": "世界黄金协会：8月全球黄金ETF吸金180亿美元 总持仓4189吨创历史新高",
+      "title_short": "8月全球黄金ETF吸金180亿美元 持仓创新高",
+      "source": "",
+      "summary": "",
+      "url": "https://m.cnfin.com/wx/share?url=%2F%2Fm.cnfin.com%2Fdz-lb%2F%2Fzixun%2F20260909%2F4467618_1.html",
+      "image": "api/images/news-4.jpg",
+      "image_source": "bing_search"
+    },
+    {
+      "id": "news-5",
+      "title": "DeepSeek今日正式发布V4.1 Flash模型 性能费用速度全面超越V4 Pro",
+      "title_short": "DeepSeek发布V4.1 Flash 全面超越V4 Pro",
+      "source": "",
+      "summary": "",
+      "url": "https://caifuhao.eastmoney.com/news/20260910084146257036990",
+      "image": "api/images/news-5.png",
+      "image_source": "article_original"
+    }
+  ],
+  "supply_news": [],
+  "bill_rate_note": "",
+  "page_url": "https://pkbmw110120.github.io/finance-morning-brief/",
+  "archive_url": "https://pkbmw110120.github.io/finance-morning-brief/.html"
+}
