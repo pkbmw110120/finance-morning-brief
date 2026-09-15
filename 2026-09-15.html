@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026-09-15 财经早报</title>
+    <style>
+        /* ========== 全局样式（固定不变）========== */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f0f0f0;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        a { color: #1a73e8; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        
+        /* ========== 头部区域 ========== */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 32px 24px;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+/* ========== 板块通用样式 ========== */
+        .section {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+        
+        .section-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #667eea;
+        }
+        
+        /* ========== 新闻条目样式 ========== */
+        .news-item {
+            padding: 16px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .news-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        
+        .news-item:first-child {
+            padding-top: 0;
+        }
+        
+        .news-title {
+            font-size: 17px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+        
+        .news-meta {
+            font-size: 13px;
+            color: #999;
+            margin-bottom: 8px;
+        }
+        
+        .ai-summary {
+            display: block;
+            font-size: 14px;
+            color: #666;
+            line-height: 1.7;
+            background: #f8f9fa;
+            padding: 12px 16px;
+            border-radius: 8px;
+            border-left: 3px solid #667eea;
+            margin-top: 8px;
+        }
+        
+        /* ========== 头条特殊样式 ========== */
+        .headline .news-title {
+            font-size: 22px;
+            color: #667eea;
+        }
+        
+        .headline .ai-summary {
+            background: #f0f4ff;
+            border-left-color: #764ba2;
+        }
+        
+        /* ========== 图片样式 ========== */
+        .news-image {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 8px;
+            margin: 12px 0;
+            display: block;
+        }
+        
+        .image-caption {
+            font-size: 12px;
+            color: #999;
+            text-align: center;
+            margin-top: 4px;
+        }
+        
+        /* ========== 版权提示 ========== */
+        .copyright {
+            font-size: 12px;
+            color: #999;
+            text-align: center;
+            padding: 16px;
+            margin-top: 24px;
+            border-top: 1px solid #eee;
+        }
+        
+        /* ========== 响应式适配 ========== */
+        @media (max-width: 768px) {
+            body { padding: 12px; }
+            
+            .header {
+                padding: 24px 16px;
+                border-radius: 8px;
+            }
+            
+            .header h1 { font-size: 22px; }
+            
+            .section {
+                padding: 16px;
+                border-radius: 8px;
+            }
+            
+            .section-title { font-size: 18px; }
+            
+            .news-title { font-size: 16px; }
+            
+            .headline .news-title { font-size: 18px; }
+        }
+        
+        /* ========== 打印优化 ========== */
+        @media print {
+            body { background: white; }
+            
+            .header {
+                background: white;
+                color: #333;
+                border: 2px solid #667eea;
+                box-shadow: none;
+            }
+            
+            .section {
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 头部 -->
+    <div class="header">
+        <h1>📰 2026年9月15日 星期二 财经早报</h1>
+</div>
+    
+    <!-- 头条 -->
+    <section class="section headline">
+        <h2 class="section-title">🔥 头条</h2>
+        <article class="news-item" data-news-id="headline-1" data-news-title="国务院多部门联合治理中小企业回款难">
+            <a href="http://finance.china.com.cn/news/20260914/6324253.shtml" target="_blank">
+                <h3 class="news-title">国务院多部门联合治理中小企业回款难：龙头企业践行"60日付现承诺" 账款凭证余额降至2.4万亿</h3>
+            </a>
+            <div class="news-meta">中国网</div>
+            
+            <div class="ai-summary">国新办9月14日举行国务院政策例行吹风会，工信部、央行、国资委、市场监管总局、证监会五部门介绍中小企业回款难治理情况。国办发〔2026〕24号文明确4方面10条措施：制定付款四项关键要素、推动龙头企业践行"60日付现承诺"、电子凭证压减至6个月以内、央企带头确保违约拖欠"动态清零"。截至7月末，全市场账款凭证余额2.4万亿元，较规范前下降20%，平均期限缩短92天。</div>
+        </article>
+    </section>
+    
+    <!-- 供应链金融 -->
+    <section class="section supply-news">
+        <h2 class="section-title">⛓️ 供应链金融</h2>
+        
+        <article class="news-item" data-news-id="snews-1" data-news-title="央行：账款凭证余额降至2.4万亿 期限缩短92天">
+            <a href="http://www.xinhuanet.com/fortune/20260914/400eb6c93aa24dce869f69755b5923f8/c.html" target="_blank">
+                <h3 class="news-title">央行：应收账款电子凭证平均期限较规范前缩短92天 145家不合规平台退出</h3>
+            </a>
+            <div class="news-meta">新华网</div>
+            
+            <div class="ai-summary">央行金融市场司司长曹媛媛在吹风会上介绍，截至7月末全市场账款凭证余额2.4万亿元，较规范前下降20%；账款凭证平均期限较去年同期缩短92天。"两头吃"情况已得到有效遏制，部分问题企业已退出业务。主要电子凭证服务平台平均服务费率降至0.16%，全市场145家不满足合规要求的平台已退出或承诺退出。</div>
+        </article>
+        
+        <article class="news-item" data-news-id="snews-2" data-news-title="多部门施策推动中小企业回款难整体好转">
+            <a href="http://m.toutiao.com/group/7685552096548110854/" target="_blank">
+                <h3 class="news-title">推动中小企业回款难问题整体好转 龙头企业率先践行"60日付现承诺"</h3>
+            </a>
+            <div class="news-meta">人民日报</div>
+            
+            <div class="ai-summary">人民日报详细报道国办发24号文的落地措施。工信部副部长柯吉欣表示，将通过规范"付款四项关键要素"并推动纳入合同示范文本，填补行业结算支付管理的"空白点"。国资委要求央企带头不违约拖欠确保"动态清零"，带头少开票多付现，严禁开具6个月以上的"票证"。同时设立国家中小企业发展基金二期，为中小企业专精特新发展注入长期资本。</div>
+        </article>
+        
+        <article class="news-item" data-news-id="snews-3" data-news-title="央行：大型企业压降账款可享债券融资便利">
+            <a href="https://finance.sina.com.cn/roll/2026-09-14/doc-inirveaw4468702.shtml" target="_blank">
+                <h3 class="news-title">治理中小企业回款顽疾！央行：大型企业压降账款可享债券融资便利</h3>
+            </a>
+            <div class="news-meta">第一财经</div>
+            
+            <div class="ai-summary">第一财经深度报道央行金融支持举措。曹媛媛指出，部分大型企业应付类账款规模大但现金类资产充裕，有能力及时付款却未付款，中小企业被迫承担大企业转嫁的融资成本。央行将对发债企业强化应付账款信息披露，对压降账款成效明显的企业给予债券融资便利，同时开展金融支持民营和普惠小微企业发展专项行动。</div>
+        </article>
+        
+        <article class="news-item" data-news-id="snews-4" data-news-title="证监会引导上市公司压缩账期">
+            <a href="http://m.toutiao.com/group/7685545826345468457/" target="_blank">
+                <h3 class="news-title">加强大型企业支付行为监管 证监会引导上市公司压缩账期及时支付中小企业</h3>
+            </a>
+            <div class="news-meta">中国银行保险报</div>
+            
+            <div class="ai-summary">中国证监会上市公司监管司司长郭瑞明表示，将细化上市公司信息披露规则，引导上市公司压缩账期，及时支付中小企业款项。同时加大走访上市公司力度，帮助上市的中小企业解决回款难题，缓解现金流压力。市场监管总局将对滥用优势地位故意拉长账期的恶劣行为依法依规处罚。</div>
+        </article>
+        
+        <article class="news-item" data-news-id="snews-5" data-news-title="跨国公司资金池政策全国推广">
+            <a href="http://jjckb.xinhuanet.com/20260915/cd43ade83d3941acace16fd111f8ce37/c.html" target="_blank">
+                <h3 class="news-title">跨国公司资金池政策全国推广 260余家跨国公司本外币跨境资金集中运营受益</h3>
+            </a>
+            <div class="news-meta">经济参考报</div>
+            
+            <div class="ai-summary">9月14日起，央行、国家外汇管理局联合发布的《关于跨国公司本外币跨境资金集中运营业务有关事宜的通知》正式施行。将试点政策推广至全国，截至6月末已有260余家跨国公司备案，惠及境内外成员企业超5500家。自贸区注册企业建池门槛进一步降低，允许自主决定归集比例，鼓励优先使用本币开展业务。</div>
+        </article>
+        
+    </section>
+    
+    <!-- 财经要闻 -->
+    <section class="section finance-news">
+        <h2 class="section-title">📊 财经要闻</h2>
+        
+        <article class="news-item" data-news-id="finance-1" data-news-title="广汽牵手一汽 南北丰田合并进入实质阶段">
+            <a href="http://www.cnstock.com/commonDetail/790170" target="_blank">
+                <h3 class="news-title">广汽牵手一汽 汽车业资产整合升级 南北丰田合并进入实质阶段</h3>
+            </a>
+            <div class="news-meta">上海证券报</div>
+            
+            <div class="ai-summary">广汽集团与一汽股份签署意向协议，筹划以发行股份方式购买一汽股份持有的某整车合资公司部分股权。经初步测算，交易完成后一汽股份将成为广汽集团第二大和具有战略影响力的股东，构成重大资产重组。据悉标的为一汽丰田50%股权，南北丰田合并成立丰田（中国）销售公司进入实质阶段，新公司拟丰田占股50%、一汽25%、广汽25%。</div>
+        </article>
+        
+        <article class="news-item" data-news-id="finance-2" data-news-title="央行5000亿元买断式逆回购等量续做">
+            <a href="http://jjckb.xinhuanet.com/20260915/01c766e07374455098093f160e855c33/c.html" target="_blank">
+                <h3 class="news-title">央行开展5000亿元6个月期买断式逆回购操作 连续第二个月等量续做</h3>
+            </a>
+            <div class="news-meta">经济参考报</div>
+            
+            <div class="ai-summary">央行9月15日开展5000亿元6个月期买断式逆回购操作，因本月等额到期实现零投放零回笼，为连续第二个月等量续做。9月两个期限品种合计等量续做，结束此前两个月加量续做。分析师指出，月初以来DR001均值持续低于1.40%政策利率，市场流动性较为宽松，央行精准调控避免利率过度偏离中枢。后续中期流动性工具整体上有望加量续做，不排除降准可能。</div>
+        </article>
+        
+        <article class="news-item" data-news-id="finance-3" data-news-title="8月金融数据出炉：融资结构发生标志性变化">
+            <a href="http://www.xinhuanet.com/20260914/378e9209f15d4cb0833b6af9cc7e259e/c.html" target="_blank">
+                <h3 class="news-title">8月金融数据出炉：社融存量同比增长7.2% 直接融资增量占比首次过半</h3>
+            </a>
+            <div class="news-meta">新华网</div>
+            
+            <div class="ai-summary">央行发布8月金融数据：社融规模存量464.8万亿元同比增长7.2%，M2余额356.81万亿元同比增长7.5%。标志性变化出现——前8个月债券和股票融资在社融增量中占比50.31%，首次超过贷款占比42.78%，较五年前同期高出近20个百分点。企业债券净融资2.79万亿元同比多增1.23万亿元。金融"五篇大文章"领域贷款增量占比超70%，信贷资源加速流向科技创新和绿色转型。</div>
+        </article>
+        
+        <article class="news-item" data-news-id="finance-4" data-news-title="美联储9月加息几成定局">
+            <a href="http://jjckb.xinhuanet.com/20260915/c24ddaa3a64b4fa68fa5ac289f64a587/c.html" target="_blank">
+                <h3 class="news-title">美联储加息呼声高 9月16日利率决议紧缩几成定局 多国货币紧缩或延至明年中</h3>
+            </a>
+            <div class="news-meta">经济参考报</div>
+            
+            <div class="ai-summary">美联储将于北京时间9月16日凌晨宣布利率决议，"美联储观察"显示加息可能性已升至约90%，三年来首次重启紧缩几成定局。8月CPI同比上涨3.4%，核心CPI环比上涨0.3%为4月以来最大单月涨幅。叠加欧洲央行与日本央行接连行动，全球主要央行有望进入同步加息轨道。市场预计紧缩态势要至明年年中才能终结，全球融资成本将维持高位。</div>
+        </article>
+        
+        <article class="news-item" data-news-id="finance-5" data-news-title="美国10年期国债收益率突破5%">
+            <a href="http://www2.xinhuanet.com/20260915/2ec44578bbc34b7aa536bf88a25a1412/c.html" target="_blank">
+                <h3 class="news-title">美国10年期国债收益率突破5% 为2023年10月以来首次</h3>
+            </a>
+            <div class="news-meta">新华网</div>
+            
+            <div class="ai-summary">美国10年期国债收益率14日盘中突破5%，最高升至5.017%，为2023年10月以来首次。30年期美债收益率一度升至5.38%创近20年新高。分析人士指出，中东地缘政治冲突刺激油价继续走高（布油报106.18美元/桶），加剧美国通胀担忧，叠加政府债务规模不断扩大等因素，共同推动长期国债收益率持续上行。高盛已将年底10年期美债收益率预测上调至4.75%。</div>
+        </article>
+        
+    </section>
+
+    <!-- 版权提示 -->
+    <div class="copyright">
+        <p>配图均来自互联网，仅供内部阅读参考。如有版权问题请联系运营团队替换。</p>
+        <p style="margin-top: 8px;">© 2026 财经早报系统 | 数据来源：公开资讯</p>
+    </div>
+
+<script>
+window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9vcGVuLWFwaXMvYm90L3YyL2hvb2svNjIxYTVlYTktNWI5NS00MTc2LTgyMjktY2NmMzBjZGJiNjgz" };
+</script>
+
+<script>
+/**
+ * 扣子早报埋点系统 - 前端采集代码 v9.0
+ */
+(function() {
+    'use strict';
+    if (navigator.doNotTrack === "1" || window.doNotTrack === "1") return;
+
+    var CONFIG = {
+        version: '9.0',
+        batchSize: 3,
+        batchInterval: 6000,
+        heartbeatInterval: 60000,
+        maxRetry: 3,
+        dntEnabled: navigator.doNotTrack === "1" || window.doNotTrack === "1"
+    };
+
+    var queue = [];
+    var eventIds = new Set();
+    var deviceInfoSent = false;
+    var pageStaySent = false;
+    var exitSent = false;
+    var sessionStartTime = Date.now();
+    var lastActivityTime = sessionStartTime;
+    var exposedNews = new Set();
+    var sessionDuration = 0;
+
+    // Generate unique event_id
+    function genEventId() {
+        return Date.now().toString(36) + Math.random().toString(36).substr(2, 6);
+    }
+
+    // Generate fingerprint
+    function getFingerprint() {
+        var str = [
+            navigator.userAgent || '',
+            screen.width || 0,
+            screen.height || 0,
+            navigator.language || '',
+            Intl.DateTimeFormat().resolvedOptions().timeZone || ''
+        ].join('|');
+        var hash = 5381;
+        for (var i = 0; i < str.length; i++) {
+            hash = ((hash << 5) + hash) + str.charCodeAt(i);
+            hash = hash & hash;
+        }
+        return (hash >>> 0).toString(36).substr(0, 10);
+    }
+
+    // Get channel source
+    function getChannelSource() {
+        var params = new URLSearchParams(window.location.search);
+        var source = params.get('utm_source') || params.get('from') || params.get('source') || params.get('channel') || '';
+        if (!source && document.referrer) {
+            try { source = new URL(document.referrer).hostname; } catch(e) {}
+        }
+        if (!source && navigator.userAgent) {
+            if (/MicroMessenger/i.test(navigator.userAgent)) source = 'wechat';
+            else if (/WeChatWork/i.test(navigator.userAgent)) source = 'wechat_work';
+            else if (/Feishu/i.test(navigator.userAgent)) source = 'feishu';
+        }
+        return source || 'unknown';
+    }
+
+    // Get page ID
+    function getPageId() {
+        var title = document.title;
+        var match = title.match(/(\d{4})-(\d{2})-(\d{2})/);
+        if (match) return '早报_' + match[0];
+        match = title.match(/(\d{4})年(\d{1,2})月(\d{1,2})日/);
+        if (match) {
+            return '早报_' + match[1] + '-' + match[2].padStart(2,'0') + '-' + match[3].padStart(2,'0');
+        }
+        var d = new Date();
+        return '早报_' + d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+    }
+
+    // Decode webhook URL
+    function getWebhookUrl() {
+        try { return atob(window.__TRACKER_CONFIG__._WEBHOOK_URL_B64); } catch(e) { return ''; }
+    }
+
+    // Send event
+    function sendEvent(eventType, payload) {
+        var eid = genEventId();
+        var data = {
+            event_id: eid,
+            event_type: eventType,
+            page_id: getPageId(),
+            channel_source: getChannelSource(),
+            timestamp: new Date().toISOString(),
+            fingerprint: getFingerprint()
+        };
+        if (!deviceInfoSent) {
+            data.device = {
+                ua: navigator.userAgent,
+                screen: screen.width + 'x' + screen.height,
+                lang: navigator.language,
+                tz: Intl.DateTimeFormat().resolvedOptions().timeZone
+            };
+            deviceInfoSent = true;
+        }
+        Object.assign(data, payload || {});
+        queue.push(data);
+        if (queue.length >= CONFIG.batchSize) flushQueue();
+    }
+
+    // Flush queue
+    function flushQueue() {
+        if (queue.length === 0) return;
+        var events = queue.splice(0);
+        var url = getWebhookUrl();
+        if (!url) return;
+        var body = JSON.stringify({ events: events });
+        fetch(url, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: body,
+            keepalive: true
+        }).catch(function() {
+            // Re-queue failed events (max 20)
+            if (queue.length < 20) queue.unshift.apply(queue, events);
+        });
+    }
+
+    // Session start
+    sendEvent('session_start', { session_duration: 0 });
+
+    // Batch interval
+    setInterval(flushQueue, CONFIG.batchInterval);
+
+    // Heartbeat
+    setInterval(function() {
+        var now = Date.now();
+        if (now - lastActivityTime <= CONFIG.heartbeatInterval * 2) {
+            sessionDuration = now - sessionStartTime;
+            sendEvent('page_stay', {
+                page_stay_duration: Math.round(sessionDuration / 1000),
+                session_duration: Math.round(sessionDuration / 1000)
+            });
+        }
+        lastActivityTime = now;
+    }, CONFIG.heartbeatInterval);
+
+    // Activity tracking
+    ['scroll', 'click', 'touchstart', 'keydown'].forEach(function(evt) {
+        document.addEventListener(evt, function() { lastActivityTime = Date.now(); }, { passive: true });
+    });
+
+    // News exposure tracking
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting && entry.intersectionRatio >= 0.1) {
+                var el = entry.target;
+                var nid = el.getAttribute('data-news-id');
+                var ntitle = el.getAttribute('data-news-title');
+                if (nid && !exposedNews.has(nid)) {
+                    exposedNews.add(nid);
+                    sendEvent('news_expose', { news_id: nid, news_title: ntitle || '' });
+                }
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('article[data-news-id]').forEach(function(el) {
+        observer.observe(el);
+    });
+
+    // News click tracking
+    document.querySelectorAll('article[data-news-id] a').forEach(function(el) {
+        el.addEventListener('click', function(e) {
+            var article = el.closest('article[data-news-id]');
+            if (!article) return;
+            var nid = article.getAttribute('data-news-id');
+            var ntitle = article.getAttribute('data-news-title');
+            var clickData = {
+                event_id: genEventId(),
+                event_type: 'news_click',
+                page_id: getPageId(),
+                channel_source: getChannelSource(),
+                timestamp: new Date().toISOString(),
+                news_id: nid,
+                news_title: ntitle || ''
+            };
+            try {
+                var pending = JSON.parse(sessionStorage.getItem('tracker_clicks') || '[]');
+                pending.push(clickData);
+                sessionStorage.setItem('tracker_clicks', JSON.stringify(pending));
+            } catch(e) {}
+
+            var url = getWebhookUrl();
+            if (url) {
+                fetch(url, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ events: [clickData] }),
+                    keepalive: true
+                }).then(function() {
+                    try {
+                        var p2 = JSON.parse(sessionStorage.getItem('tracker_clicks') || '[]');
+                        var idx = p2.findIndex(function(x) { return x.event_id === clickData.event_id; });
+                        if (idx >= 0) { p2.splice(idx, 1); sessionStorage.setItem('tracker_clicks', JSON.stringify(p2)); }
+                    } catch(e2) {}
+                });
+            }
+        });
+    });
+
+    // Retry pending clicks from previous session
+    try {
+        var pending = JSON.parse(sessionStorage.getItem('tracker_clicks') || '[]');
+        if (pending.length > 0) {
+            var url = getWebhookUrl();
+            if (url) {
+                fetch(url, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ events: pending.slice(0, 20) }),
+                    keepalive: true
+                }).then(function() { sessionStorage.removeItem('tracker_clicks'); });
+            }
+        }
+    } catch(e) {}
+
+    // Page exit
+    function sendPageExit(exitType) {
+        if (exitSent) return;
+        exitSent = true;
+        var now = Date.now();
+        sendEvent('page_exit', {
+            exit_type: exitType,
+            session_duration: Math.round((now - sessionStartTime) / 1000),
+            page_stay_duration: Math.round((now - sessionStartTime) / 1000),
+            scroll_depth: Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100) || 0
+        });
+        flushQueue();
+    }
+
+    document.addEventListener('visibilitychange', function() {
+        if (document.visibilityState === 'hidden') sendPageExit('hide');
+    });
+    window.addEventListener('beforeunload', function() {
+        sendPageExit('unload');
+    });
+
+    // Retention check
+    try {
+        var lastVisit = localStorage.getItem('tracker_last_visit');
+        if (lastVisit && Date.now() - parseInt(lastVisit) > 7 * 86400000) {
+            sendEvent('retention_check', { days_since_last_visit: Math.round((Date.now() - parseInt(lastVisit)) / 86400000) });
+        }
+        localStorage.setItem('tracker_last_visit', Date.now().toString());
+    } catch(e) {}
+
+    window.MorningBriefTracker = { version: CONFIG.version, sendEvent: sendEvent, flushQueue: flushQueue };
+})();
+</script>
+
+</body>
+</html>
