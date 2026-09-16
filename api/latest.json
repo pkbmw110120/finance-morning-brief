@@ -1,71 +1,122 @@
 {
-  "date": "",
-  "updated_at": "T09:45:00+08:00",
+  "date": "2026-09-16",
+  "updated_at": "2026-09-16T09:50:00+08:00",
   "copyright_notice": "配图均来自互联网，仅供内部阅读参考。如有版权问题请联系运营团队替换。",
   "headline": {
     "id": "headline-1",
-    "title": "车企\"60天账期\"从承诺变铁律 国家首个账期管理文件落地破解供应链资金难题",
-    "title_short": "车企",
-    "source": "",
-    "summary": "",
-    "url": "http://auto.cnr.cn/2015xc/20260910/t20260910_527809683.shtml",
-    "image": "api/images/headline-1.jpg",
-    "image_source": "article_original"
+    "title": "央行今日净投放5920亿 美联储FOMC议息会议今夜揭晓",
+    "title_short": "央行",
+    "source": "中国政府网/财联社",
+    "summary": "9月15日央行开展5970亿元隔夜逆回购+5000亿元买断式逆回购，净投放5920亿元。美联储FOMC会议今晚召开，加息概率约90%。美债10年期收益率盘中突破5%创2007年以来新高。",
+    "url": "https://www.gov.cn/zhengce/202609/content_7118397.htm",
+    "image": "",
+    "image_source": ""
   },
   "finance_news": [
     {
       "id": "news-1",
-      "title": "国新办今日下午举行金融\"十五五\"发布会 四部门勾勒金融强国建设\"施工图\"",
-      "title_short": "国新办四部门发布金融强国建设",
-      "source": "",
-      "summary": "",
-      "url": "http://news.cnr.cn/native/gd/20260909/t20260909_527808856.shtml",
-      "image": "api/images/news-1.jpg",
-      "image_source": "article_original"
+      "title": "8月金融数据出炉：社融存量同比增长7.2% 直接融资增量占比首次过半",
+      "title_short": "8月社融",
+      "source": "新华网",
+      "summary": "社融规模存量464.8万亿元同比增长7.2%，M2余额356.81万亿元同比增长7.5%。前8个月债券和股票融资在社融增量中占比50.31%，首次超过贷款。",
+      "url": "http://www.xinhuanet.com/20260914/378e9209f15d4cb0833b6af9cc7e259e/c.html",
+      "image": "",
+      "image_source": ""
     },
     {
       "id": "news-2",
-      "title": "8月CPI同比上涨0.8% PPI涨幅扩大至3.8% 消费与工业价格同步回暖",
-      "title_short": "8月CPI同比涨0.8% PPI涨幅扩至3.8%",
-      "source": "",
-      "summary": "",
-      "url": "http://jjckb.xinhuanet.com/20260910/3b76e408b2ea4f76b7c58c2feecaaac1/c.html",
-      "image": "api/images/news-2.jpg",
-      "image_source": "article_original"
+      "title": "发改委召开民营企业座谈会：推动民间资本放心投能投尽投",
+      "title_short": "发改委",
+      "source": "国家发改委",
+      "summary": "国家发改委主任郑栅洁与多位民营企业家代表座谈，强调推动民间资本放心投、能投尽投，进一步放宽市场准入。",
+      "url": "https://www.36kr.com/news/3736475441888902",
+      "image": "",
+      "image_source": ""
     },
     {
       "id": "news-3",
-      "title": "央行今日公布8月金融数据 M2及社融增量数据即将揭晓",
-      "title_short": "央行今日公布8月金融数据",
-      "source": "",
-      "summary": "",
-      "url": "https://www.cnfin.com/xwzxzy/jrhg/zgrmb/20260910/4467609_1.html",
-      "image": "api/images/news-3.jpg",
-      "image_source": "bing_search"
+      "title": "商务部等8部门：促进智能家居消费 推动家电以旧换新",
+      "title_short": "商务部",
+      "source": "商务部",
+      "summary": "商务部联合8部门印发方案促进智能家居消费，推动家电以旧换新行动落地，预计带动超千亿元消费市场规模。",
+      "url": "https://www.36kr.com/news/3736548902874630",
+      "image": "",
+      "image_source": ""
     },
     {
       "id": "news-4",
-      "title": "世界黄金协会：8月全球黄金ETF吸金180亿美元 总持仓4189吨创历史新高",
-      "title_short": "8月全球黄金ETF吸金180亿美元 持仓创新高",
-      "source": "",
-      "summary": "",
-      "url": "https://m.cnfin.com/wx/share?url=%2F%2Fm.cnfin.com%2Fdz-lb%2F%2Fzixun%2F20260909%2F4467618_1.html",
-      "image": "api/images/news-4.jpg",
-      "image_source": "bing_search"
+      "title": "电子信息制造业十五五规划：2030年营收目标30万亿元",
+      "title_short": "电子信息",
+      "source": "中国政府网",
+      "summary": "工信部、国家发改委联合发布电子信息制造业十五五发展规划，提出到2030年行业营收突破30万亿元目标。",
+      "url": "http://www.gov.cn/zhengce/202609/content_7118394.htm",
+      "image": "",
+      "image_source": ""
     },
     {
       "id": "news-5",
-      "title": "DeepSeek今日正式发布V4.1 Flash模型 性能费用速度全面超越V4 Pro",
-      "title_short": "DeepSeek发布V4.1 Flash 全面超越V4 Pro",
-      "source": "",
-      "summary": "",
-      "url": "https://caifuhao.eastmoney.com/news/20260910084146257036990",
-      "image": "api/images/news-5.png",
-      "image_source": "article_original"
+      "title": "美债抛售潮加剧 10年期收益率创2007年来新高",
+      "title_short": "美债",
+      "source": "新华网",
+      "summary": "美国10年期国债收益率盘中突破5%，最高升至5.017%，为2007年以来首次。30年期一度升至5.38%创近20年新高。",
+      "url": "http://www2.xinhuanet.com/20260915/2ec44578bbc34b7aa536bf88a25a1412/c.html",
+      "image": "",
+      "image_source": ""
     }
   ],
-  "supply_news": [],
-  "bill_rate_note": "",
+  "supply_news": [
+    {
+      "id": "snews-1",
+      "title": "央行：应收账款电子凭证平均期限较规范前缩短92天 145家不合规平台退出",
+      "title_short": "账款凭证",
+      "source": "新华网",
+      "summary": "截至7月末全市场账款凭证余额2.4万亿元，较规范前下降20%，平均期限缩短92天。",
+      "url": "http://www.xinhuanet.com/fortune/20260914/400eb6c93aa24dce869f69755b5923f8/c.html",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "snews-2",
+      "title": "国办发24号文：推动中小企业回款难整体好转 央企国企践行60日付现承诺",
+      "title_short": "国办24号文",
+      "source": "人民日报",
+      "summary": "国办发24号文明确4方面10条措施，推动龙头企业践行60日付现承诺，央企带头确保违约拖欠动态清零。",
+      "url": "http://m.toutiao.com/group/7685552096548110854/",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "snews-3",
+      "title": "治理中小企业回款顽疾！央行：大型企业压降账款可享债券融资便利",
+      "title_short": "央行融资便利",
+      "source": "第一财经",
+      "summary": "央行将对发债企业强化应付账款信息披露，对压降账款成效明显的企业给予债券融资便利。",
+      "url": "https://finance.sina.com.cn/roll/2026-09-14/doc-inirveaw4468702.shtml",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "snews-4",
+      "title": "加强大型企业支付行为监管 证监会引导上市公司压缩账期及时支付中小企业",
+      "title_short": "证监会",
+      "source": "中国证券报",
+      "summary": "证监会将细化上市公司信息披露规则，引导上市公司压缩账期，及时支付中小企业款项。",
+      "url": "http://m.toutiao.com/group/7685545826345468457/",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "snews-5",
+      "title": "广州期货交易所绿色期货扩容 工业硅等90%+现货采用期货定价",
+      "title_short": "广期所",
+      "source": "36氪",
+      "summary": "广期所推动绿色期货品种扩容，工业硅等品种90%以上现货贸易已采用期货价格定价。",
+      "url": "https://www.36kr.com/news/3736402140309510",
+      "image": "",
+      "image_source": ""
+    }
+  ],
+  "bill_rate_note": "今日报价暂未更新",
   "page_url": "https://pkbmw110120.github.io/finance-morning-brief/",
-  "archive_url": "https://pkbmw110120.github.io/finance-morning-brief/.html"
+  "archive_url": "https://pkbmw110120.github.io/finance-morning-brief/2026-09-16.html"
 }
