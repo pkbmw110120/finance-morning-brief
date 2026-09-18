@@ -1,0 +1,122 @@
+{
+  "date": "2026-09-18",
+  "updated_at": "2026-09-18T09:50:00+08:00",
+  "copyright_notice": "配图均来自互联网，仅供内部阅读参考。如有版权问题请联系运营团队替换。",
+  "headline": {
+    "id": "headline-1",
+    "title": "美联储加息落地 A股有望修复",
+    "title_short": "美联储加息落地 A股",
+    "source": "南方都市报",
+    "summary": "",
+    "url": "https://www.nfnews.com/content/VoQVJKBXy5.html",
+    "image": "",
+    "image_source": ""
+  },
+  "finance_news": [
+    {
+      "id": "news-1",
+      "title": "美股加息后首日大涨 纳指飙升",
+      "title_short": "美股加息后首日大涨 ",
+      "source": "东方财富",
+      "summary": "",
+      "url": "https://finance.eastmoney.com/a/202609183877695368.html",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "news-2",
+      "title": "央行本周净投放8268亿元",
+      "title_short": "央行本周净投放826",
+      "source": "财联社",
+      "summary": "",
+      "url": "https://www.cls.cn/detail/2486757",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "news-3",
+      "title": "香港金管局加息至4.25%",
+      "title_short": "香港金管局加息至4.",
+      "source": "财联社",
+      "summary": "",
+      "url": "https://www.cls.cn/detail/2485759",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "news-4",
+      "title": "第140届广交会下月开幕",
+      "title_short": "第140届广交会下月",
+      "source": "南方都市报",
+      "summary": "",
+      "url": "https://m.sohu.com/a/1077482007_121106875/",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "news-5",
+      "title": "潘功胜：金融结构深刻变化",
+      "title_short": "潘功胜：金融结构深刻",
+      "source": "中国证券报",
+      "summary": "",
+      "url": "https://www.cs.com.cn/xwzx/01/2026/09/17/detail_2026091710039736.html",
+      "image": "",
+      "image_source": ""
+    }
+  ],
+  "supply_news": [
+    {
+      "id": "snews-1",
+      "title": "物流供应链金融",
+      "title_short": "物流供应链金融",
+      "source": "中国网",
+      "summary": "",
+      "url": "http://finance.china.com.cn/industry/20260917/6324556.shtml",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "snews-2",
+      "title": "车企账期承诺落地 60天红线明确",
+      "title_short": "车企账期承诺落地 6",
+      "source": "金融时报",
+      "summary": "",
+      "url": "https://jrj.wuhan.gov.cn/ynzx_57/xwzx/202609/t20260917_2849200.shtml",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "snews-3",
+      "title": "央行推广应收账款融资平台",
+      "title_short": "央行推广应收账款融资",
+      "source": "中国青年报",
+      "summary": "",
+      "url": "https://news.youth.cn/jsxw/202609/t20260917_16874135.htm",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "snews-4",
+      "title": "数字人民币跨境融资首单落地",
+      "title_short": "数字人民币跨境融资首",
+      "source": "财联社",
+      "summary": "",
+      "url": "https://www.cls.cn/detail/2486155",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "snews-5",
+      "title": "绿色供应链金融创新论坛召开",
+      "title_short": "绿色供应链金融创新论",
+      "source": "中国工信新闻网",
+      "summary": "",
+      "url": "https://www.cnii.com.cn/qy/202609/t20260917_760879.html",
+      "image": "",
+      "image_source": ""
+    }
+  ],
+  "bill_rate_note": "",
+  "page_url": "https://pkbmw110120.github.io/finance-morning-brief/",
+  "archive_url": "https://pkbmw110120.github.io/finance-morning-brief/2026-09-18.html"
+}
