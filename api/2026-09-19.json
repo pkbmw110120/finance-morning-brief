@@ -1,0 +1,122 @@
+{
+  "date": "2026-09-19",
+  "updated_at": "2026-09-19T09:50:00+08:00",
+  "copyright_notice": "配图均来自互联网，仅供内部阅读参考。如有版权问题请联系运营团队替换。",
+  "headline": {
+    "id": "headline-1",
+    "title": "中美经贸磋商在即 何立峰率团赴美",
+    "title_short": "中美经贸磋商在即 何",
+    "source": "商务部",
+    "summary": "",
+    "url": "http://www.mofcom.gov.cn/xwfb/xwfyrth/art/2026/art_bc1393a624444a2296194f7e7ba49d53.html",
+    "image": "",
+    "image_source": ""
+  },
+  "finance_news": [
+    {
+      "id": "news-1",
+      "title": "A股周五大涨 半导体领涨",
+      "title_short": "A股周五大涨 半导体",
+      "source": "东方财富",
+      "summary": "",
+      "url": "https://finance.eastmoney.com/a/202609183878731964.html",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "news-2",
+      "title": "央行本周净投放8268亿元",
+      "title_short": "央行本周净投放826",
+      "source": "中国证券网",
+      "summary": "",
+      "url": "http://www.cnstock.com/commonDetail/792072",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "news-3",
+      "title": "三大央行同步加息",
+      "title_short": "三大央行同步加息",
+      "source": "财联社",
+      "summary": "",
+      "url": "https://www.cls.cn/detail/2487500",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "news-4",
+      "title": "医药工业十五五规划发布",
+      "title_short": "医药工业十五五规划发",
+      "source": "新华社",
+      "summary": "",
+      "url": "https://www.gov.cn/lianbo/202609/content_7081455.htm",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "news-5",
+      "title": "美股涨跌不一 半导体走强",
+      "title_short": "美股涨跌不一 半导体",
+      "source": "东方财富",
+      "summary": "",
+      "url": "https://finance.eastmoney.com/a/202609183878895641.html",
+      "image": "",
+      "image_source": ""
+    }
+  ],
+  "supply_news": [
+    {
+      "id": "snews-1",
+      "title": "全国首单持票人保函受益供票ABN",
+      "title_short": "全国首单持票人保函受",
+      "source": "临沂日报",
+      "summary": "",
+      "url": "https://www.linyi.gov.cn/info/4971/493709.htm",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "snews-2",
+      "title": "国办24号文治理中小企业回款难",
+      "title_short": "国办24号文治理中小",
+      "source": "财联社",
+      "summary": "",
+      "url": "https://www.cls.cn/detail/2485156",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "snews-3",
+      "title": "中老跨境数字支付互联互通启动",
+      "title_short": "中老跨境数字支付互联",
+      "source": "新华社",
+      "summary": "",
+      "url": "https://www.gov.cn/lianbo/202609/content_7081524.htm",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "snews-4",
+      "title": "湖北十五五规划推动供应链金融",
+      "title_short": "湖北十五五规划推动供",
+      "source": "财联社",
+      "summary": "",
+      "url": "https://www.cls.cn/detail/2487200",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "snews-5",
+      "title": "北京词元经济行动方案发布",
+      "title_short": "北京词元经济行动方案",
+      "source": "北京市经信局",
+      "summary": "",
+      "url": "https://jxj.beijing.gov.cn/zwgk/2024zcwj/202609/t20260918_4870474.html",
+      "image": "",
+      "image_source": ""
+    }
+  ],
+  "bill_rate_note": "",
+  "page_url": "https://pkbmw110120.github.io/finance-morning-brief/",
+  "archive_url": "https://pkbmw110120.github.io/finance-morning-brief/2026-09-19.html"
+}
