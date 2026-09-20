@@ -1,0 +1,122 @@
+{
+  "date": "2026-09-20",
+  "updated_at": "2026-09-20T09:50:00+08:00",
+  "copyright_notice": "配图均来自互联网，仅供内部阅读参考。如有版权问题请联系运营团队替换。",
+  "headline": {
+    "id": "headline-1",
+    "title": "9月LPR连续16个月按兵不动 年内降息窗口或仍未关闭",
+    "title_short": "9月LPR连续16个",
+    "source": "来源：界面新闻",
+    "summary": "央行授权公布9月LPR：1年期3.00%、5年期以上3.50%，均与上月持平，自2025年5月以来已连续16个月未调整。分析师认为，当前经济基本面仍有韧性，货币政策短期以流动性支持为主，但后期央行仍有可能实施政策性降息，预计降息幅度10bp、降准0.5个百分点。",
+    "url": "https://www.jiemian.com/article/15116737.html",
+    "image": "",
+    "image_source": ""
+  },
+  "finance_news": [
+    {
+      "id": "fnews-1",
+      "title": "央行今日开展320亿元7天期逆回购操作",
+      "title_short": "央行今日开展320亿",
+      "source": "来源：央视网",
+      "summary": "9月20日央行以固定利率、数量招标方式开展320亿元7天期逆回购操作，操作利率1.40%，全额满足一级交易商需求。",
+      "url": "https://jingji.cctv.cn/2026/09/20/ARTISANITAGn0YPGKBxfhF0A260920.shtml",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "fnews-2",
+      "title": "美股分化收官 道指三连阴纳指周线上涨",
+      "title_short": "美股分化收官 道指三",
+      "source": "来源：Reuters",
+      "summary": "道指收跌115点至51663点，S&P 500微涨0.12%至7647点，纳指涨0.35%至26511点。科技板块领涨，半导体股走强。10年期美债收益率逼近5%，原油维持在100美元上方，市场关注美联储后续加息节奏。",
+      "url": "https://perfectdaytrading.com/dow-closes-110-pts-lower-as-treasury-yields-rise-and-oil-stays-above-100/",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "fnews-3",
+      "title": "美联储沃什：通胀太高持续太久 年内或不止加息两次",
+      "title_short": "美联储沃什：通胀太高",
+      "source": "来源：证券时报",
+      "summary": "中泰国际首席经济学家李迅雷表示，美联储加息刚刚开始，主流观点预计年内加息两次，但实际可能不止两次。若加息超预期可能带来AI泡沫风险。A股结构性牛市主线仍在科技板块，AI及科创板ETF仍持乐观态度。",
+      "url": "http://m.toutiao.com/group/7687415047915635226/",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "fnews-4",
+      "title": "十部门联合发布医药工业十五五规划",
+      "title_short": "十部门联合发布医药工",
+      "source": "来源：证券日报",
+      "summary": "十部门联合印发医药工业十五五规划，提出2030年首创新药全球占比目标超25%，推动生物医药产业加速成为国家新兴支柱产业。",
+      "url": "http://www.zqrb.cn/finance/hongguanjingji/index.html",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "fnews-5",
+      "title": "多部门十五五规划密集发布 文化产业房车消费同步布局",
+      "title_short": "多部门十五五规划密集",
+      "source": "来源：证券日报",
+      "summary": "多部门密集发布十五五规划：文化产业发展规划提出培育耐心资本、扩大长期投资；十部门合力促进房车消费，加大政策供给。电子信息制造业、医药工业等专项规划同步落地。",
+      "url": "http://www.zqrb.cn/finance/hongguanjingji/index.html",
+      "image": "",
+      "image_source": ""
+    }
+  ],
+  "supply_news": [
+    {
+      "id": "snews-1",
+      "title": "国务院发文治理中小企业回款难 凭证期限压减至6个月",
+      "title_short": "国务院发文治理中小企",
+      "source": "来源：中国经济网",
+      "summary": "国务院办公厅印发《关于加强中小企业回款难问题治理有关工作的通知》，提出4方面10条措施。要求分行业明确合理账期，推动龙头企业践行\"60日付现承诺\"，将应收账款电子凭证最长付款期限压减至6个月，发挥央企国企及时支付表率作用。",
+      "url": "https://ysxw.cctv.cn/article.html?channelId=1215&item_id=6137601222051812566&toc_style_id=feeds_default",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "snews-2",
+      "title": "工信部发布汽车行业账期管理通知 首个专门治理文件出台",
+      "title_short": "工信部发布汽车行业账",
+      "source": "来源：经济日报",
+      "summary": "工信部、市场监管总局联合发布《关于推动汽车企业规范供应商账款支付 优化账期管理的通知》，为我国首个针对汽车行业账期问题的治理文件。鼓励对中小企业供应商全部采用现金支付，最长不超过60天，由政府委托第三方机构调研评估并公开发布执行结果。",
+      "url": "http://m.toutiao.com/group/7687423465036497408/",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "snews-3",
+      "title": "全国首单持票人为保函受益人供应链票据ABN发行",
+      "title_short": "全国首单持票人为保函",
+      "source": "来源：DoNews",
+      "summary": "商城数科集团联合泸州银行、国泰海通证券等发行\"泸融通商2026年度第一期供应链票据定向资产支持票据信托\"，为全国首单以持票人为保函受益人的供应链票据ABN，亦是西部首单银行增信同类产品，惠及10家上游企业。",
+      "url": "https://www.donews.com/news/detail/8/6715521.html",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "snews-4",
+      "title": "供票中国行上海站：供应链票据市场步入高质量发展新阶段",
+      "title_short": "供票中国行上海站：供",
+      "source": "来源：美通社",
+      "summary": "商城数科集团主办\"供票中国行·上海站\"，上海票据交易所、金融机构、核心企业等近百家单位参会。数据显示2026年上半年车企应付票据余额增长21.6%，票据正成为核心企业支付结算与中小供应商融资的重要纽带。",
+      "url": "https://finance.sina.com.cn/roll/2026-09-18/doc-inisfpqz3352408.shtml",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "snews-5",
+      "title": "邮储银行数字供应链金融润泽产业链 洛阳实践",
+      "title_short": "邮储银行数字供应链金",
+      "source": "来源：环球网",
+      "summary": "邮储银行洛阳市分行以数字供应链金融为支点，为市属国企上游民营中小微供应商提供融资支持，解决\"应收账款账期长、融资难、融资慢\"痛点，为整条供应链注入金融动能。",
+      "url": "https://tags.sina.com.cn/finance_gongyinglianjinrong",
+      "image": "",
+      "image_source": ""
+    }
+  ],
+  "bill_rate_note": "",
+  "page_url": "https://pkbmw110120.github.io/finance-morning-brief/",
+  "archive_url": "https://pkbmw110120.github.io/finance-morning-brief/2026-09-20.html"
+}
