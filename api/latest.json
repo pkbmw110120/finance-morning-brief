@@ -1,11 +1,11 @@
 {
-  "date": "2026-09-20",
-  "updated_at": "2026-09-20T09:50:00+08:00",
+  "date": "2026-09-21",
+  "updated_at": "2026-09-21T09:50:00+08:00",
   "copyright_notice": "配图均来自互联网，仅供内部阅读参考。如有版权问题请联系运营团队替换。",
   "headline": {
     "id": "headline-1",
-    "title": "中美经贸磋商在美举行",
-    "title_short": "中美经贸磋商在美举行",
+    "title": "中美经贸磋商在纽约启动",
+    "title_short": "中美经贸磋商在纽约启",
     "source": "中国政府网",
     "summary": "",
     "url": "https://www.gov.cn/yaowen/liebiao/202609/content_7081527.htm",
@@ -15,51 +15,51 @@
   "finance_news": [
     {
       "id": "news-1",
-      "title": "9月LPR连续16个月不变",
-      "title_short": "9月LPR连续16个",
-      "source": "财联社",
+      "title": "LPR连续16个月持稳",
+      "title_short": "LPR连续16个月持",
+      "source": "环球网",
       "summary": "",
-      "url": "https://www.cls.cn/detail/2487991",
+      "url": "https://finance.huanqiu.com/article/47TKfG9dP5m",
       "image": "",
       "image_source": ""
     },
     {
       "id": "news-2",
-      "title": "公积金新规今起实施",
-      "title_short": "公积金新规今起实施",
-      "source": "澎湃新闻",
+      "title": "央行将在港发行600亿央票",
+      "title_short": "央行将在港发行600",
+      "source": "证券时报",
       "summary": "",
-      "url": "https://m.thepaper.cn/newsDetail_forward_34102848",
+      "url": "https://www.stcn.com/article/detail/3568741.html",
       "image": "",
       "image_source": ""
     },
     {
       "id": "news-3",
-      "title": "国际评级机构批量上调中资银行",
-      "title_short": "国际评级机构批量上调",
-      "source": "东方财富",
+      "title": "国常会部署应对老龄化",
+      "title_short": "国常会部署应对老龄化",
+      "source": "财联社",
       "summary": "",
-      "url": "https://finance.eastmoney.com/a/202609183878748879.html",
+      "url": "https://www.cls.cn/detail/2488038",
       "image": "",
       "image_source": ""
     },
     {
       "id": "news-4",
-      "title": "全球三大央行同步紧缩",
-      "title_short": "全球三大央行同步紧缩",
+      "title": "富时A50指数调仓生效",
+      "title_short": "富时A50指数调仓生",
       "source": "东方财富",
       "summary": "",
-      "url": "https://finance.eastmoney.com/a/202609203879281250.html",
+      "url": "https://finance.eastmoney.com/a/202609213879349828.html",
       "image": "",
       "image_source": ""
     },
     {
       "id": "news-5",
-      "title": "中老跨境数字支付互联互通启动",
-      "title_short": "中老跨境数字支付互联",
+      "title": "市监总局整治内卷式竞争",
+      "title_short": "市监总局整治内卷式竞",
       "source": "财联社",
       "summary": "",
-      "url": "https://www.cls.cn/detail/2488007",
+      "url": "https://www.cls.cn/detail/2488038",
       "image": "",
       "image_source": ""
     }
@@ -67,8 +67,28 @@
   "supply_news": [
     {
       "id": "snews-1",
-      "title": "国办发文治理中小企业回款难",
-      "title_short": "国办发文治理中小企业",
+      "title": "数字人民币跨境贸易服务升级",
+      "title_short": "数字人民币跨境贸易服",
+      "source": "证券日报",
+      "summary": "",
+      "url": "https://www.zqrb.cn/news/2026-09-21/A1758938.html",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "snews-2",
+      "title": "沙特PIF设立供应链金融公司",
+      "title_short": "沙特PIF设立供应链",
+      "source": "PIF官网",
+      "summary": "",
+      "url": "https://www.pif.gov.sa/en/news-and-insights/press-releases/2026/pif-launches-tawrid-to-provide-supply-chain-financing-products-in-saudi-arabia/",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "snews-3",
+      "title": "北京鼓励拓展应收账款融资",
+      "title_short": "北京鼓励拓展应收账款",
       "source": "第一财经",
       "summary": "",
       "url": "https://www.yicai.com/epaper/pc/202609/15/content_54151.html",
@@ -76,47 +96,27 @@
       "image_source": ""
     },
     {
-      "id": "snews-2",
-      "title": "物流供应链金融",
-      "title_short": "物流供应链金融",
-      "source": "中国工信新闻网",
-      "summary": "",
-      "url": "https://www.cnii.com.cn/qy/202609/t20260917_760879.html",
-      "image": "",
-      "image_source": ""
-    },
-    {
-      "id": "snews-3",
-      "title": "汽车账期新规60天红线落地",
-      "title_short": "汽车账期新规60天红",
-      "source": "中国工信新闻网",
-      "summary": "",
-      "url": "https://www.cnii.com.cn/gxxww/qc/202609/t20260918_761137.html",
-      "image": "",
-      "image_source": ""
-    },
-    {
       "id": "snews-4",
-      "title": "邮储银行数字供应链金融润泽洛阳",
-      "title_short": "邮储银行数字供应链金",
-      "source": "财联社",
+      "title": "供票中国行上海站研讨会",
+      "title_short": "供票中国行上海站研讨",
+      "source": "美通社",
       "summary": "",
-      "url": "https://www.cls.cn/detail/2485819",
+      "url": "https://www.prnasia.com/story/548436-1.shtml",
       "image": "",
       "image_source": ""
     },
     {
       "id": "snews-5",
-      "title": "首单银行增信供票ABN落地",
-      "title_short": "首单银行增信供票AB",
-      "source": "美通社",
+      "title": "铁路物流金融累计融资超132亿",
+      "title_short": "铁路物流金融累计融资",
+      "source": "中国经济网",
       "summary": "",
-      "url": "http://cnmobile.prnasia.com/story/548436-1.shtml",
+      "url": "http://www.ce.cn/cysc/yq/dt/202609/t20260920_3225525.shtml",
       "image": "",
       "image_source": ""
     }
   ],
   "bill_rate_note": "",
   "page_url": "https://pkbmw110120.github.io/finance-morning-brief/",
-  "archive_url": "https://pkbmw110120.github.io/finance-morning-brief/2026-09-20.html"
+  "archive_url": "https://pkbmw110120.github.io/finance-morning-brief/2026-09-21.html"
 }
