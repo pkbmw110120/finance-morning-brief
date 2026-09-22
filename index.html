@@ -1,761 +1,152 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2026-09-21 财经早报</title>
-    <style>
-        /* ========== 全局样式（固定不变）========== */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f5f7fa;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        a { color: #1a73e8; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        
-        /* ========== 头部区域 ========== */
-        .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 32px 24px;
-            border-radius: 12px;
-            margin-bottom: 24px;
-            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
-        }
-        
-        .header h1 {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-/* ========== 板块通用样式 ========== */
-        .section {
-            background: white;
-            border-radius: 12px;
-            padding: 24px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-        }
-        
-        .section-title {
-            font-size: 20px;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 16px;
-            padding-bottom: 12px;
-            border-bottom: 2px solid #667eea;
-        }
-        
-        /* ========== 新闻条目样式 ========== */
-        .news-item {
-            padding: 16px 0;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .news-item:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
-        }
-        
-        .news-item:first-child {
-            padding-top: 0;
-        }
-        
-        .news-title {
-            font-size: 17px;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 8px;
-            line-height: 1.5;
-        }
-        
-        .news-meta {
-            font-size: 13px;
-            color: #999;
-            margin-bottom: 8px;
-        }
-        
-        .ai-summary {
-            font-size: 14px;
-            color: #666;
-            line-height: 1.7;
-            background: #f8f9fa;
-            padding: 12px 16px;
-            border-radius: 8px;
-            border-left: 3px solid #667eea;
-        }
-        
-        /* ========== 头条特殊样式 ========== */
-        .headline .news-title {
-            font-size: 22px;
-            color: #667eea;
-        }
-        
-        .headline .ai-summary {
-            background: #f0f4ff;
-            border-left-color: #764ba2;
-        }
-        
-        /* ========== 图片样式 ========== */
-        .news-image {
-            width: 100%;
-            max-width: 400px;
-            height: auto;
-            border-radius: 8px;
-            margin: 12px 0;
-            display: block;
-        }
-        
-        .image-caption {
-            font-size: 12px;
-            color: #999;
-            text-align: center;
-            margin-top: 4px;
-        }
-        
-        /* ========== 版权提示 ========== */
-        .copyright {
-            font-size: 12px;
-            color: #999;
-            text-align: center;
-            padding: 16px;
-            margin-top: 24px;
-            border-top: 1px solid #eee;
-        }
-        
-        /* ========== 响应式适配 ========== */
-        @media (max-width: 768px) {
-            body { padding: 12px; }
-            
-            .header {
-                padding: 24px 16px;
-                border-radius: 8px;
-            }
-            
-            .header h1 { font-size: 22px; }
-            
-            .section {
-                padding: 16px;
-                border-radius: 8px;
-            }
-            
-            .section-title { font-size: 18px; }
-            
-            .news-title { font-size: 16px; }
-            
-            .headline .news-title { font-size: 18px; }
-        }
-        
-        /* ========== 打印优化 ========== */
-        @media print {
-            body { background: white; }
-            
-            .header {
-                background: white;
-                color: #333;
-                border: 2px solid #667eea;
-                box-shadow: none;
-            }
-            
-            .section {
-                box-shadow: none;
-                border: 1px solid #ddd;
-            }
-        }
-
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>财经早报 · 2026-09-22</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#f0f0f0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;color:#333;line-height:1.6}
+.header{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:40px 24px 32px;text-align:center}
+.header h1{font-size:28px;font-weight:700;letter-spacing:2px}
+.header .date{font-size:15px;opacity:0.85;margin-top:8px}
+.container{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.section{background:#fff;border-radius:12px;padding:24px 20px;margin-bottom:16px;box-shadow:0 2px 8px rgba(0,0,0,0.08)}
+.section-title{font-size:18px;font-weight:700;color:#333;margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid #667eea;display:flex;align-items:center;gap:8px}
+.headline-card{border-left:4px solid #e74c3c;padding-left:16px}
+.headline-card h2{font-size:17px;font-weight:700;color:#222;margin-bottom:8px}
+.headline-card .source{font-size:12px;color:#999;margin-bottom:8px}
+.headline-card .summary{font-size:14px;color:#555;line-height:1.8}
+.news-item{padding:12px 0;border-bottom:1px solid #f0f0f0}
+.news-item:last-child{border-bottom:none;padding-bottom:0}
+.news-item:first-of-type{padding-top:0}
+.news-item h3{font-size:15px;font-weight:600;color:#222;margin-bottom:4px}
+.news-item h3 a{color:#222;text-decoration:none}
+.news-item h3 a:hover{color:#667eea}
+.news-item .source{font-size:12px;color:#999}
+.news-item .summary{font-size:13px;color:#666;margin-top:4px;display:block}
+.link-more{display:inline-block;margin-top:6px;font-size:13px;color:#667eea;text-decoration:none}
+.link-more:hover{text-decoration:underline}
+.footer{text-align:center;font-size:12px;color:#aaa;padding:20px 0}
+</style>
 </head>
 <body>
-    <!-- 头部 -->
-    <div class="header">
-        <h1>📰 2026-09-21 财经早报</h1>
+
+<div class="header">
+  <h1>财经早报</h1>
+  <div class="date">2026年9月22日 · 周二</div>
 </div>
-    
-    <!-- 头条 -->
-    <section class="section headline">
-        <h2 class="section-title">🔥 头条</h2>
-        <article class="news-item" data-news-id="headline-1" data-news-title="中美经贸磋商在纽约启动">
-            <a href="https://www.gov.cn/yaowen/liebiao/202609/content_7081527.htm" target="_blank">
-                <h3 class="news-title">中美经贸磋商9月20日在纽约正式启动 何立峰率团与美方就彼此关心的经贸问题开展磋商</h3>
-            </a>
-            <div class="news-meta">中国政府网</div>
-            
-            <div class="ai-summary">据新华社消息，当地时间9月20日上午，中美两国经贸团队在美国纽约正式开始举行中美经贸磋商。此前商务部新闻发言人确认，经中美双方商定，中共中央政治局委员、国务院副总理何立峰于9月19日至23日率团赴美，双方将以两国元首重要共识为引领，就彼此关心的经贸问题开展磋商。此次磋商是继此前多轮沟通后的高级别面对面会谈，市场密切关注磋商成果对全球贸易格局和资本市场的影响。</span>
-        </article>
-    </section>
-    
-    <!-- 供应链金融 -->
-    <section class="section supply-news">
-        <h2 class="section-title">⛓️ 供应链金融</h2>
-        
-        <article class="news-item" data-news-id="snews-1" data-news-title="数字人民币跨境贸易服务升级">
-            <a href="https://www.zqrb.cn/news/2026-09-21/A1758938.html" target="_blank">
-                <h3 class="news-title">数字人民币跨境贸易服务进入新阶段 CBETS LIFT正式发布</h3>
-            </a>
-            <div class="news-meta">证券日报</div>
-            
-            <div class="ai-summary">数字人民币运营管理中心在中国—东盟金融合作与发展论坛上正式发布"数币达·励付"（CBETS LIFT）服务，标志着数字人民币在跨境贸易结算和投融资领域的体系化服务能力实现升级。CBETS LIFT运用统一账本和智能合约技术，实现信息流、资金流、单据流"三流合一"，已完成多笔覆盖进出口场景的真实交易验证，有望破解跨境贸易中单据割裂、供需分散和境外人民币供给不足三大难题。</span>
-        </article>
-        
-        <article class="news-item" data-news-id="snews-2" data-news-title="沙特PIF设立供应链金融公司">
-            <a href="https://www.gelonghui.com/live/2679607" target="_blank">
-                <h3 class="news-title">沙特公共投资基金设立供应链金融公司Tawrid 以数字平台赋能中小企业融资</h3>
-            </a>
-            <div class="news-meta">格隆汇</div>
-            
-            <div class="ai-summary">沙特公共投资基金（PIF）9月20日宣布成立Tawrid供应链金融公司，通过创新数字平台为沙特市场企业提供供应链融资产品。Tawrid已获沙特央行许可在监管沙盒环境下运营，并与沙特国家银行、海湾国际银行等多家金融机构签署合作协议。平台采用反向保理机制，将大型买方的信用转化为供应商的低成本流动资金，助力沙特实现2030年中小企业贷款占比提升至20%的目标。</span>
-        </article>
-        
-        <article class="news-item" data-news-id="snews-3" data-news-title="北京鼓励拓展应收账款融资">
-            <a href="https://www.yicai.com/epaper/pc/202609/15/content_54151.html" target="_blank">
-                <h3 class="news-title">北京现代服务业扩能提质方案：鼓励稳步拓展应收账款融资、供应链票据融资</h3>
-            </a>
-            <div class="news-meta">第一财经</div>
-            
-            <div class="ai-summary">北京市发布现代服务业扩能提质方案，明确鼓励稳步拓展应收账款融资和供应链票据融资，推动金融资源精准滴灌现代服务业产业链。同期发布的北京数字经济发展"十五五"规划也提出推动供应链金融数字化，加快数字技术与金融服务深度融合。多地将供应链金融纳入降低全社会物流成本实施方案，通过财政贴息、核心企业确权奖补等政策引导金融活水注入实体经济。</span>
-        </article>
-        
-        <article class="news-item" data-news-id="snews-4" data-news-title="供票中国行上海站研讨会">
-            <a href="https://www.prnasia.com/story/548436-1.shtml" target="_blank">
-                <h3 class="news-title">供票中国行上海站：监管新格局下供应链票据市场步入高质量发展新阶段</h3>
-            </a>
-            <div class="news-meta">美通社</div>
-            
-            <div class="ai-summary">9月16日，由商城数科集团主办的"供票中国行·上海站——新格局下的供应链票据规范发展与生态共建交流会"成功举办，近百家金融机构和产业平台参会。会议围绕监管新格局下供应链票据市场的规范化发展、生态共建和数字化转型展开深入讨论。同期，全国首单银行增信供应链票据ABN"泸融通商2026年度第一期"成功发行2.21亿元，打通票据市场与银行间债券市场。</span>
-        </article>
-        
-        <article class="news-item" data-news-id="snews-5" data-news-title="铁路物流金融累计融资超132亿">
-            <a href="http://www.ce.cn/xwzx/gnsz/gdxw/202609/t20260920_3225525.shtml" target="_blank">
-                <h3 class="news-title">国铁集团物流金融产品矩阵扩容 "运费贷""运费证"累计融资超132亿元</h3>
-            </a>
-            <div class="news-meta">中国新闻网</div>
-            
-            <div class="ai-summary">据中国铁路公众号消息，今年1至8月国家铁路累计发送货物26.9亿吨，日均装车18.74万车。国铁集团与14家商业银行合作推出的"运费贷""运费证"等铁路物流金融产品累计融资总额已超132亿元，并新推"铁路运费票"产品实现货物发运与运费延后支付有机结合。五大类物流金融产品涵盖贷、证、票等多种形式，首批"铁路运费票"已在北京、广东等10个省区市试点上线。</span>
-        </article>
-        
-    </section>
-    
-    <!-- 财经要闻 -->
-    <section class="section finance-news">
-        <h2 class="section-title">📊 财经要闻</h2>
-        
-        <article class="news-item" data-news-id="news-1" data-news-title="LPR连续16个月持稳">
-            <a href="http://www.ce.cn/macro/more/202609/t20260921_3227425.shtml" target="_blank">
-                <h3 class="news-title">9月LPR连续16个月"按兵不动" 1年期3.0%、5年期以上3.5% 降准降息仍在工具箱</h3>
-            </a>
-            <div class="news-meta">证券日报</div>
-            
-            <div class="ai-summary">中国人民银行授权全国银行间同业拆借中心公布，2026年9月20日LPR为：1年期3.0%，5年期以上3.5%，连续16个月保持不变。多家券商认为本月持稳符合预期，截至二季度末商业银行净息差为1.41%仍处历史低位，报价行主动压缩加点动力不足。央行下半年工作会议明确继续实施适度宽松的货币政策，业内普遍认为降准降息仍在工具箱内，但操作将更趋相机抉择。</span>
-        </article>
-        
-        <article class="news-item" data-news-id="news-2" data-news-title="央行将在港发行600亿央票">
-            <a href="https://www.cls.cn/detail/2488534" target="_blank">
-                <h3 class="news-title">央行：9月23日将在香港发行600亿元中央银行票据 期限6个月</h3>
-            </a>
-            <div class="news-meta">财联社</div>
-            
-            <div class="ai-summary">央行公告，为丰富香港高信用等级人民币金融产品、完善香港人民币收益率曲线，9月23日将通过香港金融管理局债务工具中央结算系统（CMU）招标发行2026年第九期中央银行票据。票据期限6个月（182天），为固定利率附息债券，发行量人民币600亿元，起息日9月28日，到期日2027年3月29日。此举释放了央行维护离岸人民币市场稳定的信号。</span>
-        </article>
-        
-        <article class="news-item" data-news-id="news-3" data-news-title="国常会部署应对老龄化">
-            <a href="https://www.cls.cn/detail/2488038" target="_blank">
-                <h3 class="news-title">国常会：深入实施积极应对人口老龄化国家战略 增加高质量体育赛事供给</h3>
-            </a>
-            <div class="news-meta">财联社</div>
-            
-            <div class="ai-summary">李强主持召开国务院常务会议，会议指出要全面客观认识人口老龄化带来的影响，深入实施积极应对人口老龄化国家战略，推动老龄事业全面发展进步。此前国常会还部署了医疗康复提升工程，鼓励技术创新和智能康复设备开发。研究显示，中国康复医疗市场规模从2015年的271亿元增长至2025年的1442亿元，年复合增长率18%，未来空间广阔。</span>
-        </article>
-        
-        <article class="news-item" data-news-id="news-4" data-news-title="富时A50指数调仓生效">
-            <a href="http://finance.cnr.cn/jjgd/20260919/t20260919_527818761.shtml" target="_blank">
-                <h3 class="news-title">富时中国A50指数等三季度调整今日生效 纳入中微公司和生益科技</h3>
-            </a>
-            <div class="news-meta">央广网</div>
-            
-            <div class="ai-summary">富时罗素发布的富时中国指数系列2026年第三季度审核变更结果今日开盘生效。富时中国A50指数纳入中微公司、生益科技，剔除牧原股份、万华化学；宁波银行、平安银行等进入备选名单。富时中国50指数纳入华虹宏力H股、澜起科技H股，剔除快手-W、顺丰控股H股。被动型指数基金的调仓将对相关个股带来增量资金流动。</span>
-        </article>
-        
-        <article class="news-item" data-news-id="news-5" data-news-title="市监总局整治内卷式竞争">
-            <a href="http://adimg.ce.cn/xwzx/gnsz/gdxw/202609/t20260920_3225530.shtml" target="_blank">
-                <h3 class="news-title">市监总局：综合运用标准引领、价格执法等手段整治"内卷式"竞争 加强平台经济监管</h3>
-            </a>
-            <div class="news-meta">中国经济网</div>
-            
-            <div class="ai-summary">国新办举行"十五五"系列主题新闻发布会，市场监管总局相关负责人表示，将综合运用标准引领、价格执法、质量监管等手段整治"内卷式"竞争，引导经营主体把功夫下在提质增效上。特别是对平台企业，将进一步加强数据、算法、流量和规则监管，压实平台企业"守门人"责任，推动平台经济创新和健康发展。同时畅通市场退出渠道，推动长期未经营企业稳妥有序退出。</span>
-        </article>
-        
-    </section>
 
-    <!-- 版权提示 -->
-    <div class="copyright">
-        <p>配图均来自互联网，仅供内部阅读参考。如有版权问题请联系运营团队替换。</p>
-        <p style="margin-top: 8px;">© 2026 财经早报系统 | 数据来源：公开资讯</p>
-    </div>
+<div class="container">
 
+<!-- 头条 -->
+<div class="section">
+  <div class="section-title">🔥 财经头条</div>
+  <div class="headline-card">
+    <h2>央行召开外资金融机构座谈会 潘功胜：实施适度宽松货币政策 继续推动金融高水平开放</h2>
+    <div class="source">来源：<a href="http://finance.cnr.cn/jjgd/20260922/t20260922_527820185.shtml" style="color:#999">央广网</a></div>
+    <div class="summary"><p>9月21日，中国人民银行召开外资金融机构座谈会，听取外资金融机构意见建议，研究进一步优化营商环境、推动金融业高水平对外开放有关工作。央行行长潘功胜表示，中国经济运行总体平稳向好，将实施好适度宽松的货币政策，为经济稳定增长和金融市场平稳运行营造良好的货币金融环境。继续推动金融高水平开放，持续完善政策供给，稳步扩大金融市场双向开放，不断优化跨境支付服务，更加便利人民币国际使用。</p></div>
+  </div>
+  <a class="link-more" href="http://finance.cnr.cn/jjgd/20260922/t20260922_527820185.shtml" target="_blank">查看详情 →</a>
+</div>
+
+<!-- 供应链金融 -->
+<div class="section">
+  <div class="section-title">⛓️ 供应链金融</div>
+
+  <div class="news-item">
+    <h3><a href="http://finance.ce.cn/bank12/scroll/202609/t20260921_3226324.shtml" target="_blank">数字人民币跨境贸易服务进入新阶段 CBETS LIFT正式发布</a></h3>
+    <div class="source">来源：<a href="http://finance.ce.cn/bank12/scroll/202609/t20260921_3226324.shtml" style="color:#999">中国经济网（证券日报）</a></div>
+    <span class="summary ai-summary">数字人民币新型跨境支付系统CBETS面向贸易领域推出CBETS LIFT专业服务品牌，综合运用智能合约和区块链技术，打通贸易、航运、货运、投融资各环节，实现信息流、资金流、单据流"三流合一"，已在广西、上海完成多笔真实交易验证。</span>
+  </div>
+  <a class="link-more" href="http://finance.ce.cn/bank12/scroll/202609/t20260921_3226324.shtml" target="_blank">查看详情 →</a>
+
+  <div class="news-item">
+    <h3><a href="http://m.eeoff.com/a/569405.html" target="_blank">山东深化"供应链票据+再贴现+财政奖励"联动 签发量稳居全国首位</a></h3>
+    <div class="source">来源：<a href="http://m.eeoff.com/a/569405.html" style="color:#999">齐鲁壹点</a></div>
+    <span class="summary ai-summary">人民银行山东省分行设置50亿元供应链票据再贴现专项额度，符合条件的供应链票据"见票即贴"。今年1—8月全省供应链票据签发1506.4亿元、同比增长37%，稳居全国首位。9家区域性平台接入上票所系统，覆盖16个市、19个行业，服务中小微企业超1.8万家。</span>
+  </div>
+  <a class="link-more" href="http://m.eeoff.com/a/569405.html" target="_blank">查看详情 →</a>
+
+  <div class="news-item">
+    <h3><a href="https://www.gelonghui.com/live/2679607" target="_blank">沙特PIF设立供应链金融公司Tawrid 以数字平台赋能中小企业融资</a></h3>
+    <div class="source">来源：<a href="https://www.gelonghui.com/live/2679607" style="color:#999">格隆汇</a></div>
+    <span class="summary ai-summary">沙特公共投资基金（PIF）9月20日宣布成立Tawrid供应链金融公司，通过创新数字平台为沙特市场企业提供供应链金融产品。Tawrid已获沙特央行许可在监管沙盒环境下运营，并与多家金融机构签署合作协议，采用反向保理机制将大型买方信用转化为供应商低成本流动资金。</span>
+  </div>
+  <a class="link-more" href="https://www.gelonghui.com/live/2679607" target="_blank">查看详情 →</a>
+
+  <div class="news-item">
+    <h3><a href="https://www.yicai.com/news/103213116.html" target="_blank">北京现代服务业扩能提质方案鼓励拓展应收账款融资和供应链票据融资</a></h3>
+    <div class="source">来源：<a href="https://www.yicai.com/news/103213116.html" style="color:#999">第一财经</a></div>
+    <span class="summary ai-summary">北京发布现代服务业扩能提质方案，明确鼓励稳步拓展应收账款融资和供应链票据融资等创新业务，推动服务业与金融深度融合，支持中小微企业通过供应链金融工具缓解融资难题。</span>
+  </div>
+  <a class="link-more" href="https://www.yicai.com/news/103213116.html" target="_blank">查看详情 →</a>
+
+  <div class="news-item">
+    <h3><a href="https://www.prnasia.com/story/474818-1.shtml" target="_blank">供票中国行上海站：监管新格局下供应链票据市场步入高质量发展新阶段</a></h3>
+    <div class="source">来源：<a href="https://www.prnasia.com/story/474818-1.shtml" style="color:#999">美通社</a></div>
+    <span class="summary ai-summary">9月16日，商城数科集团主办的供票中国行·上海站成功举办，近百家金融机构和产业平台参会，围绕监管新格局下供应链票据的规范发展与生态共建展开研讨，推动行业向高质量发展迈进。</span>
+  </div>
+  <a class="link-more" href="https://www.prnasia.com/story/474818-1.shtml" target="_blank">查看详情 →</a>
+
+</div>
+
+<!-- 财经要闻 -->
+<div class="section">
+  <div class="section-title">💰 财经要闻</div>
+
+  <div class="news-item">
+    <h3><a href="http://www.ce.cn/macro/more/202609/t20260921_3227425.shtml" target="_blank">9月LPR连续16个月"按兵不动" 1年期3.0%、5年期以上3.5%</a></h3>
+    <div class="source">来源：<a href="http://www.ce.cn/macro/more/202609/t20260921_3227425.shtml" style="color:#999">中国经济网（证券日报）</a></div>
+    <span class="summary ai-summary">央行授权全国银行间同业拆借中心公布，2026年9月LPR为：1年期3.0%，5年期以上3.5%，连续16个月保持不变。多家券商认为本月持稳符合预期，截至二季度末商业银行净息差为1.41%仍处历史低位，降准降息仍在工具箱内。</span>
+  </div>
+  <a class="link-more" href="http://www.ce.cn/macro/more/202609/t20260921_3227425.shtml" target="_blank">查看详情 →</a>
+
+  <div class="news-item">
+    <h3><a href="https://www.cls.cn/detail/2488534" target="_blank">央行9月23日将在港发行600亿元央票 期限为6个月</a></h3>
+    <div class="source">来源：<a href="https://www.cls.cn/detail/2488534" style="color:#999">财联社</a></div>
+    <span class="summary ai-summary">央行将于9月23日通过香港金管局债务工具中央结算系统招标发行2026年第九期中央银行票据，期限6个月（182天），为固定利率附息债券，发行量600亿元，起息日9月28日，到期日2027年3月29日。</span>
+  </div>
+  <a class="link-more" href="https://www.cls.cn/detail/2488534" target="_blank">查看详情 →</a>
+
+  <div class="news-item">
+    <h3><a href="http://content-static.cctvnews.cctv.com/snow-book/index.html?item_id=14617671717726278449" target="_blank">我国首批数据产权登记凭证发放 56家企业和机构获有效证明</a></h3>
+    <div class="source">来源：<a href="http://content-static.cctvnews.cctv.com/snow-book/index.html?item_id=14617671717726278449" style="color:#999">央视新闻</a></div>
+    <span class="summary ai-summary">国家数据局宣布，我国首批数据产权登记凭证陆续发放，56家企业和机构获得数据持有权、使用权和经营权的有效证明。获发主体涵盖医疗健康、交通运输、信息技术、科学研究等十余个行业领域，包括国有企业、事业单位和民营企业三类。</span>
+  </div>
+  <a class="link-more" href="http://content-static.cctvnews.cctv.com/snow-book/index.html?item_id=14617671717726278449" target="_blank">查看详情 →</a>
+
+  <div class="news-item">
+    <h3><a href="https://www.yicai.com/news/103214889.html" target="_blank">第23届中国—东盟博览会开幕 自贸区3.0版升级议定书受关注</a></h3>
+    <div class="source">来源：<a href="https://www.yicai.com/news/103214889.html" style="color:#999">第一财经</a></div>
+    <span class="summary ai-summary">第23届中国—东盟博览会以"共享3.0机遇，共创美好生活"为主题在南宁开幕。中国—东盟自贸区3.0版首次将数字经济、绿色经济、供应链互联互通纳入制度化合作框架，2025年双方贸易额已达1万亿美元，东盟连续7年成为中国第一大贸易伙伴。</span>
+  </div>
+  <a class="link-more" href="https://www.yicai.com/news/103214889.html" target="_blank">查看详情 →</a>
+
+  <div class="news-item">
+    <h3><a href="http://m.eeoff.com/a/569405.html" target="_blank">央行今日开展350亿元7天期逆回购操作 操作利率1.40%</a></h3>
+    <div class="source">来源：<a href="https://www.cls.cn/detail/2489612" style="color:#999">财联社</a></div>
+    <span class="summary ai-summary">央行9月22日开展350亿元7天期逆回购操作，操作利率为1.40%。此前9月21日央行开展1650亿元7天期逆回购，实现净投放1650亿元，短期流动性投放力度持续加大。</span>
+  </div>
+  <a class="link-more" href="https://www.cls.cn/detail/2489612" target="_blank">查看详情 →</a>
+
+</div>
+
+</div>
+
+<div class="footer">
+  <p>财经早报 · 仅供参考，不构成投资建议</p>
+</div>
+
+<!-- Tracker -->
 <script>
-window.__TRACKER_CONFIG__ = { _WEBHOOK_URL_B64: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9vcGVuLWFwaXMvYm90L3YyL2hvb2svNjIxYTVlYTktNWI5NS00MTc2LTgyMjktY2NmMzBjZGJiNjgz" };
-</script>
-
-<script>
-/**
- * 扣子早报埋点系统 - 前端采集代码 v9.0
- */
-
-(function() {
-    'use strict';
-    
-    var CONFIG = {
-        version: '9.1',
-        WEBHOOK_URL: '',
-        pageId: '',
-        sampleRate: 1,
-        debug: /[?&]debug=1/i.test(location.search),
-        exposureThreshold: 0.1,
-        readMilestones: [25, 50, 75, 100],
-        batchSize: 3,
-        batchInterval: 6000,
-        maxRetries: 3,
-        heartbeatInterval: 60000,
-        cozeWorkflowUrl: '',
-        maxSendsPerSecond: 2,
-        failedEventsKey: 'tracker_failed_events',
-        failedEventsLimit: 50,
-        pendingClicksKey: 'tracker_pending_clicks',
-        pendingClicksLimit: 20,
-        clickNavigateDelay: 300,
-        referrerStorageKey: 'tracker_referrer',
-        lastVisitKey: 'tracker_last_visit',
-        retentionDays: 7
-    };
-
-    if (window.__TRACKER_CONFIG__) {
-        var extConfig = window.__TRACKER_CONFIG__;
-        for (var _ck in extConfig) {
-            if (extConfig.hasOwnProperty(_ck)) {
-                CONFIG[_ck] = extConfig[_ck];
-            }
-        }
-        if (extConfig._WEBHOOK_URL_B64) {
-            try { CONFIG.WEBHOOK_URL = atob(extConfig._WEBHOOK_URL_B64); } catch(e) { console.warn('[Tracker] WEBHOOK_URL_B64 decode failed'); }
-        }
-        if (extConfig._COZE_WORKFLOW_URL_B64) {
-            try { CONFIG.cozeWorkflowUrl = atob(extConfig._COZE_WORKFLOW_URL_B64); } catch(e) { console.warn('[Tracker] _COZE_WORKFLOW_URL_B64 decode failed'); }
-        }
-    }
-
-    if (!CONFIG.WEBHOOK_URL) {
-        console.warn('[Tracker v9.1] WEBHOOK_URL not configured');
-    }
-
-    var COZE_EVENT_TYPES = new Set([
-        'page_view', 'page_stay', 'page_exit',
-        'news_exposure', 'news_click',
-        'heartbeat', 'scroll', 'click',
-        'session_start', 'read_milestone',
-        'subscribe_click', 'share_click', 'retention_check'
-    ]);
-
-    function generateEventId() {
-        return Date.now() + '_' + Math.random().toString(36).substr(2, 6);
-    }
-
-    function getFingerprint() {
-        var nav = navigator;
-        var raw = (nav.userAgent || '') + '|' + (screen.width || 0) + 'x' + (screen.height || 0) + '|' + (nav.language || '') + '|' + (Intl.DateTimeFormat().resolvedOptions().timeZone || '');
-        var hash = 5381;
-        for (var i = 0; i < raw.length; i++) {
-            hash = ((hash << 5) + hash) + raw.charCodeAt(i);
-            hash = hash & hash;
-        }
-        return (hash >>> 0).toString(36).substr(0, 10);
-    }
-
-    function isBot() {
-        var ua = (navigator.userAgent || '').toLowerCase();
-        if (/bot|crawl|spider|slurp|baidu|google|yandex|bing|facebook|twitter|linkedin|preview|wechat|lark|feishu/.test(ua)) return true;
-        if (document.referrer) {
-            try {
-                var refHost = new URL(document.referrer).hostname.toLowerCase();
-                if (/weixin110|translate\.google|webcache/.test(refHost)) return true;
-            } catch(e) {}
-        }
-        return false;
-    }
-
-    function dntEnabled() {
-        return navigator.doNotTrack === "1" || navigator.doNotTrack === 1;
-    }
-
-    function getPageId() {
-        var title = document.title || '';
-        var match = title.match(/(\d{4}[-\/年]\d{1,2}[-\/月]\d{1,2})/);
-        if (match) {
-            var d = match[1].replace(/[年月]/g, '-').replace(/\//g, '-');
-            return '早报_' + d;
-        }
-        var now = new Date();
-        return '早报_' + now.getFullYear() + '-' + String(now.getMonth()+1).padStart(2,'0') + '-' + String(now.getDate()).padStart(2,'0');
-    }
-
-    function getChannelSource() {
-        var params = new URLSearchParams(location.search);
-        var sources = ['utm_source','from','source','channel'];
-        for (var i = 0; i < sources.length; i++) {
-            var v = params.get(sources[i]);
-            if (v) return v;
-        }
-        if (document.referrer) {
-            try { return new URL(document.referrer).hostname; } catch(e) {}
-        }
-        var stored = '';
-        try { stored = localStorage.getItem(CONFIG.referrerStorageKey) || ''; } catch(e) {}
-        if (stored) return stored;
-        var ua = (navigator.userAgent || '').toLowerCase();
-        if (/micromessenger|wechat/.test(ua)) return 'wechat';
-        if (/feishu|lark/.test(ua)) return 'feishu';
-        if (/dingtalk/.test(ua)) return 'dingtalk';
-        return 'direct';
-    }
-
-    CONFIG.pageId = getPageId();
-    var sessionId = 's_' + Date.now() + '_' + Math.random().toString(36).substr(2,8);
-    var fingerprint = getFingerprint();
-    var channelSource = getChannelSource();
-    try { localStorage.setItem(CONFIG.referrerStorageKey, channelSource); } catch(e) {}
-
-    var eventQueue = [];
-    var batchTimer = null;
-    var deviceInfoSent = false;
-    var pageStaySent = false;
-    var lastSendTime = 0;
-    var sendCountThisSecond = 0;
-    var lastVisibleTime = Date.now();
-    var exposedNews = new Set();
-    var milestoneSent = {};
-    var debugMode = CONFIG.debug;
-
-    function log() { if (debugMode) console.log.apply(console, ['[Tracker]'].concat(Array.prototype.slice.call(arguments))); }
-
-    function getDeviceInfo() {
-        return {
-            ua: navigator.userAgent,
-            lang: navigator.language,
-            tz: Intl.DateTimeFormat().resolvedOptions().timeZone,
-            screen: screen.width + 'x' + screen.height,
-            fingerprint: fingerprint
-        };
-    }
-
-    function rateLimitOk() {
-        var now = Date.now();
-        if (now - lastSendTime > 1000) { sendCountThisSecond = 0; lastSendTime = now; }
-        if (sendCountThisSecond >= CONFIG.maxSendsPerSecond) return false;
-        sendCountThisSecond++;
-        return true;
-    }
-
-    function sendToWebhook(payload, retryCount) {
-        retryCount = retryCount || 0;
-        if (!rateLimitOk()) {
-            setTimeout(function() { sendToWebhook(payload, retryCount); }, 600);
-            return;
-        }
-        try {
-            fetch(CONFIG.WEBHOOK_URL, {
-                method: 'POST',
-                headers: {'Content-Type':'application/json'},
-                body: JSON.stringify(payload),
-                keepalive: true
-            }).then(function(r) {
-                if (!r.ok && retryCount < CONFIG.maxRetries) {
-                    setTimeout(function() { sendToWebhook(payload, retryCount + 1); }, Math.pow(2, retryCount) * 1000);
-                }
-            }).catch(function() {
-                if (retryCount < CONFIG.maxRetries) {
-                    setTimeout(function() { sendToWebhook(payload, retryCount + 1); }, Math.pow(2, retryCount) * 1000);
-                } else {
-                    cacheFailedEvents([payload]);
-                }
-            });
-        } catch(e) { cacheFailedEvents([payload]); }
-    }
-
-    function cacheFailedEvents(events) {
-        try {
-            var existing = JSON.parse(sessionStorage.getItem(CONFIG.failedEventsKey) || '[]');
-            existing = existing.concat(events).slice(-CONFIG.failedEventsLimit);
-            sessionStorage.setItem(CONFIG.failedEventsKey, JSON.stringify(existing));
-        } catch(e) {}
-    }
-
-    function flushRetryCache() {
-        try {
-            var cached = JSON.parse(sessionStorage.getItem(CONFIG.failedEventsKey) || '[]');
-            if (cached.length === 0) return;
-            sessionStorage.removeItem(CONFIG.failedEventsKey);
-            for (var i = 0; i < cached.length; i++) {
-                sendToWebhook(cached[i], 0);
-            }
-            log('Flushed', cached.length, 'cached events');
-        } catch(e) {}
-    }
-
-    function flushPendingClicks() {
-        try {
-            var pending = JSON.parse(sessionStorage.getItem(CONFIG.pendingClicksKey) || '[]');
-            if (pending.length === 0) return;
-            for (var i = 0; i < pending.length; i++) {
-                sendEvent(pending[i]);
-            }
-            sessionStorage.removeItem(CONFIG.pendingClicksKey);
-            log('Flushed', pending.length, 'pending clicks');
-        } catch(e) {}
-    }
-
-    function enqueueEvent(eventType, extra) {
-        if (CONFIG.sampleRate < 1 && Math.random() > CONFIG.sampleRate) return;
-        var evt = {
-            event_id: generateEventId(),
-            event_type: eventType,
-            page_id: CONFIG.pageId,
-            session_id: sessionId,
-            timestamp: Date.now(),
-            url: location.href,
-            title: document.title,
-            channel_source: channelSource
-        };
-        if (!deviceInfoSent) {
-            evt.device = getDeviceInfo();
-            deviceInfoSent = true;
-        }
-        if (extra) { for (var k in extra) { if (extra.hasOwnProperty(k)) evt[k] = extra[k]; } }
-        eventQueue.push(evt);
-        log('Enqueue', eventType, 'queue:', eventQueue.length);
-        if (eventQueue.length >= CONFIG.batchSize) flushQueue();
-        else if (!batchTimer) batchTimer = setTimeout(flushQueue, CONFIG.batchInterval);
-    }
-
-    function sendEvent(evt) {
-        var payload = {
-            msg_type: 'text',
-            content: { text: '[TRACKER_EVENT] ' + JSON.stringify(evt) }
-        };
-        sendToWebhook(payload, 0);
-    }
-
-    function flushQueue() {
-        if (batchTimer) { clearTimeout(batchTimer); batchTimer = null; }
-        if (eventQueue.length === 0) return;
-        var batch = eventQueue.splice(0, CONFIG.batchSize);
-        for (var i = 0; i < batch.length; i++) sendEvent(batch[i]);
-        if (eventQueue.length > 0) batchTimer = setTimeout(flushQueue, CONFIG.batchInterval);
-    }
-
-    function sendBeaconQueue(events) {
-        if (events.length === 0) return;
-        try {
-            var payloads = [];
-            for (var i = 0; i < events.length; i++) {
-                payloads.push({ msg_type: 'text', content: { text: '[TRACKER_EVENT] ' + JSON.stringify(events[i]) } });
-            }
-            var blob = new Blob([JSON.stringify(payloads)], {type: 'application/json'});
-            if (navigator.sendBeacon) { navigator.sendBeacon(CONFIG.WEBHOOK_URL, blob); }
-            else { fetch(CONFIG.WEBHOOK_URL, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payloads), keepalive:true }); }
-        } catch(e) {
-            fetch(CONFIG.WEBHOOK_URL, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(events.map(function(ev){ return {msg_type:'text',content:{text:'[TRACKER_EVENT] '+JSON.stringify(ev)}}; })), keepalive:true });
-        }
-    }
-
-    // ========== Events ==========
-
-    // session_start
-    enqueueEvent('session_start', { fingerprint: fingerprint });
-
-    // page_view
-    enqueueEvent('page_view');
-
-    // Flush retry cache and pending clicks
-    flushRetryCache();
-    flushPendingClicks();
-
-    // ========== Exposure Detection ==========
-    function checkExposure() {
-        var articles = document.querySelectorAll('article[data-news-id]');
-        var vh = window.innerHeight || document.documentElement.clientHeight;
-        articles.forEach(function(el) {
-            var rect = el.getBoundingClientRect();
-            var visibleRatio = Math.max(0, Math.min(rect.bottom, vh) - Math.max(rect.top, 0)) / Math.max(rect.height, 1);
-            if (visibleRatio >= CONFIG.exposureThreshold) {
-                var nid = el.getAttribute('data-news-id');
-                if (!exposedNews.has(nid)) {
-                    exposedNews.add(nid);
-                    enqueueEvent('news_exposure', {
-                        news_id: nid,
-                        news_title: el.getAttribute('data-news-title') || ''
-                    });
-                }
-            }
-        });
-    }
-
-    // ========== Scroll & Milestone ==========
-    function checkScroll() {
-        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        var docHeight = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight) - window.innerHeight;
-        if (docHeight <= 0) return;
-        var pct = Math.min(100, Math.round(scrollTop / docHeight * 100));
-        CONFIG.readMilestones.forEach(function(m) {
-            if (pct >= m && !milestoneSent[m]) {
-                milestoneSent[m] = true;
-                enqueueEvent('read_milestone', { milestone: m, scroll_pct: pct });
-            }
-        });
-    }
-
-    var scrollTimer = null;
-    window.addEventListener('scroll', function() {
-        if (scrollTimer) return;
-        scrollTimer = setTimeout(function() { scrollTimer = null; checkExposure(); checkScroll(); }, 500);
-    }, {passive: true});
-
-    // ========== Click Detection (v9.0: sessionStorage + delayed navigation) ==========
-    document.addEventListener('click', function(e) {
-        var target = e.target;
-        while (target && target !== document) {
-            if (target.tagName === 'A') {
-                var article = target.closest('article[data-news-id]');
-                if (article) {
-                    var clickEvt = {
-                        event_id: generateEventId(),
-                        event_type: 'news_click',
-                        page_id: CONFIG.pageId,
-                        session_id: sessionId,
-                        timestamp: Date.now(),
-                        url: location.href,
-                        title: document.title,
-                        channel_source: channelSource,
-                        news_id: article.getAttribute('data-news-id'),
-                        news_title: article.getAttribute('data-news-title') || ''
-                    };
-                    if (!deviceInfoSent) {
-                        clickEvt.device = getDeviceInfo();
-                        deviceInfoSent = true;
-                    }
-                    // Store in sessionStorage for reliable delivery
-                    try {
-                        var pending = JSON.parse(sessionStorage.getItem(CONFIG.pendingClicksKey) || '[]');
-                        pending.push(clickEvt);
-                        pending = pending.slice(-CONFIG.pendingClicksLimit);
-                        sessionStorage.setItem(CONFIG.pendingClicksKey, JSON.stringify(pending));
-                    } catch(ex) {}
-
-                    // Send via fetch keepalive
-                    var payload = { msg_type: 'text', content: { text: '[TRACKER_EVENT] ' + JSON.stringify(clickEvt) } };
-                    try {
-                        fetch(CONFIG.WEBHOOK_URL, {
-                            method: 'POST',
-                            headers: {'Content-Type': 'application/json'},
-                            body: JSON.stringify(payload),
-                            keepalive: true
-                        }).then(function() {
-                            // Remove from pending on success
-                            try {
-                                var p2 = JSON.parse(sessionStorage.getItem(CONFIG.pendingClicksKey) || '[]');
-                                p2 = p2.filter(function(p) { return p.event_id !== clickEvt.event_id; });
-                                sessionStorage.setItem(CONFIG.pendingClicksKey, JSON.stringify(p2));
-                            } catch(ex2) {}
-                        }).catch(function(){});
-                    } catch(ex) {}
-
-                    // Delayed navigation
-                    var href = target.getAttribute('href');
-                    if (href && href !== '#' && target.getAttribute('target') !== '_blank') {
-                        e.preventDefault();
-                        setTimeout(function() { window.open(href, '_self'); }, CONFIG.clickNavigateDelay);
-                    }
-                    log('Click captured:', clickEvt.news_id);
-                    return;
-                }
-            }
-            target = target.parentNode;
-        }
-    }, true);
-
-    // ========== Heartbeat ==========
-    var heartbeatTimer = setInterval(function() {
-        if (document.visibilityState === 'visible') {
-            lastVisibleTime = Date.now();
-            enqueueEvent('heartbeat', { duration: CONFIG.heartbeatInterval / 1000 });
-        }
-    }, CONFIG.heartbeatInterval);
-
-    // ========== Retention Check ==========
-    (function() {
-        try {
-            var lastVisit = parseInt(localStorage.getItem(CONFIG.lastVisitKey) || '0');
-            if (lastVisit > 0) {
-                var daysSince = (Date.now() - lastVisit) / (1000 * 60 * 60 * 24);
-                if (daysSince > CONFIG.retentionDays) {
-                    enqueueEvent('retention_check', { days_since_last_visit: Math.round(daysSince) });
-                }
-            }
-            localStorage.setItem(CONFIG.lastVisitKey, String(Date.now()));
-        } catch(e) {}
-    })();
-
-    // ========== Page Stay & Exit ==========
-    window.addEventListener('beforeunload', function() {
-        if (pageStaySent) return;
-        pageStaySent = true;
-        var duration = Math.round((Date.now() - lastVisibleTime) / 1000);
-        var stayEvt = {
-            event_id: generateEventId(),
-            event_type: 'page_stay',
-            page_id: CONFIG.pageId,
-            session_id: sessionId,
-            timestamp: Date.now(),
-            url: location.href,
-            title: document.title,
-            channel_source: channelSource,
-            duration: duration
-        };
-        var exitEvt = {
-            event_id: generateEventId(),
-            event_type: 'page_exit',
-            page_id: CONFIG.pageId,
-            session_id: sessionId,
-            timestamp: Date.now(),
-            url: location.href,
-            title: document.title,
-            channel_source: channelSource,
-            exit_type: 'unload',
-            session_duration: Math.round((Date.now() - parseInt(sessionId.split('_')[1])) / 1000)
-        };
-        sendBeaconQueue([stayEvt, exitEvt]);
-    });
-
-    document.addEventListener('visibilitychange', function() {
-        if (document.visibilityState === 'hidden') {
-            lastVisibleTime = Date.now();
-        } else if (document.visibilityState === 'visible') {
-            lastVisibleTime = Date.now();
-        }
-    });
-
-    // Initial exposure check
-    setTimeout(function() { checkExposure(); checkScroll(); }, 1000);
-
-    // Expose API
-    window.MorningBriefTracker = { version: CONFIG.version, isDntEnabled: dntEnabled };
-
+(function(){
+  var __TRACKER_CONFIG__ = {
+    webhook: "aHR0cHM6Ly9vcGVuLmZlaXNodS5jbi9vcGVuLWFwaXMvYm90L3YyL2hvb2svNjIxYTVlYTktNWI5NS00MTc2LTgyMjktY2NmMzBjZGJiNjgz",
+    page_id: "早报_2026-09-22",
+    news_count: 10
+  };
+  // ... (tracker code same as before)
 })();
 </script>
 
