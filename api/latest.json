@@ -1,122 +1,20 @@
 {
-  "date": "2026-09-21",
-  "updated_at": "2026-09-21T09:50:00+08:00",
+  "date": "2026-09-22",
+  "updated_at": "2026-09-22T09:50:00+08:00",
   "copyright_notice": "配图均来自互联网，仅供内部阅读参考。如有版权问题请联系运营团队替换。",
   "headline": {
     "id": "headline-1",
-    "title": "中美经贸磋商在纽约启动",
-    "title_short": "中美经贸磋商在纽约启",
-    "source": "中国政府网",
+    "title": "",
+    "title_short": "",
+    "source": "",
     "summary": "",
-    "url": "https://www.gov.cn/yaowen/liebiao/202609/content_7081527.htm",
+    "url": "",
     "image": "",
     "image_source": ""
   },
-  "finance_news": [
-    {
-      "id": "news-1",
-      "title": "LPR连续16个月持稳",
-      "title_short": "LPR连续16个月持",
-      "source": "证券日报",
-      "summary": "",
-      "url": "http://www.ce.cn/macro/more/202609/t20260921_3227425.shtml",
-      "image": "",
-      "image_source": ""
-    },
-    {
-      "id": "news-2",
-      "title": "央行将在港发行600亿央票",
-      "title_short": "央行将在港发行600",
-      "source": "财联社",
-      "summary": "",
-      "url": "https://www.cls.cn/detail/2488534",
-      "image": "",
-      "image_source": ""
-    },
-    {
-      "id": "news-3",
-      "title": "国常会部署应对老龄化",
-      "title_short": "国常会部署应对老龄化",
-      "source": "财联社",
-      "summary": "",
-      "url": "https://www.cls.cn/detail/2488038",
-      "image": "",
-      "image_source": ""
-    },
-    {
-      "id": "news-4",
-      "title": "富时A50指数调仓生效",
-      "title_short": "富时A50指数调仓生",
-      "source": "央广网",
-      "summary": "",
-      "url": "http://finance.cnr.cn/jjgd/20260919/t20260919_527818761.shtml",
-      "image": "",
-      "image_source": ""
-    },
-    {
-      "id": "news-5",
-      "title": "市监总局整治内卷式竞争",
-      "title_short": "市监总局整治内卷式竞",
-      "source": "中国经济网",
-      "summary": "",
-      "url": "http://adimg.ce.cn/xwzx/gnsz/gdxw/202609/t20260920_3225530.shtml",
-      "image": "",
-      "image_source": ""
-    }
-  ],
-  "supply_news": [
-    {
-      "id": "snews-1",
-      "title": "数字人民币跨境贸易服务升级",
-      "title_short": "数字人民币跨境贸易服",
-      "source": "证券日报",
-      "summary": "",
-      "url": "https://www.zqrb.cn/news/2026-09-21/A1758938.html",
-      "image": "",
-      "image_source": ""
-    },
-    {
-      "id": "snews-2",
-      "title": "沙特PIF设立供应链金融公司",
-      "title_short": "沙特PIF设立供应链",
-      "source": "格隆汇",
-      "summary": "",
-      "url": "https://www.gelonghui.com/live/2679607",
-      "image": "",
-      "image_source": ""
-    },
-    {
-      "id": "snews-3",
-      "title": "北京鼓励拓展应收账款融资",
-      "title_short": "北京鼓励拓展应收账款",
-      "source": "第一财经",
-      "summary": "",
-      "url": "https://www.yicai.com/epaper/pc/202609/15/content_54151.html",
-      "image": "",
-      "image_source": ""
-    },
-    {
-      "id": "snews-4",
-      "title": "供票中国行上海站研讨会",
-      "title_short": "供票中国行上海站研讨",
-      "source": "美通社",
-      "summary": "",
-      "url": "https://www.prnasia.com/story/548436-1.shtml",
-      "image": "",
-      "image_source": ""
-    },
-    {
-      "id": "snews-5",
-      "title": "铁路物流金融累计融资超132亿",
-      "title_short": "铁路物流金融累计融资",
-      "source": "中国新闻网",
-      "summary": "",
-      "url": "http://www.ce.cn/xwzx/gnsz/gdxw/202609/t20260920_3225525.shtml",
-      "image": "",
-      "image_source": ""
-    }
-  ],
+  "finance_news": [],
+  "supply_news": [],
   "bill_rate_note": "",
   "page_url": "https://pkbmw110120.github.io/finance-morning-brief/",
-  "archive_url": "https://pkbmw110120.github.io/finance-morning-brief/2026-09-21.html"
+  "archive_url": "https://pkbmw110120.github.io/finance-morning-brief/2026-09-22.html"
 }
