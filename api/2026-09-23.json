@@ -1,0 +1,122 @@
+{
+  "date": "2026-09-23",
+  "updated_at": "2026-09-23T09:50:00+08:00",
+  "copyright_notice": "配图均来自互联网，仅供内部阅读参考。如有版权问题请联系运营团队替换。",
+  "headline": {
+    "id": "headline-1",
+    "title": "央行：实施适度宽松货币政策",
+    "title_short": "央行：实施适度宽松货",
+    "source": "新华网",
+    "summary": "",
+    "url": "http://www.xinhuanet.com/fortune/20260922/99bfd58693514785a917aed34dabb776/c.html",
+    "image": "",
+    "image_source": ""
+  },
+  "finance_news": [
+    {
+      "id": "news-1",
+      "title": "LPR连续16个月按兵不动",
+      "title_short": "LPR连续16个月按",
+      "source": "36氪",
+      "summary": "",
+      "url": "https://36kr.com/p/3992594773883912",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "news-2",
+      "title": "央行将在港发行600亿央票",
+      "title_short": "央行将在港发行600",
+      "source": "财联社",
+      "summary": "",
+      "url": "https://www.cls.cn/detail/2490666",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "news-3",
+      "title": "纳指创新高 半导体大涨",
+      "title_short": "纳指创新高 半导体大",
+      "source": "东方财富",
+      "summary": "",
+      "url": "https://finance.eastmoney.com/a/202609233881659439.html",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "news-4",
+      "title": "中金公司今日复牌",
+      "title_short": "中金公司今日复牌",
+      "source": "财联社",
+      "summary": "",
+      "url": "https://www.cls.cn/detail/2490280",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "news-5",
+      "title": "李强调研先进制造业",
+      "title_short": "李强调研先进制造业",
+      "source": "财联社",
+      "summary": "",
+      "url": "https://www.cls.cn/detail/2490628",
+      "image": "",
+      "image_source": ""
+    }
+  ],
+  "supply_news": [
+    {
+      "id": "snews-1",
+      "title": "央视聚焦供应链金融创新",
+      "title_short": "央视聚焦供应链金融创",
+      "source": "央视网",
+      "summary": "",
+      "url": "https://news.cctv.cn/2026/09/22/ARTICgbtUHb78HEl3SAPsF1x260922.shtml",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "snews-2",
+      "title": "多地密集出台供应链金融政策",
+      "title_short": "多地密集出台供应链金",
+      "source": "中国服务贸易协会",
+      "summary": "",
+      "url": "http://www.cfec.org.cn/page.php?cid=32",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "snews-3",
+      "title": "民生银行发布钢铁行业金融方案",
+      "title_short": "民生银行发布钢铁行业",
+      "source": "中国网",
+      "summary": "",
+      "url": "http://finance.china.com.cn/roll/20260922/6324875.shtml",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "snews-4",
+      "title": "2026民洽会天津开幕",
+      "title_short": "2026民洽会天津开",
+      "source": "中国新闻网",
+      "summary": "",
+      "url": "http://www.chinanews.com.cn/cj/2026/09-22/10701717.shtml",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "snews-5",
+      "title": "供应链ABS市场延续调整",
+      "title_short": "供应链ABS市场延续",
+      "source": "新浪财经",
+      "summary": "",
+      "url": "http://stock.finance.sina.com.cn/stock/go.php/vReport_Show/kind/10/rptid/843314806504/index.phtml",
+      "image": "",
+      "image_source": ""
+    }
+  ],
+  "bill_rate_note": "",
+  "page_url": "https://pkbmw110120.github.io/finance-morning-brief/",
+  "archive_url": "https://pkbmw110120.github.io/finance-morning-brief/2026-09-23.html"
+}
