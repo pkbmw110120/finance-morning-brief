@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-23",
-  "updated_at": "2026-09-23T09:50:00+08:00",
+  "date": "2026-09-24",
+  "updated_at": "2026-09-24T09:50:00+08:00",
   "copyright_notice": "配图均来自互联网，仅供内部阅读参考。如有版权问题请联系运营团队替换。",
   "headline": {
     "id": "headline-1",
@@ -15,51 +15,51 @@
   "finance_news": [
     {
       "id": "news-1",
-      "title": "LPR连续16个月按兵不动",
-      "title_short": "LPR连续16个月按",
-      "source": "36氪",
+      "title": "OECD上调2026年全球经济增速预期至2.9%，AI投资带动增长",
+      "title_short": "OECD上调2026",
+      "source": "新华网 · 9月24日",
       "summary": "",
-      "url": "https://36kr.com/p/3992594773883912",
+      "url": "http://www3.xinhuanet.com/20260923/e9dc6aa61cec49699cc8a8fbc621d7da/c.html",
       "image": "",
       "image_source": ""
     },
     {
       "id": "news-2",
-      "title": "央行将在港发行600亿央票",
-      "title_short": "央行将在港发行600",
-      "source": "财联社",
+      "title": "债券通“南向通”上线五周年，双向融通助力金融高水平开放",
+      "title_short": "债券通“南向通”上线",
+      "source": "中国经济网 · 9月24日",
       "summary": "",
-      "url": "https://www.cls.cn/detail/2490666",
+      "url": "http://www.ce.cn/macro/more/202609/t20260924_3233793.shtml",
       "image": "",
       "image_source": ""
     },
     {
       "id": "news-3",
-      "title": "纳指创新高 半导体大涨",
-      "title_short": "纳指创新高 半导体大",
-      "source": "东方财富",
+      "title": "9月银行理财规模延续高增态势，含权类产品为扩容主力",
+      "title_short": "9月银行理财规模延续",
+      "source": "中国经济网 · 9月24日",
       "summary": "",
-      "url": "https://finance.eastmoney.com/a/202609233881659439.html",
+      "url": "http://finance.ce.cn/bank12/scroll/202609/t20260924_3233812.shtml",
       "image": "",
       "image_source": ""
     },
     {
       "id": "news-4",
-      "title": "中金公司今日复牌",
-      "title_short": "中金公司今日复牌",
-      "source": "财联社",
+      "title": "加仓意愿再度集聚，股票私募仓位两周连涨",
+      "title_short": "加仓意愿再度集聚，股",
+      "source": "中国证券报 · 9月24日",
       "summary": "",
-      "url": "https://www.cls.cn/detail/2490280",
+      "url": "https://www.cs.com.cn/xwzx/hg/202609/t20260924_6756893.html",
       "image": "",
       "image_source": ""
     },
     {
       "id": "news-5",
-      "title": "李强调研先进制造业",
-      "title_short": "李强调研先进制造业",
-      "source": "财联社",
+      "title": "央行开展8000亿元MLF操作，超额续做2000亿元",
+      "title_short": "央行开展8000亿元",
+      "source": "新华网 · 9月24日",
       "summary": "",
-      "url": "https://www.cls.cn/detail/2490628",
+      "url": "http://www.xinhuanet.com/20260923/24e1a8fb4140417aa2acdd570b0e71f4/c.html",
       "image": "",
       "image_source": ""
     }
@@ -67,56 +67,56 @@
   "supply_news": [
     {
       "id": "snews-1",
-      "title": "央视聚焦供应链金融创新",
-      "title_short": "央视聚焦供应链金融创",
-      "source": "央视网",
+      "title": "国铁集团推出“铁路运费票”物流金融产品，10省区市试点",
+      "title_short": "国铁集团推出“铁路运",
+      "source": "人民网 · 9月24日",
       "summary": "",
-      "url": "https://news.cctv.cn/2026/09/22/ARTICgbtUHb78HEl3SAPsF1x260922.shtml",
+      "url": "http://sc.people.com.cn/n2/2026/0923/c345167-41705466.html",
       "image": "",
       "image_source": ""
     },
     {
       "id": "snews-2",
-      "title": "多地密集出台供应链金融政策",
-      "title_short": "多地密集出台供应链金",
-      "source": "中国服务贸易协会",
+      "title": "供应链票据市场步入高质量发展新阶段，近百家机构上海研讨",
+      "title_short": "供应链票据市场步入高",
+      "source": "央广网 · 9月24日",
       "summary": "",
-      "url": "http://www.cfec.org.cn/page.php?cid=32",
+      "url": "http://www.cnr.cn/shanghai/tt/20260923/t20260923_527822749.shtml",
       "image": "",
       "image_source": ""
     },
     {
       "id": "snews-3",
-      "title": "民生银行发布钢铁行业金融方案",
-      "title_short": "民生银行发布钢铁行业",
-      "source": "中国网",
+      "title": "央行通过CMU发行600亿元央行票据，中标利率1.37%",
+      "title_short": "央行通过CMU发行6",
+      "source": "新华网 · 9月24日",
       "summary": "",
-      "url": "http://finance.china.com.cn/roll/20260922/6324875.shtml",
+      "url": "http://www.xinhuanet.com/20260923/24e1a8fb4140417aa2acdd570b0e71f4/c.html",
       "image": "",
       "image_source": ""
     },
     {
       "id": "snews-4",
-      "title": "2026民洽会天津开幕",
-      "title_short": "2026民洽会天津开",
-      "source": "中国新闻网",
+      "title": "国办部署治理中小企业回款难，应收账款电子凭证平均期限缩短92天",
+      "title_short": "国办部署治理中小企业",
+      "source": "中国政府网 · 9月24日",
       "summary": "",
-      "url": "http://www.chinanews.com.cn/cj/2026/09-22/10701717.shtml",
+      "url": "https://www.gov.cn/zhengce/202609/content_7040892.htm",
       "image": "",
       "image_source": ""
     },
     {
       "id": "snews-5",
-      "title": "供应链ABS市场延续调整",
-      "title_short": "供应链ABS市场延续",
-      "source": "东方财富",
+      "title": "国铁集团五大类物流金融产品体系成型，助力产业链降本增效",
+      "title_short": "国铁集团五大类物流金",
+      "source": "人民日报 · 9月24日",
       "summary": "",
-      "url": "https://caifuhao.eastmoney.com/news/20260914174331309421660",
+      "url": "http://paper.people.com.cn/rmrbhwb/pc/content/202609/24/content_30182961.html",
       "image": "",
       "image_source": ""
     }
   ],
   "bill_rate_note": "",
   "page_url": "https://pkbmw110120.github.io/finance-morning-brief/",
-  "archive_url": "https://pkbmw110120.github.io/finance-morning-brief/2026-09-23.html"
+  "archive_url": "https://pkbmw110120.github.io/finance-morning-brief/2026-09-24.html"
 }
