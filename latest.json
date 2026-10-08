@@ -1,122 +1,122 @@
 {
-  "date": "2026-09-20",
-  "updated_at": "2026-09-20T09:55:00+08:00",
-  "copyright_notice": "本早报由AI自动生成，仅供参考",
+  "date": "",
+  "updated_at": "T09:45:00+08:00",
+  "copyright_notice": "配图均来自互联网，仅供内部阅读参考。如有版权问题请联系运营团队替换。",
   "headline": {
     "id": "headline-1",
-    "title": "中美经贸磋商9月19日至23日在美举行 何立峰率团赴美国与美方就彼此关心的经贸问题开展磋商",
-    "title_short": "中美经贸磋商在美举行",
-    "url": "https://www.gov.cn/yaowen/liebiao/202609/content_7081527.htm",
-    "source": "中国政府网",
-    "summary": "商务部新闻发言人9月19日表示，经中美双方商定，中共中央政治局委员、国务院副总理何立峰将于9月19日至23日率团赴美国与美方举行经贸磋商。双方将以两国元首重要共识为引领，就彼此关心的经贸问题开展磋商。同日商务部就美方签署《2026年格雷厄姆制裁俄罗斯和伊朗法案》答记者问，强调中方反对缺乏联合国授权和国际法依据的单边制裁，将密切关注美方后续举措，保留采取一切必要措施的权利。",
-    "image": "",
-    "image_source_label": ""
+    "title": "央行节后首日开展12000亿元买断式逆回购 财政部同步发行1500亿特别国债 流动性组合拳护航A股",
+    "title_short": "央行万亿流动性护航A股",
+    "source": "",
+    "summary": "",
+    "url": "http://finance.cnr.cn/ycbd/20261008/t20261008_527835905.shtml",
+    "image": "api/images/headline-1.jpg",
+    "image_source": "article_original"
   },
   "finance_news": [
     {
       "id": "news-1",
-      "title": "9月LPR报价出炉：1年期3.0%、5年期以上3.5% 连续16个月保持不变",
-      "title_short": "9月LPR连续16个月不变",
-      "url": "https://www.cls.cn/detail/2487991",
-      "source": "财联社",
-      "summary": "中国人民银行授权全国银行间同业拆借中心公布，2026年9月20日贷款市场报价利率（LPR）为：1年期LPR为3.0%，5年期以上LPR为3.5%，均较上月保持不变。这是LPR连续第16个月"按兵不动"。作为定价基础的7天期逆回购利率自2025年5月以来已连续16个月未调整。最新数据显示，8月新发放企业贷款加权平均利率略低于3%，个人住房贷款加权平均利率约3.1%，均处历史低位。",
-      "image": "",
-      "image_source_label": ""
+      "title": "美联储9月会议纪要：年内至少再加息一次 通胀水平仍处高位",
+      "title_short": "美联储释放加息信号",
+      "source": "",
+      "summary": "",
+      "url": "http://news.cnr.cn/sq/20261008/t20261008_527835834.shtml",
+      "image": "api/images/news-1.jpg",
+      "image_source": "article_original"
     },
     {
       "id": "news-2",
-      "title": "新修订《住房公积金管理条例》今日实施 提取情形扩至9种 支持装修和物业费",
-      "title_short": "公积金新规今起实施",
-      "url": "https://m.thepaper.cn/newsDetail_forward_34102848",
-      "source": "澎湃新闻",
-      "summary": "新修订的《住房公积金管理条例》9月20日正式实施。住建部介绍，新条例提取情形从6种增至9种，新增装修住房、支付物业费等提取场景，支持租房、购房、修房和养房全生命周期住房消费。"十五五"时期将重点推进四项工作：扩大制度覆盖面支持灵活就业人员缴存、拓宽提取使用范围、推动管理服务数智化提质增效、筑牢资金安全防线。",
-      "image": "",
-      "image_source_label": ""
+      "title": "9月末我国外汇储备降至34003亿美元 黄金储备连续23个月增加",
+      "title_short": "外汇储备下降黄金连增",
+      "source": "",
+      "summary": "",
+      "url": "http://www.xinhuanet.com/fortune/20261007/823a4287d5d047bca23e3277c333d94a/c.html",
+      "image": "api/images/news-2.jpg",
+      "image_source": "article_original"
     },
     {
       "id": "news-3",
-      "title": "标普穆迪密集上调中资银行评级 行业基本面企稳获国际认可",
-      "title_short": "国际评级机构批量上调中资银行",
-      "url": "https://finance.eastmoney.com/a/202609183878748879.html",
-      "source": "东方财富",
-      "summary": "标普全球评级近日将中国银行业国家风险评估（BICRA）从组"6"上调至组"5"，同步上调交通银行及3家子公司长期评级至A，浦发银行升至BBB+，民生银行、华夏银行升至BBB。穆迪亦上调中信银行长期外币存款评级至Baa1。评级机构认为，中国技术进步和雄厚财政储备增强了经济体及银行体系应对经济波动的韧性，但中小银行评级出现分化。",
-      "image": "",
-      "image_source_label": ""
+      "title": "新型政策性金融工具已累计投放超千亿元 PSL降息扩围支持\"六张网\"建设",
+      "title_short": "千亿政策性资金加速落地",
+      "source": "",
+      "summary": "",
+      "url": "https://epaper.cs.com.cn/zgzqb/html/2026-10/08/nw.D110000zgzqb_20261008_6-A02.htm",
+      "image": "api/images/news-3.jpg",
+      "image_source": "article_original"
     },
     {
       "id": "news-4",
-      "title": "全球三大央行同步紧缩 能源冲击重塑全球货币政策路径",
-      "title_short": "全球三大央行同步紧缩",
-      "url": "https://finance.eastmoney.com/a/202609203879281250.html",
-      "source": "东方财富",
-      "summary": "9月中旬全球主要央行密集公布货币政策决议：美联储加息25个基点至3.75%-4%为三年来首次，点阵图显示年内或再加息一次；日本央行加息25个基点至1.25%创31年新高；欧洲央行年内二度加息至2.5%。英国央行暂维持3.75%不变但释放加息信号。中东地缘冲突引发能源价格飙升叠加顽固通胀，各国央行面临稳增长与控通胀的两难抉择。",
-      "image": "",
-      "image_source_label": ""
+      "title": "国庆假期消费市场总体平稳 以旧换新带动销售额334.8亿元",
+      "title_short": "国庆消费以旧换新334亿",
+      "source": "",
+      "summary": "",
+      "url": "http://hb.people.com.cn/n2/2026/1008/c192237-41715570.html",
+      "image": "api/images/news-4.png",
+      "image_source": "article_original"
     },
     {
       "id": "news-5",
-      "title": "中老跨境数字支付互联互通正式启动 央行与老挝央行联合推动",
-      "title_short": "中老跨境数字支付互联互通启动",
-      "url": "https://www.cls.cn/detail/2488007",
-      "source": "财联社",
-      "summary": "9月18日，中国人民银行与老挝人民民主共和国银行在广西南宁联合举办中老跨境数字支付互联互通启动会。央行副行长陆磊出席并致辞。同日央行今日开展320亿元7天逆回购操作，操作利率1.40%不变。此外，五协会联合制定《个人贷款业务明示综合融资成本自律规范》，要求采取内部收益率法计算年化综合融资成本，不得使用"日利率""月费率"等形式替代。",
-      "image": "",
-      "image_source_label": ""
+      "title": "十大券商研判节后A股：小级别\"红十月\"可期 科技主线有望重新占优",
+      "title_short": "券商看好节后红十月",
+      "source": "",
+      "summary": "",
+      "url": "https://www.cls.cn/detail/2498701",
+      "image": "api/images/news-5.jpg",
+      "image_source": "bing_search"
     }
   ],
   "supply_news": [
     {
-      "id": "snews-1",
-      "title": "国办印发《关于加强中小企业回款难问题治理有关工作的通知》 提出4方面10条具体措施",
-      "title_short": "国办发文治理中小企业回款难",
-      "url": "https://www.yicai.com/epaper/pc/202609/15/content_54151.html",
-      "source": "第一财经",
-      "summary": "国务院办公厅近日印发通知，针对大型企业利用市场竞争优势地位拉长中小企业账期问题，提出健全行业账款支付规则、加强大型企业支付行为监管、规范管理非现金支付工具、强化资金传导效能和融资支持4方面10条措施。通知要求分行业明确合理账期，推动龙头企业率先践行"60日付现承诺"，将电子凭证最长付款期限压减至6个月，并发挥央企国企及时支付表率作用。",
-      "image": "",
-      "image_source_label": ""
+      "id": "supply-1",
+      "title": "国新健康落地全国首笔药品追溯码无追索权保理 拓展医保数据服务供应链金融",
+      "title_short": "首笔医保追溯码保理落地",
+      "source": "",
+      "summary": "",
+      "url": "http://epaper.stcn.com/con/202610/08/content_2981104.html",
+      "image": "api/images/supply-1.jpg",
+      "image_source": "article_original"
     },
     {
-      "id": "snews-2",
-      "title": ""十五五"物流供应链金融年均复合增速预计12%至20% 跨境绿色融资成增长核心",
-      "title_short": "物流供应链金融"十五五"高增速",
-      "url": "https://www.cnii.com.cn/qy/202609/t20260917_760879.html",
-      "source": "中国工信新闻网",
-      "summary": "中国物流与采购联合会9月17日发布数据，我国物流供应链金融市场规模稳步增长，"十五五"期间年均复合增长率预计维持12%-20%，呈前高后稳态势。跨境物流融资、绿色物流装备融资等细分场景将成为增长核心。多地已将供应链金融纳入降低全社会物流成本实施方案，通过财政贴息、核心企业确权奖补等政策引导金融资源精准滴灌实体经济。",
-      "image": "",
-      "image_source_label": ""
+      "id": "supply-2",
+      "title": "IFC与三井住友联合推出5亿美元供应链金融工具 支持新兴市场中小企业",
+      "title_short": "5亿美元供应链金融工具",
+      "source": "",
+      "summary": "",
+      "url": "https://digitaltradeoutlook.com/ifc-smbc-500m-supply-chain-finance-facility/",
+      "image": "api/images/supply-2.webp",
+      "image_source": "article_original"
     },
     {
-      "id": "snews-3",
-      "title": "汽车行业账期新规明确：对中小企业账期不超过60天 从行业自律上升为行政监管",
-      "title_short": "汽车账期新规60天红线落地",
-      "url": "https://www.cnii.com.cn/gxxww/qc/202609/t20260918_761137.html",
-      "source": "中国工信新闻网",
-      "summary": "工信部、市场监管总局联合发布《关于推动汽车企业规范供应商账款支付 优化账期管理的通知》，明确账期自供应商交付货物并验收合格之日起计算，对中小企业账期不超过60天，鼓励30天内完成支付。这是国家层面首个面向行业领域的账期管理文件，由行业自律上升为行政要求。17家重点车企已承诺账期不超过60天，平均账期54天。",
-      "image": "",
-      "image_source_label": ""
+      "id": "supply-3",
+      "title": "香港金管局\"货贸通\"试点促成10宗贸易融资 贷款额达1.8亿港元",
+      "title_short": "货贸通促进跨境贸易融资",
+      "source": "",
+      "summary": "",
+      "url": "http://m.chinanews.com/wap/detail/chs/zw/10708264.shtml",
+      "image": "api/images/supply-3.jpg",
+      "image_source": "bing_search"
     },
     {
-      "id": "snews-4",
-      "title": "邮储银行洛阳市分行：以数字供应链金融为支点 为产业链注入金融动能",
-      "title_short": "邮储银行数字供应链金融润泽洛阳",
-      "url": "https://www.cls.cn/detail/2485819",
-      "source": "财联社",
-      "summary": "在古都洛阳，邮储银行以数字供应链金融为支点，为整条供应链注入金融动能。针对市属国企上游民营中小微供应商"应收账款账期长、融资难、融资慢"的困境，邮储银行通过数字化手段打通融资堵点，实现供应链上下游资金高效流转，为实体经济注入源源不断的金融活水，助力产业链协同发展。",
-      "image": "",
-      "image_source_label": ""
+      "id": "supply-4",
+      "title": "银行\"Token贷\"密集落地 十余家银行以词元消耗量作为供应链授信依据",
+      "title_short": "Token贷创新供应链授信模式",
+      "source": "",
+      "summary": "",
+      "url": "https://cj.sina.com.cn/articles/view/6192937794/17120bb4202002v2h4",
+      "image": "api/images/supply-4.jpg",
+      "image_source": "bing_search"
     },
     {
-      "id": "snews-5",
-      "title": "全国首单银行增信供应链票据ABN成功发行 沂链通平台落地2.21亿元创新产品",
-      "title_short": "首单银行增信供票ABN落地",
-      "url": "http://cnmobile.prnasia.com/story/548436-1.shtml",
-      "source": "美通社",
-      "summary": "9月16日，在交易商协会和上海票据交易所指导下，商城数科集团会同泸州银行、国泰海通证券等机构，成功发行全国首单以持票人为保函受益人的供应链票据ABN——"泸融通商2026年度第一期"。产品发行总规模2.21亿元，优先级票面利率1.8%，惠及四川等地10家供应链上游企业，打通票据市场与银行间债券市场。",
-      "image": "",
-      "image_source_label": ""
+      "id": "supply-5",
+      "title": "天津七部门联合发布\"阶梯护航\"方案 推广应收账款质押融资等供应链金融服务",
+      "title_short": "天津推广供应链金融服务",
+      "source": "",
+      "summary": "",
+      "url": "https://finance.sina.com.cn/wm/2026-10-07/doc-iniuknsk6114023.shtml",
+      "image": "api/images/supply-5.jpg",
+      "image_source": "bing_search"
     }
   ],
-  "bill_rate_note": "数据来源：沈阳票据网（9月17日）",
+  "bill_rate_note": "",
   "page_url": "https://pkbmw110120.github.io/finance-morning-brief/",
-  "archive_url": "https://pkbmw110120.github.io/finance-morning-brief/2026-09-20.html"
+  "archive_url": "https://pkbmw110120.github.io/finance-morning-brief/.html"
 }
