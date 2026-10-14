@@ -1,32 +1,32 @@
 {
-  "date": "2026-10-13",
-  "updated_at": "2026-10-13T09:50:00+08:00",
+  "date": "2026-10-14",
+  "updated_at": "2026-10-14T09:50:00+08:00",
   "copyright_notice": "配图均来自互联网，仅供内部阅读参考。如有版权问题请联系运营团队替换。",
   "headline": {
     "id": "headline-1",
-    "title": "金融街论坛年会下周开幕",
-    "title_short": "金融街论坛年会下周开",
-    "source": "证券时报",
+    "title": "IMF上调全球增长预期 AI投资成引擎",
+    "title_short": "IMF上调全球增长预",
+    "source": "第一财经",
     "summary": "",
-    "url": "https://www.stcn.com/article/detail/4213048.html",
+    "url": "https://www.yicai.com/news/103390898.html",
     "image": "",
     "image_source": ""
   },
   "finance_news": [
     {
       "id": "news-1",
-      "title": "粤芯半导体登陆创业板",
-      "title_short": "粤芯半导体登陆创业板",
-      "source": "中国证券报",
+      "title": "粤芯半导体上市首日涨223%",
+      "title_short": "粤芯半导体上市首日涨",
+      "source": "澎湃新闻",
       "summary": "",
-      "url": "https://www.cs.com.cn/ssgs/01/2026/10/13/detail_2026101310044274.html",
+      "url": "https://m.thepaper.cn/newsDetail_forward_34241456",
       "image": "",
       "image_source": ""
     },
     {
       "id": "news-2",
-      "title": "A股并购重组市场热度攀升",
-      "title_short": "A股并购重组市场热度",
+      "title": "资本市场全链条护航新质生产力",
+      "title_short": "资本市场全链条护航新",
       "source": "财联社",
       "summary": "",
       "url": "https://www.cls.cn/detail/2500642",
@@ -35,18 +35,8 @@
     },
     {
       "id": "news-3",
-      "title": "银行股齐创历史新高",
-      "title_short": "银行股齐创历史新高",
-      "source": "21世纪经济报道",
-      "summary": "",
-      "url": "https://m.21jingji.com/article/20261012/herald/204d0c2aa77b9e49ee05ff1cb2b026e5.html",
-      "image": "",
-      "image_source": ""
-    },
-    {
-      "id": "news-4",
-      "title": "公募运作办法全面大修",
-      "title_short": "公募运作办法全面大修",
+      "title": "61家A股公司前三季度业绩预喜",
+      "title_short": "61家A股公司前三季",
       "source": "财联社",
       "summary": "",
       "url": "https://www.cls.cn/detail/2499885",
@@ -54,9 +44,19 @@
       "image_source": ""
     },
     {
+      "id": "news-4",
+      "title": "A股中长期基本面持续增强",
+      "title_short": "A股中长期基本面持续",
+      "source": "中国证券报",
+      "summary": "",
+      "url": "https://www.cs.com.cn/gppd/gsyj/2026/10/14/detail_2026101410044458.html",
+      "image": "",
+      "image_source": ""
+    },
+    {
       "id": "news-5",
-      "title": "动力煤价格突破千元",
-      "title_short": "动力煤价格突破千元",
+      "title": "腾讯发行18亿美元+260亿元票据",
+      "title_short": "腾讯发行18亿美元+",
       "source": "财联社",
       "summary": "",
       "url": "https://www.cls.cn/detail/2501684",
@@ -67,38 +67,8 @@
   "supply_news": [
     {
       "id": "supply-1",
-      "title": "渤海银行破解纺织小微融资困局",
-      "title_short": "渤海银行破解纺织小微",
-      "source": "中国经济网",
-      "summary": "",
-      "url": "http://i1.ce.cn/finance/bank12/scroll/202610/t20261010_3253246.shtml",
-      "image": "",
-      "image_source": ""
-    },
-    {
-      "id": "supply-2",
-      "title": "上海农商银行深耕供应链金融",
-      "title_short": "上海农商银行深耕供应",
-      "source": "人民日报",
-      "summary": "",
-      "url": "http://sh.people.com.cn/n2/2026/1012/c134768-41719823.html",
-      "image": "",
-      "image_source": ""
-    },
-    {
-      "id": "supply-3",
-      "title": "浦发银行供应链金融服务中小企业",
-      "title_short": "浦发银行供应链金融服",
-      "source": "中新网",
-      "summary": "",
-      "url": "http://www.cq.chinanews.com.cn/fgs/2026/1012/16-14967.html",
-      "image": "",
-      "image_source": ""
-    },
-    {
-      "id": "supply-4",
-      "title": "供应链金融助力缓解中小企业资金难题",
-      "title_short": "供应链金融助力缓解中",
+      "title": "供应链金融从",
+      "title_short": "供应链金融从",
       "source": "[自动修正]news.cn",
       "summary": "",
       "url": "https://www.news.cn/fortune/20261008/ceeffdc7d2ca473cbebc2c959da41a47/c.html",
@@ -106,17 +76,47 @@
       "image_source": ""
     },
     {
-      "id": "supply-5",
-      "title": "金融全链条护航秋收",
-      "title_short": "金融全链条护航秋收",
-      "source": "人民日报",
+      "id": "supply-2",
+      "title": "英大信托供应链金融突破千亿",
+      "title_short": "英大信托供应链金融突",
+      "source": "[自动修正]cj.sina.com.cn",
       "summary": "",
-      "url": "http://paper.people.com.cn/rmrb/pc/content/202610/12/content_30185152.html",
+      "url": "https://cj.sina.com.cn/articles/view/1905628462/7195952e01901r2c6",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "supply-3",
+      "title": "肉安网电子仓单破解冻品融资难题",
+      "title_short": "肉安网电子仓单破解冻",
+      "source": "36氪",
+      "summary": "",
+      "url": "https://36kr.com/p/4022687405838214",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "supply-4",
+      "title": "",
+      "title_short": "",
+      "source": "中国经济网",
+      "summary": "",
+      "url": "http://i1.ce.cn/finance/bank12/scroll/202610/t20261010_3253246.shtml",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "supply-5",
+      "title": "供应链金融进入合规时代",
+      "title_short": "供应链金融进入合规时",
+      "source": "新华社",
+      "summary": "",
+      "url": "https://finance.eastmoney.com/a/202610083889789159.html",
       "image": "",
       "image_source": ""
     }
   ],
   "bill_rate_note": "",
   "page_url": "https://pkbmw110120.github.io/finance-morning-brief/",
-  "archive_url": "https://pkbmw110120.github.io/finance-morning-brief/2026-10-13.html"
+  "archive_url": "https://pkbmw110120.github.io/finance-morning-brief/2026-10-14.html"
 }
