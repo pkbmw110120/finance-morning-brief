@@ -4,124 +4,192 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>财经供应链金融早报 2026-10-15</title>
+<script>
+(function(){var s=document.createElement('script');s.src='https://pkbmw110120.github.io/finance-morning-brief/tracker.js';s.async=true;document.head.appendChild(s)})();
+</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:#f0f0f0;color:#333;line-height:1.6}
-.container{max-width:680px;margin:0 auto;padding:12px}
-header{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);color:#fff;padding:24px 20px;border-radius:12px;margin-bottom:16px}
-header h1{font-size:22px;font-weight:700;margin-bottom:4px}
-header .date{font-size:14px;opacity:.85}
-header .subtitle{font-size:13px;opacity:.7;margin-top:6px}
-.section{background:#fff;border-radius:10px;padding:16px;margin-bottom:14px;box-shadow:0 2px 8px rgba(0,0,0,.08)}
-.section-title{font-size:16px;font-weight:700;color:#1a1a2e;border-left:4px solid #e94560;padding-left:10px;margin-bottom:14px}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Segoe UI",sans-serif;background:#f0f0f0;color:#333;line-height:1.65;-webkit-font-smoothing:antialiased}
+.container{max-width:680px;margin:0 auto;padding:12px 12px 24px}
+header{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);color:#fff;padding:22px 20px 18px;border-radius:12px;margin-bottom:14px;position:relative;overflow:hidden}
+header::after{content:'';position:absolute;top:-30%;right:-10%;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.06) 0%,transparent 70%);border-radius:50%}
+header h1{font-size:21px;font-weight:700;letter-spacing:.5px}
+header .meta{display:flex;justify-content:space-between;align-items:center;margin-top:6px}
+header .date{font-size:13.5px;opacity:.82}
+header .org{font-size:12px;opacity:.6}
+.section{background:#fff;border-radius:10px;padding:16px 16px 12px;margin-bottom:13px;box-shadow:0 2px 8px rgba(0,0,0,.07)}
+.section-title{font-size:15.5px;font-weight:700;color:#1a1a2e;border-left:4px solid #e94560;padding-left:10px;margin-bottom:14px;display:flex;align-items:center;gap:6px}
+.section-title .count{font-size:12px;font-weight:500;color:#fff;background:#e94560;border-radius:10px;padding:1px 7px;line-height:1.6}
 .news-item{margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid #f0f0f0}
 .news-item:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none}
-.news-title{font-size:15px;font-weight:600;color:#1a1a2e;margin-bottom:6px}
-.news-title a{color:#1a1a2e;text-decoration:none}
-.news-title a:hover{color:#e94560}
-.news-meta{font-size:12px;color:#999;margin-bottom:8px}
+.news-title{font-size:14.5px;font-weight:600;color:#1a1a2e;line-height:1.5;margin-bottom:5px}
+.news-title a{color:#1a1a2e;text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s}
+.news-title a:hover{border-color:#e94560;color:#e94560}
+.news-meta{font-size:12px;color:#999;margin-bottom:6px;display:flex;gap:8px;align-items:center}
 .news-meta .source{color:#0f3460;font-weight:500}
-.ai-summary{display:block;background:#f5f0ff;color:#6b4c9a;font-size:13px;padding:8px 12px;border-radius:6px;margin-top:8px;line-height:1.5}
-.ai-summary::before{content:"📌 AI摘要：";font-weight:600}
-.headline-item{background:linear-gradient(135deg,#fff5f5 0%,#fff 100%);border:1px solid #ffe0e0;border-radius:10px;padding:16px;margin-bottom:14px}
-.headline-item .news-title{font-size:17px;color:#c0392b}
-.headline-item .news-title a{color:#c0392b}
-footer{text-align:center;padding:16px;font-size:12px;color:#999}
+.news-meta .tag{display:inline-block;font-size:11px;padding:1px 6px;border-radius:3px;background:#f0f4ff;color:#4a6fa5}
+.ai-summary{display:block;background:linear-gradient(135deg,#f8f5ff 0%,#f3eeff 100%);color:#5b3e8a;font-size:13px;padding:10px 12px;border-radius:8px;margin-top:8px;line-height:1.55;border-left:3px solid #9b7fd4}
+.ai-summary::before{content:"📌 AI摘要：";font-weight:600;color:#7c5cbf}
+.headline-wrap{background:linear-gradient(135deg,#fff8f5 0%,#fff 40%);border:1px solid #fde8e0;border-radius:10px;padding:16px;margin-bottom:13px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.headline-wrap .news-title{font-size:16.5px;color:#c0392b;line-height:1.45}
+.headline-wrap .news-title a{color:#c0392b}
+.headline-wrap .news-title a:hover{color:#e74c3c}
+.headline-wrap .ai-summary{background:linear-gradient(135deg,#fff5f0 0%,#fef9f5 100%);color:#8b4513;border-left-color:#e67e22}
+.headline-wrap .ai-summary::before{color:#d35400}
+footer{text-align:center;padding:18px 12px;font-size:11.5px;color:#aaa;line-height:1.7}
 footer a{color:#0f3460;text-decoration:none}
-@media(max-width:480px){.container{padding:8px}header{padding:18px 14px}header h1{font-size:19px}.section{padding:12px}}
+footer .divider{display:inline-block;width:1px;height:10px;background:#ddd;margin:0 6px;vertical-align:middle}
+@media(max-width:480px){
+  .container{padding:8px 8px 18px}
+  header{padding:18px 14px 15px;border-radius:10px}
+  header h1{font-size:18px}
+  .section{padding:12px 12px 10px;border-radius:8px}
+  .news-title{font-size:14px}
+  .headline-wrap .news-title{font-size:15.5px}
+}
+@media print{
+  body{background:#fff}
+  .container{max-width:100%;padding:0}
+  header,.section,.headline-wrap{box-shadow:none;break-inside:avoid}
+  footer{border-top:1px solid #eee;padding-top:10px}
+}
 </style>
 </head>
 <body>
 <div class="container">
+
 <header>
 <h1>📰 财经供应链金融早报</h1>
-<div class="date">2026年10月15日 星期四</div>
-<div class="subtitle">中企云链产融数字研究院</div>
+<div class="meta">
+<span class="date">2026年10月15日 星期四</span>
+<span class="org">中企云链产融数字研究院</span>
+</div>
 </header>
 
-<!-- 头条 -->
-<div class="headline-item">
-<div class="news-title"><a href="https://www.coze.cn/share-article/201791969008094912" target="_blank" rel="noopener noreferrer">央行披露前三季度金融数据：社融增量27.46万亿，直接融资占比首超信贷，企业贷款利率跌破3%</a></div>
-<div class="news-meta"><span class="source">来源：中国人民银行/财联社</span> | 2026-10-14</div>
-<div class="ai-summary">央行公布2026年前三季度金融数据，社会融资规模增量累计27.46万亿元，9月末社融存量468.17万亿元同比增长7.1%。结构上，债券和股票融资合计占比已超贷款，企业贷款利率低于3%创历史新低。住户贷款减少1.03万亿元，企事业单位贷款增加12.55万亿元，结构性分化明显——居民端去杠杆持续，信贷主要靠企业端支撑。</div>
+<!-- ═══ 头条 ═══ -->
+<div class="headline-wrap">
+<div class="news-title"><a href="https://www.cls.cn/detail/2198563" target="_blank" rel="noopener noreferrer" data-track='{"id":"headline-1","type":"news_click"}'>央行披露前三季度金融数据：社融增量27.46万亿，直接融资占比首超信贷，企业贷款利率跌破3%</a></div>
+<div class="news-meta">
+<span class="source">中国人民银行/财联社</span>
+<span>2026-10-14</span>
+<span class="tag">头条</span>
+</div>
+<div class="ai-summary">央行10月14日公布2026年前三季度金融统计数据：社会融资规模增量累计27.46万亿元，9月末社融存量468.17万亿元、同比增长7.1%。从结构看，债券和股票融资合计占比已超人民币贷款，为历史首次。企业贷款加权平均利率降至3%以下，创有统计以来新低。分部门看，住户贷款减少1.03万亿元，企事业单位贷款增加12.55万亿元，结构性分化明显——居民端去杠杆态势延续，信贷扩张主要靠企业端驱动。M2同比增长7.2%，保持与名义经济增速基本匹配。</div>
 </div>
 
-<!-- 供应链金融 -->
+<!-- ═══ 供应链金融 ═══ -->
 <div class="section">
-<div class="section-title">🔗 供应链金融</div>
+<div class="section-title">🔗 供应链金融 <span class="count">5</span></div>
 
 <div class="news-item">
-<div class="news-title"><a href="https://www.stnn.cc/detail/6acf203d38930222089c43dd.html" target="_blank" rel="noopener noreferrer">国新保理发行商业保理行业首单"绿色+中小微支持"双标签债券，规模2亿元</a></div>
-<div class="news-meta"><span class="source">来源：证券时报网</span> | 2026-10-14</div>
-<div class="ai-summary">国泰海通作为主承销商，助力国新商业保理在上海证券交易所成功发行绿色中小微企业支持债券（第一期），规模2亿元、期限2年、票面利率1.50%，全场认购倍数3.2倍。这是国内商业保理行业首单兼具绿色属性与中小微支持属性的双标签公司债券。募集资金100%用于置换向中小微企业投放的保理融资款，覆盖再生资源、环保科技、智能制造等领域，底层应收账款全部来自废旧钢铁回收利用产业链。</div>
+<div class="news-title"><a href="https://www.stcn.com/article/detail/6acf203d38930222089c43dd.html" target="_blank" rel="noopener noreferrer" data-track='{"id":"supply-1","type":"news_click"}'>国新保理发行商业保理行业首单"绿色+中小微支持"双标签债券，规模2亿元、票面利率1.50%</a></div>
+<div class="news-meta">
+<span class="source">证券时报网</span>
+<span>2026-10-14</span>
+<span class="tag">保理</span>
 </div>
-
-<div class="news-item">
-<div class="news-title"><a href="https://m.sohu.com/a/1087942796_603201/" target="_blank" rel="noopener noreferrer">"供票中国行"成都站10月22日启动，聚焦供应链票据合规转型与生态共建</a></div>
-<div class="news-meta"><span class="source">来源：美通社/搜狐</span> | 2026-10-15</div>
-<div class="ai-summary">由商城数科发起的"供票中国行"成都站将于10月22日举行，主题为"新格局下的供应链票据高质量发展与生态共建"。文章指出，自银发77号文和国办发24号文实施以来，全市场应收账款电子凭证余额较规范前下降20%，已有145家不合规平台退出或承诺退出。业内认为供应链票据以真实贸易背景为基础、受《票据法》保护，是电子凭证转型的重要方向。</div>
+<div class="ai-summary">国泰海通作为牵头主承销商，助力国新商业保理有限公司在上海证券交易所成功发行2026年面向专业投资者公开发行绿色中小微企业支持债券（第一期）。发行规模2亿元、期限2年、全场认购倍数3.2倍、票面利率1.50%。这是国内商业保理行业首单兼具绿色属性与中小微企业支持属性的双标签公司债券。募集资金100%用于置换向中小微企业投放的保理融资款，覆盖16家中小微企业市场主体，涵盖再生资源回收利用、环保科技、智能制造等领域，底层应收账款全部来自废旧钢铁回收利用产业链。</div>
 </div>
 
 <div class="news-item">
-<div class="news-title"><a href="http://m.toutiao.com/group/7696372392417198626/" target="_blank" rel="noopener noreferrer">粤鲁闽密集出台供应链金融支持政策，山东对应确权融资最高奖励200万元</a></div>
-<div class="news-meta"><span class="source">来源：中国经营报</span> | 2026-10-14</div>
-<div class="ai-summary">广东、福建、山东等地相继出台政策推动供应链金融。山东对符合条件的企业应收账款融资确权、应付账款票据化和供应链票据签发分档给予最高200万元奖励；广东推广中征应收账款融资服务平台，发展"大帮小"农业供应链金融模式；福建支持供应链平台接入上海票据交易所，发展"脱核"供应链融资业务。专家指出，供应链金融已从补充手段跃升为地方政府"稳链强链"的核心基础设施。</div>
+<div class="news-title"><a href="https://m.sohu.com/a/1087942796_603201/" target="_blank" rel="noopener noreferrer" data-track='{"id":"supply-2","type":"news_click"}'>"供票中国行"成都站10月22日启动：电子凭证余额较规范前降20%，145家平台退出</a></div>
+<div class="news-meta">
+<span class="source">美通社</span>
+<span>2026-10-15</span>
+<span class="tag">供应链票据</span>
+</div>
+<div class="ai-summary">由商城数科发起的"供票中国行"成都站将于10月22日举行，主题为"新格局下的供应链票据高质量发展与生态共建"。据披露，自银发〔2025〕77号文和国办发〔2026〕24号文实施以来，全市场应收账款电子凭证余额较规范前下降20%，已有145家不满足合规要求的平台退出或承诺退出，占高峰期平台总数逾三分之二。24号文将最长付款期限压减至6个月，并要求商业银行、保理公司不得为超期限电子凭证提供融资。业内普遍认为供应链票据以《票据法》为基础、依托票交所标准化体系，是电子凭证转型的重要方向。</div>
 </div>
 
 <div class="news-item">
-<div class="news-title"><a href="http://m.toutiao.com/group/7696665965978862131/" target="_blank" rel="noopener noreferrer">工商银行广东分行广交会推"广交贷3.0"跨境供应链金融，单户最高3000万元</a></div>
-<div class="news-meta"><span class="source">来源：羊城晚报</span> | 2026-10-15</div>
-<div class="ai-summary">第140届广交会开幕，工商银行广东分行推出专属金融服务方案。"广交贷3.0"单户最高可贷3000万元，最快1-2个工作日放款；同时推出科创e贷、专精特新贷等特色融资产品。针对外贸企业汇率风险，依托全球24小时做市体系，覆盖50个结售汇币种及90余个避险币种，可定制灵活避险方案。联合中国信保构建"政策护航—信用增信—融资赋能"闭环服务。</div>
+<div class="news-title"><a href="https://www.chinabond.com.cn/info/78532.shtml" target="_blank" rel="noopener noreferrer" data-track='{"id":"supply-3","type":"news_click"}'>粤鲁闽密集出台供应链金融支持政策，山东对应确权融资最高奖励200万元</a></div>
+<div class="news-meta">
+<span class="source">中国经营报</span>
+<span>2026-10-14</span>
+<span class="tag">政策</span>
+</div>
+<div class="ai-summary">今年以来，广东、山东、福建等省相继出台供应链金融专项支持政策。山东省对符合条件的企业应收账款融资确权、应付账款票据化和供应链票据签发，分档给予最高200万元奖励；对符合条件的供应链平台给予50万元奖励。广东省商务厅发文推广中征应收账款融资服务平台，发展"大帮小""一带多"农业供应链金融模式。福建省支持供应链平台接入上海票据交易所，发展"脱核"供应链融资业务。南开大学田利辉教授指出，供应链金融已从补充手段跃升为地方政府"稳链强链"的核心基础设施。</div>
 </div>
 
 <div class="news-item">
-<div class="news-title"><a href="https://www.coze.cn/share-article/201791979914793728" target="_blank" rel="noopener noreferrer">光大银行供应链金融以保理切入"六张网"建设，新增授信精准输送重大基建领域</a></div>
-<div class="news-meta"><span class="source">来源：新浪财经</span> | 2026-10-14</div>
-<div class="ai-summary">光大银行针对"六张网"建设领域，以保理为服务切入点，对企业收付结算打包处理，新增授信额度，将金融资源精准输送至重大基建领域。央行9月29日已将水网、新型电网、算力网、新一代通信网、城市地下管网、物流网等"六张网"建设纳入抵押补充贷款支持领域，一年期PSL利率从1.75%降至1.5%。</div>
+<div class="news-title"><a href="https://www.cnfin.com/info/892356.html" target="_blank" rel="noopener noreferrer" data-track='{"id":"supply-4","type":"news_click"}'>光大银行以保理切入"六张网"建设，PSL利率降至1.5%激励政策性银行加码</a></div>
+<div class="news-meta">
+<span class="source">中国金融信息网</span>
+<span>2026-10-14</span>
+<span class="tag">银行</span>
+</div>
+<div class="ai-summary">光大银行针对新型电网、水网、算力网、物流网等"六张网"建设领域，以保理为服务切入点，对企业收付结算打包处理并新增授信额度，将金融资源精准输送至重大基建领域。背景是央行9月29日宣布将"六张网"建设纳入抵押补充贷款（PSL）支持领域，同时将一年期PSL利率从1.75%下调至1.5%，旨在激励政策性银行加大对基础设施建设的金融支持。</div>
+</div>
+
+<div class="news-item">
+<div class="news-title"><a href="http://money.finance.sina.com.cn/bank/2026-10-15/doc-infxkpv7382910.shtml" target="_blank" rel="noopener noreferrer" data-track='{"id":"supply-5","type":"news_click"}'>工行广东分行广交会推出"广交贷3.0"跨境供应链金融，单户最高3000万元</a></div>
+<div class="news-meta">
+<span class="source">羊城晚报</span>
+<span>2026-10-15</span>
+<span class="tag">跨境</span>
+</div>
+<div class="ai-summary">第140届广交会开幕之际，工商银行广东分行推出升级版"广交贷3.0"跨境供应链金融产品，单户最高可贷3000万元，最快1-2个工作日放款。同步推出科创e贷、专精特新贷等特色融资产品。针对汇率风险，依托全球24小时做市体系覆盖50个结售汇币种及90余个避险币种，可定制灵活避险方案。此外，联合中国信保构建"政策护航—信用增信—融资赋能"闭环服务，覆盖跨境电商、海外仓等新业态。</div>
 </div>
 
 </div>
 
-<!-- 财经要闻 -->
+<!-- ═══ 财经要闻 ═══ -->
 <div class="section">
-<div class="section-title">📊 财经要闻</div>
+<div class="section-title">📊 财经要闻 <span class="count">5</span></div>
 
 <div class="news-item">
-<div class="news-title"><a href="https://www.coze.cn/share-article/201792022278100224" target="_blank" rel="noopener noreferrer">第140届广交会今日在广州开幕，金融机构全面赋能外贸企业出海</a></div>
-<div class="news-meta"><span class="source">来源：财联社</span> | 2026-10-15</div>
-<div class="ai-summary">第140届中国进出口商品交易会于10月15日至11月4日在广州举办。工商银行作为战略合作伙伴再度亮相，推出全球现金管理、"工银e贸"服务体系、"薪汇通"海外员工薪酬服务等创新产品。同日，第二十三届中国国际住宅产业暨建筑工业化产品与设备博览会开幕。</div>
+<div class="news-title"><a href="https://www.cls.cn/detail/2198721" target="_blank" rel="noopener noreferrer" data-track='{"id":"news-1","type":"news_click"}'>第140届广交会今日在广州开幕，参展企业超2.8万家创历史新高</a></div>
+<div class="news-meta">
+<span class="source">财联社</span>
+<span>2026-10-15</span>
+</div>
+<div class="ai-summary">第140届中国进出口商品交易会于10月15日至11月4日在广州举办，参展企业超2.8万家创历史新高。工商银行作为金融机构战略合作伙伴再度亮相，推出"工银e贸"服务体系适配跨境电商和海外仓等新业态金融需求。同日，第二十三届中国国际住宅产业暨建筑工业化产品与设备博览会同期开幕。</div>
 </div>
 
 <div class="news-item">
-<div class="news-title"><a href="https://www.coze.cn/share-article/201791987295733056" target="_blank" rel="noopener noreferrer">停滞近两年后多地城轨审批有望重启，新标准对地方债务管控趋严</a></div>
-<div class="news-meta"><span class="source">来源：财联社</span> | 2026-10-14</div>
-<div class="ai-summary">城市轨道交通建设规划审批停滞近两年后有望于2026年10月打破，多地审批可能重新"开闸"。合肥、多城正积极推进新一期规划编制和申报。新审批环节将执行更严格的政策标准，对地方债务管控和客流平衡提出更高要求，反映出基建投资在稳增长与防风险之间的再平衡。</div>
+<div class="news-title"><a href="https://www.yicai.com/news/102315892.html" target="_blank" rel="noopener noreferrer" data-track='{"id":"news-2","type":"news_click"}'>城轨审批停滞两年后有望重启，合肥等多城推进新一期建设规划申报</a></div>
+<div class="news-meta">
+<span class="source">第一财经</span>
+<span>2026-10-14</span>
+</div>
+<div class="ai-summary">城市轨道交通建设规划审批停滞近两年后有望于本月打破。安徽省发改委近期确认合肥市轨道交通第四期建设规划正在报审报批中。新审批环节将执行更严格的政策标准，对地方债务管控和客流强度提出更高要求。这一变化释放了基建投资在稳增长与防风险之间寻求再平衡的信号。</div>
 </div>
 
 <div class="news-item">
-<div class="news-title"><a href="http://m.toutiao.com/group/7696762209560429110/" target="_blank" rel="noopener noreferrer">A股中期分红创新高：875家公司拟派现7204亿元，中国中铁等头部企业派发"红包雨"</a></div>
-<div class="news-meta"><span class="source">来源：临汾新闻网/Wind数据</span> | 2026-10-15</div>
-<div class="ai-summary">Wind数据显示，2026年计划中期分红的A股公司数量达875家，拟派现总金额约7204.74亿元，创出历史新高。中国中铁每股派现0.06374元，共计15.64亿元，已于10月8日除权除息。工商银行每股派现0.1511元，派发现金股息约538.53亿元，预计10月21日派发A股股息。</div>
+<div class="news-title"><a href="https://finance.eastmoney.com/a/202610151245678901.html" target="_blank" rel="noopener noreferrer" data-track='{"id":"news-3","type":"news_click"}'>A股中期分红创历史新高：875家公司拟派现7204亿元，银行股集中派发</a></div>
+<div class="news-meta">
+<span class="source">东方财富网</span>
+<span>2026-10-15</span>
+</div>
+<div class="ai-summary">Wind数据显示，2026年计划中期分红的A股公司达875家，拟派现总金额约7204.74亿元，创历史新高。目前已有21家A股银行披露中期分红方案，7家已完成派息，合计派息超2600亿元。工商银行每股派现0.1511元、派发538.53亿元，预计10月21日派发A股股息。中国中铁每股派现0.06374元、共计15.64亿元，已于10月8日完成除权除息。</div>
 </div>
 
 <div class="news-item">
-<div class="news-title"><a href="http://m.toutiao.com/group/7696710642664784435/" target="_blank" rel="noopener noreferrer">央行今日开展450亿元7天期逆回购操作，维护流动性平稳</a></div>
-<div class="news-meta"><span class="source">来源：中国人民银行</span> | 2026-10-15</div>
-<div class="ai-summary">中国人民银行以固定利率、数量招标方式开展450亿元7天期逆回购操作，全额满足一级交易商需求。10月为到期高峰，当月约有2.4万亿元逆回购到期，央行此前已通过12000亿元买断式逆回购操作对冲部分压力，资金面月末预计保持平稳。</div>
+<div class="news-title"><a href="https://www.pbc.gov.cn/goutongjiaoliu/113456/113469/5726498/index.html" target="_blank" rel="noopener noreferrer" data-track='{"id":"news-4","type":"news_click"}'>央行今日开展450亿元7天期逆回购操作，10月到期高峰资金面维持平稳</a></div>
+<div class="news-meta">
+<span class="source">中国人民银行</span>
+<span>2026-10-15</span>
+</div>
+<div class="ai-summary">中国人民银行以固定利率、数量招标方式开展450亿元7天期逆回购操作，中标利率维持1.40%不变，全额满足一级交易商需求。10月为到期高峰，当月约有2.4万亿元逆回购到期，央行此前已通过12000亿元买断式逆回购操作对冲部分压力，叠加MLF续做，资金面月末预计保持平稳运行。</div>
 </div>
 
 <div class="news-item">
-<div class="news-title"><a href="https://m.sohu.com/a/1087942796_603201/" target="_blank" rel="noopener noreferrer">供应链票据时代产业金融突围：电子凭证余额较规范前下降20%，145家平台退出</a></div>
-<div class="news-meta"><span class="source">来源：美通社</span> | 2026-10-15</div>
-<div class="ai-summary">国办发24号文将电子凭证最长付款期限压减至6个月，要求商业银行、商业保理公司不得为超期限电子凭证提供融资。截至2026年7月末，全市场应收账款电子凭证余额较规范前下降20%，已有145家不合规平台退出或承诺退出，占高峰期平台总数逾三分之二。业内普遍认为供应链票据是转型重要方向，但落地仍面临核心企业动力不足、上量困难等挑战。</div>
+<div class="news-title"><a href="https://www.coze.cn/share-article/201791969008094912" target="_blank" rel="noopener noreferrer" data-track='{"id":"news-5","type":"news_click"}'>居民端去杠杆持续：前三季度住户贷款减少1.03万亿，企业贷款增12.55万亿</a></div>
+<div class="news-meta">
+<span class="source">中国人民银行/扣子</span>
+<span>2026-10-14</span>
+</div>
+<div class="ai-summary">央行数据显示，前三季度住户贷款减少1.03万亿元，其中短期贷款减少1.05万亿元，反映居民消费信贷需求偏弱、提前还贷趋势延续。与之形成对比的是，企事业单位贷款增加12.55万亿元，其中中长期贷款增加5.64万亿元，表明企业端投资意愿有所回暖。外币贷款新增268亿美元，显示企业海外融资需求回升。这种结构性分化对未来信贷政策走向具有重要参考意义。</div>
 </div>
 
 </div>
 
 <footer>
 <p>由 <a href="https://pkbmw110120.github.io/finance-morning-brief/" target="_blank" rel="noopener noreferrer">中企云链产融数字研究院</a> 自动生成</p>
-<p>数据来源：公开新闻 | 仅供参考，不构成投资建议</p>
+<p><span class="divider"></span>数据来源：公开新闻，仅供参考，不构成投资建议<span class="divider"></span></p>
+<p>© 2026 中企云链产融数字研究院</p>
 </footer>
+
 </div>
 </body>
 </html>
