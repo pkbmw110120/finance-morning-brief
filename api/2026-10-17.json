@@ -1,0 +1,122 @@
+{
+  "date": "2026-10-17",
+  "updated_at": "2026-10-17T09:50:00+08:00",
+  "copyright_notice": "配图均来自互联网，仅供内部阅读参考。如有版权问题请联系运营团队替换。",
+  "headline": {
+    "id": "headline-1",
+    "title": "国常会部署深化",
+    "title_short": "国常会部署深化",
+    "source": "中国新闻网",
+    "summary": "",
+    "url": "http://www.chinanews.com.cn/gn/2026/10-16/10715918.shtml",
+    "image": "",
+    "image_source": ""
+  },
+  "finance_news": [
+    {
+      "id": "news-1",
+      "title": "央行9月M2增7.2% 直接融资占比近半",
+      "title_short": "央行9月M2增7.2",
+      "source": "中国新闻网",
+      "summary": "",
+      "url": "http://www.chinanews.com.cn/gsztc/2026/10-16/10715419.shtml",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "news-2",
+      "title": "1.3万亿超长期特别国债发行收官",
+      "title_short": "1.3万亿超长期特别",
+      "source": "[自动修正]news.qq.com",
+      "summary": "",
+      "url": "http://news.qq.com/rain/a/20261016A0DM3H00",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "news-3",
+      "title": "费城半导体八连跌创16年纪录",
+      "title_short": "费城半导体八连跌创1",
+      "source": "财联社",
+      "summary": "",
+      "url": "https://www.cls.cn/detail/2504607",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "news-4",
+      "title": "A股缩量修复 沪指周涨0.24%",
+      "title_short": "A股缩量修复 沪指周",
+      "source": "东方财富网",
+      "summary": "",
+      "url": "https://finance.eastmoney.com/a/202610163898716186.html",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "news-5",
+      "title": "美联储沃什偏鸽 10月按兵不动概率升",
+      "title_short": "美联储沃什偏鸽 10",
+      "source": "财联社",
+      "summary": "",
+      "url": "https://www.cls.cn/detail/2504241",
+      "image": "",
+      "image_source": ""
+    }
+  ],
+  "supply_news": [
+    {
+      "id": "supply-1",
+      "title": "供应链金融创新缓解中小企业资金难题",
+      "title_short": "供应链金融创新缓解中",
+      "source": "经济参考报",
+      "summary": "",
+      "url": "https://finance.sina.com.cn/jjxw/2026-10-16/doc-inivmyex7501683.shtml",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "supply-2",
+      "title": "天津保理论坛：370家集聚全国首位",
+      "title_short": "天津保理论坛：370",
+      "source": "天津日报",
+      "summary": "",
+      "url": "https://finance.sina.com.cn/wm/2026-10-16/doc-inivmprc7645354.shtml",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "supply-3",
+      "title": "浦发银行",
+      "title_short": "浦发银行",
+      "source": "光明网",
+      "summary": "",
+      "url": "http://economy.gmw.cn/2026-10/16/content_39050717.htm",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "supply-4",
+      "title": "建行全链条金融服务护航广交会",
+      "title_short": "建行全链条金融服务护",
+      "source": "东方财富网",
+      "summary": "",
+      "url": "https://wap.eastmoney.com/a/202610163897600085.html",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "supply-5",
+      "title": "悦达国际反向保理授信5600万",
+      "title_short": "悦达国际反向保理授信",
+      "source": "同花顺",
+      "summary": "",
+      "url": "https://stock.10jqka.com.cn/hks/20261016/c680785686.shtml",
+      "image": "",
+      "image_source": ""
+    }
+  ],
+  "bill_rate_note": "",
+  "page_url": "https://pkbmw110120.github.io/finance-morning-brief/",
+  "archive_url": "https://pkbmw110120.github.io/finance-morning-brief/2026-10-17.html"
+}
