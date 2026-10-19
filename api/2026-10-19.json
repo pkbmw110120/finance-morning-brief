@@ -1,0 +1,122 @@
+{
+  "date": "2026-10-19",
+  "updated_at": "2026-10-19T09:50:00+08:00",
+  "copyright_notice": "配图均来自互联网，仅供内部阅读参考。如有版权问题请联系运营团队替换。",
+  "headline": {
+    "id": "headline-1",
+    "title": "金融街论坛年会今日开幕 四大监管负责人将发声",
+    "title_short": "金融街论坛年会今日开",
+    "source": "中国经济网",
+    "summary": "",
+    "url": "http://www.ce.cn/xwzx/gnsz/gdxw/202610/t20261019_3262289.shtml",
+    "image": "",
+    "image_source": ""
+  },
+  "finance_news": [
+    {
+      "id": "news-1",
+      "title": "9月经济数据今日发布 LPR明日揭晓",
+      "title_short": "9月经济数据今日发布",
+      "source": "第一财经",
+      "summary": "",
+      "url": "https://www.yicai.com/brief/103398090.html",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "news-2",
+      "title": "科技龙头掀回购潮 海光中科曙光澜起齐出手",
+      "title_short": "科技龙头掀回购潮 海",
+      "source": "证券时报",
+      "summary": "",
+      "url": "https://stcn.com/article/detail/4224198.html",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "news-3",
+      "title": "沃什鸽派发言 加息预期降至15%以下",
+      "title_short": "沃什鸽派发言 加息预",
+      "source": "财联社",
+      "summary": "",
+      "url": "https://www.cls.cn/detail/2506833",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "news-4",
+      "title": "两部门拟对AI生物医药光伏实施出口管制",
+      "title_short": "两部门拟对AI生物医",
+      "source": "中国经济网",
+      "summary": "",
+      "url": "http://adimg.ce.cn/xwzx/gnsz/gdxw/202610/t20261017_3261081.shtml",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "news-5",
+      "title": "全球人形机器人收入前五全是中国企业",
+      "title_short": "全球人形机器人收入前",
+      "source": "澎湃新闻",
+      "summary": "",
+      "url": "https://www.thepaper.cn/newsDetail_forward_29634325",
+      "image": "",
+      "image_source": ""
+    }
+  ],
+  "supply_news": [
+    {
+      "id": "supply-1",
+      "title": "国办十条措施治理中小企业回款难",
+      "title_short": "国办十条措施治理中小",
+      "source": "人民日报",
+      "summary": "",
+      "url": "http://paper.people.com.cn/rmrb/pc/content/202610/19/content_30186340.html",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "supply-2",
+      "title": "民生银行供应链金融深耕乡村产业链",
+      "title_short": "民生银行供应链金融深",
+      "source": "人民日报",
+      "summary": "",
+      "url": "http://paper.people.com.cn/rmrb/pc/content/202610/19/content_30186337.html",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "supply-3",
+      "title": "天逸集团广交会推跨境供应链金融",
+      "title_short": "天逸集团广交会推跨境",
+      "source": "光明网",
+      "summary": "",
+      "url": "https://digital.gmw.cn/2026-10/18/content_39051972.htm",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "supply-4",
+      "title": "京东供应链金融百亿提额助11.11",
+      "title_short": "京东供应链金融百亿提",
+      "source": "中国网财经",
+      "summary": "",
+      "url": "http://finance.china.com.cn/roll/20261016/6326126.shtml",
+      "image": "",
+      "image_source": ""
+    },
+    {
+      "id": "supply-5",
+      "title": "紫金农商银行",
+      "title_short": "紫金农商银行",
+      "source": "第一财经",
+      "summary": "",
+      "url": "https://www.yicai.com/news/102870254.html",
+      "image": "",
+      "image_source": ""
+    }
+  ],
+  "bill_rate_note": "",
+  "page_url": "https://pkbmw110120.github.io/finance-morning-brief/",
+  "archive_url": "https://pkbmw110120.github.io/finance-morning-brief/2026-10-19.html"
+}
